@@ -1,0 +1,20 @@
+[
+  {
+    "speaker": "Agent",
+    "text": "Hello, may I speak with Brian?",
+    "stime": 0,
+    "etime": 3
+  },
+  {
+    "speaker": "Customer",
+    "text": "You have the wrong person.",
+    "stime": 3.2,
+    "etime": 5
+  },
+  {
+    "speaker": "Agent",
+    "text": "Apologies, I will remove this number.",
+    "stime": 5.2,
+    "etime": 7
+  }
+]
