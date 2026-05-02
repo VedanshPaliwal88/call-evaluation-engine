@@ -1,14 +1,18 @@
 # Call Evaluation Project
 
-Production-minded assignment solution for transcript analysis across three task areas:
+## Project Overview
 
-- Q1: profanity detection
-- Q2: privacy and compliance violation detection
-- Q3: silence and overtalk metrics
+This project is a production-minded assignment solution for analyzing debt-collection call transcripts in batch. It supports three deliverables:
 
-## Stack
+- `Q1`: profanity detection with both `regex` and `LLM prompting` approaches
+- `Q2`: privacy and compliance violation detection with both `regex` and `LLM prompting` approaches
+- `Q3`: silence and overtalk metrics with interactive Plotly visualizations
 
-- Python 3.11+
+The application is built as a Streamlit app backed by a shared service layer so the same ingestion, detector, and metrics logic is used by both the UI and the test suite.
+
+## Technology Stack
+
+- Python `3.11+`
 - Streamlit
 - Pydantic
 - OpenAI SDK
@@ -22,51 +26,114 @@ Production-minded assignment solution for transcript analysis across three task 
 ```text
 app/
   streamlit_app.py
+data/
+  labeled/
 docs/
   architecture.md
 src/
   call_evaluation/
 tests/
-data/
+All_Conversations/
 ```
 
 ## Setup
 
-1. Create a virtual environment with Python 3.11+.
-2. Install dependencies:
+### 1. Clone the repository
 
 ```bash
-pip install -e .[dev]
+git clone <your-repo-url>
+cd "Call evaluation project"
 ```
 
-3. Configure environment variables:
+### 2. Create the environment file
+
+Create a `.env` file in the project root. The easiest path is to copy the example file:
 
 ```bash
 copy .env.example .env
 ```
 
-4. Update `.env` with a valid `OPENAI_API_KEY`.
+Then update `.env` with your values:
 
-## Run
+```env
+OPENAI_API_KEY=your_openai_api_key_here
+LLM_MODEL=gpt-4o
+```
+
+If `OPENAI_API_KEY` is missing, the app still runs, but the `LLM` approach is disabled in the UI and only `Pattern Matching` is available.
+
+### 3. Install dependencies
+
+Create and activate a Python `3.11+` environment, then install the project:
+
+```bash
+pip install -e .[dev]
+```
+
+## Run the Application
+
+Start the Streamlit app with:
 
 ```bash
 streamlit run app/streamlit_app.py
 ```
 
-## Test
+The UI supports:
+
+- multiple `JSON` / `YAML` transcript uploads
+- a single `ZIP` containing transcript files
+- batch results by `call_id`
+- evidence drill-down per call
+- metrics visualizations for silence and overtalk
+
+## Run the Tests
+
+Run the full test suite with:
 
 ```bash
 pytest
 ```
 
-If `data/labeled/annotations.csv` is available, it should be treated as the ground-truth validation set for Q1 and Q2 evaluation plus prompt regression checks.
+The repository includes:
 
-## Deployment
+- ingestion and validation tests
+- regex detector adversarial tests
+- prompt regression tests
+- LLM response parsing tests
+- metrics and visualization tests
 
-The app is local-first and structured to remain compatible with Streamlit Community Cloud. The deployed environment needs the same environment variables as local execution.
+## Deployment to Streamlit Community Cloud
+
+1. Push the repository to GitHub.
+2. Sign in to [Streamlit Community Cloud](https://share.streamlit.io/).
+3. Create a new app from the GitHub repository.
+4. Set the main file path to `app/streamlit_app.py`.
+5. Add the required secrets in the Streamlit app settings:
+   - `OPENAI_API_KEY`
+   - `LLM_MODEL` with value `gpt-4o` or another supported model name
+6. Deploy the app.
+
+If the API key is omitted in deployment, the app still loads, but the `LLM` option is disabled and the UI shows a clear warning.
+
+## Phase Summary
+
+- `phase/1-foundation`
+  - project scaffold, config, dependency setup, core models, architecture documentation, and prompt-template groundwork
+- `phase/2-ingestion`
+  - JSON/YAML/ZIP ingestion, canonical transcript normalization, validation, and special transcript tagging
+- `phase/3-profanity`
+  - regex and LLM profanity detectors, prompt regression coverage, and annotation-based evaluation
+- `phase/4-compliance`
+  - regex and LLM compliance detectors, voicemail/wrong-person/implied-verification handling, and annotation-based evaluation
+- `phase/5-metrics`
+  - interval-based silence/overtalk metrics, edge-case handling, and Plotly visualization helpers
+- `phase/6-ui`
+  - Streamlit batch analysis app, evidence drill-down, metrics dashboard, and graceful LLM degradation
+- `phase/7-report`
+  - final README and architecture documentation updates aligned to the shipped implementation
 
 ## Notes
 
-- The provided assignment data is JSON, but the app also supports YAML and ZIP uploads to match the assignment specification.
-- `docs/architecture.md` contains the architecture rationale and diagram used by the implementation.
-- A local-only technical report can be kept under `artifacts/local/` for review without committing it to Git.
+- The provided assignment dataset is primarily JSON, but the system also supports `YAML` and `ZIP` input to match the assignment requirements.
+- LLM prompts are versioned files under `src/call_evaluation/detectors/llm/prompts/`.
+- The architecture reference for the final built system is documented in [docs/architecture.md](/C:/Users/Vedansh%20Paliwal/Desktop/Call%20evaluation%20project/docs/architecture.md).
