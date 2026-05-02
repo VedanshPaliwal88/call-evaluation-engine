@@ -11,3 +11,4 @@ build/
 *.pyo
 *.pyd
 artifacts/local/
+data/labeled/annotation_skips.csv

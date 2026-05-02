@@ -38,6 +38,9 @@ SKIP_FIELDS = ["call_id"]
 SEVERITY_OPTIONS = ["NONE", "MILD", "MODERATE", "SEVERE"]
 CONTEXT_OPTIONS = ["DIRECTED_AT_AGENT", "DIRECTED_AT_CUSTOMER", "SELF_EXPRESSION", "NARRATIVE_QUOTE", "AMBIENT"]
 VERIFICATION_OPTIONS = ["VERIFIED", "PARTIAL", "UNVERIFIED", "NOT_APPLICABLE"]
+# NOTE: NO_VIOLATION is included here for human annotators but is not a valid value in the
+# compliance prompt or in _ENUM_SAFE_DEFAULTS. If an annotation uses it, the LLM sanitizer
+# will fall back to NOT_APPLICABLE when that annotation is used for evaluation comparisons.
 VIOLATION_TYPE_OPTIONS = ["NO_VIOLATION", "NO_VERIFICATION", "ACCOUNT_DETAILS_BEFORE_VERIFICATION", "NOT_APPLICABLE"]
 
 # ---------------------------------------------------------------------------
@@ -259,7 +262,7 @@ def _render_annotation_form(call_id: str, needs_profanity: bool, needs_complianc
 
         # Profanity section
         if needs_profanity:
-            container = left if left is not None else st
+            container = left if left is not None else st.container()
             with container:
                 with st.expander("**Profanity**", expanded=True):
                     agent = st.radio(
@@ -282,7 +285,7 @@ def _render_annotation_form(call_id: str, needs_profanity: bool, needs_complianc
 
         # Compliance section
         if needs_compliance:
-            container = right if right is not None else st
+            container = right if right is not None else st.container()
             with container:
                 with st.expander("**Compliance**", expanded=True):
                     violation = st.radio(
