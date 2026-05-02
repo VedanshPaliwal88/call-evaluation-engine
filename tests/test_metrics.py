@@ -13,7 +13,8 @@ from call_evaluation.models.transcript import (
 from call_evaluation.metrics.call_metrics import MetricsService
 from call_evaluation.visualization import (
     create_distribution_histograms,
-    create_per_call_metrics_figure,
+    create_metrics_box_plot,
+    create_metrics_scatter_plot,
     create_top_n_figure,
 )
 
@@ -111,13 +112,16 @@ def test_visualizations_return_expected_plotly_objects() -> None:
             "overtalk_pct": 5.0,
         },
     ]
-    per_call = create_per_call_metrics_figure(rows)
+    box_plot = create_metrics_box_plot(rows)
+    scatter_plot = create_metrics_scatter_plot(rows)
     distributions = create_distribution_histograms(rows)
     top_silence = create_top_n_figure(rows, "silence_pct", top_n=1)
     top_overtalk = create_top_n_figure(rows, "overtalk_pct", top_n=1)
 
-    assert per_call is not None
-    assert len(per_call.data) == 4
+    assert box_plot is not None
+    assert len(box_plot.data) == 2
+    assert scatter_plot is not None
+    assert len(scatter_plot.data) == 1
     assert set(distributions.keys()) == {"silence_pct", "overtalk_pct"}
     assert top_silence is not None
     assert top_overtalk is not None
