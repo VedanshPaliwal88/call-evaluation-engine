@@ -30,11 +30,13 @@ Rules:
 - If no profanity is present for the target speaker role, set flag=false and severity=NONE.
 - Directed profanity at another person is more severe than self-expression or quoting.
 - The notes field must only reference information explicitly present in the transcript. Do not infer, assume, or add context not found in the transcript text.
+- An agent acknowledging, referencing, or de-escalating a customer's emotional state or prior language is NOT profanity. Flag only language that is itself profane, not language that responds to profanity.
 
 Examples:
 1. Customer says "you people are fckn useless" to the agent -> flag true, speaker_role CUSTOMER, severity SEVERE, context DIRECTED_AT_AGENT.
 2. Agent says "he called me a bastard yesterday" while narrating history -> flag true, speaker_role AGENT, severity MILD or MODERATE, context NARRATIVE_QUOTE.
 3. Customer says "damn that hurts" after hearing the balance -> flag true, speaker_role CUSTOMER, severity MILD, context SELF_EXPRESSION.
+4. [NEGATIVE EXAMPLE] Agent says "I understand you may feel frustrated, but let's discuss your options" after a customer used profanity -> flag false, severity NONE. The agent is de-escalating and acknowledging the customer's emotional state. This is not profanity — do not flag an agent for responding professionally to a customer's language.
 
 Transcript:
 {{TRANSCRIPT}}
