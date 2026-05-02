@@ -31,6 +31,7 @@ Rules:
 - Distinguish full verification from partial verification when only one factor is confirmed or the sequence is incomplete.
 - Explicitly identify disclosure before any verification attempt begins.
 - For voicemail or wrong-person cases, explain why verification status is NOT_APPLICABLE or UNVERIFIED.
+- The notes field must only reference information explicitly present in the transcript. Do not infer, assume, or add context not found in the transcript text.
 
 Examples:
 1. Agent states the exact balance before asking DOB -> violation YES, verification_status UNVERIFIED, violation_type NO_VERIFICATION.

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import logging
 from pathlib import Path
 from typing import TypeVar
 
@@ -9,7 +10,44 @@ from pydantic import BaseModel, ValidationError
 from call_evaluation.config import RuntimeState, get_settings
 from call_evaluation.services.exceptions import LLMUnavailableError
 
+logger = logging.getLogger(__name__)
+
 ModelT = TypeVar("ModelT", bound=BaseModel)
+
+_LLM_TIMEOUT_SECONDS = 30.0
+
+try:  # openai may not be installed in all environments
+    from openai import APITimeoutError as _OpenAITimeoutError
+except ImportError:  # pragma: no cover
+    _OpenAITimeoutError = None  # type: ignore[assignment,misc]
+
+_ENUM_SAFE_DEFAULTS: dict[str, tuple[set[str], str]] = {
+    "violation": ({"YES", "NO"}, "NO"),
+    "verification_status": ({"VERIFIED", "PARTIAL", "UNVERIFIED", "NOT_APPLICABLE"}, "UNVERIFIED"),
+    "violation_type": ({"NO_VERIFICATION", "ACCOUNT_DETAILS_BEFORE_VERIFICATION", "NOT_APPLICABLE"}, "NOT_APPLICABLE"),
+    "severity": ({"NONE", "MILD", "MODERATE", "SEVERE"}, "NONE"),
+    "context": ({"DIRECTED_AT_AGENT", "DIRECTED_AT_CUSTOMER", "SELF_EXPRESSION", "NARRATIVE_QUOTE", "AMBIENT"}, "AMBIENT"),
+    "sentiment": ({"POSITIVE", "NEUTRAL", "NEGATIVE"}, "NEUTRAL"),
+}
+
+
+def _sanitize_enum_fields(parsed: dict) -> dict:
+    """Coerce any out-of-range enum values to safe defaults before Pydantic sees them."""
+    for field, (allowed, default) in _ENUM_SAFE_DEFAULTS.items():
+        if field not in parsed:
+            continue
+        value = parsed[field]
+        if isinstance(value, str) and value.upper() in allowed:
+            parsed[field] = value.upper()
+        elif value not in allowed:
+            logger.warning(
+                "LLM returned unexpected value %r for field %r — falling back to %r",
+                value,
+                field,
+                default,
+            )
+            parsed[field] = default
+    return parsed
 
 
 class LLMClient:
@@ -58,18 +96,55 @@ class LLMClient:
         self.require_available()
         assert self._client is not None
 
-        response = self._client.chat.completions.create(
-            model=self.settings.llm_model,
-            temperature=0.0,
-            response_format={"type": "json_object"},
-            messages=[
-                {"role": "system", "content": "Return valid JSON only."},
-                {"role": "user", "content": prompt},
-            ],
-        )
+        try:
+            response = self._client.chat.completions.create(
+                model=self.settings.llm_model,
+                temperature=0.0,
+                timeout=_LLM_TIMEOUT_SECONDS,
+                response_format={"type": "json_object"},
+                messages=[
+                    {"role": "system", "content": "Return valid JSON only."},
+                    {"role": "user", "content": prompt},
+                ],
+            )
+        except Exception as exc:
+            if self._is_timeout(exc):
+                logger.warning("LLM request timed out after %ss — returning safe fallback result.", _LLM_TIMEOUT_SECONDS)
+                return self._safe_fallback(response_model, "LLM request timed out")
+            raise LLMUnavailableError(f"LLM request failed: {exc}") from exc
+
         content = response.choices[0].message.content or "{}"
         try:
             parsed = json.loads(content)
+        except json.JSONDecodeError as exc:
+            raise LLMUnavailableError(f"LLM response was not valid JSON: {exc}") from exc
+
+        parsed = _sanitize_enum_fields(parsed)
+
+        try:
             return response_model.model_validate(parsed)
-        except (json.JSONDecodeError, ValidationError) as exc:
-            raise LLMUnavailableError(f"LLM response failed schema validation: {exc}") from exc
+        except ValidationError as exc:
+            logger.warning("LLM response failed schema validation after sanitization: %s", exc)
+            return self._safe_fallback(response_model, "LLM response failed schema validation")
+
+    @staticmethod
+    def _is_timeout(exc: Exception) -> bool:
+        if _OpenAITimeoutError is not None and isinstance(exc, _OpenAITimeoutError):
+            return True
+        return "timeout" in str(exc).lower() or "timed out" in str(exc).lower()
+
+    def _safe_fallback(self, response_model: type[ModelT], reason: str) -> ModelT:
+        """Build a minimal valid instance of response_model using safe defaults."""
+        defaults: dict[str, object] = {
+            "flag": False,
+            "speaker_role": "UNKNOWN",
+            "severity": "NONE",
+            "sentiment": "NEUTRAL",
+            "context": "AMBIENT",
+            "violation": "NO",
+            "verification_status": "UNVERIFIED",
+            "violation_type": "NOT_APPLICABLE",
+            "evidence": [],
+            "notes": reason,
+        }
+        return response_model.model_validate(defaults)

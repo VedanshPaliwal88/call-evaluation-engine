@@ -29,6 +29,7 @@ Rules:
 - Never invent enum values.
 - If no profanity is present for the target speaker role, set flag=false and severity=NONE.
 - Directed profanity at another person is more severe than self-expression or quoting.
+- The notes field must only reference information explicitly present in the transcript. Do not infer, assume, or add context not found in the transcript text.
 
 Examples:
 1. Customer says "you people are fckn useless" to the agent -> flag true, speaker_role CUSTOMER, severity SEVERE, context DIRECTED_AT_AGENT.
