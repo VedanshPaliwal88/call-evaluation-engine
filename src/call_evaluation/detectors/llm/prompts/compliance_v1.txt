@@ -9,7 +9,7 @@ Output JSON schema:
 {
   "violation": "YES" | "NO",
   "verification_status": "VERIFIED" | "PARTIAL" | "UNVERIFIED" | "NOT_APPLICABLE",
-  "violation_type": string,
+  "violation_type": "NOT_APPLICABLE" | "NO_VERIFICATION" | "ACCOUNT_DETAILS_BEFORE_VERIFICATION",
   "notes": string,
   "evidence": [
     {
@@ -27,12 +27,16 @@ Rules:
 - Never invent enum values.
 - Focus on whether sensitive information was disclosed by the agent before verification.
 - Consider implied verification when the intent and sequence support it.
+- Distinguish full verification from partial verification when only one factor is confirmed or the sequence is incomplete.
+- Explicitly identify disclosure before any verification attempt begins.
 - For voicemail or wrong-person cases, explain why verification status is NOT_APPLICABLE or UNVERIFIED.
 
 Examples:
-1. Agent states the exact balance before asking DOB -> violation YES, verification_status UNVERIFIED.
-2. Agent confirms DOB and address before discussing the account -> violation NO, verification_status VERIFIED.
-3. Agent leaves a voicemail mentioning an overdue balance -> violation YES, verification_status NOT_APPLICABLE.
+1. Agent states the exact balance before asking DOB -> violation YES, verification_status UNVERIFIED, violation_type NO_VERIFICATION.
+2. Agent confirms DOB and address before discussing the account -> violation NO, verification_status VERIFIED, violation_type NOT_APPLICABLE.
+3. Agent leaves a voicemail without disclosing a specific amount or account details -> violation NO, verification_status NOT_APPLICABLE, violation_type NOT_APPLICABLE.
+4. Agent asks only for the customer's first name, then shares the balance -> violation YES, verification_status PARTIAL, violation_type NO_VERIFICATION.
+5. Agent shares account details before verification but later completes verification -> violation YES, verification_status VERIFIED, violation_type ACCOUNT_DETAILS_BEFORE_VERIFICATION.
 
 Transcript:
 {{TRANSCRIPT}}

@@ -3,7 +3,9 @@ from __future__ import annotations
 from pathlib import Path
 
 from call_evaluation.models.analysis import (
+    ComplianceViolation,
     ContextLabel,
+    PrivacyVerificationStatus,
     SentimentLabel,
     SeverityLabel,
 )
@@ -54,3 +56,19 @@ def test_llm_client_uses_zero_temperature() -> None:
     except RuntimeError:
         pass
     assert llm_client._client.chat.completions.kwargs["temperature"] == 0.0
+
+
+def test_compliance_prompt_contains_expected_enums_and_edge_cases() -> None:
+    prompt_text = Path("src/call_evaluation/detectors/llm/prompts/compliance_v1.txt").read_text(encoding="utf-8")
+    for value in PrivacyVerificationStatus:
+        assert value.value in prompt_text
+    for value in ComplianceViolation:
+        assert value.value in prompt_text
+    for phrase in [
+        "voicemail",
+        "wrong-person",
+        "implied verification",
+        "partial verification",
+        "disclosure before any verification attempt begins",
+    ]:
+        assert phrase in prompt_text.lower()

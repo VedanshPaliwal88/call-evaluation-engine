@@ -10,20 +10,20 @@ from call_evaluation.models.analysis import (
     SpecialCallType,
 )
 from call_evaluation.models.transcript import SpeakerRole, TranscriptFilePayload
-from call_evaluation.utils.text import normalize_for_matching, normalize_for_verification
+from call_evaluation.utils.text import normalize_for_verification
 
 
 DISCLOSURE_PATTERNS = [
-    re.compile(r"\byour balance\b"),
-    re.compile(r"\boutstanding balance\b"),
-    re.compile(r"\boverdue balance\b"),
     re.compile(r"\bbalance of\b"),
-    re.compile(r"\byour account details?\b"),
-    re.compile(r"\baccount details?\b"),
+    re.compile(r"\bbalance (?:is|was)\b"),
+    re.compile(r"\bcurrent balance\b"),
+    re.compile(r"\byour overdue balance is\b"),
+    re.compile(r"\boverdue balance is\b"),
     re.compile(r"\byou owe\b"),
     re.compile(r"\blast payment was\b"),
     re.compile(r"\bi see your last payment\b"),
 ]
+NAME_ONLY_PATTERN = re.compile(r"\b(?:this is|it's|it is|my name is|speaking)\s+[a-z]+(?:\s+[a-z]+)?\b")
 VERIFICATION_PATTERNS = [
     re.compile(r"\bdate of birth\b"),
     re.compile(r"\bdob\b"),
@@ -62,11 +62,12 @@ class RegexComplianceDetector:
 
         if SpecialCallType.VOICEMAIL.value in tags:
             voicemail_evidence = transcript.turns[:1]
+            voicemail_has_specific_disclosure = self._contains_specific_disclosure(transcript)
             return ComplianceAnalysisResult(
                 call_id=transcript.call_id,
-                violation=ComplianceViolation.YES if self._contains_disclosure(transcript) else ComplianceViolation.NO,
+                violation=ComplianceViolation.YES if voicemail_has_specific_disclosure else ComplianceViolation.NO,
                 verification_status=PrivacyVerificationStatus.NOT_APPLICABLE,
-                violation_type="VOICEMAIL_DISCLOSURE" if self._contains_disclosure(transcript) else "VOICEMAIL_NO_DISCLOSURE",
+                violation_type="NO_VERIFICATION" if voicemail_has_specific_disclosure else "NOT_APPLICABLE",
                 evidence=[
                     EvidenceSpan(
                         speaker_role=turn.speaker.value,
@@ -85,59 +86,77 @@ class RegexComplianceDetector:
                 call_id=transcript.call_id,
                 violation=ComplianceViolation.NO,
                 verification_status=PrivacyVerificationStatus.NOT_APPLICABLE,
-                violation_type="WRONG_PERSON",
+                violation_type="NOT_APPLICABLE",
                 evidence=[],
                 notes="Wrong-person call detected; no valid borrower verification flow applies.",
             )
 
         verified = False
+        partial = False
         pending_verification = False
+        pre_verification_disclosure: list[EvidenceSpan] = []
         evidence: list[EvidenceSpan] = []
 
         for turn in transcript.turns:
-            normalized = normalize_for_matching(turn.text)
-            verification_text = normalize_for_verification(turn.text)
+            normalized = normalize_for_verification(turn.text)
+            verification_text = normalized
             if turn.speaker == SpeakerRole.AGENT and any(pattern.search(normalized) for pattern in VERIFICATION_PATTERNS):
                 pending_verification = True
             elif turn.speaker == SpeakerRole.CUSTOMER and pending_verification and self._looks_like_customer_confirmation(verification_text):
                 verified = True
                 pending_verification = False
+            elif turn.speaker == SpeakerRole.CUSTOMER and self._looks_like_name_only_confirmation(verification_text):
+                partial = True
 
             if turn.speaker == SpeakerRole.AGENT and self._contains_disclosure_text(normalized):
-                evidence.append(
-                    EvidenceSpan(
-                        speaker_role=turn.speaker.value,
-                        text=turn.text,
-                        stime=turn.stime,
-                        etime=turn.etime,
-                        reason="Agent disclosed potentially sensitive account information.",
-                    )
+                span = EvidenceSpan(
+                    speaker_role=turn.speaker.value,
+                    text=turn.text,
+                    stime=turn.stime,
+                    etime=turn.etime,
+                    reason="Agent disclosed potentially sensitive account information.",
                 )
+                evidence.append(span)
                 if not verified:
-                    return ComplianceAnalysisResult(
-                        call_id=transcript.call_id,
-                        violation=ComplianceViolation.YES,
-                        verification_status=PrivacyVerificationStatus.UNVERIFIED,
-                        violation_type="DISCLOSURE_BEFORE_VERIFICATION",
-                        evidence=evidence,
-                        notes="Regex path found sensitive disclosure before full verification.",
-                    )
+                    pre_verification_disclosure.append(span)
+
+        if pre_verification_disclosure:
+            if verified:
+                return ComplianceAnalysisResult(
+                    call_id=transcript.call_id,
+                    violation=ComplianceViolation.YES,
+                    verification_status=PrivacyVerificationStatus.VERIFIED,
+                    violation_type="ACCOUNT_DETAILS_BEFORE_VERIFICATION",
+                    evidence=pre_verification_disclosure,
+                    notes="Regex path found disclosure before verification was fully completed.",
+                )
+            return ComplianceAnalysisResult(
+                call_id=transcript.call_id,
+                violation=ComplianceViolation.YES,
+                verification_status=PrivacyVerificationStatus.PARTIAL if partial else PrivacyVerificationStatus.UNVERIFIED,
+                violation_type="NO_VERIFICATION",
+                evidence=pre_verification_disclosure,
+                notes="Regex path found sensitive disclosure before full verification.",
+            )
 
         return ComplianceAnalysisResult(
             call_id=transcript.call_id,
             violation=ComplianceViolation.NO,
-            verification_status=PrivacyVerificationStatus.VERIFIED if verified else PrivacyVerificationStatus.UNVERIFIED,
-            violation_type="NO_VIOLATION",
+            verification_status=PrivacyVerificationStatus.VERIFIED if verified else PrivacyVerificationStatus.NOT_APPLICABLE,
+            violation_type="NOT_APPLICABLE",
             evidence=evidence,
             notes="No pre-verification disclosure was detected by regex rules.",
         )
 
     def _contains_disclosure(self, transcript: TranscriptFilePayload) -> bool:
-        return any(self._contains_disclosure_text(normalize_for_matching(turn.text)) for turn in transcript.turns if turn.speaker == SpeakerRole.AGENT)
+        return any(self._contains_disclosure_text(normalize_for_verification(turn.text)) for turn in transcript.turns if turn.speaker == SpeakerRole.AGENT)
+
+    def _contains_specific_disclosure(self, transcript: TranscriptFilePayload) -> bool:
+        return any(self._contains_disclosure_text(normalize_for_verification(turn.text)) for turn in transcript.turns if turn.speaker == SpeakerRole.AGENT)
 
     @staticmethod
     def _contains_disclosure_text(normalized_text: str) -> bool:
-        if re.search(r"\b(a|the)\s+balance\b", normalized_text) and not re.search(r"\b(your|outstanding|overdue|owe|account|payment)\b", normalized_text):
+        if re.search(r"\b(a|the)\s+balance\b", normalized_text) and not re.search(r"\b(your|owe|payment)\b", normalized_text):
             return False
         return any(pattern.search(normalized_text) for pattern in DISCLOSURE_PATTERNS)
 
@@ -155,3 +174,8 @@ class RegexComplianceDetector:
             ADDRESS_SPELLED_PATTERN,
         ]
         return any(pattern.search(normalized_text) for pattern in verification_patterns)
+
+    @staticmethod
+    def _looks_like_name_only_confirmation(normalized_text: str) -> bool:
+        normalized_text = normalized_text.strip()
+        return bool(NAME_ONLY_PATTERN.search(normalized_text))
