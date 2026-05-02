@@ -82,6 +82,8 @@ class ComplianceAnalysisResult(BaseModel):
 class MetricResult(BaseModel):
     call_id: str
     total_duration: float = 0.0
+    agent_talk_time: float = 0.0
+    customer_talk_time: float = 0.0
     agent_talk_pct: float = 0.0
     customer_talk_pct: float = 0.0
     silence_pct: float = 0.0
