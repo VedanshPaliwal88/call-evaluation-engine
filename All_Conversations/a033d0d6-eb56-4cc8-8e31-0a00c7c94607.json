@@ -1,0 +1,56 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark calling from XYZ Collections. Am I speaking with Sarah?",
+        "stime": 0,
+        "etime": 8
+    },
+    {
+        "speaker": "Customer",
+        "text": "No, this is not Sarah. You have the wrong number.",
+        "stime": 7.5,
+        "etime": 11
+    },
+    {
+        "speaker": "Agent",
+        "text": "I apologize for the mix-up. I'm calling about an outstanding balance on an account.",
+        "stime": 10,
+        "etime": 18
+    },
+    {
+        "speaker": "Customer",
+        "text": "I really don't think I know anything about that.",
+        "stime": 17,
+        "etime": 21
+    },
+    {
+        "speaker": "Agent",
+        "text": "Could you confirm your name to ensure I'm not reaching the right person?",
+        "stime": 20,
+        "etime": 27
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, my name is Emily, and I don\u2019t have any accounts with your company.",
+        "stime": 26,
+        "etime": 34
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you, Emily. I\u2019ll make sure to update our records.",
+        "stime": 33,
+        "etime": 40
+    },
+    {
+        "speaker": "Customer",
+        "text": "I appreciate that. Have a good day.",
+        "stime": 39,
+        "etime": 44
+    },
+    {
+        "speaker": "Agent",
+        "text": "You too! Take care.",
+        "stime": 43,
+        "etime": 50
+    }
+]

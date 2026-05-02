@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm doing well, thank you. How can I help you?",
+        "stime": 8,
+        "etime": 12
+    },
+    {
+        "speaker": "Agent",
+        "text": "I\u2019m calling about your overdue account. First, can you verify your date of birth for me?",
+        "stime": 10,
+        "etime": 20
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's March 15, 1990.",
+        "stime": 19,
+        "etime": 22
+    },
+    {
+        "speaker": "Agent",
+        "text": "Got it. You have an outstanding balance of $500. How do you plan on handling this?",
+        "stime": 21,
+        "etime": 32
+    },
+    {
+        "speaker": "Customer",
+        "text": "I need more time to figure it out. Can we set up a payment plan?",
+        "stime": 30,
+        "etime": 36
+    },
+    {
+        "speaker": "Agent",
+        "text": "Listen, lady, you\u2019ve got to sort your shit out. This isn\u2019t a charity.",
+        "stime": 35,
+        "etime": 45
+    },
+    {
+        "speaker": "Customer",
+        "text": "I understand the urgency, but I need to discuss this further.",
+        "stime": 44,
+        "etime": 48
+    },
+    {
+        "speaker": "Agent",
+        "text": "I don\u2019t give a damn what you need! You owe money, and you better pay it!",
+        "stime": 47,
+        "etime": 56
+    },
+    {
+        "speaker": "Customer",
+        "text": "I will do my best to resolve this, but yelling isn't going to help.",
+        "stime": 55,
+        "etime": 60
+    },
+    {
+        "speaker": "Agent",
+        "text": "You\u2019re making this harder than it has to be. Just pay up already!",
+        "stime": 59,
+        "etime": 66
+    },
+    {
+        "speaker": "Customer",
+        "text": "I\u2019m trying to be cooperative here. Can we please keep this civil?",
+        "stime": 65,
+        "etime": 70
+    },
+    {
+        "speaker": "Agent",
+        "text": "Civil? Ha! You\u2019re the one dodging payments. Get your act together!",
+        "stime": 69,
+        "etime": 77
+    },
+    {
+        "speaker": "Customer",
+        "text": "I will ensure it's taken care of. Thank you for your time.",
+        "stime": 76,
+        "etime": 80
+    },
+    {
+        "speaker": "Agent",
+        "text": "Yeah, whatever. Just don\u2019t make me call you again about this!",
+        "stime": 79,
+        "etime": 86
+    }
+]

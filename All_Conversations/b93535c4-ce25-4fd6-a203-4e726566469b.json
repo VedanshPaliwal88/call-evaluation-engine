@@ -1,0 +1,80 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, is this Alex Johnson?",
+        "stime": 0,
+        "etime": 5
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, this is Alex. Who's calling?",
+        "stime": 5.5,
+        "etime": 9
+    },
+    {
+        "speaker": "Agent",
+        "text": "Hi Alex, I'm Laura from XYZ Collections. I'm calling regarding your account. Can I please verify your date of birth?",
+        "stime": 8,
+        "etime": 18
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's April 15, 1990.",
+        "stime": 18.2,
+        "etime": 21
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you, Alex. Now, can you please confirm your address for me?",
+        "stime": 21.5,
+        "etime": 26
+    },
+    {
+        "speaker": "Customer",
+        "text": "It's 123 Maple Street, Springfield.",
+        "stime": 26.2,
+        "etime": 30
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for that information. You currently have an outstanding balance of $250 on your account. Would you like to discuss payment options?",
+        "stime": 30.5,
+        "etime": 42
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, I would like to know how I can pay it off.",
+        "stime": 42.2,
+        "etime": 46
+    },
+    {
+        "speaker": "Agent",
+        "text": "You can pay online via our website or set up a payment plan if that works better for you.",
+        "stime": 46.5,
+        "etime": 56
+    },
+    {
+        "speaker": "Customer",
+        "text": "I think I'll pay online today.",
+        "stime": 56.2,
+        "etime": 59
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great choice! I will send you an email with the payment link shortly.",
+        "stime": 59.5,
+        "etime": 67
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you for your help!",
+        "stime": 67.5,
+        "etime": 70
+    },
+    {
+        "speaker": "Agent",
+        "text": "You're welcome, Alex. Have a great day!",
+        "stime": 70.2,
+        "etime": 75
+    }
+]

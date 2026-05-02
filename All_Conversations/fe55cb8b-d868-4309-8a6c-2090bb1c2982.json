@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "Hi Mark, I'm doing alright, thanks. What can I help you with?",
+        "stime": 8,
+        "etime": 13
+    },
+    {
+        "speaker": "Agent",
+        "text": "I'm calling regarding your account with Quick Loans. Before we proceed, could you please verify your date of birth?",
+        "stime": 12,
+        "etime": 22
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's July 15, 1990.",
+        "stime": 23,
+        "etime": 26
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for that information. Can you also confirm your current address?",
+        "stime": 25,
+        "etime": 33
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, it's 123 Maple Street, Springfield.",
+        "stime": 34,
+        "etime": 38
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great! I can confirm your identity. You have an outstanding balance of $250. How would you like to proceed with the payment?",
+        "stime": 37,
+        "etime": 48
+    },
+    {
+        "speaker": "Customer",
+        "text": "I can pay $100 today and the rest next week.",
+        "stime": 49,
+        "etime": 54
+    },
+    {
+        "speaker": "Agent",
+        "text": "That sounds good. I will set up the payment for $100 today. Can you please provide your payment method?",
+        "stime": 53,
+        "etime": 62
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'll use my debit card, the number is 4567-8910-1112-1314.",
+        "stime": 63,
+        "etime": 68
+    },
+    {
+        "speaker": "Agent",
+        "text": "Please hold on. I will need to take you through a secure process for that information.",
+        "stime": 67,
+        "etime": 77
+    },
+    {
+        "speaker": "Customer",
+        "text": "Alright, I'm ready.",
+        "stime": 78,
+        "etime": 81
+    },
+    {
+        "speaker": "Agent",
+        "text": "Perfect! Thank you for your cooperation. Your payment will be processed shortly.",
+        "stime": 80,
+        "etime": 90
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you for your help, Mark.",
+        "stime": 91,
+        "etime": 95
+    },
+    {
+        "speaker": "Agent",
+        "text": "You're welcome! Have a great day!",
+        "stime": 96,
+        "etime": 102
+    }
+]

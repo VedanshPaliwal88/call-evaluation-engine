@@ -1,0 +1,32 @@
+[
+    {
+        "speaker": "Customer",
+        "text": "You have reached the voicemail of John Smith. Please leave a message after the beep.",
+        "stime": 0,
+        "etime": 8
+    },
+    {
+        "speaker": "Agent",
+        "text": "Hello John, this is Lisa from Stellar Collections. I am calling about your overdue balance.",
+        "stime": 9,
+        "etime": 20
+    },
+    {
+        "speaker": "Customer",
+        "text": "To leave a message, please include your name and number.",
+        "stime": 21,
+        "etime": 30
+    },
+    {
+        "speaker": "Agent",
+        "text": "It's important to discuss your options for the account. You can reach me at 1-800-555-0199.",
+        "stime": 31,
+        "etime": 42
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you for your message. I will get back to you as soon as possible.",
+        "stime": 43,
+        "etime": 52
+    }
+]

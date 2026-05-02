@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is John calling from XYZ Collections. Is this Mr. Smith?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, this is he. What is this about?",
+        "stime": 7.5,
+        "etime": 11
+    },
+    {
+        "speaker": "Agent",
+        "text": "I am reaching out to discuss your account with XYZ Bank. To proceed, can you please verify your date of birth?",
+        "stime": 10,
+        "etime": 21
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's January 15, 1985.",
+        "stime": 22,
+        "etime": 25
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you, Mr. Smith. Can you also confirm your current address for me?",
+        "stime": 24,
+        "etime": 30
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, it's 123 Elm Street, Springfield.",
+        "stime": 31,
+        "etime": 35
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thanks for confirming that information. You currently have an outstanding balance of $450. How do you wish to proceed with the payment?",
+        "stime": 34,
+        "etime": 48
+    },
+    {
+        "speaker": "Customer",
+        "text": "I can pay half today and the rest next month.",
+        "stime": 47,
+        "etime": 53
+    },
+    {
+        "speaker": "Agent",
+        "text": "That sounds reasonable. So, would you like to make a payment of $225 today?",
+        "stime": 52,
+        "etime": 60
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, I can do that.",
+        "stime": 59,
+        "etime": 62
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great! I will process that for you. May I have your payment method, please?",
+        "stime": 61,
+        "etime": 68
+    },
+    {
+        "speaker": "Customer",
+        "text": "I will use my credit card.",
+        "stime": 67,
+        "etime": 70
+    },
+    {
+        "speaker": "Agent",
+        "text": "Perfect, please provide the card details when you're ready.",
+        "stime": 69,
+        "etime": 73
+    },
+    {
+        "speaker": "Customer",
+        "text": "Okay, it's 4111 1111 1111 1111, expires 10/25.",
+        "stime": 72,
+        "etime": 75
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for that information, Mr. Smith. I will process this and send you a confirmation shortly.",
+        "stime": 74,
+        "etime": 85
+    }
+]

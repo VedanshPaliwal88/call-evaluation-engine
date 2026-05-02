@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mike from XYZ Collections. How the hell are you today?",
+        "stime": 0,
+        "etime": 6
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm doing well, thank you. How can I help you?",
+        "stime": 7,
+        "etime": 11
+    },
+    {
+        "speaker": "Agent",
+        "text": "I need you to verify your date of birth before I spill the beans about your account. What is it?",
+        "stime": 10,
+        "etime": 20
+    },
+    {
+        "speaker": "Customer",
+        "text": "It's June 15, 1985.",
+        "stime": 19,
+        "etime": 22
+    },
+    {
+        "speaker": "Agent",
+        "text": "Sure, whatever. You've got a balance of three thousand dollars. You gonna pay it or what?",
+        "stime": 21,
+        "etime": 28
+    },
+    {
+        "speaker": "Customer",
+        "text": "I\u2019m currently looking into my options for payment.",
+        "stime": 29,
+        "etime": 34
+    },
+    {
+        "speaker": "Agent",
+        "text": "Options? What the hell does that even mean? You owe money, pay up!",
+        "stime": 33,
+        "etime": 39
+    },
+    {
+        "speaker": "Customer",
+        "text": "I understand, but I need to make sure it's feasible for me.",
+        "stime": 38,
+        "etime": 42
+    },
+    {
+        "speaker": "Agent",
+        "text": "Feasible? Stop giving me excuses. Just pick a damn payment method!",
+        "stime": 41,
+        "etime": 46
+    },
+    {
+        "speaker": "Customer",
+        "text": "I can set up a payment plan if that's acceptable.",
+        "stime": 45,
+        "etime": 49
+    },
+    {
+        "speaker": "Agent",
+        "text": "A payment plan? Oh great, just what I needed to hear. You sound like a real winner.",
+        "stime": 48,
+        "etime": 54
+    },
+    {
+        "speaker": "Customer",
+        "text": "I\u2019m just trying to resolve this responsibly.",
+        "stime": 53,
+        "etime": 57
+    },
+    {
+        "speaker": "Agent",
+        "text": "Responsibly? I don\u2019t care about your sob story. Pay what you owe!",
+        "stime": 56,
+        "etime": 62
+    },
+    {
+        "speaker": "Customer",
+        "text": "I will get back to you once I have everything sorted out.",
+        "stime": 61,
+        "etime": 65
+    },
+    {
+        "speaker": "Agent",
+        "text": "Yeah, good luck with that. I\u2019ll be waiting, and don\u2019t take too long!",
+        "stime": 64,
+        "etime": 70
+    }
+]

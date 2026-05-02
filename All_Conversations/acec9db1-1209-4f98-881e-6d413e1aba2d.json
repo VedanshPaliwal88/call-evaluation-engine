@@ -1,0 +1,74 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark calling from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 6
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm doing well, thanks. What\u2019s this about?",
+        "stime": 7,
+        "etime": 11
+    },
+    {
+        "speaker": "Agent",
+        "text": "I\u2019m contacting you regarding an overdue balance on your account with Global Finance. Can I have your full name to proceed?",
+        "stime": 10,
+        "etime": 18
+    },
+    {
+        "speaker": "Customer",
+        "text": "It's Sarah Johnson.",
+        "stime": 19,
+        "etime": 21
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you, Sarah. You have a balance of two hundred fifty dollars. When can we expect payment?",
+        "stime": 20,
+        "etime": 30
+    },
+    {
+        "speaker": "Customer",
+        "text": "I need a little more time. Can I pay next week?",
+        "stime": 29,
+        "etime": 34
+    },
+    {
+        "speaker": "Agent",
+        "text": "I can note that down. Just to confirm, would you like to set a date for next week?",
+        "stime": 33,
+        "etime": 40
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, let\u2019s say next Friday.",
+        "stime": 39,
+        "etime": 43
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great, I have scheduled your payment for next Friday. Is there anything else I can help you with today?",
+        "stime": 42,
+        "etime": 51
+    },
+    {
+        "speaker": "Customer",
+        "text": "No, that\u2019s all for now. Thank you.",
+        "stime": 50,
+        "etime": 55
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for your time, Sarah. Have a good day!",
+        "stime": 54,
+        "etime": 60
+    },
+    {
+        "speaker": "Customer",
+        "text": "You too, goodbye!",
+        "stime": 59,
+        "etime": 62
+    }
+]

@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Sarah calling from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "Hi Sarah, I\u2019m doing well, thanks. What\u2019s this about?",
+        "stime": 8,
+        "etime": 13
+    },
+    {
+        "speaker": "Agent",
+        "text": "I\u2019m calling regarding your outstanding balance with ABC Finance. Can you please verify your address for me?",
+        "stime": 12,
+        "etime": 22
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it\u2019s 123 Maple Street, Springfield.",
+        "stime": 23,
+        "etime": 27
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for that. Can you also confirm your date of birth?",
+        "stime": 26,
+        "etime": 32
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, it\u2019s January 15, 1990.",
+        "stime": 33,
+        "etime": 36
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for confirming your identity. You currently have a balance of $500. How would you like to address this today?",
+        "stime": 35,
+        "etime": 45
+    },
+    {
+        "speaker": "Customer",
+        "text": "I\u2019d like to set up a payment plan.",
+        "stime": 46,
+        "etime": 50
+    },
+    {
+        "speaker": "Agent",
+        "text": "Of course, we can set that up. Would you prefer weekly or monthly payments?",
+        "stime": 49,
+        "etime": 58
+    },
+    {
+        "speaker": "Customer",
+        "text": "Monthly payments would work best for me.",
+        "stime": 59,
+        "etime": 63
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great! I\u2019ll set up a monthly payment plan for you. What day of the month would you like to make your payment?",
+        "stime": 62,
+        "etime": 73
+    },
+    {
+        "speaker": "Customer",
+        "text": "The 15th of each month is good for me.",
+        "stime": 74,
+        "etime": 78
+    },
+    {
+        "speaker": "Agent",
+        "text": "Perfect. I\u2019ve noted that down. Thank you for your cooperation today.",
+        "stime": 77,
+        "etime": 85
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you, Sarah. I appreciate your help.",
+        "stime": 86,
+        "etime": 90
+    },
+    {
+        "speaker": "Agent",
+        "text": "You're welcome! Have a great day.",
+        "stime": 91,
+        "etime": 95
+    }
+]

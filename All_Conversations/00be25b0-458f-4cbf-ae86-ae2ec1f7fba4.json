@@ -1,0 +1,50 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, is this Mr. Johnson? This is Lisa calling from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm sorry, but I think you have the wrong person. My name is Sarah.",
+        "stime": 6.5,
+        "etime": 12
+    },
+    {
+        "speaker": "Agent",
+        "text": "Oh, I apologize for the confusion, Sarah. I'm reaching out about a debt related to an outstanding balance with Definite Bank.",
+        "stime": 11,
+        "etime": 19
+    },
+    {
+        "speaker": "Customer",
+        "text": "I don't have any account with Definite Bank. You might want to check your records.",
+        "stime": 18,
+        "etime": 24
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for letting me know. I will make a note to update our records.",
+        "stime": 23,
+        "etime": 30
+    },
+    {
+        "speaker": "Customer",
+        "text": "I appreciate that. Is there anything else I need to do?",
+        "stime": 29,
+        "etime": 34
+    },
+    {
+        "speaker": "Agent",
+        "text": "No, that's all. I'm sorry for any inconvenience caused. Have a great day!",
+        "stime": 33,
+        "etime": 40
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you, you too!",
+        "stime": 39,
+        "etime": 42
+    }
+]

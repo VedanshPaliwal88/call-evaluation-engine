@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, is this Mr. Johnson? This is Sarah calling from XYZ Collections.",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, this is Mr. Johnson speaking. How can I help you?",
+        "stime": 8,
+        "etime": 11
+    },
+    {
+        "speaker": "Agent",
+        "text": "I'm calling today regarding an outstanding balance on your account. Can I take a moment of your time to discuss this?",
+        "stime": 10,
+        "etime": 18
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, I have a moment. What is the balance?",
+        "stime": 19,
+        "etime": 23
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you. You currently have a balance of three hundred dollars due. Can you confirm your phone number for account verification?",
+        "stime": 22,
+        "etime": 34
+    },
+    {
+        "speaker": "Customer",
+        "text": "It's 555-123-4567, but why do you need that?",
+        "stime": 35,
+        "etime": 40
+    },
+    {
+        "speaker": "Agent",
+        "text": "I appreciate that. As I mentioned, your balance is three hundred dollars. How would you like to proceed with the payment?",
+        "stime": 39,
+        "etime": 51
+    },
+    {
+        "speaker": "Customer",
+        "text": "I\u2019m not sure I can pay the full amount right now.",
+        "stime": 52,
+        "etime": 56
+    },
+    {
+        "speaker": "Agent",
+        "text": "I understand. We can discuss payment plans or options to help you settle this balance.",
+        "stime": 55,
+        "etime": 63
+    },
+    {
+        "speaker": "Customer",
+        "text": "That would be helpful. What do you suggest?",
+        "stime": 64,
+        "etime": 67
+    },
+    {
+        "speaker": "Agent",
+        "text": "We could set up a payment plan where you pay a hundred dollars a month for three months. Does that work for you?",
+        "stime": 66,
+        "etime": 78
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, that sounds manageable.",
+        "stime": 79,
+        "etime": 82
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great! I\u2019ll send you a confirmation email with the details. Thank you for your cooperation today.",
+        "stime": 81,
+        "etime": 92
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you! I appreciate your help.",
+        "stime": 93,
+        "etime": 96
+    },
+    {
+        "speaker": "Agent",
+        "text": "You're welcome! If you have any further questions, feel free to reach out. Have a great day!",
+        "stime": 95,
+        "etime": 105
+    }
+]

@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mike from XYZ Collections. Who am I speaking with today?",
+        "stime": 0,
+        "etime": 8
+    },
+    {
+        "speaker": "Customer",
+        "text": "Hi Mike, this is Sarah.",
+        "stime": 8.5,
+        "etime": 11
+    },
+    {
+        "speaker": "Agent",
+        "text": "Alright, Sarah. Can you please verify your date of birth for me?",
+        "stime": 10,
+        "etime": 15
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's February 12, 1985.",
+        "stime": 15.5,
+        "etime": 17
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thanks, but I'm not sure if you're being honest. Can you give me your address instead?",
+        "stime": 16,
+        "etime": 24
+    },
+    {
+        "speaker": "Customer",
+        "text": "I live at 123 Maple Street, Springfield.",
+        "stime": 24.5,
+        "etime": 28
+    },
+    {
+        "speaker": "Agent",
+        "text": "Fine. So you do owe us $850. How do you plan to pay it, or are you just going to ignore it like everyone else?",
+        "stime": 27,
+        "etime": 36
+    },
+    {
+        "speaker": "Customer",
+        "text": "I intend to pay it, but I need a payment plan.",
+        "stime": 35.5,
+        "etime": 39
+    },
+    {
+        "speaker": "Agent",
+        "text": "A payment plan? Seriously? You think we're running a charity here? You have to pay up now!",
+        "stime": 38,
+        "etime": 46
+    },
+    {
+        "speaker": "Customer",
+        "text": "I understand your position, but I need options to manage this.",
+        "stime": 45.5,
+        "etime": 50
+    },
+    {
+        "speaker": "Agent",
+        "text": "Options? How about you just stop being so damn lazy and settle your debt? That's an option!",
+        "stime": 49,
+        "etime": 56
+    },
+    {
+        "speaker": "Customer",
+        "text": "I would appreciate it if you could speak respectfully.",
+        "stime": 55.5,
+        "etime": 58
+    },
+    {
+        "speaker": "Agent",
+        "text": "Respectful? You think I owe you respect? Pay your damn bills and maybe I will!",
+        "stime": 57,
+        "etime": 65
+    },
+    {
+        "speaker": "Customer",
+        "text": "I will escalate this conversation if it continues unprofessionally.",
+        "stime": 64.5,
+        "etime": 69
+    },
+    {
+        "speaker": "Agent",
+        "text": "Go ahead, I really don't care. Just get your money sorted out somehow!",
+        "stime": 68,
+        "etime": 75
+    }
+]

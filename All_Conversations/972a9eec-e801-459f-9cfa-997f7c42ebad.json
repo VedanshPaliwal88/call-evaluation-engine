@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mike from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "What the hell do you want? I\u2019m not in the mood for this crap!",
+        "stime": 6.5,
+        "etime": 12
+    },
+    {
+        "speaker": "Agent",
+        "text": "I understand this can be frustrating. I\u2019m calling about your outstanding balance with ABC Credit Services. Can you please verify your date of birth for security?",
+        "stime": 11,
+        "etime": 24
+    },
+    {
+        "speaker": "Customer",
+        "text": "Why the f*** should I tell you anything? Get lost!",
+        "stime": 23,
+        "etime": 29
+    },
+    {
+        "speaker": "Agent",
+        "text": "I appreciate your concern. I can only discuss your account once we confirm your identity. Your date of birth, please?",
+        "stime": 28,
+        "etime": 40
+    },
+    {
+        "speaker": "Customer",
+        "text": "It's none of your damn business! You\u2019re all a bunch of crooks!",
+        "stime": 39,
+        "etime": 44
+    },
+    {
+        "speaker": "Agent",
+        "text": "I understand you feel that way. However, to assist you, I need to verify your information. Could you just confirm your address?",
+        "stime": 43,
+        "etime": 56
+    },
+    {
+        "speaker": "Customer",
+        "text": "I don\u2019t have to give you s***! You\u2019re a joke!",
+        "stime": 55,
+        "etime": 59
+    },
+    {
+        "speaker": "Agent",
+        "text": "I\u2019m here to help you. If you could provide your address, I can give you more information regarding your account.",
+        "stime": 58,
+        "etime": 68
+    },
+    {
+        "speaker": "Customer",
+        "text": "You really think I'm gonna play your stupid games? Forget it!",
+        "stime": 67,
+        "etime": 73
+    },
+    {
+        "speaker": "Agent",
+        "text": "I assure you, I'm trying to assist. Without verification, I can't access your account details, which is important to resolve this matter.",
+        "stime": 72,
+        "etime": 85
+    },
+    {
+        "speaker": "Customer",
+        "text": "Ugh! Fine, it's 123 Maple St., you happy now?",
+        "stime": 84,
+        "etime": 89
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for that. I see you have a balance of $500. Would you like to discuss payment options?",
+        "stime": 88,
+        "etime": 98
+    },
+    {
+        "speaker": "Customer",
+        "text": "Whatever, just get on with it. I don\u2019t have all day!",
+        "stime": 97,
+        "etime": 103
+    },
+    {
+        "speaker": "Agent",
+        "text": "Absolutely, I can help with that. Let\u2019s go over your options now.",
+        "stime": 102,
+        "etime": 112
+    }
+]

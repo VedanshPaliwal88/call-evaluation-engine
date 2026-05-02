@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is James from XYZ Collections. Am I speaking with Sarah Johnson?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, this is Sarah. What is this about?",
+        "stime": 7.5,
+        "etime": 10
+    },
+    {
+        "speaker": "Agent",
+        "text": "I\u2019m calling regarding an outstanding balance on your account. To protect your privacy, could you please verify your date of birth?",
+        "stime": 9,
+        "etime": 22
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's April 15, 1990.",
+        "stime": 22.5,
+        "etime": 25
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you, Sarah. Can you also confirm your current address for me?",
+        "stime": 24,
+        "etime": 30
+    },
+    {
+        "speaker": "Customer",
+        "text": "It's 123 Elm Street, Springfield.",
+        "stime": 30.5,
+        "etime": 34
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great, I appreciate that. Now, you have an outstanding balance of $450. How would you like to proceed with this payment?",
+        "stime": 33,
+        "etime": 42
+    },
+    {
+        "speaker": "Customer",
+        "text": "I can pay half of it today and the rest next week.",
+        "stime": 41.5,
+        "etime": 46
+    },
+    {
+        "speaker": "Agent",
+        "text": "That works. So, we will process a payment of $225 today. How would you like to pay?",
+        "stime": 45,
+        "etime": 55
+    },
+    {
+        "speaker": "Customer",
+        "text": "I can use my credit card for that.",
+        "stime": 55.5,
+        "etime": 58
+    },
+    {
+        "speaker": "Agent",
+        "text": "Perfect. Please provide me with your credit card details when you're ready.",
+        "stime": 57,
+        "etime": 62
+    },
+    {
+        "speaker": "Customer",
+        "text": "It's 4111 1111 1111 1111, expiration date 12/25.",
+        "stime": 62.5,
+        "etime": 66
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for that information. Your payment has been processed successfully. Is there anything else I can assist you with today?",
+        "stime": 65,
+        "etime": 75
+    },
+    {
+        "speaker": "Customer",
+        "text": "No, that's all. Thank you for your help!",
+        "stime": 74.5,
+        "etime": 78
+    },
+    {
+        "speaker": "Agent",
+        "text": "You're welcome, Sarah! Have a great day.",
+        "stime": 77,
+        "etime": 82
+    }
+]

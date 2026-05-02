@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark calling from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "I\u2019m fine, thank you. What\u2019s this about?",
+        "stime": 8,
+        "etime": 13
+    },
+    {
+        "speaker": "Agent",
+        "text": "I\u2019m calling regarding an outstanding balance on your account. Before we proceed, can you please verify your date of birth?",
+        "stime": 12,
+        "etime": 23
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it\u2019s July 15, 1990.",
+        "stime": 24,
+        "etime": 28
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for that. Can you also confirm your current address for security purposes?",
+        "stime": 27,
+        "etime": 37
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, it\u2019s 123 Main Street, Springfield.",
+        "stime": 36,
+        "etime": 40
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for confirming your identity. You currently have a balance of $250 on your account.",
+        "stime": 39,
+        "etime": 50
+    },
+    {
+        "speaker": "Customer",
+        "text": "I thought I paid that last month.",
+        "stime": 51,
+        "etime": 55
+    },
+    {
+        "speaker": "Agent",
+        "text": "I understand your concern. Let me check the payment history for you.",
+        "stime": 54,
+        "etime": 63
+    },
+    {
+        "speaker": "Customer",
+        "text": "Okay, I appreciate that.",
+        "stime": 62,
+        "etime": 65
+    },
+    {
+        "speaker": "Agent",
+        "text": "It appears the payment was missed. How would you like to settle this today?",
+        "stime": 64,
+        "etime": 73
+    },
+    {
+        "speaker": "Customer",
+        "text": "I can pay half of it now and the rest next week.",
+        "stime": 72,
+        "etime": 77
+    },
+    {
+        "speaker": "Agent",
+        "text": "That sounds reasonable. Let\u2019s process that payment of $125 right away.",
+        "stime": 76,
+        "etime": 85
+    },
+    {
+        "speaker": "Customer",
+        "text": "Great, thank you for your help!",
+        "stime": 84,
+        "etime": 89
+    },
+    {
+        "speaker": "Agent",
+        "text": "You\u2019re welcome! Thanks for your cooperation today.",
+        "stime": 88,
+        "etime": 95
+    }
+]

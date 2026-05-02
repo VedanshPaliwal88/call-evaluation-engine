@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 6
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm doing alright, thank you. What's this about?",
+        "stime": 6.5,
+        "etime": 11
+    },
+    {
+        "speaker": "Agent",
+        "text": "I'm calling regarding your outstanding balance with your credit card account. Can you confirm your mailing address?",
+        "stime": 10,
+        "etime": 19
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's 123 Maple Street.",
+        "stime": 18.5,
+        "etime": 21
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you. I see here you have a balance of $500. How would you like to handle that today?",
+        "stime": 20,
+        "etime": 30
+    },
+    {
+        "speaker": "Customer",
+        "text": "I\u2019m not sure. I\u2019ve been meaning to call about that.",
+        "stime": 29,
+        "etime": 34
+    },
+    {
+        "speaker": "Agent",
+        "text": "I understand. It's important to address this. You can set up a payment plan if that helps!",
+        "stime": 33,
+        "etime": 40
+    },
+    {
+        "speaker": "Customer",
+        "text": "I need more information before I decide, can you provide details?",
+        "stime": 39,
+        "etime": 44
+    },
+    {
+        "speaker": "Agent",
+        "text": "Of course! The balance is from your last purchase and some fees. Would you like to know the due date?",
+        "stime": 43,
+        "etime": 51
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, please.",
+        "stime": 50,
+        "etime": 52
+    },
+    {
+        "speaker": "Agent",
+        "text": "The due date is October 15th. You can pay online or through mail. How would you prefer?",
+        "stime": 51,
+        "etime": 60
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'll likely pay online, but I need some time to consider my options first.",
+        "stime": 59,
+        "etime": 65
+    },
+    {
+        "speaker": "Agent",
+        "text": "That\u2019s completely understandable. Please let us know if you have any other questions!",
+        "stime": 64,
+        "etime": 71
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thanks for the information.",
+        "stime": 70,
+        "etime": 73
+    },
+    {
+        "speaker": "Agent",
+        "text": "You're welcome! Have a great day!",
+        "stime": 72,
+        "etime": 76
+    }
+]

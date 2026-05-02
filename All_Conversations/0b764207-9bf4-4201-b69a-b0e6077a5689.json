@@ -1,0 +1,32 @@
+[
+    {
+        "speaker": "Customer",
+        "text": "You have reached the voicemail of Jamie Parker. Please leave a message after the beep.",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Agent",
+        "text": "Hello Jamie, this is Sarah calling from Clear Collections. I'm reaching out about your outstanding balance on your account. Please call us back at one eight hundred two three four five six seven.",
+        "stime": 8,
+        "etime": 22
+    },
+    {
+        "speaker": "Customer",
+        "text": "If this is an urgent matter, you may also reach me via email.",
+        "stime": 23,
+        "etime": 30
+    },
+    {
+        "speaker": "Agent",
+        "text": "You can reach us at support@clearcollections.com. We're here to assist you in resolving this issue as soon as possible.",
+        "stime": 31,
+        "etime": 42
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you for the information. I will get back to you shortly.",
+        "stime": 43,
+        "etime": 50
+    }
+]

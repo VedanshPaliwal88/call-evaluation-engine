@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "What the hell do you want? I don\u2019t have time for your crap!",
+        "stime": 7.5,
+        "etime": 12
+    },
+    {
+        "speaker": "Agent",
+        "text": "I understand you're busy. I\u2019m calling about your outstanding balance with ABC Lending. First, can you please verify your date of birth?",
+        "stime": 11,
+        "etime": 21
+    },
+    {
+        "speaker": "Customer",
+        "text": "Why the hell should I tell you anything? Get lost!",
+        "stime": 20,
+        "etime": 25
+    },
+    {
+        "speaker": "Agent",
+        "text": "I appreciate your frustration, but I need to confirm your identity. Could you please provide your address instead?",
+        "stime": 24,
+        "etime": 32
+    },
+    {
+        "speaker": "Customer",
+        "text": "You think I'm gonna give you that? Screw you!",
+        "stime": 31,
+        "etime": 35
+    },
+    {
+        "speaker": "Agent",
+        "text": "I completely understand your hesitation. However, without verification, I can\u2019t discuss your account details.",
+        "stime": 34,
+        "etime": 43
+    },
+    {
+        "speaker": "Customer",
+        "text": "Fine! It\u2019s 123 Fake St. Now tell me what you want!",
+        "stime": 42,
+        "etime": 50
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for that. Your outstanding balance is $500. How would you like to proceed with the payment?",
+        "stime": 49,
+        "etime": 58
+    },
+    {
+        "speaker": "Customer",
+        "text": "I don't have the damn money right now!",
+        "stime": 57,
+        "etime": 60
+    },
+    {
+        "speaker": "Agent",
+        "text": "I understand. Would you like to set up a payment plan or discuss other options?",
+        "stime": 59,
+        "etime": 68
+    },
+    {
+        "speaker": "Customer",
+        "text": "I don\u2019t want any of your stupid options! Just leave me alone!",
+        "stime": 67,
+        "etime": 74
+    },
+    {
+        "speaker": "Agent",
+        "text": "I respect your wishes, but I will need to follow up with you in a couple of weeks if that\u2019s alright.",
+        "stime": 73,
+        "etime": 80
+    },
+    {
+        "speaker": "Customer",
+        "text": "Whatever, just do what you want!",
+        "stime": 79,
+        "etime": 83
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for your time today. Have a good day.",
+        "stime": 82,
+        "etime": 88
+    }
+]

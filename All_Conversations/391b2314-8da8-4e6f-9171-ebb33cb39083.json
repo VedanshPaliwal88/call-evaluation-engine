@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, is this Mr. Thompson?",
+        "stime": 0,
+        "etime": 5
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, this is he. Who's calling?",
+        "stime": 4.5,
+        "etime": 9
+    },
+    {
+        "speaker": "Agent",
+        "text": "My name is Sarah, and I'm calling from XYZ Collections regarding your account. Can you please verify your date of birth?",
+        "stime": 8,
+        "etime": 19
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's June 15, 1985.",
+        "stime": 18.5,
+        "etime": 21
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for that information. Could you also confirm your current address?",
+        "stime": 20,
+        "etime": 27
+    },
+    {
+        "speaker": "Customer",
+        "text": "It's 456 Maple Street, Springfield.",
+        "stime": 26,
+        "etime": 30
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for confirming. I see that your account has a balance of $750. Would you like to discuss payment options?",
+        "stime": 29,
+        "etime": 39
+    },
+    {
+        "speaker": "Customer",
+        "text": "I can make a payment today. What are my options?",
+        "stime": 38,
+        "etime": 42
+    },
+    {
+        "speaker": "Agent",
+        "text": "You can pay by credit card over the phone, or through our online portal. Which would you prefer?",
+        "stime": 41,
+        "etime": 51
+    },
+    {
+        "speaker": "Customer",
+        "text": "I prefer the online portal, please.",
+        "stime": 50,
+        "etime": 54
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great choice! I'll send you a link to your email. Can you confirm your email address?",
+        "stime": 53,
+        "etime": 62
+    },
+    {
+        "speaker": "Customer",
+        "text": "It's thompson85@email.com.",
+        "stime": 61,
+        "etime": 64
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you, Mr. Thompson. You will receive the link shortly. Is there anything else I can assist you with today?",
+        "stime": 63,
+        "etime": 73
+    },
+    {
+        "speaker": "Customer",
+        "text": "No, that's all. Thank you for your help.",
+        "stime": 72,
+        "etime": 76
+    },
+    {
+        "speaker": "Agent",
+        "text": "You're welcome! Have a great day.",
+        "stime": 75,
+        "etime": 80
+    }
+]

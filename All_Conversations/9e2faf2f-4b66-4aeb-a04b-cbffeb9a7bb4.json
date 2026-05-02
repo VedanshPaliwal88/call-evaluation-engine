@@ -1,0 +1,80 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, is this Mr. Johnson?",
+        "stime": 0,
+        "etime": 5
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, that's me. Who is this?",
+        "stime": 5.5,
+        "etime": 8
+    },
+    {
+        "speaker": "Agent",
+        "text": "This is Sarah from XYZ Collections. I'm calling to discuss your account. Can you please verify your date of birth for security purposes?",
+        "stime": 7,
+        "etime": 18
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's January 15, 1985.",
+        "stime": 18,
+        "etime": 21
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you, Mr. Johnson. I appreciate your cooperation. Can you also confirm your address for me?",
+        "stime": 21,
+        "etime": 29
+    },
+    {
+        "speaker": "Customer",
+        "text": "I live at 123 Maple Street.",
+        "stime": 29,
+        "etime": 32
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for verifying that information. You have an outstanding balance of $450. What payment options do you prefer?",
+        "stime": 32,
+        "etime": 43
+    },
+    {
+        "speaker": "Customer",
+        "text": "I would like to set up a payment plan.",
+        "stime": 43,
+        "etime": 46
+    },
+    {
+        "speaker": "Agent",
+        "text": "That sounds good. I can assist you with that. How much do you want to pay monthly?",
+        "stime": 46,
+        "etime": 55
+    },
+    {
+        "speaker": "Customer",
+        "text": "I can pay $100 a month.",
+        "stime": 55,
+        "etime": 58
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great! We'll set that up. Your first payment will be due on the 15th of next month.",
+        "stime": 58,
+        "etime": 65
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you for your help.",
+        "stime": 65,
+        "etime": 68
+    },
+    {
+        "speaker": "Agent",
+        "text": "You're welcome, Mr. Johnson. If you have any questions, feel free to call us back. Have a great day!",
+        "stime": 68,
+        "etime": 78
+    }
+]

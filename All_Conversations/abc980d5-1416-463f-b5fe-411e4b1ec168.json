@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Good afternoon, this is Mark calling from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "I\u2019m doing alright, thanks. What\u2019s this about?",
+        "stime": 8,
+        "etime": 12
+    },
+    {
+        "speaker": "Agent",
+        "text": "I\u2019m calling regarding your account with City Bank. Can you please verify your address?",
+        "stime": 11,
+        "etime": 20
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it\u2019s 123 Maple Street.",
+        "stime": 21,
+        "etime": 24
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you. Can you also confirm your date of birth?",
+        "stime": 23,
+        "etime": 30
+    },
+    {
+        "speaker": "Customer",
+        "text": "It's July 15, 1990.",
+        "stime": 31,
+        "etime": 34
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for that information. I see you have an outstanding balance of $250. How would you like to settle this today?",
+        "stime": 33,
+        "etime": 45
+    },
+    {
+        "speaker": "Customer",
+        "text": "I can pay $100 today and the rest next month.",
+        "stime": 46,
+        "etime": 51
+    },
+    {
+        "speaker": "Agent",
+        "text": "That sounds like a good plan. I can process the $100 payment right now. Would you like to use your credit card?",
+        "stime": 50,
+        "etime": 64
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, let\u2019s do that.",
+        "stime": 63,
+        "etime": 66
+    },
+    {
+        "speaker": "Agent",
+        "text": "Please provide your card number when you\u2019re ready.",
+        "stime": 65,
+        "etime": 70
+    },
+    {
+        "speaker": "Customer",
+        "text": "It\u2019s 4111-1111-1111-1111.",
+        "stime": 71,
+        "etime": 74
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you. I will process that now. You will receive a confirmation shortly.",
+        "stime": 73,
+        "etime": 80
+    },
+    {
+        "speaker": "Customer",
+        "text": "Great, thank you for your help.",
+        "stime": 79,
+        "etime": 83
+    },
+    {
+        "speaker": "Agent",
+        "text": "You\u2019re welcome! Have a great day.",
+        "stime": 82,
+        "etime": 87
+    }
+]

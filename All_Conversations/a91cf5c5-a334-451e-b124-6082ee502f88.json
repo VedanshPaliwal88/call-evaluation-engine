@@ -1,0 +1,32 @@
+[
+    {
+        "speaker": "Customer",
+        "text": "You have reached the voicemail of John Smith. Please leave a message after the beep.",
+        "stime": 0,
+        "etime": 9
+    },
+    {
+        "speaker": "Agent",
+        "text": "Hi John, this is Linda from Apex Collections. I'm calling about your outstanding balance of seven hundred dollars.",
+        "stime": 10,
+        "etime": 22
+    },
+    {
+        "speaker": "Customer",
+        "text": "For a quicker response, please leave your name and number.",
+        "stime": 23,
+        "etime": 30
+    },
+    {
+        "speaker": "Agent",
+        "text": "You can reach me at one eight hundred five five five zero seven one zero. It's important we discuss this matter.",
+        "stime": 31,
+        "etime": 44
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you for reaching out, I will get back to you soon.",
+        "stime": 45,
+        "etime": 52
+    }
+]

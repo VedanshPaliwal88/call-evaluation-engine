@@ -1,0 +1,80 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "Hi Mark, I\u2019m doing well, thank you.",
+        "stime": 6.5,
+        "etime": 10
+    },
+    {
+        "speaker": "Agent",
+        "text": "I\u2019m glad to hear that! I'm calling regarding your outstanding balance with ABC Credit. Can I please verify your address?",
+        "stime": 9,
+        "etime": 20
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it\u2019s 123 Main Street, Apt 4B.",
+        "stime": 19,
+        "etime": 22
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for that. Just to confirm your identity, can you also provide your date of birth?",
+        "stime": 21,
+        "etime": 30
+    },
+    {
+        "speaker": "Customer",
+        "text": "It\u2019s July 15, 1990.",
+        "stime": 29,
+        "etime": 31
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for the verification. You currently have an outstanding balance of $250. How would you like to proceed with payment?",
+        "stime": 30.5,
+        "etime": 40
+    },
+    {
+        "speaker": "Customer",
+        "text": "I can pay half of it today, and the rest in a week.",
+        "stime": 39,
+        "etime": 44
+    },
+    {
+        "speaker": "Agent",
+        "text": "That sounds reasonable. Would you like to make a payment of $125 now?",
+        "stime": 43,
+        "etime": 50
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, that works for me.",
+        "stime": 49,
+        "etime": 52
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great! I\u2019ll give you the payment options shortly. Thank you for your cooperation.",
+        "stime": 51,
+        "etime": 60
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you for your help, Mark.",
+        "stime": 59,
+        "etime": 62
+    },
+    {
+        "speaker": "Agent",
+        "text": "You're welcome! Have a great day.",
+        "stime": 61,
+        "etime": 64
+    }
+]

@@ -1,0 +1,32 @@
+[
+    {
+        "speaker": "Customer",
+        "text": "You have reached the voicemail of Alex Thompson. Please leave your message after the tone.",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Agent",
+        "text": "Hi Alex, this is Sarah from Collection Solutions. I'm calling about your outstanding balance.",
+        "stime": 5,
+        "etime": 15
+    },
+    {
+        "speaker": "Customer",
+        "text": "To reach me faster, please leave your name and number.",
+        "stime": 10,
+        "etime": 15
+    },
+    {
+        "speaker": "Agent",
+        "text": "You can reach me at one eight hundred five five five six seven eight nine if you have any questions.",
+        "stime": 12,
+        "etime": 20
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you for your message. I'll get back to you as soon as I can.",
+        "stime": 18,
+        "etime": 25
+    }
+]

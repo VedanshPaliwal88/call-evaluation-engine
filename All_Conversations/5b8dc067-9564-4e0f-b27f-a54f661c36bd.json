@@ -1,0 +1,80 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark calling from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 6
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm doing alright, thanks. What is this about?",
+        "stime": 6.5,
+        "etime": 11
+    },
+    {
+        "speaker": "Agent",
+        "text": "I\u2019m reaching out regarding your account with City Bank. Can I have your last four digits of your Social Security number to start?",
+        "stime": 10,
+        "etime": 20
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's 1234.",
+        "stime": 20.5,
+        "etime": 23
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you. You currently have an outstanding balance of $500. When can we expect payment?",
+        "stime": 22,
+        "etime": 32
+    },
+    {
+        "speaker": "Customer",
+        "text": "I didn\u2019t realize I had a balance. I need to check my finances first.",
+        "stime": 31,
+        "etime": 37
+    },
+    {
+        "speaker": "Agent",
+        "text": "I understand. It\u2019s important to keep track of your accounts. Would you like to set up a payment plan?",
+        "stime": 36,
+        "etime": 45
+    },
+    {
+        "speaker": "Customer",
+        "text": "I might consider that, but I need a little time.",
+        "stime": 44.5,
+        "etime": 49
+    },
+    {
+        "speaker": "Agent",
+        "text": "Of course. Just to let you know, we can offer flexible plans. What would be a good time to follow up with you?",
+        "stime": 48,
+        "etime": 56
+    },
+    {
+        "speaker": "Customer",
+        "text": "How about next week? I should have a clearer view then.",
+        "stime": 55.5,
+        "etime": 60
+    },
+    {
+        "speaker": "Agent",
+        "text": "Sounds good! I\u2019ll reach out again next week. Thank you for your time.",
+        "stime": 59,
+        "etime": 67
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you, Mark. I appreciate your understanding.",
+        "stime": 66,
+        "etime": 72
+    },
+    {
+        "speaker": "Agent",
+        "text": "You're welcome! Have a great day.",
+        "stime": 71,
+        "etime": 75
+    }
+]

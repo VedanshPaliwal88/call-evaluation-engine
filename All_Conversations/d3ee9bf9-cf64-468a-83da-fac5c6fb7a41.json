@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark from XYZ Collections. How are you doing today?",
+        "stime": 0,
+        "etime": 6
+    },
+    {
+        "speaker": "Customer",
+        "text": "Oh great, another goddamn phone call! What's your problem?",
+        "stime": 5,
+        "etime": 11
+    },
+    {
+        "speaker": "Agent",
+        "text": "I'm calling regarding your outstanding balance with MegaLoans. Can you please confirm your address?",
+        "stime": 10,
+        "etime": 20
+    },
+    {
+        "speaker": "Customer",
+        "text": "Why the hell would I tell you anything? You really think I\u2019ll cooperate?",
+        "stime": 19.5,
+        "etime": 26
+    },
+    {
+        "speaker": "Agent",
+        "text": "I understand your frustration. I just need to verify your identity before discussing the account details.",
+        "stime": 25,
+        "etime": 35
+    },
+    {
+        "speaker": "Customer",
+        "text": "Screw your verification! You\u2019re just wasting my time, you idiots!",
+        "stime": 34,
+        "etime": 42
+    },
+    {
+        "speaker": "Agent",
+        "text": "I assure you, I'm here to help you resolve this. You currently have a balance of $800.",
+        "stime": 41,
+        "etime": 50
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yeah? And what do you want me to do about it, huh?",
+        "stime": 49,
+        "etime": 55
+    },
+    {
+        "speaker": "Agent",
+        "text": "We can discuss payment options that work for you. Would you prefer a payment plan?",
+        "stime": 54,
+        "etime": 63
+    },
+    {
+        "speaker": "Customer",
+        "text": "You think I give a damn about your plans? I\u2019m not paying a penny!",
+        "stime": 62,
+        "etime": 69
+    },
+    {
+        "speaker": "Agent",
+        "text": "I understand that this is a tough situation. However, ignoring the debt will only lead to further issues.",
+        "stime": 68,
+        "etime": 78
+    },
+    {
+        "speaker": "Customer",
+        "text": "Issues? I've got bigger problems than your stupid debt! Just leave me alone!",
+        "stime": 77,
+        "etime": 85
+    },
+    {
+        "speaker": "Agent",
+        "text": "I see, but I must advise you that there are consequences for non-payment. I\u2019m here to help if you decide to talk.",
+        "stime": 84,
+        "etime": 93
+    },
+    {
+        "speaker": "Customer",
+        "text": "Help? You call harassing me help? Get lost!",
+        "stime": 92,
+        "etime": 98
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for your time. If you change your mind, please give us a call back.",
+        "stime": 97,
+        "etime": 104
+    }
+]

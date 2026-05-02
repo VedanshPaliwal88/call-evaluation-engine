@@ -1,0 +1,56 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm fine, but I prefer not to discuss anything regarding debts.",
+        "stime": 7.5,
+        "etime": 12
+    },
+    {
+        "speaker": "Agent",
+        "text": "I understand your concerns. I'm calling about your overdue balance with our company.",
+        "stime": 11,
+        "etime": 19
+    },
+    {
+        "speaker": "Customer",
+        "text": "I've already requested to have my number added to the do not call list.",
+        "stime": 18,
+        "etime": 24
+    },
+    {
+        "speaker": "Agent",
+        "text": "I apologize for the inconvenience. Let me check and ensure your number is marked.",
+        "stime": 23,
+        "etime": 32
+    },
+    {
+        "speaker": "Customer",
+        "text": "I just want to be left alone. Please make sure it\u2019s done.",
+        "stime": 31,
+        "etime": 36
+    },
+    {
+        "speaker": "Agent",
+        "text": "Absolutely, I\u2019ll make sure it's processed right away.",
+        "stime": 35,
+        "etime": 40
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you. I really don\u2019t want to receive calls anymore.",
+        "stime": 39,
+        "etime": 44
+    },
+    {
+        "speaker": "Agent",
+        "text": "You're welcome, and I have confirmed your number is now on the do not call list.",
+        "stime": 43,
+        "etime": 52
+    }
+]

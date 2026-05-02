@@ -1,0 +1,56 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Jason calling from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm okay, but why are you calling me?",
+        "stime": 7.5,
+        "etime": 10
+    },
+    {
+        "speaker": "Agent",
+        "text": "I'm reaching out regarding your overdue balance on your account. I just wanted to discuss your payment options.",
+        "stime": 10,
+        "etime": 20
+    },
+    {
+        "speaker": "Customer",
+        "text": "I already requested to be on your do not call list last month.",
+        "stime": 19.8,
+        "etime": 23
+    },
+    {
+        "speaker": "Agent",
+        "text": "I apologize for the inconvenience. Let me check that for you and ensure your number is marked correctly.",
+        "stime": 22,
+        "etime": 31
+    },
+    {
+        "speaker": "Customer",
+        "text": "Please do it quickly. I don\u2019t want to hear from you again.",
+        "stime": 30,
+        "etime": 34
+    },
+    {
+        "speaker": "Agent",
+        "text": "Absolutely. I\u2019ll mark your number as do not call right now.",
+        "stime": 33,
+        "etime": 39
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you, I hope this is the last call.",
+        "stime": 38,
+        "etime": 42
+    },
+    {
+        "speaker": "Agent",
+        "text": "You're welcome! I've completed the request. You won't receive any further calls.",
+        "stime": 41,
+        "etime": 50
+    }
+]

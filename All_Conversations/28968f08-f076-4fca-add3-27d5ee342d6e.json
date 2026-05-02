@@ -1,0 +1,86 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, is this Mr. Johnson?",
+        "stime": 0,
+        "etime": 4
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, this is he. Who am I speaking with?",
+        "stime": 4.2,
+        "etime": 8
+    },
+    {
+        "speaker": "Agent",
+        "text": "This is Emily from XYZ Collections. I'm calling regarding your account with City Credit. Can you please verify your date of birth for security purposes?",
+        "stime": 8,
+        "etime": 20
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's July 15, 1985.",
+        "stime": 20.2,
+        "etime": 24
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you, Mr. Johnson. For verification, could you also confirm your address?",
+        "stime": 23,
+        "etime": 29
+    },
+    {
+        "speaker": "Customer",
+        "text": "I live at 123 Maple Street, Springfield.",
+        "stime": 29,
+        "etime": 32
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for confirming that information. I see that your current balance is $450. How would you like to proceed with the payment?",
+        "stime": 31,
+        "etime": 41
+    },
+    {
+        "speaker": "Customer",
+        "text": "I can pay half of that amount today.",
+        "stime": 41.5,
+        "etime": 44
+    },
+    {
+        "speaker": "Agent",
+        "text": "That sounds good. So, you would like to pay $225 today. How would you like to make that payment?",
+        "stime": 44,
+        "etime": 52
+    },
+    {
+        "speaker": "Customer",
+        "text": "I can do it with my credit card over the phone.",
+        "stime": 52.2,
+        "etime": 56
+    },
+    {
+        "speaker": "Agent",
+        "text": "Perfect. Please provide your credit card details, and I'll assist you with the transaction.",
+        "stime": 56,
+        "etime": 64
+    },
+    {
+        "speaker": "Customer",
+        "text": "The card number is 4111 1111 1111 1111, expiration date is 12/25.",
+        "stime": 64.5,
+        "etime": 70
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you, Mr. Johnson. Your payment has been processed successfully. Is there anything else I can assist you with today?",
+        "stime": 70,
+        "etime": 80
+    },
+    {
+        "speaker": "Customer",
+        "text": "No, that will be all. Thank you!",
+        "stime": 80.5,
+        "etime": 84
+    }
+]

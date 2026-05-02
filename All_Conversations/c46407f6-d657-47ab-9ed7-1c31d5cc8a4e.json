@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "Hi Mark, I'm doing well, thanks. What's this about?",
+        "stime": 8,
+        "etime": 13
+    },
+    {
+        "speaker": "Agent",
+        "text": "I'm calling about your outstanding balance with ABC Credit Card. Can you confirm your last name for me?",
+        "stime": 12.5,
+        "etime": 21
+    },
+    {
+        "speaker": "Customer",
+        "text": "It's Johnson.",
+        "stime": 22,
+        "etime": 24
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you, Mr. Johnson. I see you have a balance of $450. Can we discuss payment options?",
+        "stime": 23,
+        "etime": 33
+    },
+    {
+        "speaker": "Customer",
+        "text": "I wasn't aware of that amount. Can you tell me more about the charges?",
+        "stime": 34,
+        "etime": 39
+    },
+    {
+        "speaker": "Agent",
+        "text": "Sure! The charges include recent purchases and some fees. Would you like to set up a payment plan?",
+        "stime": 38,
+        "etime": 48
+    },
+    {
+        "speaker": "Customer",
+        "text": "I would consider that, but I need to review my statement first.",
+        "stime": 49,
+        "etime": 54
+    },
+    {
+        "speaker": "Agent",
+        "text": "Absolutely, I can send you a detailed statement. Would you prefer it via email or postal mail?",
+        "stime": 53,
+        "etime": 64
+    },
+    {
+        "speaker": "Customer",
+        "text": "Email would be best, please.",
+        "stime": 65,
+        "etime": 68
+    },
+    {
+        "speaker": "Agent",
+        "text": "Got it! I'll send that over. Just for confirmation, can you provide your email address?",
+        "stime": 67,
+        "etime": 76
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's johnson.family@email.com.",
+        "stime": 77,
+        "etime": 80
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you, Mr. Johnson. I\u2019ll send the statement shortly. Anything else I can assist you with?",
+        "stime": 79,
+        "etime": 88
+    },
+    {
+        "speaker": "Customer",
+        "text": "No, that's all for now. Thanks for your help!",
+        "stime": 89,
+        "etime": 92
+    },
+    {
+        "speaker": "Agent",
+        "text": "You're welcome! Have a great day!",
+        "stime": 91,
+        "etime": 95
+    }
+]

@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark calling from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm alright, just busy with work. What can I help you with?",
+        "stime": 8,
+        "etime": 14
+    },
+    {
+        "speaker": "Agent",
+        "text": "I understand. I'm calling regarding an outstanding balance on your account. Before we proceed, could you please verify your date of birth?",
+        "stime": 13,
+        "etime": 25
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's March 15, 1985.",
+        "stime": 26,
+        "etime": 30
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for that information. Can you also confirm your current address?",
+        "stime": 29,
+        "etime": 38
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, it's 123 Maple Street, Springfield.",
+        "stime": 39,
+        "etime": 43
+    },
+    {
+        "speaker": "Agent",
+        "text": "I appreciate your help. You currently have a balance of $450 due. How would you like to proceed with the payment?",
+        "stime": 42,
+        "etime": 56
+    },
+    {
+        "speaker": "Customer",
+        "text": "I can pay $200 today and the rest later.",
+        "stime": 57,
+        "etime": 61
+    },
+    {
+        "speaker": "Agent",
+        "text": "That sounds good. I can help you set up that payment right now. Would you like to pay by credit card or bank transfer?",
+        "stime": 60,
+        "etime": 73
+    },
+    {
+        "speaker": "Customer",
+        "text": "I prefer using my credit card.",
+        "stime": 74,
+        "etime": 78
+    },
+    {
+        "speaker": "Agent",
+        "text": "Perfect. I'll need your card number, expiration date, and security code to process that.",
+        "stime": 77,
+        "etime": 88
+    },
+    {
+        "speaker": "Customer",
+        "text": "Okay, my card number is 1234-5678-9012-3456, expiring 12/25, and the security code is 123.",
+        "stime": 89,
+        "etime": 100
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for providing that information. Your payment is being processed now, and you'll receive a confirmation shortly.",
+        "stime": 99,
+        "etime": 110
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you for your help!",
+        "stime": 111,
+        "etime": 114
+    },
+    {
+        "speaker": "Agent",
+        "text": "You're welcome! Have a great day.",
+        "stime": 113,
+        "etime": 119
+    }
+]

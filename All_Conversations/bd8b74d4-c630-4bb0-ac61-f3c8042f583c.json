@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, is this John Smith?",
+        "stime": 0,
+        "etime": 4
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, this is John. Who's calling?",
+        "stime": 4.5,
+        "etime": 8
+    },
+    {
+        "speaker": "Agent",
+        "text": "Hi John, this is Lisa from XYZ Collections. How are you today?",
+        "stime": 7,
+        "etime": 12
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm doing okay, thanks. What is this about?",
+        "stime": 12.5,
+        "etime": 17
+    },
+    {
+        "speaker": "Agent",
+        "text": "I'm calling regarding your outstanding balance with ABC Credit Union. Can I get your address to locate your account?",
+        "stime": 16,
+        "etime": 24
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's 123 Elm Street.",
+        "stime": 24.5,
+        "etime": 28
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you, John. Your current balance is $550. How do you intend to settle this?",
+        "stime": 27,
+        "etime": 35
+    },
+    {
+        "speaker": "Customer",
+        "text": "I really can't pay that amount right now.",
+        "stime": 35.5,
+        "etime": 39
+    },
+    {
+        "speaker": "Agent",
+        "text": "I understand. We can discuss payment plans or possible arrangements. Would that be helpful?",
+        "stime": 38,
+        "etime": 46
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, I'd appreciate that.",
+        "stime": 45.5,
+        "etime": 48
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great! I can set you up with a payment plan. Just to confirm, your account shows an email on file as john.smith@email.com, is that correct?",
+        "stime": 47,
+        "etime": 56
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, that\u2019s correct.",
+        "stime": 55.5,
+        "etime": 58
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you, let\u2019s proceed with discussing your options then!",
+        "stime": 57,
+        "etime": 64
+    },
+    {
+        "speaker": "Customer",
+        "text": "Okay, sounds good.",
+        "stime": 64.5,
+        "etime": 67
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for your cooperation, John. I appreciate it.",
+        "stime": 66,
+        "etime": 72
+    }
+]

@@ -1,0 +1,56 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark calling from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm fine, but I don't appreciate these calls.",
+        "stime": 6.5,
+        "etime": 10
+    },
+    {
+        "speaker": "Agent",
+        "text": "I understand your frustration. I'm calling about your overdue balance with your account.",
+        "stime": 9,
+        "etime": 19
+    },
+    {
+        "speaker": "Customer",
+        "text": "I've already requested to be put on the do not call list.",
+        "stime": 18,
+        "etime": 22
+    },
+    {
+        "speaker": "Agent",
+        "text": "I apologize for the inconvenience. Let me confirm that your number will be marked as do not call.",
+        "stime": 21,
+        "etime": 32
+    },
+    {
+        "speaker": "Customer",
+        "text": "I really hope this works. I don't want to hear from you again.",
+        "stime": 31,
+        "etime": 36
+    },
+    {
+        "speaker": "Agent",
+        "text": "Absolutely, I will ensure it's updated right away. Thank you for your patience.",
+        "stime": 35,
+        "etime": 45
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you. Goodbye.",
+        "stime": 44,
+        "etime": 47
+    },
+    {
+        "speaker": "Agent",
+        "text": "Goodbye, and take care.",
+        "stime": 46,
+        "etime": 50
+    }
+]

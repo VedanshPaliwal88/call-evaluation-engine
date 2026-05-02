@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, is this John Smith?",
+        "stime": 0,
+        "etime": 5
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, this is John.",
+        "stime": 5.5,
+        "etime": 7
+    },
+    {
+        "speaker": "Agent",
+        "text": "Hi John, this is Sarah from XYZ Collections. I'm reaching out regarding your account with Fast Loans.",
+        "stime": 7,
+        "etime": 15
+    },
+    {
+        "speaker": "Customer",
+        "text": "Oh, I see. What's going on?",
+        "stime": 15.5,
+        "etime": 18
+    },
+    {
+        "speaker": "Agent",
+        "text": "I just wanted to discuss your outstanding balance. Before that, can you confirm your address for me?",
+        "stime": 18,
+        "etime": 25
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's 123 Elm Street, Springfield.",
+        "stime": 24.5,
+        "etime": 27
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you. Your account shows a balance of $450. How would you like to proceed with the payment?",
+        "stime": 27,
+        "etime": 36
+    },
+    {
+        "speaker": "Customer",
+        "text": "I can pay half of it today, if that works.",
+        "stime": 35,
+        "etime": 39
+    },
+    {
+        "speaker": "Agent",
+        "text": "That sounds good! Would you prefer to pay by debit or credit card?",
+        "stime": 38,
+        "etime": 45
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'll use my credit card.",
+        "stime": 44,
+        "etime": 47
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great! Please provide the card number when you're ready.",
+        "stime": 46,
+        "etime": 50
+    },
+    {
+        "speaker": "Customer",
+        "text": "Okay, it's 1234-5678-9012-3456.",
+        "stime": 50,
+        "etime": 54
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you, John. I will process that payment for you now.",
+        "stime": 53,
+        "etime": 58
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you, I appreciate your help.",
+        "stime": 58.5,
+        "etime": 60
+    },
+    {
+        "speaker": "Agent",
+        "text": "You're welcome! Have a great day.",
+        "stime": 60,
+        "etime": 63
+    }
+]

@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark calling from Stellar Collections. How are you today?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm doing okay, thanks. What is this about?",
+        "stime": 8,
+        "etime": 12
+    },
+    {
+        "speaker": "Agent",
+        "text": "I'm reaching out regarding your account with Pacific Lending. To proceed, could you please verify your date of birth?",
+        "stime": 11,
+        "etime": 23
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's January 15, 1985.",
+        "stime": 22,
+        "etime": 26
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for that information. Could you also confirm your current address please?",
+        "stime": 25,
+        "etime": 33
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, it's 123 Maple Street, Springfield.",
+        "stime": 32,
+        "etime": 37
+    },
+    {
+        "speaker": "Agent",
+        "text": "I appreciate your cooperation. I see a balance of $250 on your account. How would you prefer to settle this today?",
+        "stime": 36,
+        "etime": 48
+    },
+    {
+        "speaker": "Customer",
+        "text": "I can make a payment of $100 right now.",
+        "stime": 49,
+        "etime": 54
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great! I can guide you through the payment process. Do you have your card details handy?",
+        "stime": 53,
+        "etime": 59
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, I have it. What's next?",
+        "stime": 60,
+        "etime": 63
+    },
+    {
+        "speaker": "Agent",
+        "text": "Please provide the card number, and I\u2019ll assist you with the transaction.",
+        "stime": 62,
+        "etime": 70
+    },
+    {
+        "speaker": "Customer",
+        "text": "It's 4123-4567-8910-1111.",
+        "stime": 71,
+        "etime": 75
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you! Let me process that payment for you now.",
+        "stime": 74,
+        "etime": 80
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thanks for your help!",
+        "stime": 81,
+        "etime": 84
+    },
+    {
+        "speaker": "Agent",
+        "text": "You're welcome! Have a great day!",
+        "stime": 83,
+        "etime": 87
+    }
+]

@@ -1,0 +1,86 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark from XYZ Collections. Am I speaking with Jessica?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, this is Jessica. What is this about?",
+        "stime": 8,
+        "etime": 12
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you, Jessica. I'm calling regarding a past due balance with your account. Before we proceed, could you please verify your date of birth?",
+        "stime": 11,
+        "etime": 24
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's July 15, 1990.",
+        "stime": 23,
+        "etime": 26
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for the confirmation. Can you also provide your current address for verification?",
+        "stime": 25,
+        "etime": 34
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, it's 123 Main Street, Springfield.",
+        "stime": 33,
+        "etime": 36
+    },
+    {
+        "speaker": "Agent",
+        "text": "I appreciate that. I can confirm that you have an outstanding balance of $350. How would you like to proceed with this payment?",
+        "stime": 35,
+        "etime": 45
+    },
+    {
+        "speaker": "Customer",
+        "text": "I can pay $200 today and the rest next month.",
+        "stime": 44,
+        "etime": 49
+    },
+    {
+        "speaker": "Agent",
+        "text": "That's perfectly fine. I will note that down. Would you like to handle the payment over the phone or online?",
+        "stime": 48,
+        "etime": 60
+    },
+    {
+        "speaker": "Customer",
+        "text": "Let's do it over the phone.",
+        "stime": 59,
+        "etime": 62
+    },
+    {
+        "speaker": "Agent",
+        "text": "Alright, I will guide you through the payment process. Please have your card ready.",
+        "stime": 61,
+        "etime": 70
+    },
+    {
+        "speaker": "Customer",
+        "text": "Got it, I'm ready.",
+        "stime": 69,
+        "etime": 72
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great! Please provide me with your card number.",
+        "stime": 71,
+        "etime": 75
+    },
+    {
+        "speaker": "Customer",
+        "text": "It's 4111 1111 1111 1111.",
+        "stime": 74,
+        "etime": 77
+    }
+]

@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Lisa from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "How the hell do you think I am? It's not like I wanted this call!",
+        "stime": 6.5,
+        "etime": 12
+    },
+    {
+        "speaker": "Agent",
+        "text": "I understand this can be frustrating. Before we proceed, can you please verify your date of birth?",
+        "stime": 10,
+        "etime": 18
+    },
+    {
+        "speaker": "Customer",
+        "text": "Why the f*** do I need to tell you that? You should already know!",
+        "stime": 17,
+        "etime": 23
+    },
+    {
+        "speaker": "Agent",
+        "text": "I completely understand your concern, but I need to verify your information for security purposes. Could you please provide your address?",
+        "stime": 22,
+        "etime": 31
+    },
+    {
+        "speaker": "Customer",
+        "text": "Ugh, fine! It's 123 Main Street, you happy now?",
+        "stime": 30,
+        "etime": 34
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for confirming that. Now, I see you have an outstanding balance of $500. How would you like to address this?",
+        "stime": 33,
+        "etime": 42
+    },
+    {
+        "speaker": "Customer",
+        "text": "I don\u2019t give a damn! I won\u2019t pay a cent until I get my money back!",
+        "stime": 41,
+        "etime": 47
+    },
+    {
+        "speaker": "Agent",
+        "text": "I understand you may feel that way. However, I recommend discussing options available to you. Would you like to hear them?",
+        "stime": 46,
+        "etime": 55
+    },
+    {
+        "speaker": "Customer",
+        "text": "Options? What options? To get screwed more? You guys are the worst!",
+        "stime": 54,
+        "etime": 60
+    },
+    {
+        "speaker": "Agent",
+        "text": "I assure you, our goal is to help you resolve this. I can set up a payment plan if that's something you\u2019d be interested in.",
+        "stime": 59,
+        "etime": 66
+    },
+    {
+        "speaker": "Customer",
+        "text": "Whatever. Just tell me what you got, but I'm not promising anything!",
+        "stime": 65,
+        "etime": 71
+    },
+    {
+        "speaker": "Agent",
+        "text": "Of course. We can start with a monthly installment plan. Would $100 a month work for you?",
+        "stime": 70,
+        "etime": 77
+    },
+    {
+        "speaker": "Customer",
+        "text": "Fine, just send me the details, and I might consider it!",
+        "stime": 76,
+        "etime": 80
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great! I\u2019ll send you the details right away. Thank you for your time today.",
+        "stime": 79,
+        "etime": 84
+    }
+]

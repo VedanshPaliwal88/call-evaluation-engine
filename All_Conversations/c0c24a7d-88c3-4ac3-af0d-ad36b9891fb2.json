@@ -1,0 +1,56 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark calling from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "I\u2019m good, but why are you calling me?",
+        "stime": 7.5,
+        "etime": 10
+    },
+    {
+        "speaker": "Agent",
+        "text": "I'm reaching out regarding your outstanding balance with ABC Credit. It's important we discuss this.",
+        "stime": 9,
+        "etime": 18
+    },
+    {
+        "speaker": "Customer",
+        "text": "I've asked you to put my number on a do not call list already.",
+        "stime": 17,
+        "etime": 21
+    },
+    {
+        "speaker": "Agent",
+        "text": "I apologize for the confusion. Let me take care of that for you right now.",
+        "stime": 20,
+        "etime": 29
+    },
+    {
+        "speaker": "Customer",
+        "text": "Please do that. I don\u2019t want to hear from you again.",
+        "stime": 28,
+        "etime": 32
+    },
+    {
+        "speaker": "Agent",
+        "text": "Absolutely. I've marked your number as do not call, and you won't receive any further calls.",
+        "stime": 31,
+        "etime": 42
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you for that.",
+        "stime": 41,
+        "etime": 43
+    },
+    {
+        "speaker": "Agent",
+        "text": "You're welcome! If you need anything else, feel free to reach out.",
+        "stime": 42,
+        "etime": 50
+    }
+]

@@ -1,0 +1,80 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark from XYZ Collections. Am I speaking with Jessica?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, this is Jessica. What is this about?",
+        "stime": 8,
+        "etime": 13
+    },
+    {
+        "speaker": "Agent",
+        "text": "I\u2019m calling regarding an outstanding balance on your account. Could you please verify your address for me?",
+        "stime": 12,
+        "etime": 20
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's 123 Elm Street, Springfield.",
+        "stime": 21,
+        "etime": 25
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you. I see here that you have a balance of $450 due. When do you plan to make a payment?",
+        "stime": 24,
+        "etime": 33
+    },
+    {
+        "speaker": "Customer",
+        "text": "I didn't know I had a balance. Can you provide more details?",
+        "stime": 32,
+        "etime": 36
+    },
+    {
+        "speaker": "Agent",
+        "text": "Sure! This balance is from services rendered last month. Can I assist you with the payment plan?",
+        "stime": 35,
+        "etime": 44
+    },
+    {
+        "speaker": "Customer",
+        "text": "I need to check my finances first before committing.",
+        "stime": 43,
+        "etime": 49
+    },
+    {
+        "speaker": "Agent",
+        "text": "Of course, take your time. Just to confirm, do you want to set a follow-up call next week?",
+        "stime": 48,
+        "etime": 57
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, that sounds good.",
+        "stime": 56,
+        "etime": 59
+    },
+    {
+        "speaker": "Agent",
+        "text": "Alright, I will call you next Wednesday. Thank you for your time, Jessica.",
+        "stime": 58,
+        "etime": 66
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you, Mark.",
+        "stime": 65,
+        "etime": 68
+    },
+    {
+        "speaker": "Agent",
+        "text": "Goodbye!",
+        "stime": 70,
+        "etime": 72
+    }
+]

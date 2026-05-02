@@ -1,0 +1,80 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, is this Mr. Thompson? This is Lisa calling from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, this is Mr. Thompson. I'm doing fine, thank you.",
+        "stime": 8,
+        "etime": 12
+    },
+    {
+        "speaker": "Agent",
+        "text": "I'm glad to hear that! I'm reaching out regarding your outstanding balance with City Credit. Can you confirm your last payment date?",
+        "stime": 11,
+        "etime": 20
+    },
+    {
+        "speaker": "Customer",
+        "text": "I believe it was in June of last year.",
+        "stime": 19,
+        "etime": 23
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for that. I see here you have an outstanding balance of $450. Would you like to settle that today?",
+        "stime": 22,
+        "etime": 32
+    },
+    {
+        "speaker": "Customer",
+        "text": "I was hoping to set up a payment plan instead.",
+        "stime": 31,
+        "etime": 35
+    },
+    {
+        "speaker": "Agent",
+        "text": "Absolutely, we can work something out. I can set up a payment plan of $100 per month for four months.",
+        "stime": 34,
+        "etime": 42
+    },
+    {
+        "speaker": "Customer",
+        "text": "That sounds reasonable to me.",
+        "stime": 41,
+        "etime": 44
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great! Can I confirm the payment method you would like to use?",
+        "stime": 43,
+        "etime": 49
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'll use my debit card.",
+        "stime": 48,
+        "etime": 52
+    },
+    {
+        "speaker": "Agent",
+        "text": "Perfect. Your first payment will be processed today. Thank you for your cooperation!",
+        "stime": 51,
+        "etime": 59
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you for understanding. Have a great day!",
+        "stime": 58,
+        "etime": 63
+    },
+    {
+        "speaker": "Agent",
+        "text": "You too, Mr. Thompson! Don't hesitate to reach out if you have any questions.",
+        "stime": 62,
+        "etime": 70
+    }
+]

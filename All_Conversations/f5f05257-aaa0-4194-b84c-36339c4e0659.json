@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hi, this is Mike with XYZ Collections. I'm calling about your unpaid balance. How are you doing today?",
+        "stime": 0,
+        "etime": 8
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm doing well, thank you. How can I help you?",
+        "stime": 9.1,
+        "etime": 12
+    },
+    {
+        "speaker": "Agent",
+        "text": "Before we get into that, can you confirm your birth date for me?",
+        "stime": 11,
+        "etime": 16
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's June 5th, 1990.",
+        "stime": 17,
+        "etime": 20
+    },
+    {
+        "speaker": "Agent",
+        "text": "Alright, and can you also provide your current address?",
+        "stime": 19.5,
+        "etime": 24
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, it's 123 Main St, Springfield.",
+        "stime": 25,
+        "etime": 27
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thanks for verifying that. You have an outstanding balance of $1,200. What the hell are you planning to do about it?",
+        "stime": 26,
+        "etime": 36
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm currently reviewing my options and will make a payment soon.",
+        "stime": 37,
+        "etime": 42
+    },
+    {
+        "speaker": "Agent",
+        "text": "Reviewing options? What kind of bullshit is that? You need to pay up now!",
+        "stime": 41.5,
+        "etime": 50
+    },
+    {
+        "speaker": "Customer",
+        "text": "I understand the urgency, but I need a little more time to arrange the funds.",
+        "stime": 49,
+        "etime": 54
+    },
+    {
+        "speaker": "Agent",
+        "text": "Time? You think you can just sit on your ass and not pay your debts? Get real!",
+        "stime": 53,
+        "etime": 61
+    },
+    {
+        "speaker": "Customer",
+        "text": "I assure you that I'm taking this seriously and will communicate my plan shortly.",
+        "stime": 60,
+        "etime": 65
+    },
+    {
+        "speaker": "Agent",
+        "text": "You better do it fast, or I'm going to escalate this, you got that?",
+        "stime": 64,
+        "etime": 70
+    },
+    {
+        "speaker": "Customer",
+        "text": "I understand. Thank you for your call, Mike.",
+        "stime": 69,
+        "etime": 73
+    },
+    {
+        "speaker": "Agent",
+        "text": "Whatever, just make sure you don't screw this up again.",
+        "stime": 72,
+        "etime": 78
+    }
+]

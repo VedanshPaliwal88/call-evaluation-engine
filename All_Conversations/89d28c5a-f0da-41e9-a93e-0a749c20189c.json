@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Dave from XYZ Collections. I need to discuss your overdue account. Can you verify your date of birth?",
+        "stime": 0,
+        "etime": 10
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's July 15, 1985.",
+        "stime": 11,
+        "etime": 14
+    },
+    {
+        "speaker": "Agent",
+        "text": "Alright, I got that. Now, can you confirm your address for me?",
+        "stime": 13,
+        "etime": 19
+    },
+    {
+        "speaker": "Customer",
+        "text": "It's 123 Elm Street, Springfield.",
+        "stime": 20,
+        "etime": 24
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thanks. You owe us $250. Here's the thing, you need to pay it now, or else.",
+        "stime": 23,
+        "etime": 32
+    },
+    {
+        "speaker": "Customer",
+        "text": "I understand, but I need to discuss my options first.",
+        "stime": 31,
+        "etime": 36
+    },
+    {
+        "speaker": "Agent",
+        "text": "Options? What options? You can either pay up or get the hell out of here with your excuses!",
+        "stime": 35,
+        "etime": 43
+    },
+    {
+        "speaker": "Customer",
+        "text": "I assure you, I\u2019m trying to resolve this as best as I can.",
+        "stime": 42,
+        "etime": 48
+    },
+    {
+        "speaker": "Agent",
+        "text": "Trying to resolve it? You think this is a joke? Pay your damn bill or face the consequences!",
+        "stime": 47,
+        "etime": 55
+    },
+    {
+        "speaker": "Customer",
+        "text": "I\u2019m here to discuss a payment plan. Please, let\u2019s work together on this.",
+        "stime": 54,
+        "etime": 60
+    },
+    {
+        "speaker": "Agent",
+        "text": "Work together? You think I have time for this crap? Just give me your credit card info!",
+        "stime": 59,
+        "etime": 67
+    },
+    {
+        "speaker": "Customer",
+        "text": "I can't give any information until we reach a reasonable agreement.",
+        "stime": 66,
+        "etime": 72
+    },
+    {
+        "speaker": "Agent",
+        "text": "You know what? I don\u2019t have time for this nonsense. Either pay or I\u2019m done with you!",
+        "stime": 71,
+        "etime": 78
+    },
+    {
+        "speaker": "Customer",
+        "text": "I will speak with my lawyer if necessary, but I prefer to settle this amicably.",
+        "stime": 77,
+        "etime": 83
+    },
+    {
+        "speaker": "Agent",
+        "text": "Good luck with that! Just don\u2019t come crying to me when you end up in deeper shit!",
+        "stime": 82,
+        "etime": 90
+    }
+]

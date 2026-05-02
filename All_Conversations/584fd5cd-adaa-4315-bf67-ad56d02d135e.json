@@ -1,0 +1,86 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 6
+    },
+    {
+        "speaker": "Customer",
+        "text": "What the hell do you want? I\u2019m not in the mood for this crap!",
+        "stime": 6.5,
+        "etime": 11
+    },
+    {
+        "speaker": "Agent",
+        "text": "I understand you're frustrated. I'm calling about your account. Can you please verify your date of birth?",
+        "stime": 10,
+        "etime": 20
+    },
+    {
+        "speaker": "Customer",
+        "text": "Why the f*** should I tell you anything? Just get lost!",
+        "stime": 19,
+        "etime": 24
+    },
+    {
+        "speaker": "Agent",
+        "text": "I can help you better if I confirm your identity. It\u2019s standard procedure. Please provide your date of birth.",
+        "stime": 23,
+        "etime": 32
+    },
+    {
+        "speaker": "Customer",
+        "text": "What part of 'leave me the hell alone' don\u2019t you get? I\u2019m not giving you anything!",
+        "stime": 31,
+        "etime": 37
+    },
+    {
+        "speaker": "Agent",
+        "text": "I appreciate your honesty. However, I cannot discuss account details until I verify your identity. Could you please provide your address?",
+        "stime": 36,
+        "etime": 47
+    },
+    {
+        "speaker": "Customer",
+        "text": "This is so f****** ridiculous! It\u2019s not like I owe you anything anyway!",
+        "stime": 46,
+        "etime": 51
+    },
+    {
+        "speaker": "Agent",
+        "text": "I understand your frustration. However, the account is still overdue. We need to verify it to assist you. Can you confirm your address?",
+        "stime": 50,
+        "etime": 60
+    },
+    {
+        "speaker": "Customer",
+        "text": "You piece of s***, I told you I\u2019m not giving you anything!",
+        "stime": 59,
+        "etime": 64
+    },
+    {
+        "speaker": "Agent",
+        "text": "I respect your choice, but without verification, I cannot proceed. I\u2019m here to help when you\u2019re ready.",
+        "stime": 63,
+        "etime": 73
+    },
+    {
+        "speaker": "Customer",
+        "text": "Whatever, just shut the f*** up!",
+        "stime": 72,
+        "etime": 76
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for your time. Feel free to call back if you wish to discuss this further.",
+        "stime": 75,
+        "etime": 82
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yeah, right. Don\u2019t hold your breath!",
+        "stime": 81,
+        "etime": 85
+    }
+]

@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Sarah from XYZ Collections. Am I speaking with Mr. Johnson?",
+        "stime": 0,
+        "etime": 6
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, this is he. What\u2019s this about?",
+        "stime": 6.5,
+        "etime": 9
+    },
+    {
+        "speaker": "Agent",
+        "text": "I\u2019m calling regarding an outstanding balance on your account. Before we proceed, can I verify your date of birth?",
+        "stime": 9,
+        "etime": 19
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's January fifteenth, nineteen eighty-five.",
+        "stime": 19.5,
+        "etime": 23
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you. Can you also confirm your current address for me?",
+        "stime": 22,
+        "etime": 27
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, I live at 123 Maple Street, Springfield.",
+        "stime": 27.5,
+        "etime": 31
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for that information. You currently have a balance of three hundred fifty dollars. How would you like to proceed with the payment?",
+        "stime": 31.5,
+        "etime": 45
+    },
+    {
+        "speaker": "Customer",
+        "text": "I can pay half of it today and the other half next week.",
+        "stime": 44,
+        "etime": 49
+    },
+    {
+        "speaker": "Agent",
+        "text": "That sounds reasonable. So, you would like to pay one hundred seventy-five dollars today?",
+        "stime": 49.5,
+        "etime": 55
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, that\u2019s correct.",
+        "stime": 55.5,
+        "etime": 57
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great! I can assist you with that payment right now.",
+        "stime": 57.5,
+        "etime": 61
+    },
+    {
+        "speaker": "Customer",
+        "text": "Alright, let\u2019s do it.",
+        "stime": 61.5,
+        "etime": 63
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for your cooperation, Mr. Johnson. Let's complete your payment.",
+        "stime": 63.5,
+        "etime": 70
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you, Sarah.",
+        "stime": 70.5,
+        "etime": 72
+    },
+    {
+        "speaker": "Agent",
+        "text": "You're welcome! Have a great day.",
+        "stime": 72.5,
+        "etime": 75
+    }
+]

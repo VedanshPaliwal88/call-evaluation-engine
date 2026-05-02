@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 6
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm doing okay, thanks. What\u2019s this about?",
+        "stime": 6.5,
+        "etime": 10
+    },
+    {
+        "speaker": "Agent",
+        "text": "I\u2019m calling regarding your overdue account with Smith Financial. Can I have your full name to proceed?",
+        "stime": 9,
+        "etime": 15
+    },
+    {
+        "speaker": "Customer",
+        "text": "It's John Doe.",
+        "stime": 15.5,
+        "etime": 17
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you, John. You currently have a balance of $250. How would you like to handle that today?",
+        "stime": 16,
+        "etime": 25
+    },
+    {
+        "speaker": "Customer",
+        "text": "I wasn\u2019t aware of that balance. Can you provide more details?",
+        "stime": 25.5,
+        "etime": 30
+    },
+    {
+        "speaker": "Agent",
+        "text": "Absolutely. You missed your last payment in October, and the total due is $250.",
+        "stime": 29,
+        "etime": 35
+    },
+    {
+        "speaker": "Customer",
+        "text": "Wait, can you confirm which account this is for?",
+        "stime": 35.5,
+        "etime": 39
+    },
+    {
+        "speaker": "Agent",
+        "text": "This is regarding your account ending in 1234. Does that sound familiar?",
+        "stime": 38,
+        "etime": 44
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, I think that\u2019s right. But I still need more information.",
+        "stime": 43.5,
+        "etime": 48
+    },
+    {
+        "speaker": "Agent",
+        "text": "Sure, you can review your past statements online to verify. Would you like to set up a payment plan?",
+        "stime": 47,
+        "etime": 55
+    },
+    {
+        "speaker": "Customer",
+        "text": "Let me think about it; I need to check my finances first.",
+        "stime": 54.5,
+        "etime": 59
+    },
+    {
+        "speaker": "Agent",
+        "text": "Of course, take your time. I can call you back next week to follow up.",
+        "stime": 58,
+        "etime": 65
+    },
+    {
+        "speaker": "Customer",
+        "text": "That sounds good. Thanks for your understanding.",
+        "stime": 64.5,
+        "etime": 68
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you, John. Have a great day!",
+        "stime": 67,
+        "etime": 70
+    }
+]

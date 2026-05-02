@@ -1,0 +1,68 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, is this Ms. Thompson? This is Jordan from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 8
+    },
+    {
+        "speaker": "Customer",
+        "text": "Hi, yes this is she. I'm doing okay, thanks. What\u2019s this about?",
+        "stime": 9,
+        "etime": 14
+    },
+    {
+        "speaker": "Agent",
+        "text": "I'm calling regarding a past due balance on your account with XYZ Bank. Can I have your date of birth to locate your records?",
+        "stime": 13,
+        "etime": 23
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's December 15, 1990.",
+        "stime": 24,
+        "etime": 27
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you, Ms. Thompson. Now, you have an outstanding balance of $500. How would you like to settle this today?",
+        "stime": 26,
+        "etime": 36
+    },
+    {
+        "speaker": "Customer",
+        "text": "I wasn't aware of that amount. I need to check my records first.",
+        "stime": 37,
+        "etime": 42
+    },
+    {
+        "speaker": "Agent",
+        "text": "I understand. However, it's important to resolve this quickly to avoid further fees. Can I note that you are planning to check your records?",
+        "stime": 41,
+        "etime": 50
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, I will do that, but I can\u2019t commit to a payment right now.",
+        "stime": 51,
+        "etime": 56
+    },
+    {
+        "speaker": "Agent",
+        "text": "That\u2019s completely fine. Please reach back out once you verify the information. Just a quick reminder, thank you for your time today.",
+        "stime": 55,
+        "etime": 65
+    },
+    {
+        "speaker": "Customer",
+        "text": "Okay, I appreciate your understanding. Bye.",
+        "stime": 66,
+        "etime": 70
+    },
+    {
+        "speaker": "Agent",
+        "text": "Goodbye, Ms. Thompson. Have a great day!",
+        "stime": 71,
+        "etime": 75
+    }
+]

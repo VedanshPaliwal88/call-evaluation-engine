@@ -1,0 +1,56 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Sarah from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm fine, but why are you calling me?",
+        "stime": 7.5,
+        "etime": 11
+    },
+    {
+        "speaker": "Agent",
+        "text": "I'm reaching out regarding your overdue account with Green Finance. It's important we discuss this.",
+        "stime": 10,
+        "etime": 19
+    },
+    {
+        "speaker": "Customer",
+        "text": "I don't want to talk about it. I've requested to be put on a do not call list before.",
+        "stime": 18,
+        "etime": 26
+    },
+    {
+        "speaker": "Agent",
+        "text": "I apologize for the inconvenience. I can help you with marking your number for the do not call list.",
+        "stime": 25,
+        "etime": 35
+    },
+    {
+        "speaker": "Customer",
+        "text": "Please do that. I really don't want any more calls.",
+        "stime": 34,
+        "etime": 39
+    },
+    {
+        "speaker": "Agent",
+        "text": "Absolutely, I will ensure your number is marked. Thank you for your patience.",
+        "stime": 38,
+        "etime": 47
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thanks for understanding. Goodbye.",
+        "stime": 46,
+        "etime": 50
+    },
+    {
+        "speaker": "Agent",
+        "text": "Goodbye! Have a great day.",
+        "stime": 49,
+        "etime": 53
+    }
+]

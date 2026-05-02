@@ -1,0 +1,44 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Lisa from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 8
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm fine, but why are you calling me?",
+        "stime": 8.5,
+        "etime": 11
+    },
+    {
+        "speaker": "Agent",
+        "text": "I'm reaching out regarding your outstanding balance with XYZ Bank. We need to discuss your account.",
+        "stime": 10,
+        "etime": 20
+    },
+    {
+        "speaker": "Customer",
+        "text": "I don\u2019t want to talk about it. Please put me on your do not call list.",
+        "stime": 21,
+        "etime": 25
+    },
+    {
+        "speaker": "Agent",
+        "text": "I completely understand. I apologize for the inconvenience. Let me ensure your number is marked as do not call.",
+        "stime": 24,
+        "etime": 34
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you. I really don\u2019t want any more calls.",
+        "stime": 35,
+        "etime": 39
+    },
+    {
+        "speaker": "Agent",
+        "text": "You're welcome. I've processed your request to be added to the do not call list.",
+        "stime": 40,
+        "etime": 49
+    }
+]

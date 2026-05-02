@@ -1,0 +1,86 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, is this Mr. Davis?",
+        "stime": 0,
+        "etime": 4
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, this is he. Who is calling?",
+        "stime": 5,
+        "etime": 8
+    },
+    {
+        "speaker": "Agent",
+        "text": "My name is Sarah from XYZ Collections. I\u2019m calling about your account. To verify your identity, could you please provide your date of birth?",
+        "stime": 7,
+        "etime": 19
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it\u2019s June 15, 1985.",
+        "stime": 18,
+        "etime": 21
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for that. Could you also confirm your current address for me?",
+        "stime": 20,
+        "etime": 27
+    },
+    {
+        "speaker": "Customer",
+        "text": "I live at 123 Elm Street, Springfield.",
+        "stime": 26,
+        "etime": 30
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great, thank you for verifying your information. You currently have an outstanding balance of $300. Would you like to discuss payment options?",
+        "stime": 29,
+        "etime": 42
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, I\u2019d prefer to set up a payment plan.",
+        "stime": 41,
+        "etime": 44
+    },
+    {
+        "speaker": "Agent",
+        "text": "That\u2019s perfectly fine. We can set up a plan over three months. Does that work for you?",
+        "stime": 43,
+        "etime": 52
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, that sounds manageable.",
+        "stime": 51,
+        "etime": 54
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great! I\u2019ll send you the details via email. Can I confirm your email address is davis@email.com?",
+        "stime": 53,
+        "etime": 60
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, that\u2019s correct.",
+        "stime": 59,
+        "etime": 61
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you, Mr. Davis. You will receive the email shortly. Have a great day!",
+        "stime": 62,
+        "etime": 70
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you, Sarah. You too!",
+        "stime": 69,
+        "etime": 74
+    }
+]

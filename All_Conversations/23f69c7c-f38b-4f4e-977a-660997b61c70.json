@@ -1,0 +1,32 @@
+[
+    {
+        "speaker": "Customer",
+        "text": "You have reached out to a voicemail. Please leave a message at the tone.",
+        "stime": 0,
+        "etime": 8
+    },
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Sarah from National Collections. I'm calling about your overdue balance.",
+        "stime": 6,
+        "etime": 16
+    },
+    {
+        "speaker": "Customer",
+        "text": "If you would like to leave a message, please do so after the beep.",
+        "stime": 10,
+        "etime": 18
+    },
+    {
+        "speaker": "Agent",
+        "text": "Please call us back at one-eight-hundred-two-five-seven-four-oh-four. We can assist you further.",
+        "stime": 17,
+        "etime": 28
+    },
+    {
+        "speaker": "Customer",
+        "text": "Press zero to re-record your message, or just hang up.",
+        "stime": 23,
+        "etime": 31
+    }
+]

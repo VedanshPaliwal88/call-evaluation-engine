@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark from Stellar Collections. How are you today?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "Hi Mark, I'm doing alright. What\u2019s this about?",
+        "stime": 7.5,
+        "etime": 11
+    },
+    {
+        "speaker": "Agent",
+        "text": "I'm reaching out regarding your overdue account with City Credit. Can you please confirm your name for me?",
+        "stime": 10,
+        "etime": 16
+    },
+    {
+        "speaker": "Customer",
+        "text": "It's Alex Turner.",
+        "stime": 15,
+        "etime": 17
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you, Alex. I see here you have a balance of $500 due. Would you like to discuss payment options?",
+        "stime": 16.5,
+        "etime": 25
+    },
+    {
+        "speaker": "Customer",
+        "text": "Wait, can you confirm the account number first? I want to make sure this is legit.",
+        "stime": 24,
+        "etime": 30
+    },
+    {
+        "speaker": "Agent",
+        "text": "Sure! The account number is 123456. So how would you like to settle the balance?",
+        "stime": 29,
+        "etime": 35
+    },
+    {
+        "speaker": "Customer",
+        "text": "That doesn\u2019t sound right. I need more verification before I discuss payment.",
+        "stime": 34,
+        "etime": 40
+    },
+    {
+        "speaker": "Agent",
+        "text": "I understand your concern. I can provide more details about the debt once I verify your identity further.",
+        "stime": 39.5,
+        "etime": 48
+    },
+    {
+        "speaker": "Customer",
+        "text": "Okay, how do we proceed with that?",
+        "stime": 47,
+        "etime": 49
+    },
+    {
+        "speaker": "Agent",
+        "text": "Could you please confirm your date of birth?",
+        "stime": 48,
+        "etime": 51
+    },
+    {
+        "speaker": "Customer",
+        "text": "It's July 5th, 1990.",
+        "stime": 50,
+        "etime": 53
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thanks, Alex. Now, about that payment, would you be able to settle the $500 today?",
+        "stime": 52,
+        "etime": 61
+    },
+    {
+        "speaker": "Customer",
+        "text": "Not today, I need to check my records first.",
+        "stime": 60,
+        "etime": 65
+    },
+    {
+        "speaker": "Agent",
+        "text": "Of course, take your time. Let us know when you're ready to discuss.",
+        "stime": 64,
+        "etime": 70
+    }
+]

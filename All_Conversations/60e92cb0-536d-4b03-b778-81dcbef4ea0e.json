@@ -1,0 +1,32 @@
+[
+    {
+        "speaker": "Customer",
+        "text": "You have reached the voicemail of John Smith. I'm unable to take your call right now.",
+        "stime": 0,
+        "etime": 8
+    },
+    {
+        "speaker": "Agent",
+        "text": "Hello John, this is Lisa from Debt Solutions. I'm calling regarding your outstanding balance.",
+        "stime": 7,
+        "etime": 18
+    },
+    {
+        "speaker": "Customer",
+        "text": "Please leave your name and number after the beep.",
+        "stime": 17,
+        "etime": 25
+    },
+    {
+        "speaker": "Agent",
+        "text": "You can reach me at one eight hundred two three four five six seven. It's important we discuss this matter soon.",
+        "stime": 24,
+        "etime": 37
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you for calling. Your call is important to me.",
+        "stime": 36,
+        "etime": 42
+    }
+]

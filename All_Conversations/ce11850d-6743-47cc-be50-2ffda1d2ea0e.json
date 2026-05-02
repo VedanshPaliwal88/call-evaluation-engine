@@ -1,0 +1,86 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "Hi Mark, I\u2019m doing alright. What\u2019s this about?",
+        "stime": 8,
+        "etime": 12
+    },
+    {
+        "speaker": "Agent",
+        "text": "I\u2019m reaching out regarding your account with Fast Loan Co. Could you please confirm your identity for security purposes?",
+        "stime": 11,
+        "etime": 20
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, what do you need from me?",
+        "stime": 19,
+        "etime": 22
+    },
+    {
+        "speaker": "Agent",
+        "text": "Could you provide your full name and the last four digits of your Social Security number?",
+        "stime": 21,
+        "etime": 30
+    },
+    {
+        "speaker": "Customer",
+        "text": "My name is Jamie Taylor, and the last four digits are 1234.",
+        "stime": 29,
+        "etime": 35
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you, Jamie. I see here you have an outstanding balance of $400 on your account. How would you like to proceed?",
+        "stime": 34,
+        "etime": 45
+    },
+    {
+        "speaker": "Customer",
+        "text": "That\u2019s a lot. Can I set up a payment plan?",
+        "stime": 44,
+        "etime": 49
+    },
+    {
+        "speaker": "Agent",
+        "text": "Yes, we can definitely do that! Typically, we can arrange a plan of $100 a month. Does that work for you?",
+        "stime": 48,
+        "etime": 58
+    },
+    {
+        "speaker": "Customer",
+        "text": "That sounds manageable. What do I need to do?",
+        "stime": 57,
+        "etime": 61
+    },
+    {
+        "speaker": "Agent",
+        "text": "I\u2019ll send the agreement to your email. Please sign it and return it to us.",
+        "stime": 60,
+        "etime": 67
+    },
+    {
+        "speaker": "Customer",
+        "text": "Okay, I\u2019ll keep an eye out for that.",
+        "stime": 66,
+        "etime": 70
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you, Jamie. If you have any questions, feel free to call back.",
+        "stime": 69,
+        "etime": 76
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thanks, Mark. I appreciate your help.",
+        "stime": 75,
+        "etime": 80
+    }
+]

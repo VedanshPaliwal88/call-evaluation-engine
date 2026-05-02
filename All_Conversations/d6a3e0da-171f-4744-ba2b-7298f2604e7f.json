@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "What the hell do you want? I'm busy!",
+        "stime": 6.5,
+        "etime": 10
+    },
+    {
+        "speaker": "Agent",
+        "text": "I understand you're busy. I'm calling about your outstanding balance. To proceed, could you please verify your date of birth?",
+        "stime": 9,
+        "etime": 16
+    },
+    {
+        "speaker": "Customer",
+        "text": "Why the f*** should I tell you anything? Get lost!",
+        "stime": 15.5,
+        "etime": 19
+    },
+    {
+        "speaker": "Agent",
+        "text": "I completely understand your frustration. However, I need to verify your identity to discuss your account details. Can you please provide your address?",
+        "stime": 18,
+        "etime": 27
+    },
+    {
+        "speaker": "Customer",
+        "text": "You\u2019re just a pain in the ass, aren\u2019t you? It\u2019s 123 Main St!",
+        "stime": 26,
+        "etime": 29
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for that information. I see your account shows a balance of $500. How would you like to proceed with this?",
+        "stime": 28,
+        "etime": 36
+    },
+    {
+        "speaker": "Customer",
+        "text": "I don\u2019t have time for this crap! I\u2019m not paying anything!",
+        "stime": 35,
+        "etime": 40
+    },
+    {
+        "speaker": "Agent",
+        "text": "I understand you're feeling overwhelmed. However, we can work together to find a suitable payment plan. Would you be open to discussing options?",
+        "stime": 39,
+        "etime": 48
+    },
+    {
+        "speaker": "Customer",
+        "text": "I wouldn\u2019t pay you a dime even if my life depended on it! Screw you!",
+        "stime": 47,
+        "etime": 54
+    },
+    {
+        "speaker": "Agent",
+        "text": "I appreciate your honesty. Please remember that ignoring the debt won't make it go away. We can help you find a solution.",
+        "stime": 53,
+        "etime": 62
+    },
+    {
+        "speaker": "Customer",
+        "text": "I\u2019ll deal with it when I feel like it! Now leave me alone!",
+        "stime": 61,
+        "etime": 67
+    },
+    {
+        "speaker": "Agent",
+        "text": "I respect your decision. If you change your mind, feel free to call us back. Thank you for your time.",
+        "stime": 66,
+        "etime": 73
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yeah, whatever!",
+        "stime": 72,
+        "etime": 75
+    },
+    {
+        "speaker": "Agent",
+        "text": "Take care. Goodbye!",
+        "stime": 74,
+        "etime": 78
+    }
+]

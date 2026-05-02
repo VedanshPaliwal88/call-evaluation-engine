@@ -1,0 +1,86 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, is this Mr. Thompson?",
+        "stime": 0,
+        "etime": 4
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, this is he. Who's calling?",
+        "stime": 5,
+        "etime": 9
+    },
+    {
+        "speaker": "Agent",
+        "text": "This is Sarah from XYZ Collections. I'm calling regarding your account. Can you please verify your date of birth?",
+        "stime": 8,
+        "etime": 19
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's June 15, 1985.",
+        "stime": 20,
+        "etime": 23
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for that information. Can you also confirm your current address for security purposes?",
+        "stime": 22,
+        "etime": 34
+    },
+    {
+        "speaker": "Customer",
+        "text": "It's 123 Main St, Springfield.",
+        "stime": 35,
+        "etime": 39
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great, thank you. I can now discuss your account. You currently have an outstanding balance of $250.",
+        "stime": 38,
+        "etime": 49
+    },
+    {
+        "speaker": "Customer",
+        "text": "I see, what are my options for payment?",
+        "stime": 50,
+        "etime": 54
+    },
+    {
+        "speaker": "Agent",
+        "text": "You can pay in full today or set up a payment plan. What would work best for you?",
+        "stime": 53,
+        "etime": 62
+    },
+    {
+        "speaker": "Customer",
+        "text": "I think I can pay half today and the rest next month.",
+        "stime": 61,
+        "etime": 65
+    },
+    {
+        "speaker": "Agent",
+        "text": "That sounds good. I can set that up for you. Would you like to use the same payment method as last time?",
+        "stime": 64,
+        "etime": 76
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, that works for me.",
+        "stime": 75,
+        "etime": 78
+    },
+    {
+        "speaker": "Agent",
+        "text": "Perfect! Your payment plan is set. Thank you for taking the time to resolve this.",
+        "stime": 77,
+        "etime": 87
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you for your help!",
+        "stime": 86,
+        "etime": 90
+    }
+]

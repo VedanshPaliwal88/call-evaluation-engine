@@ -1,0 +1,56 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark calling from XYZ Collections. Am I speaking with Sarah?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "No, this is not Sarah. You must have the wrong number.",
+        "stime": 8.5,
+        "etime": 12
+    },
+    {
+        "speaker": "Agent",
+        "text": "I apologize for the mix-up. I was contacting Sarah about an outstanding balance with XYZ Bank.",
+        "stime": 11,
+        "etime": 20
+    },
+    {
+        "speaker": "Customer",
+        "text": "I really don\u2019t know a Sarah. Are you sure you dialed correctly?",
+        "stime": 19,
+        "etime": 25
+    },
+    {
+        "speaker": "Agent",
+        "text": "Let me double-check that. Could I confirm the number I dialed is 555-1234?",
+        "stime": 24,
+        "etime": 30
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, that's my number, but I assure you I'm not Sarah.",
+        "stime": 29,
+        "etime": 35
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for clarifying that. I will update our records to ensure this number is removed.",
+        "stime": 34,
+        "etime": 42
+    },
+    {
+        "speaker": "Customer",
+        "text": "I appreciate that. Thank you for your help.",
+        "stime": 41,
+        "etime": 46
+    },
+    {
+        "speaker": "Agent",
+        "text": "You're welcome! Have a great day!",
+        "stime": 47,
+        "etime": 52
+    }
+]

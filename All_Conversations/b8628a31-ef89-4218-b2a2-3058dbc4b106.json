@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 5
+    },
+    {
+        "speaker": "Customer",
+        "text": "What the hell do you want? I'm not in the mood for this crap!",
+        "stime": 4.5,
+        "etime": 10
+    },
+    {
+        "speaker": "Agent",
+        "text": "I understand this may not be a good time. I'm calling regarding your outstanding balance. Can you please confirm your date of birth for identity verification?",
+        "stime": 9,
+        "etime": 20
+    },
+    {
+        "speaker": "Customer",
+        "text": "You think I\u2019m just going to give you that? Screw off!",
+        "stime": 19,
+        "etime": 24
+    },
+    {
+        "speaker": "Agent",
+        "text": "I assure you, I can only proceed with verification after confirming your identity. Your privacy is important to us.",
+        "stime": 23,
+        "etime": 33
+    },
+    {
+        "speaker": "Customer",
+        "text": "What a joke! I don\u2019t owe you anything, you idiots!",
+        "stime": 32,
+        "etime": 37
+    },
+    {
+        "speaker": "Agent",
+        "text": "I understand your frustration, but I must verify your information. Could you please provide your address?",
+        "stime": 36,
+        "etime": 46
+    },
+    {
+        "speaker": "Customer",
+        "text": "Ugh! It's 1234 Ridiculous Lane, but I\u2019m telling you, you\u2019re wasting your time!",
+        "stime": 45,
+        "etime": 53
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for that information. Now, I see a balance of $500 on your account. How would you like to address this?",
+        "stime": 52,
+        "etime": 62
+    },
+    {
+        "speaker": "Customer",
+        "text": "I don\u2019t have to pay a damn thing! You can go to hell!",
+        "stime": 61,
+        "etime": 67
+    },
+    {
+        "speaker": "Agent",
+        "text": "I understand this is not easy to discuss. However, we can work out a payment plan that suits you.",
+        "stime": 66,
+        "etime": 76
+    },
+    {
+        "speaker": "Customer",
+        "text": "You really think I\u2019m going to negotiate with you people? No chance!",
+        "stime": 75,
+        "etime": 82
+    },
+    {
+        "speaker": "Agent",
+        "text": "I respect your decision. Just know that I'm here to help if you change your mind. Thank you for your time today.",
+        "stime": 81,
+        "etime": 91
+    },
+    {
+        "speaker": "Customer",
+        "text": "Whatever, don\u2019t call me again!",
+        "stime": 90,
+        "etime": 94
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for the conversation. Have a good day.",
+        "stime": 93,
+        "etime": 100
+    }
+]

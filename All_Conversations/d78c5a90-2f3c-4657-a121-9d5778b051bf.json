@@ -1,0 +1,56 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, is this Mark Reynolds? This is Lisa calling from XYZ Collections.",
+        "stime": 0,
+        "etime": 8
+    },
+    {
+        "speaker": "Customer",
+        "text": "No, this is not Mark. You must have the wrong number.",
+        "stime": 8.5,
+        "etime": 11
+    },
+    {
+        "speaker": "Agent",
+        "text": "I apologize. I'm calling about an outstanding balance on an account with ABC Credit.",
+        "stime": 10,
+        "etime": 20
+    },
+    {
+        "speaker": "Customer",
+        "text": "I really have no idea what you're talking about. I don\u2019t owe anything.",
+        "stime": 19,
+        "etime": 22
+    },
+    {
+        "speaker": "Agent",
+        "text": "I understand, and I\u2019m sorry for the confusion. Can I confirm your name, just to update our records?",
+        "stime": 21,
+        "etime": 30
+    },
+    {
+        "speaker": "Customer",
+        "text": "It's Sarah Thompson. I can assure you, I don\u2019t have any debts.",
+        "stime": 29,
+        "etime": 34
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you, Sarah. I will remove this number from our call list. Sorry for the inconvenience.",
+        "stime": 33,
+        "etime": 43
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thanks for understanding. Have a good day.",
+        "stime": 42,
+        "etime": 47
+    },
+    {
+        "speaker": "Agent",
+        "text": "You too! Goodbye.",
+        "stime": 46,
+        "etime": 50
+    }
+]

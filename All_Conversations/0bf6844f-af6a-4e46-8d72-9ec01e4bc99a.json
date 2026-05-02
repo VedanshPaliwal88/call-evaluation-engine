@@ -1,0 +1,86 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, is this Maria?",
+        "stime": 0,
+        "etime": 4
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, this is Maria.",
+        "stime": 4.5,
+        "etime": 6
+    },
+    {
+        "speaker": "Agent",
+        "text": "Hi Maria, this is John calling from XYZ Collections. How are you today?",
+        "stime": 6,
+        "etime": 12
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm doing alright, thank you.",
+        "stime": 12.5,
+        "etime": 15
+    },
+    {
+        "speaker": "Agent",
+        "text": "I'm glad to hear that! I'm reaching out to discuss your account with ABC Bank. Can I get your account number?",
+        "stime": 15,
+        "etime": 25
+    },
+    {
+        "speaker": "Customer",
+        "text": "I don't have it handy right now.",
+        "stime": 25.5,
+        "etime": 28
+    },
+    {
+        "speaker": "Agent",
+        "text": "No problem! I can look it up with your name. You've got an outstanding balance of $250. Would you like to discuss payment options?",
+        "stime": 28,
+        "etime": 40
+    },
+    {
+        "speaker": "Customer",
+        "text": "I wasn\u2019t aware of that amount. Can you give me more details?",
+        "stime": 40.5,
+        "etime": 44
+    },
+    {
+        "speaker": "Agent",
+        "text": "Sure! The balance is from a missed payment last month. Do you have a plan to settle this soon?",
+        "stime": 44,
+        "etime": 54
+    },
+    {
+        "speaker": "Customer",
+        "text": "I need some time to think about it.",
+        "stime": 54.5,
+        "etime": 58
+    },
+    {
+        "speaker": "Agent",
+        "text": "That's completely understandable. Just remember, the sooner you settle, the better for your credit report.",
+        "stime": 58.5,
+        "etime": 66
+    },
+    {
+        "speaker": "Customer",
+        "text": "Okay, I'll review my finances and get back to you.",
+        "stime": 66.5,
+        "etime": 70
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you, Maria. I appreciate your attention to this matter. Have a great day!",
+        "stime": 70.5,
+        "etime": 76
+    },
+    {
+        "speaker": "Customer",
+        "text": "You too, goodbye!",
+        "stime": 76.5,
+        "etime": 79
+    }
+]

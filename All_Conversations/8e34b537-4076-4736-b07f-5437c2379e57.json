@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Sarah from XYZ Collections. Am I speaking with Mark?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, this is Mark. What can I help you with?",
+        "stime": 8,
+        "etime": 12
+    },
+    {
+        "speaker": "Agent",
+        "text": "I'm calling regarding your outstanding balance with ABC Credit. Can I confirm your account details?",
+        "stime": 11,
+        "etime": 20
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, I\u2019d like to know the balance first.",
+        "stime": 19,
+        "etime": 23
+    },
+    {
+        "speaker": "Agent",
+        "text": "You currently have a balance of $450. How would you like to proceed with payment?",
+        "stime": 22,
+        "etime": 33
+    },
+    {
+        "speaker": "Customer",
+        "text": "I wasn\u2019t expecting that. Can you remind me when it was due?",
+        "stime": 32,
+        "etime": 38
+    },
+    {
+        "speaker": "Agent",
+        "text": "The payment was due last month on the 15th. Would you like to discuss payment options?",
+        "stime": 37,
+        "etime": 46
+    },
+    {
+        "speaker": "Customer",
+        "text": "I can pay part of it now. Can you take my credit card info?",
+        "stime": 45,
+        "etime": 50
+    },
+    {
+        "speaker": "Agent",
+        "text": "Absolutely, but first I need to verify your identity. Could you please provide your address?",
+        "stime": 49,
+        "etime": 57
+    },
+    {
+        "speaker": "Customer",
+        "text": "I live at 123 Elm Street.",
+        "stime": 56,
+        "etime": 60
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you, Mark. That matches our records. Let\u2019s proceed with collecting your payment.",
+        "stime": 59,
+        "etime": 70
+    },
+    {
+        "speaker": "Customer",
+        "text": "Okay, my card number is 4111 1111 1111 1111.",
+        "stime": 69,
+        "etime": 75
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for that. I will process this payment for you now.",
+        "stime": 74,
+        "etime": 80
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thanks for your help!",
+        "stime": 79,
+        "etime": 82
+    },
+    {
+        "speaker": "Agent",
+        "text": "You're welcome! You're all set. Have a great day!",
+        "stime": 81,
+        "etime": 90
+    }
+]

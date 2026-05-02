@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 8
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yeah? What the hell do you want?",
+        "stime": 8.5,
+        "etime": 12
+    },
+    {
+        "speaker": "Agent",
+        "text": "I\u2019m calling regarding your outstanding balance with ABC Credit. Before we proceed, can you please confirm your date of birth?",
+        "stime": 11,
+        "etime": 20
+    },
+    {
+        "speaker": "Customer",
+        "text": "Why the f*** would I tell you anything? Screw you!",
+        "stime": 19.5,
+        "etime": 24
+    },
+    {
+        "speaker": "Agent",
+        "text": "I understand this might be frustrating, but I need to verify your identity. Can you confirm your address?",
+        "stime": 23,
+        "etime": 30
+    },
+    {
+        "speaker": "Customer",
+        "text": "Why don't you shove that up your ass? I\u2019m not giving you anything!",
+        "stime": 29,
+        "etime": 34
+    },
+    {
+        "speaker": "Agent",
+        "text": "I assure you, I\u2019m just trying to help you. I can\u2019t provide account details without verification.",
+        "stime": 33.5,
+        "etime": 42
+    },
+    {
+        "speaker": "Customer",
+        "text": "Help? You think this is help? You're just another annoying leech!",
+        "stime": 41,
+        "etime": 47
+    },
+    {
+        "speaker": "Agent",
+        "text": "I\u2019m here to assist you, and I\u2019d like to resolve this matter. Just a little information is needed.",
+        "stime": 46,
+        "etime": 55
+    },
+    {
+        "speaker": "Customer",
+        "text": "Oh, give me a break! You think I owe you something, right?",
+        "stime": 54.5,
+        "etime": 60
+    },
+    {
+        "speaker": "Agent",
+        "text": "I can provide details once we verify your information. Can you confirm your zip code?",
+        "stime": 59,
+        "etime": 68
+    },
+    {
+        "speaker": "Customer",
+        "text": "You\u2019re really pissing me off with this shit! Fine, it\u2019s 12345!",
+        "stime": 67,
+        "etime": 73
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for that. I see you have a balance of $500. How would you like to proceed?",
+        "stime": 72,
+        "etime": 81
+    },
+    {
+        "speaker": "Customer",
+        "text": "I\u2019m not paying a damn thing today!",
+        "stime": 80,
+        "etime": 85
+    },
+    {
+        "speaker": "Agent",
+        "text": "I understand. Would you like to set up a payment plan instead?",
+        "stime": 84,
+        "etime": 92
+    }
+]

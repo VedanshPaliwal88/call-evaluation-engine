@@ -1,0 +1,86 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Sarah calling from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm fine, thanks. What is this about?",
+        "stime": 8,
+        "etime": 12
+    },
+    {
+        "speaker": "Agent",
+        "text": "I'm reaching out regarding your outstanding balance with Global Credit. Can I have your name to proceed?",
+        "stime": 11,
+        "etime": 20
+    },
+    {
+        "speaker": "Customer",
+        "text": "It's John Harris.",
+        "stime": 21,
+        "etime": 23
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you, John. You currently have a balance of three hundred dollars. When can we expect payment?",
+        "stime": 22,
+        "etime": 32
+    },
+    {
+        "speaker": "Customer",
+        "text": "I wasn't even aware of that. Can you tell me more details?",
+        "stime": 33,
+        "etime": 36
+    },
+    {
+        "speaker": "Agent",
+        "text": "Of course. This balance includes your last payment missed in August. Would you like to set up a payment plan?",
+        "stime": 35,
+        "etime": 45
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm not sure if I can afford that right now.",
+        "stime": 46,
+        "etime": 50
+    },
+    {
+        "speaker": "Agent",
+        "text": "I understand, John. We can work with you on that. What amount could you manage as a down payment?",
+        "stime": 49,
+        "etime": 58
+    },
+    {
+        "speaker": "Customer",
+        "text": "Maybe I can do fifty dollars.",
+        "stime": 59,
+        "etime": 62
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great, I can arrange that. You can pay over the phone or online. Which preference do you have?",
+        "stime": 61,
+        "etime": 71
+    },
+    {
+        "speaker": "Customer",
+        "text": "I prefer online payment.",
+        "stime": 72,
+        "etime": 75
+    },
+    {
+        "speaker": "Agent",
+        "text": "Perfect! I'll send you a link to complete the payment. Thank you for your cooperation today.",
+        "stime": 76,
+        "etime": 85
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you for your help.",
+        "stime": 86,
+        "etime": 88
+    }
+]

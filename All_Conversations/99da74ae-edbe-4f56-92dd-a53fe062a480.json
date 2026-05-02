@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, is this Samantha?",
+        "stime": 0,
+        "etime": 5
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, this is Samantha. Who is calling?",
+        "stime": 5.5,
+        "etime": 10
+    },
+    {
+        "speaker": "Agent",
+        "text": "Hi Samantha, this is Mark from XYZ Collections. How are you today?",
+        "stime": 9,
+        "etime": 14
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm okay, just busy with work. What is this about?",
+        "stime": 14.5,
+        "etime": 18
+    },
+    {
+        "speaker": "Agent",
+        "text": "I understand, and I appreciate your time. I'm calling regarding your outstanding account balance.",
+        "stime": 17.5,
+        "etime": 25
+    },
+    {
+        "speaker": "Customer",
+        "text": "Can you provide more details about the account?",
+        "stime": 26,
+        "etime": 29
+    },
+    {
+        "speaker": "Agent",
+        "text": "Sure! Could you please confirm your address for verification purposes?",
+        "stime": 28,
+        "etime": 35
+    },
+    {
+        "speaker": "Customer",
+        "text": "I live at 123 Maple Street.",
+        "stime": 36,
+        "etime": 39
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you! You currently have a balance of $450. Would you like to set up a payment plan?",
+        "stime": 38,
+        "etime": 48
+    },
+    {
+        "speaker": "Customer",
+        "text": "I wasn't aware of that amount. Can you break it down for me?",
+        "stime": 47,
+        "etime": 51
+    },
+    {
+        "speaker": "Agent",
+        "text": "Certainly! This includes overdue fees and last month\u2019s payment. How do you wish to proceed?",
+        "stime": 50,
+        "etime": 60
+    },
+    {
+        "speaker": "Customer",
+        "text": "Okay, I can start with a partial payment online.",
+        "stime": 59,
+        "etime": 64
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great! I will guide you through the online payment process.",
+        "stime": 63,
+        "etime": 70
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you, I appreciate your help.",
+        "stime": 69,
+        "etime": 72
+    },
+    {
+        "speaker": "Agent",
+        "text": "You're welcome, Samantha! I'm here to assist you anytime.",
+        "stime": 71,
+        "etime": 76
+    }
+]

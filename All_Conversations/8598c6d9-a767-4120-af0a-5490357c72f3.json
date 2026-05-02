@@ -1,0 +1,80 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "What the f*** do you want? I'm not in the mood for your crap!",
+        "stime": 7.5,
+        "etime": 13
+    },
+    {
+        "speaker": "Agent",
+        "text": "I understand this might be frustrating. However, I need to verify your identity to proceed. Can you please provide your date of birth?",
+        "stime": 12,
+        "etime": 22
+    },
+    {
+        "speaker": "Customer",
+        "text": "Why the hell do you need that? Just f*** off already!",
+        "stime": 22.5,
+        "etime": 28
+    },
+    {
+        "speaker": "Agent",
+        "text": "I apologize for the inconvenience. I can only assist you if I can confirm your details. Your date of birth, please?",
+        "stime": 27,
+        "etime": 37
+    },
+    {
+        "speaker": "Customer",
+        "text": "It's July 15, 1985, you idiot! Now can you just tell me what you want?",
+        "stime": 36,
+        "etime": 43
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for that information. You currently have an outstanding balance of $500. Would you like to discuss payment options?",
+        "stime": 42,
+        "etime": 55
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm not paying a damn thing! You can shove it up your a**!",
+        "stime": 54,
+        "etime": 60
+    },
+    {
+        "speaker": "Agent",
+        "text": "I understand. If you're facing difficulties, we can explore options together. Let's talk about it.",
+        "stime": 59,
+        "etime": 68
+    },
+    {
+        "speaker": "Customer",
+        "text": "I don't need your help! Just get lost!",
+        "stime": 67,
+        "etime": 73
+    },
+    {
+        "speaker": "Agent",
+        "text": "I respect your wishes. Should you change your mind, feel free to contact us. Thank you for your time.",
+        "stime": 72,
+        "etime": 82
+    },
+    {
+        "speaker": "Customer",
+        "text": "Whatever, just don\u2019t call me again!",
+        "stime": 81,
+        "etime": 85
+    },
+    {
+        "speaker": "Agent",
+        "text": "Understood. Have a great day ahead!",
+        "stime": 84,
+        "etime": 90
+    }
+]

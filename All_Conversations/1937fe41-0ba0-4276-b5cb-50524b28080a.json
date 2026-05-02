@@ -1,0 +1,80 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, is this Mr. Johnson? This is Lisa from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 8
+    },
+    {
+        "speaker": "Customer",
+        "text": "Hi Lisa, yes this is Mr. Johnson. I'm doing okay, thanks.",
+        "stime": 8.5,
+        "etime": 12
+    },
+    {
+        "speaker": "Agent",
+        "text": "I\u2019m glad to hear that! I'm calling regarding your outstanding balance with XYZ Credit. Can you confirm your address for me?",
+        "stime": 11,
+        "etime": 21
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's 123 Elm Street.",
+        "stime": 20,
+        "etime": 24
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you. I see you have a balance of $350. Would you like to discuss payment options?",
+        "stime": 23,
+        "etime": 32
+    },
+    {
+        "speaker": "Customer",
+        "text": "I didn't expect that. Can you give me more details about the charges?",
+        "stime": 31,
+        "etime": 36
+    },
+    {
+        "speaker": "Agent",
+        "text": "Of course! This balance is from your last statement dated July 15th. We can discuss how to settle this today.",
+        "stime": 35,
+        "etime": 45
+    },
+    {
+        "speaker": "Customer",
+        "text": "I need some time to think about it. Can I call back later?",
+        "stime": 44,
+        "etime": 48
+    },
+    {
+        "speaker": "Agent",
+        "text": "Sure, I understand. Just to let you know, you can pay online or through our automated system anytime.",
+        "stime": 47,
+        "etime": 58
+    },
+    {
+        "speaker": "Customer",
+        "text": "Alright, I\u2019ll look into that. Thanks for the information.",
+        "stime": 57,
+        "etime": 62
+    },
+    {
+        "speaker": "Agent",
+        "text": "You\u2019re welcome, Mr. Johnson. If you have any further questions, feel free to reach out.",
+        "stime": 61,
+        "etime": 70
+    },
+    {
+        "speaker": "Customer",
+        "text": "I appreciate it, Lisa. Talk to you later.",
+        "stime": 69,
+        "etime": 74
+    },
+    {
+        "speaker": "Agent",
+        "text": "Goodbye, take care!",
+        "stime": 73,
+        "etime": 76
+    }
+]

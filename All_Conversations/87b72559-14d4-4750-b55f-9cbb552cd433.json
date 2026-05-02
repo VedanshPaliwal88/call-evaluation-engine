@@ -1,0 +1,32 @@
+[
+    {
+        "speaker": "Customer",
+        "text": "You have reached the voicemail of John Smith. Please leave a message after the tone.",
+        "stime": 0,
+        "etime": 8
+    },
+    {
+        "speaker": "Agent",
+        "text": "Hello John, this is Lisa from Clear Collections. I am calling regarding your outstanding balance.",
+        "stime": 9,
+        "etime": 17
+    },
+    {
+        "speaker": "Customer",
+        "text": "To leave a message, please press one or wait for the beep.",
+        "stime": 18,
+        "etime": 26
+    },
+    {
+        "speaker": "Agent",
+        "text": "You can reach me at one eight hundred two four seven six three two one. It\u2019s important to discuss your account status.",
+        "stime": 27,
+        "etime": 40
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you for your call. Have a great day!",
+        "stime": 41,
+        "etime": 48
+    }
+]

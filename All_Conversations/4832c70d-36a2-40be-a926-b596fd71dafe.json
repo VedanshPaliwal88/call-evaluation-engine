@@ -1,0 +1,32 @@
+[
+    {
+        "speaker": "Customer",
+        "text": "You have reached the voicemail of John Smith. Please leave a message after the beep.",
+        "stime": 0,
+        "etime": 8
+    },
+    {
+        "speaker": "Agent",
+        "text": "Hello, John. This is Sarah from Apex Collections. I'm calling about your overdue balance with your account. Please call us back at 1-800-555-0199.",
+        "stime": 9,
+        "etime": 22
+    },
+    {
+        "speaker": "Customer",
+        "text": "To leave a message, please indicate your name and number after the beep.",
+        "stime": 23,
+        "etime": 31
+    },
+    {
+        "speaker": "Agent",
+        "text": "Again, that's Sarah from Apex Collections. We need to discuss your payment options. Thank you for your attention.",
+        "stime": 32,
+        "etime": 45
+    },
+    {
+        "speaker": "Customer",
+        "text": "Have a great day! Goodbye.",
+        "stime": 46,
+        "etime": 52
+    }
+]

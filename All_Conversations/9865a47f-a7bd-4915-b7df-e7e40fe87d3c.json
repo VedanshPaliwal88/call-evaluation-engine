@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark from XYZ Collections. Am I speaking with Jordan Smith?",
+        "stime": 0,
+        "etime": 8
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, this is Jordan. What can I help you with?",
+        "stime": 9,
+        "etime": 12
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you, Jordan. I\u2019m calling regarding your outstanding balance with ABC Credit Union. Before we discuss the account details, could you please verify your date of birth?",
+        "stime": 11,
+        "etime": 24
+    },
+    {
+        "speaker": "Customer",
+        "text": "It's June 15, 1992.",
+        "stime": 25,
+        "etime": 27
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for that information. Can you also confirm your current address for verification?",
+        "stime": 26,
+        "etime": 36
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's 123 Main Street, Springfield.",
+        "stime": 37,
+        "etime": 40
+    },
+    {
+        "speaker": "Agent",
+        "text": "I appreciate your verification, Jordan. You have an outstanding balance of $450. How would you like to proceed with the payment?",
+        "stime": 39,
+        "etime": 52
+    },
+    {
+        "speaker": "Customer",
+        "text": "I\u2019d like to set up a payment plan if possible.",
+        "stime": 53,
+        "etime": 58
+    },
+    {
+        "speaker": "Agent",
+        "text": "Absolutely, we can do that. Would you prefer weekly or monthly payments?",
+        "stime": 57,
+        "etime": 66
+    },
+    {
+        "speaker": "Customer",
+        "text": "Monthly payments would work better for me.",
+        "stime": 67,
+        "etime": 71
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great! I will set you up with a monthly payment of $75 starting next month. Does that sound good?",
+        "stime": 70,
+        "etime": 82
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, that works for me. Thank you.",
+        "stime": 83,
+        "etime": 88
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for your cooperation, Jordan. You will receive a confirmation email shortly.",
+        "stime": 87,
+        "etime": 96
+    },
+    {
+        "speaker": "Customer",
+        "text": "I appreciate your help. Have a good day!",
+        "stime": 97,
+        "etime": 102
+    },
+    {
+        "speaker": "Agent",
+        "text": "You're welcome, Jordan. Have a great day!",
+        "stime": 101,
+        "etime": 108
+    }
+]

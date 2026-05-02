@@ -1,0 +1,32 @@
+[
+    {
+        "speaker": "Customer",
+        "text": "You have reached the voicemail of Sarah Thompson. Please leave a message after the beep.",
+        "stime": 0,
+        "etime": 9
+    },
+    {
+        "speaker": "Agent",
+        "text": "Hello, Sarah. This is Tom from Cash Flow Collections. I'm trying to reach you regarding your overdue account.",
+        "stime": 10,
+        "etime": 24
+    },
+    {
+        "speaker": "Customer",
+        "text": "To leave a message, press one. For more options, press two.",
+        "stime": 25,
+        "etime": 36
+    },
+    {
+        "speaker": "Agent",
+        "text": "Please give me a call back at your earliest convenience. My number is one eight hundred two three four five six seven.",
+        "stime": 37,
+        "etime": 50
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you for your call. Have a great day!",
+        "stime": 51,
+        "etime": 61
+    }
+]

@@ -1,0 +1,86 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, is this Mr. Smith?",
+        "stime": 0,
+        "etime": 5
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, this is he. Who is this?",
+        "stime": 5.5,
+        "etime": 9
+    },
+    {
+        "speaker": "Agent",
+        "text": "This is Jessica calling from XYZ Collections. I'm calling about your account with Fast Credit Co. Can you please confirm your date of birth for identity verification?",
+        "stime": 8,
+        "etime": 20
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's April 15, 1985.",
+        "stime": 21,
+        "etime": 24
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for that information. Can you also verify your address for me?",
+        "stime": 24.5,
+        "etime": 30
+    },
+    {
+        "speaker": "Customer",
+        "text": "It's 123 Maple Street, Springfield.",
+        "stime": 30.5,
+        "etime": 34
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for verifying your identity, Mr. Smith. Your current balance is $450. How would you like to proceed with payment?",
+        "stime": 34.5,
+        "etime": 45
+    },
+    {
+        "speaker": "Customer",
+        "text": "I can pay half of that today, $225.",
+        "stime": 45.5,
+        "etime": 49
+    },
+    {
+        "speaker": "Agent",
+        "text": "That's perfectly fine. Would you like to make that payment over the phone or online?",
+        "stime": 49.5,
+        "etime": 55
+    },
+    {
+        "speaker": "Customer",
+        "text": "I\u2019ll do it online, please.",
+        "stime": 55.5,
+        "etime": 58
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great! I will send you a payment link via email. Is that okay?",
+        "stime": 58.5,
+        "etime": 64
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, that works for me.",
+        "stime": 64.5,
+        "etime": 67
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for your cooperation, Mr. Smith. If you have any further questions, feel free to reach out.",
+        "stime": 67.5,
+        "etime": 75
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you for your help.",
+        "stime": 75.5,
+        "etime": 78
+    }
+]

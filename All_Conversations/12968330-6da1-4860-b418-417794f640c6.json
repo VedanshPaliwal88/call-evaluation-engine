@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark from XYZ Collections. Am I speaking with Jessica?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, this is Jessica. What is this about?",
+        "stime": 8,
+        "etime": 12
+    },
+    {
+        "speaker": "Agent",
+        "text": "I'm calling regarding your overdue balance with City Finance. Can we discuss your account details?",
+        "stime": 11,
+        "etime": 20
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, I was expecting a call about that. What do you need from me?",
+        "stime": 19,
+        "etime": 25
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you. I see here that you have an outstanding balance of $250. How do you want to handle it today?",
+        "stime": 24,
+        "etime": 35
+    },
+    {
+        "speaker": "Customer",
+        "text": "I need to check my finances first. Can you give me more details?",
+        "stime": 34,
+        "etime": 40
+    },
+    {
+        "speaker": "Agent",
+        "text": "Certainly, your last payment was made three months ago, and I can help set up a payment plan.",
+        "stime": 39,
+        "etime": 48
+    },
+    {
+        "speaker": "Customer",
+        "text": "That sounds good, but can you remind me how I can pay?",
+        "stime": 47,
+        "etime": 53
+    },
+    {
+        "speaker": "Agent",
+        "text": "You can pay online, over the phone, or by mail. Which option do you prefer?",
+        "stime": 52,
+        "etime": 62
+    },
+    {
+        "speaker": "Customer",
+        "text": "I think I'll pay online. Can you email me the instructions?",
+        "stime": 61,
+        "etime": 67
+    },
+    {
+        "speaker": "Agent",
+        "text": "Of course! I'll send you the payment instructions right after this call.",
+        "stime": 66,
+        "etime": 74
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you, that would be helpful.",
+        "stime": 73,
+        "etime": 78
+    },
+    {
+        "speaker": "Agent",
+        "text": "You're welcome, Jessica. I appreciate your cooperation today.",
+        "stime": 77,
+        "etime": 82
+    },
+    {
+        "speaker": "Customer",
+        "text": "No problem. Have a good day!",
+        "stime": 81,
+        "etime": 85
+    },
+    {
+        "speaker": "Agent",
+        "text": "You too! Goodbye!",
+        "stime": 84,
+        "etime": 89
+    }
+]

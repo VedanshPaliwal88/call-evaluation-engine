@@ -1,0 +1,86 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Steve from XYZ Collections. How the hell are you today?",
+        "stime": 0,
+        "etime": 8
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm doing well, thank you for asking. How can I help you today?",
+        "stime": 7.5,
+        "etime": 12
+    },
+    {
+        "speaker": "Agent",
+        "text": "I'm calling about your overdue account. Can you just confirm your address?",
+        "stime": 11,
+        "etime": 19
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's 123 Maple Street.",
+        "stime": 18,
+        "etime": 22
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great, now let's get to the point. You owe us a shitload of money. What are you doing about it?",
+        "stime": 21,
+        "etime": 32
+    },
+    {
+        "speaker": "Customer",
+        "text": "I\u2019m currently looking for a job and I will make a payment as soon as I can.",
+        "stime": 31,
+        "etime": 37
+    },
+    {
+        "speaker": "Agent",
+        "text": "You think that\u2019s a good excuse? This is f***ing ridiculous! You need to step up.",
+        "stime": 36,
+        "etime": 45
+    },
+    {
+        "speaker": "Customer",
+        "text": "I understand that the situation is serious, and I'm trying to manage it.",
+        "stime": 44,
+        "etime": 50
+    },
+    {
+        "speaker": "Agent",
+        "text": "Whatever. Just get your act together and pay what you owe. It\u2019s not rocket science!",
+        "stime": 49,
+        "etime": 58
+    },
+    {
+        "speaker": "Customer",
+        "text": "I will do my best to resolve this as soon as possible.",
+        "stime": 57,
+        "etime": 62
+    },
+    {
+        "speaker": "Agent",
+        "text": "You better. Or, trust me, I\u2019ll be back on your ass with more calls!",
+        "stime": 61,
+        "etime": 70
+    },
+    {
+        "speaker": "Customer",
+        "text": "I look forward to resolving this amicably. Thank you for your call.",
+        "stime": 69,
+        "etime": 75
+    },
+    {
+        "speaker": "Agent",
+        "text": "Yeah, whatever. Good luck with that!",
+        "stime": 74,
+        "etime": 78
+    },
+    {
+        "speaker": "Customer",
+        "text": "Take care.",
+        "stime": 77,
+        "etime": 78.5
+    }
+]

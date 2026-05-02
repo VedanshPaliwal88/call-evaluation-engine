@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hi there, this is Dave from XYZ Collections. How's it going?",
+        "stime": 0,
+        "etime": 6
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm doing well, thank you. How can I help you?",
+        "stime": 7,
+        "etime": 11
+    },
+    {
+        "speaker": "Agent",
+        "text": "I'm calling about your overdue balance with Universal Credit. First, can you verify your date of birth?",
+        "stime": 10,
+        "etime": 21
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's April 15, 1990.",
+        "stime": 21,
+        "etime": 24
+    },
+    {
+        "speaker": "Agent",
+        "text": "Alright, that's fine. Now, let me check your account... Oh great, you've got a balance of two thousand dollars. How the hell are you planning to pay this?",
+        "stime": 23,
+        "etime": 38
+    },
+    {
+        "speaker": "Customer",
+        "text": "I would like to set up a payment plan if possible.",
+        "stime": 37,
+        "etime": 41
+    },
+    {
+        "speaker": "Agent",
+        "text": "A payment plan? Seriously? You expect me to just let you slide? Do you have any idea how much we deal with this crap?",
+        "stime": 40,
+        "etime": 54
+    },
+    {
+        "speaker": "Customer",
+        "text": "I understand you're frustrated, but I'm trying to find a solution here.",
+        "stime": 53,
+        "etime": 58
+    },
+    {
+        "speaker": "Agent",
+        "text": "Look, it's not my problem that you can't manage your finances. You need to get your act together. What's your address so I can send the collections team?",
+        "stime": 57,
+        "etime": 72
+    },
+    {
+        "speaker": "Customer",
+        "text": "It's 123 Maple Street, Springfield.",
+        "stime": 71,
+        "etime": 75
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great. Just great. You really think that's going to help you? You've got a lot to learn. Pay up or face the consequences.",
+        "stime": 74,
+        "etime": 89
+    },
+    {
+        "speaker": "Customer",
+        "text": "I will do my best to resolve this, but I need your cooperation.",
+        "stime": 88,
+        "etime": 92
+    },
+    {
+        "speaker": "Agent",
+        "text": "Cooperation? You should have thought about that before racking up debt. You better figure it out or else!",
+        "stime": 91,
+        "etime": 104
+    },
+    {
+        "speaker": "Customer",
+        "text": "I will handle it. Thank you for your time.",
+        "stime": 103,
+        "etime": 107
+    },
+    {
+        "speaker": "Agent",
+        "text": "Yeah, sure. Good luck with that. Whatever!",
+        "stime": 106,
+        "etime": 113
+    }
+]

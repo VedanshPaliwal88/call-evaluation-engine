@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 8
+    },
+    {
+        "speaker": "Customer",
+        "text": "What the hell do you want? I'm sick of this crap!",
+        "stime": 7.5,
+        "etime": 12
+    },
+    {
+        "speaker": "Agent",
+        "text": "I understand you're frustrated. I'm calling regarding your overdue account.",
+        "stime": 11,
+        "etime": 18
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yeah? And what gives you the right to bother me? You are all a bunch of idiots!",
+        "stime": 17,
+        "etime": 22
+    },
+    {
+        "speaker": "Agent",
+        "text": "I assure you that we're here to help. Can I get your account number to assist you further?",
+        "stime": 21,
+        "etime": 29
+    },
+    {
+        "speaker": "Customer",
+        "text": "You think I'm just going to give you my info? Screw you!",
+        "stime": 28,
+        "etime": 33
+    },
+    {
+        "speaker": "Agent",
+        "text": "I understand your hesitation; however, I need that to proceed. Your current balance is fifty dollars.",
+        "stime": 32,
+        "etime": 40
+    },
+    {
+        "speaker": "Customer",
+        "text": "I don't care about that! Just stop calling me already!",
+        "stime": 39,
+        "etime": 44
+    },
+    {
+        "speaker": "Agent",
+        "text": "I can help you set up a payment plan if that works for you. Let's find a solution.",
+        "stime": 43,
+        "etime": 50
+    },
+    {
+        "speaker": "Customer",
+        "text": "Solution? You're just a leech! Leave me the hell alone!",
+        "stime": 49,
+        "etime": 54
+    },
+    {
+        "speaker": "Agent",
+        "text": "I truly apologize for the inconvenience. My goal is to help you resolve this matter efficiently.",
+        "stime": 53,
+        "etime": 62
+    },
+    {
+        "speaker": "Customer",
+        "text": "I don't need your help! Just f*** off!",
+        "stime": 61,
+        "etime": 65
+    },
+    {
+        "speaker": "Agent",
+        "text": "I respect your feelings. If you need assistance in the future, please don't hesitate to reach out.",
+        "stime": 64,
+        "etime": 73
+    },
+    {
+        "speaker": "Customer",
+        "text": "Whatever, just go away!",
+        "stime": 72,
+        "etime": 75
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for your time. Have a good day.",
+        "stime": 74,
+        "etime": 80
+    }
+]

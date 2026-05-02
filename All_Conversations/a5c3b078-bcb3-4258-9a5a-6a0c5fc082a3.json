@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, is this Mr. Johnson?",
+        "stime": 0,
+        "etime": 5
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, this is him. Who is this?",
+        "stime": 5.5,
+        "etime": 10
+    },
+    {
+        "speaker": "Agent",
+        "text": "This is Lisa calling from XYZ Collections. How are you today?",
+        "stime": 9,
+        "etime": 15
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm fine, thanks for asking. What's this about?",
+        "stime": 15.5,
+        "etime": 20
+    },
+    {
+        "speaker": "Agent",
+        "text": "I'm reaching out regarding an outstanding balance on your account. Can you please verify your date of birth?",
+        "stime": 20,
+        "etime": 30
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's February 12, 1985.",
+        "stime": 29,
+        "etime": 32
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you, Mr. Johnson. Can you also confirm your current address?",
+        "stime": 32.5,
+        "etime": 38
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, it's 123 Maple Street, Springfield.",
+        "stime": 37,
+        "etime": 42
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for verifying that information. You have a balance of $250 due. How would you like to proceed with payment?",
+        "stime": 42.5,
+        "etime": 52
+    },
+    {
+        "speaker": "Customer",
+        "text": "Can I pay by credit card over the phone?",
+        "stime": 51,
+        "etime": 55
+    },
+    {
+        "speaker": "Agent",
+        "text": "Absolutely. I can assist you with that. Please provide your card details.",
+        "stime": 55.5,
+        "etime": 63
+    },
+    {
+        "speaker": "Customer",
+        "text": "Alright, my card number is 4111 1111 1111 1111.",
+        "stime": 62,
+        "etime": 66
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you. I\u2019ll process that payment now. You're all set, Mr. Johnson.",
+        "stime": 66.5,
+        "etime": 74
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thanks for your help!",
+        "stime": 73,
+        "etime": 75
+    },
+    {
+        "speaker": "Agent",
+        "text": "You're welcome! Have a great day.",
+        "stime": 75.5,
+        "etime": 80
+    }
+]

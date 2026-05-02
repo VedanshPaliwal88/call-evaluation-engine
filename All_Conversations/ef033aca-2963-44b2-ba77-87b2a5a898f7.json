@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Michael from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 6
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm doing okay, thanks. What\u2019s this about?",
+        "stime": 6.5,
+        "etime": 10
+    },
+    {
+        "speaker": "Agent",
+        "text": "I'm calling regarding your outstanding debt with ABC Credit. To protect your privacy, can you please confirm your date of birth?",
+        "stime": 9,
+        "etime": 19
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's July 15, 1985.",
+        "stime": 19.5,
+        "etime": 22
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for that information. Could you also provide your current address for verification?",
+        "stime": 22.5,
+        "etime": 30
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, it's 123 Elm Street, Springfield.",
+        "stime": 30.5,
+        "etime": 34
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you, I\u2019ve verified your information. You currently have a balance of $450. What payment method do you prefer?",
+        "stime": 34.5,
+        "etime": 45
+    },
+    {
+        "speaker": "Customer",
+        "text": "I can pay by credit card.",
+        "stime": 45.5,
+        "etime": 48
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great! I\u2019ll guide you through the process. Can you please provide your card number?",
+        "stime": 48.5,
+        "etime": 55
+    },
+    {
+        "speaker": "Customer",
+        "text": "It's 4111 1111 1111 1111.",
+        "stime": 56,
+        "etime": 58
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you. And the expiration date?",
+        "stime": 58.5,
+        "etime": 60
+    },
+    {
+        "speaker": "Customer",
+        "text": "It's 12/25.",
+        "stime": 60.5,
+        "etime": 62
+    },
+    {
+        "speaker": "Agent",
+        "text": "Perfect. Your payment of $450 has been processed successfully. Thank you for your cooperation.",
+        "stime": 62.5,
+        "etime": 72
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you for the help!",
+        "stime": 72.5,
+        "etime": 75
+    },
+    {
+        "speaker": "Agent",
+        "text": "You're welcome! Have a great day.",
+        "stime": 75.5,
+        "etime": 80
+    }
+]

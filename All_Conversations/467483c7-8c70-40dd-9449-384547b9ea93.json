@@ -1,0 +1,86 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark calling from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm doing alright, thanks. What is this about?",
+        "stime": 8,
+        "etime": 12
+    },
+    {
+        "speaker": "Agent",
+        "text": "I\u2019m reaching out regarding an outstanding balance on your account. Before we proceed, could you please verify your date of birth?",
+        "stime": 11,
+        "etime": 22
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's July 15th, 1990.",
+        "stime": 21,
+        "etime": 24
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for providing that. Can you also confirm your current address?",
+        "stime": 23,
+        "etime": 30
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, it's 123 Main St, Springfield.",
+        "stime": 29,
+        "etime": 32
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for confirming your identity. According to our records, you have a balance of $450. How would you like to proceed?",
+        "stime": 31,
+        "etime": 42
+    },
+    {
+        "speaker": "Customer",
+        "text": "I wasn\u2019t aware of that balance. Can I get more details?",
+        "stime": 41,
+        "etime": 46
+    },
+    {
+        "speaker": "Agent",
+        "text": "Absolutely. This amount is from your last statement dated June 1st. Would you like to make a payment today?",
+        "stime": 45,
+        "etime": 56
+    },
+    {
+        "speaker": "Customer",
+        "text": "I can pay half of it today. How do I do that?",
+        "stime": 55,
+        "etime": 59
+    },
+    {
+        "speaker": "Agent",
+        "text": "You can pay by credit card over the phone or online. Which method do you prefer?",
+        "stime": 58,
+        "etime": 67
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'll pay by credit card right now.",
+        "stime": 66,
+        "etime": 70
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great! I\u2019ll assist you with that. Please hold on while I pull up your account.",
+        "stime": 69,
+        "etime": 80
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thanks for your help.",
+        "stime": 79,
+        "etime": 81
+    }
+]

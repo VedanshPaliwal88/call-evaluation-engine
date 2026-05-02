@@ -1,0 +1,80 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark from XYZ Collections. Am I speaking with Jessica?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, this is Jessica. What\u2019s this about?",
+        "stime": 7.5,
+        "etime": 11
+    },
+    {
+        "speaker": "Agent",
+        "text": "I\u2019m calling regarding your overdue account with City Loan Services. Can I get your address for verification?",
+        "stime": 10,
+        "etime": 20
+    },
+    {
+        "speaker": "Customer",
+        "text": "It's 123 Elm Street, Springfield.",
+        "stime": 19,
+        "etime": 22
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you, Jessica. Your current balance is $450. How would you like to address this today?",
+        "stime": 21,
+        "etime": 30
+    },
+    {
+        "speaker": "Customer",
+        "text": "I can\u2019t pay all of it right now. Can I set up a payment plan?",
+        "stime": 29,
+        "etime": 35
+    },
+    {
+        "speaker": "Agent",
+        "text": "Absolutely, we can do that. We usually suggest $150 per month. Does that work for you?",
+        "stime": 34.5,
+        "etime": 44
+    },
+    {
+        "speaker": "Customer",
+        "text": "That sounds reasonable. When would my first payment be due?",
+        "stime": 43,
+        "etime": 48
+    },
+    {
+        "speaker": "Agent",
+        "text": "Your first payment would be due on the 15th of next month.",
+        "stime": 47,
+        "etime": 50
+    },
+    {
+        "speaker": "Customer",
+        "text": "Okay, I can do that. Can you send me the confirmation?",
+        "stime": 49,
+        "etime": 54
+    },
+    {
+        "speaker": "Agent",
+        "text": "Sure! I\u2019ll send you an email confirmation after we finish this call.",
+        "stime": 53,
+        "etime": 60
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you, I appreciate your help.",
+        "stime": 59,
+        "etime": 61
+    },
+    {
+        "speaker": "Agent",
+        "text": "You're welcome, Jessica. Have a great day!",
+        "stime": 60,
+        "etime": 64
+    }
+]

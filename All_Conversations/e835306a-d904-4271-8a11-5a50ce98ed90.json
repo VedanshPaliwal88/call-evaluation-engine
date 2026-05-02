@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark from XYZ Debt Collection. How are you today?",
+        "stime": 0,
+        "etime": 8
+    },
+    {
+        "speaker": "Customer",
+        "text": "What the hell do you want? I've had enough of your crap!",
+        "stime": 8.5,
+        "etime": 13
+    },
+    {
+        "speaker": "Agent",
+        "text": "I understand you're frustrated. I'm calling about your outstanding balance. To assist you, could you please verify your date of birth?",
+        "stime": 12,
+        "etime": 20
+    },
+    {
+        "speaker": "Customer",
+        "text": "Why the hell would I tell you anything? Just get lost!",
+        "stime": 19,
+        "etime": 24
+    },
+    {
+        "speaker": "Agent",
+        "text": "I completely understand your concerns. However, I need to verify your identity. Could you confirm your address for me?",
+        "stime": 23,
+        "etime": 31
+    },
+    {
+        "speaker": "Customer",
+        "text": "Fine! It's 123 Main St. But this is bullsh*t!",
+        "stime": 30,
+        "etime": 36
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for that information. I appreciate your cooperation. Now, you have an outstanding balance of $500. How would you like to handle that?",
+        "stime": 35,
+        "etime": 45
+    },
+    {
+        "speaker": "Customer",
+        "text": "I\u2019m not paying you a damn thing! You can't make me!",
+        "stime": 44,
+        "etime": 49
+    },
+    {
+        "speaker": "Agent",
+        "text": "I understand your frustration, but we want to find a solution that works for you. Would you like to discuss a payment plan?",
+        "stime": 48,
+        "etime": 58
+    },
+    {
+        "speaker": "Customer",
+        "text": "A payment plan? Are you kidding me? You think I\u2019ll waste my time with you?",
+        "stime": 57,
+        "etime": 62
+    },
+    {
+        "speaker": "Agent",
+        "text": "I hear you, and I'm here to help. All I need is for us to work together on this.",
+        "stime": 61,
+        "etime": 67
+    },
+    {
+        "speaker": "Customer",
+        "text": "Just get off my back, will you? I'm done with this nonsense!",
+        "stime": 66,
+        "etime": 72
+    },
+    {
+        "speaker": "Agent",
+        "text": "I respect your feelings, and I'm here to listen whenever you're ready to discuss your options.",
+        "stime": 71,
+        "etime": 80
+    },
+    {
+        "speaker": "Customer",
+        "text": "Whatever. Don't expect me to call you back anytime soon!",
+        "stime": 79,
+        "etime": 84
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for your time today. If you have any questions, feel free to reach out. Have a good day.",
+        "stime": 83,
+        "etime": 90
+    }
+]

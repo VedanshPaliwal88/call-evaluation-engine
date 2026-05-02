@@ -1,0 +1,56 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hi, this is Jason calling from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 6
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm doing well, but who are you looking for?",
+        "stime": 6.5,
+        "etime": 10
+    },
+    {
+        "speaker": "Agent",
+        "text": "I\u2019m reaching out regarding a past due balance on your account with First National Bank.",
+        "stime": 9,
+        "etime": 18
+    },
+    {
+        "speaker": "Customer",
+        "text": "I think you have the wrong person. I don\u2019t have an account there.",
+        "stime": 17,
+        "etime": 24
+    },
+    {
+        "speaker": "Agent",
+        "text": "I apologize for the mix-up. Can I please confirm your name to ensure I'm not contacting the wrong person?",
+        "stime": 24,
+        "etime": 36
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's Lisa Grant. I really don\u2019t have any association with that bank.",
+        "stime": 35,
+        "etime": 42
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you, Lisa. I will update our records immediately to prevent any further calls.",
+        "stime": 41,
+        "etime": 50
+    },
+    {
+        "speaker": "Customer",
+        "text": "I appreciate that. Thank you for clearing this up.",
+        "stime": 49,
+        "etime": 55
+    },
+    {
+        "speaker": "Agent",
+        "text": "You're welcome, Lisa. Have a great day!",
+        "stime": 55,
+        "etime": 60
+    }
+]

@@ -1,0 +1,32 @@
+[
+    {
+        "speaker": "Customer",
+        "text": "You have reached the voicemail of John Smith. Please leave a message after the beep.",
+        "stime": 0,
+        "etime": 8
+    },
+    {
+        "speaker": "Agent",
+        "text": "Hello John, this is Sarah from Clear Collections. I'm reaching out about your overdue balance on your account.",
+        "stime": 9,
+        "etime": 20
+    },
+    {
+        "speaker": "Customer",
+        "text": "To leave a message, press one. To repeat these options, press two.",
+        "stime": 21,
+        "etime": 30
+    },
+    {
+        "speaker": "Agent",
+        "text": "Please contact us at 1-800-555-0199 to discuss your options. We are here to help.",
+        "stime": 31,
+        "etime": 42
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you for calling. Your message will be delivered after the tone.",
+        "stime": 43,
+        "etime": 53
+    }
+]

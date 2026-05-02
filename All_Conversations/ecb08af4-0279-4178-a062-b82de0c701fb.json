@@ -1,0 +1,86 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark from XYZ Collections. Am I speaking with John?",
+        "stime": 0,
+        "etime": 8
+    },
+    {
+        "speaker": "Customer",
+        "text": "Who the hell do you think you are? I don\u2019t want to talk to you!",
+        "stime": 7,
+        "etime": 12
+    },
+    {
+        "speaker": "Agent",
+        "text": "I understand you're frustrated, John. I just need to verify your identity before discussing any account details. Can you please provide your date of birth?",
+        "stime": 11,
+        "etime": 21
+    },
+    {
+        "speaker": "Customer",
+        "text": "Why the f**k do you need that? Just get to the point!",
+        "stime": 20,
+        "etime": 25
+    },
+    {
+        "speaker": "Agent",
+        "text": "I apologize for the inconvenience. It's standard procedure. Your date of birth please?",
+        "stime": 24,
+        "etime": 31
+    },
+    {
+        "speaker": "Customer",
+        "text": "It's none of your f***ing business! Just tell me what you want!",
+        "stime": 30,
+        "etime": 35
+    },
+    {
+        "speaker": "Agent",
+        "text": "I appreciate your patience, John, but I can't disclose any account information without verifying your identity. Can you confirm your address instead?",
+        "stime": 34,
+        "etime": 44
+    },
+    {
+        "speaker": "Customer",
+        "text": "Just f*** off already! I\u2019m not giving you anything!",
+        "stime": 43,
+        "etime": 48
+    },
+    {
+        "speaker": "Agent",
+        "text": "I truly understand your concerns. However, I need this information to assist you effectively. Your address, please?",
+        "stime": 47,
+        "etime": 56
+    },
+    {
+        "speaker": "Customer",
+        "text": "This is a waste of my time! Why can't you just say what you need?",
+        "stime": 55,
+        "etime": 60
+    },
+    {
+        "speaker": "Agent",
+        "text": "I assure you, I'm here to help, John. I just need a little more information. Can you provide your current address?",
+        "stime": 59,
+        "etime": 68
+    },
+    {
+        "speaker": "Customer",
+        "text": "I\u2019m not telling you s**t! Just drop it!",
+        "stime": 67,
+        "etime": 72
+    },
+    {
+        "speaker": "Agent",
+        "text": "I respect your decision, John. Please know that I'm here if you change your mind. Thank you for your time.",
+        "stime": 71,
+        "etime": 80
+    },
+    {
+        "speaker": "Customer",
+        "text": "Whatever... just leave me alone!",
+        "stime": 79,
+        "etime": 82
+    }
+]

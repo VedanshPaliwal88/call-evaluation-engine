@@ -1,0 +1,86 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm okay, thanks. What\u2019s this about?",
+        "stime": 8,
+        "etime": 11
+    },
+    {
+        "speaker": "Agent",
+        "text": "I\u2019m calling regarding your outstanding debt with Global Bank. Can you confirm your name for me?",
+        "stime": 10,
+        "etime": 20
+    },
+    {
+        "speaker": "Customer",
+        "text": "It's Jordan Smith.",
+        "stime": 19,
+        "etime": 22
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you, Jordan. Your account shows a balance of $750. How would you like to settle this today?",
+        "stime": 21,
+        "etime": 32
+    },
+    {
+        "speaker": "Customer",
+        "text": "I need to check my finances before deciding.",
+        "stime": 31,
+        "etime": 36
+    },
+    {
+        "speaker": "Agent",
+        "text": "I understand. Just so you know, we can set up a payment plan if that helps.",
+        "stime": 35,
+        "etime": 44
+    },
+    {
+        "speaker": "Customer",
+        "text": "That could work. Can you send me the details?",
+        "stime": 43,
+        "etime": 47
+    },
+    {
+        "speaker": "Agent",
+        "text": "Absolutely, I can send that via email. Can you confirm your email address?",
+        "stime": 46,
+        "etime": 56
+    },
+    {
+        "speaker": "Customer",
+        "text": "It's jordan.smith@email.com.",
+        "stime": 55,
+        "etime": 58
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great! I will send the details right away. Is there anything else you need?",
+        "stime": 57,
+        "etime": 67
+    },
+    {
+        "speaker": "Customer",
+        "text": "No, that\u2019s all for now. Thanks.",
+        "stime": 66,
+        "etime": 70
+    },
+    {
+        "speaker": "Agent",
+        "text": "You're welcome! Have a great day.",
+        "stime": 69,
+        "etime": 75
+    },
+    {
+        "speaker": "Customer",
+        "text": "You too. Bye!",
+        "stime": 74,
+        "etime": 77
+    }
+]

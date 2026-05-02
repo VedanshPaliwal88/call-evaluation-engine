@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm doing alright, thanks. What's this about?",
+        "stime": 7.5,
+        "etime": 11
+    },
+    {
+        "speaker": "Agent",
+        "text": "I'm calling regarding your outstanding balance with City Credit. Before we discuss any details, can you please confirm your date of birth?",
+        "stime": 10,
+        "etime": 22
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's January 15, 1990.",
+        "stime": 22.5,
+        "etime": 25
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you. Can you also confirm your current address for verification?",
+        "stime": 24,
+        "etime": 30
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, I live at 123 Maple Street, Springfield.",
+        "stime": 29,
+        "etime": 34
+    },
+    {
+        "speaker": "Agent",
+        "text": "I appreciate that. Now, I can confirm you have an outstanding balance of $250. How would you like to proceed with the payment?",
+        "stime": 33,
+        "etime": 43
+    },
+    {
+        "speaker": "Customer",
+        "text": "I can pay half of that amount today.",
+        "stime": 42.5,
+        "etime": 46
+    },
+    {
+        "speaker": "Agent",
+        "text": "That's great. So you'll be paying $125 today? How would you like to make that payment?",
+        "stime": 45,
+        "etime": 54
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'll do it via credit card over the phone.",
+        "stime": 53,
+        "etime": 57
+    },
+    {
+        "speaker": "Agent",
+        "text": "Perfect! Please provide your card details, and I'll process the payment right away.",
+        "stime": 56,
+        "etime": 64
+    },
+    {
+        "speaker": "Customer",
+        "text": "My card number is 4111 1234 5678 9010.",
+        "stime": 63.5,
+        "etime": 66
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you. I am processing that now. One moment please.",
+        "stime": 65,
+        "etime": 70
+    },
+    {
+        "speaker": "Customer",
+        "text": "Okay, I'm waiting.",
+        "stime": 69,
+        "etime": 71
+    },
+    {
+        "speaker": "Agent",
+        "text": "Your payment has been successfully processed. Thank you for your cooperation today!",
+        "stime": 70,
+        "etime": 78
+    }
+]

@@ -1,0 +1,80 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, is this Mr. Smith?",
+        "stime": 0,
+        "etime": 5
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, this is him. Who's calling?",
+        "stime": 6,
+        "etime": 10
+    },
+    {
+        "speaker": "Agent",
+        "text": "This is Sarah from XYZ Recovery. I'm calling about an outstanding balance on your account. Can you please verify your date of birth?",
+        "stime": 9,
+        "etime": 18
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's April 15, 1985.",
+        "stime": 19,
+        "etime": 22
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for that information, Mr. Smith. Can you also confirm your address for me?",
+        "stime": 21,
+        "etime": 28
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, it's 123 Elm Street, Springfield.",
+        "stime": 29,
+        "etime": 32
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for verifying that. You currently have a balance of $650. How would you like to proceed with payment?",
+        "stime": 31,
+        "etime": 40
+    },
+    {
+        "speaker": "Customer",
+        "text": "I can make a payment today. How do I do that?",
+        "stime": 41,
+        "etime": 44
+    },
+    {
+        "speaker": "Agent",
+        "text": "We can process a payment over the phone or you can also pay online. Which would you prefer?",
+        "stime": 43,
+        "etime": 52
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'll pay online, that\u2019s easier for me.",
+        "stime": 53,
+        "etime": 57
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great! I will send you an email with the payment link shortly.",
+        "stime": 56,
+        "etime": 63
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you for your help.",
+        "stime": 64,
+        "etime": 66
+    },
+    {
+        "speaker": "Agent",
+        "text": "You're welcome, Mr. Smith. If you have any other questions, feel free to reach out. Have a great day!",
+        "stime": 65,
+        "etime": 75
+    }
+]

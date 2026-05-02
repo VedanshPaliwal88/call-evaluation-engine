@@ -1,0 +1,86 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark from XYZ Collections. How the hell are you today?",
+        "stime": 0,
+        "etime": 8
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm doing well, thank you. How can I help you?",
+        "stime": 9.2,
+        "etime": 12.5
+    },
+    {
+        "speaker": "Agent",
+        "text": "Listen up, I need to verify your identity before we go on. Give me your date of birth.",
+        "stime": 11,
+        "etime": 20
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's April 15, 1990.",
+        "stime": 21,
+        "etime": 23
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great. Now, can you confirm your address?",
+        "stime": 22,
+        "etime": 26
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, it's 456 Maple Street, Springfield.",
+        "stime": 27,
+        "etime": 31
+    },
+    {
+        "speaker": "Agent",
+        "text": "Okay, listen here, you owe $500 and I'm not here to play nice. How are you going to pay?",
+        "stime": 30,
+        "etime": 42
+    },
+    {
+        "speaker": "Customer",
+        "text": "I plan to pay it online once I check my funds.",
+        "stime": 43,
+        "etime": 48
+    },
+    {
+        "speaker": "Agent",
+        "text": "Yeah, well make it quick because I don't have all day. This isn't a charity!",
+        "stime": 47,
+        "etime": 57
+    },
+    {
+        "speaker": "Customer",
+        "text": "I understand. I will try to make the payment as soon as possible.",
+        "stime": 58,
+        "etime": 63
+    },
+    {
+        "speaker": "Agent",
+        "text": "You better. I don\u2019t need your excuses; just get it done!",
+        "stime": 62,
+        "etime": 70
+    },
+    {
+        "speaker": "Customer",
+        "text": "I appreciate your concern, but I will make the payment.",
+        "stime": 71,
+        "etime": 75
+    },
+    {
+        "speaker": "Agent",
+        "text": "Whatever, just stop wasting my time. Bye!",
+        "stime": 74,
+        "etime": 80
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you for your time.",
+        "stime": 81,
+        "etime": 83
+    }
+]

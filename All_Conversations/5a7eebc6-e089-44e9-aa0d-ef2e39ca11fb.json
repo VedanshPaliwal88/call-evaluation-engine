@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Sarah from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm doing alright, thanks. What is this about?",
+        "stime": 6.5,
+        "etime": 11
+    },
+    {
+        "speaker": "Agent",
+        "text": "I understand. I'm calling regarding an account you have with City Bank. Can I please confirm your date of birth for security purposes?",
+        "stime": 10,
+        "etime": 22
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's January 14, 1990.",
+        "stime": 21,
+        "etime": 24
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for confirming. Can you also verify your current address?",
+        "stime": 23,
+        "etime": 31
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, it's 123 Maple Street, Springfield.",
+        "stime": 30,
+        "etime": 34
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for that information. You currently have an outstanding balance of $250. How would you like to proceed with the payment?",
+        "stime": 33,
+        "etime": 45
+    },
+    {
+        "speaker": "Customer",
+        "text": "I can pay $100 today and the rest next week.",
+        "stime": 44,
+        "etime": 50
+    },
+    {
+        "speaker": "Agent",
+        "text": "That sounds reasonable. Would you prefer to pay via debit card or bank transfer?",
+        "stime": 49,
+        "etime": 59
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'll use my debit card.",
+        "stime": 58,
+        "etime": 61
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great! I will guide you through the payment process now. Please have your card ready.",
+        "stime": 60,
+        "etime": 70
+    },
+    {
+        "speaker": "Customer",
+        "text": "Okay, I'm ready.",
+        "stime": 69,
+        "etime": 72
+    },
+    {
+        "speaker": "Agent",
+        "text": "Perfect! Please provide your card number to begin.",
+        "stime": 71,
+        "etime": 78
+    },
+    {
+        "speaker": "Customer",
+        "text": "It's 1234 5678 9012 3456.",
+        "stime": 77,
+        "etime": 81
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you! I will process this payment for you right now.",
+        "stime": 80,
+        "etime": 85
+    }
+]

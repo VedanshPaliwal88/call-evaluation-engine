@@ -1,0 +1,74 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, is this Mr. Thompson? This is Lisa calling from XYZ Collections.",
+        "stime": 0,
+        "etime": 8
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, this is Mr. Thompson. What can I help you with?",
+        "stime": 8.5,
+        "etime": 12
+    },
+    {
+        "speaker": "Agent",
+        "text": "I'm calling regarding your outstanding balance with City Bank. Can you confirm your address for me?",
+        "stime": 11,
+        "etime": 18
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's 123 Elm Street.",
+        "stime": 18.5,
+        "etime": 21
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you, Mr. Thompson. You currently have a balance of $450. How would you like to settle this today?",
+        "stime": 20,
+        "etime": 29
+    },
+    {
+        "speaker": "Customer",
+        "text": "I wasn't aware of that balance. Can you break down the charges for me?",
+        "stime": 30,
+        "etime": 35
+    },
+    {
+        "speaker": "Agent",
+        "text": "Of course! The charges include a missed payment fee and interest. Would you prefer to pay with a card over the phone?",
+        "stime": 34,
+        "etime": 42
+    },
+    {
+        "speaker": "Customer",
+        "text": "I need to review my statements before making a payment.",
+        "stime": 41.5,
+        "etime": 45
+    },
+    {
+        "speaker": "Agent",
+        "text": "I understand. Once you have the information, feel free to call us back. We can also email you the summary of the charges if that helps.",
+        "stime": 44,
+        "etime": 52
+    },
+    {
+        "speaker": "Customer",
+        "text": "That would be great, thank you.",
+        "stime": 53,
+        "etime": 56
+    },
+    {
+        "speaker": "Agent",
+        "text": "You're welcome! We appreciate your attention to this matter. Have a nice day!",
+        "stime": 57,
+        "etime": 63
+    },
+    {
+        "speaker": "Customer",
+        "text": "You too, goodbye.",
+        "stime": 64,
+        "etime": 66
+    }
+]

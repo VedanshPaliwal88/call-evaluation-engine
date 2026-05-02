@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, is this Sarah Johnson?",
+        "stime": 0,
+        "etime": 5
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, this is Sarah. Who's calling?",
+        "stime": 5.2,
+        "etime": 9
+    },
+    {
+        "speaker": "Agent",
+        "text": "Hi Sarah, this is Mark from XYZ Collections. I hope you\u2019re doing well today.",
+        "stime": 8,
+        "etime": 14
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm fine, thanks. What is this about?",
+        "stime": 14.2,
+        "etime": 18
+    },
+    {
+        "speaker": "Agent",
+        "text": "I'm calling regarding your outstanding balance on your account with XYZ Bank. Can you confirm your account number so I can assist you?",
+        "stime": 17,
+        "etime": 27
+    },
+    {
+        "speaker": "Customer",
+        "text": "I don't have that information right now. Can you tell me the balance?",
+        "stime": 27.5,
+        "etime": 31
+    },
+    {
+        "speaker": "Agent",
+        "text": "Sure! Your current balance is $350. How would you like to proceed with this payment?",
+        "stime": 30,
+        "etime": 40
+    },
+    {
+        "speaker": "Customer",
+        "text": "I need some time to figure that out. Can I pay next week?",
+        "stime": 39.2,
+        "etime": 45
+    },
+    {
+        "speaker": "Agent",
+        "text": "Unfortunately, we do require payment arrangements to be made sooner. Could we set up a payment plan today?",
+        "stime": 44,
+        "etime": 54
+    },
+    {
+        "speaker": "Customer",
+        "text": "I really can't handle that right now. What are my options?",
+        "stime": 53.5,
+        "etime": 58
+    },
+    {
+        "speaker": "Agent",
+        "text": "We can arrange a payment plan that fits your schedule. I can share details about the payment options available.",
+        "stime": 57.5,
+        "etime": 67
+    },
+    {
+        "speaker": "Customer",
+        "text": "Please go ahead, but I still need time to consider it.",
+        "stime": 66,
+        "etime": 70
+    },
+    {
+        "speaker": "Agent",
+        "text": "Alright, I understand. Your balance remains $350 and we can split it into smaller payments if that helps.",
+        "stime": 69,
+        "etime": 79
+    },
+    {
+        "speaker": "Customer",
+        "text": "Okay, I appreciate your help. I'll call back once I decide.",
+        "stime": 78.5,
+        "etime": 83
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for your time, Sarah. I'll be here if you need further assistance.",
+        "stime": 82,
+        "etime": 88
+    }
+]

@@ -1,0 +1,86 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "Hi Mark, I'm doing well, thank you. What's this about?",
+        "stime": 8,
+        "etime": 13
+    },
+    {
+        "speaker": "Agent",
+        "text": "I\u2019m calling regarding an outstanding balance on your account with Universal Funding. Can I first verify your identity? Please confirm your date of birth.",
+        "stime": 12,
+        "etime": 24
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's June 15, 1990.",
+        "stime": 25,
+        "etime": 28
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for that. Can you also confirm your current address?",
+        "stime": 27,
+        "etime": 32
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, it's 123 Main Street, Springfield.",
+        "stime": 33,
+        "etime": 37
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great, I can confirm your identity. You have an outstanding balance of $250. How would you like to proceed with the payment?",
+        "stime": 36,
+        "etime": 49
+    },
+    {
+        "speaker": "Customer",
+        "text": "I can pay half of it today and the rest next week.",
+        "stime": 50,
+        "etime": 56
+    },
+    {
+        "speaker": "Agent",
+        "text": "That sounds reasonable. So, you would like to pay $125 today. How will you be making this payment?",
+        "stime": 55,
+        "etime": 65
+    },
+    {
+        "speaker": "Customer",
+        "text": "I\u2019ll use my credit card, if that\u2019s okay.",
+        "stime": 66,
+        "etime": 71
+    },
+    {
+        "speaker": "Agent",
+        "text": "Of course, I can assist you with that. Please hold for a moment while I pull up the payment details.",
+        "stime": 70,
+        "etime": 82
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, take your time.",
+        "stime": 83,
+        "etime": 86
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for your patience. I have the payment details ready now.",
+        "stime": 85,
+        "etime": 92
+    },
+    {
+        "speaker": "Customer",
+        "text": "Perfect, let's go ahead.",
+        "stime": 93,
+        "etime": 96
+    }
+]

@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hi there, this is Mike from XYZ Collections. How the hell are you?",
+        "stime": 0,
+        "etime": 8
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm doing well, thank you for asking. How can I help you today?",
+        "stime": 9.2,
+        "etime": 13
+    },
+    {
+        "speaker": "Agent",
+        "text": "I\u2019m calling about your past due balance. Can you just confirm your name?",
+        "stime": 12,
+        "etime": 18
+    },
+    {
+        "speaker": "Customer",
+        "text": "Of course, it's John Smith.",
+        "stime": 19,
+        "etime": 21
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great! You've got an outstanding balance of $500. When are you gonna pay this shit off?",
+        "stime": 21.5,
+        "etime": 30
+    },
+    {
+        "speaker": "Customer",
+        "text": "I understand the seriousness. I\u2019m currently assessing my finances.",
+        "stime": 29,
+        "etime": 34
+    },
+    {
+        "speaker": "Agent",
+        "text": "Assessing your finances? Whatever! Just get your act together and pay us!",
+        "stime": 33.5,
+        "etime": 40
+    },
+    {
+        "speaker": "Customer",
+        "text": "I appreciate your concern, but I need some time to sort this out.",
+        "stime": 39,
+        "etime": 43
+    },
+    {
+        "speaker": "Agent",
+        "text": "Time? You think we have time to waste? Get real! This is unacceptable!",
+        "stime": 42.5,
+        "etime": 50
+    },
+    {
+        "speaker": "Customer",
+        "text": "I assure you, I'm doing my best to resolve this issue.",
+        "stime": 49,
+        "etime": 53
+    },
+    {
+        "speaker": "Agent",
+        "text": "Your best isn\u2019t good enough! Do you think I care about your excuses?",
+        "stime": 52,
+        "etime": 59
+    },
+    {
+        "speaker": "Customer",
+        "text": "I would just like to find a solution that works for both of us.",
+        "stime": 58,
+        "etime": 62
+    },
+    {
+        "speaker": "Agent",
+        "text": "Solution? You need to get your head out of your ass and just pay!",
+        "stime": 61,
+        "etime": 68
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you for your time. I will reach out once I have a plan.",
+        "stime": 67,
+        "etime": 72
+    },
+    {
+        "speaker": "Agent",
+        "text": "Yeah, whatever. Just don't take too long, dumbass.",
+        "stime": 71.5,
+        "etime": 77
+    }
+]

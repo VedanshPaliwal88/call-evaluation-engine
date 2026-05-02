@@ -1,0 +1,86 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, is this Mr. Johnson?",
+        "stime": 0,
+        "etime": 4
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, this is he. Who\u2019s calling?",
+        "stime": 4.2,
+        "etime": 8
+    },
+    {
+        "speaker": "Agent",
+        "text": "This is Sarah from XYZ Collections. I'm reaching out regarding your account. Can you please confirm your date of birth for verification?",
+        "stime": 8,
+        "etime": 20
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's July 15, 1985.",
+        "stime": 20.2,
+        "etime": 24
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you, Mr. Johnson. Can you also confirm your current address?",
+        "stime": 24,
+        "etime": 30
+    },
+    {
+        "speaker": "Customer",
+        "text": "I live at 123 Maple Street, Springfield.",
+        "stime": 30.2,
+        "etime": 34
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for that information. I can confirm that you have an outstanding balance of $500. What would you like to do about this?",
+        "stime": 34,
+        "etime": 45
+    },
+    {
+        "speaker": "Customer",
+        "text": "I didn't realize it was that much. Can I set up a payment plan?",
+        "stime": 45.2,
+        "etime": 49
+    },
+    {
+        "speaker": "Agent",
+        "text": "Absolutely, we can set up a payment plan for you. How much would you like to pay each month?",
+        "stime": 49.5,
+        "etime": 57
+    },
+    {
+        "speaker": "Customer",
+        "text": "I can do $100 a month.",
+        "stime": 57.2,
+        "etime": 60
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great! I will set up the plan for $100 per month. Your first payment will be due on the 15th of next month.",
+        "stime": 60.5,
+        "etime": 70
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sounds good, thank you for your help.",
+        "stime": 70.5,
+        "etime": 74
+    },
+    {
+        "speaker": "Agent",
+        "text": "You're welcome! Thank you for your time, Mr. Johnson. Have a great day!",
+        "stime": 74.5,
+        "etime": 80
+    },
+    {
+        "speaker": "Customer",
+        "text": "You too, goodbye.",
+        "stime": 80.2,
+        "etime": 83
+    }
+]

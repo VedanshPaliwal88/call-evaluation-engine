@@ -1,0 +1,86 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Sarah from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm doing okay, thank you. What's this about?",
+        "stime": 8,
+        "etime": 13
+    },
+    {
+        "speaker": "Agent",
+        "text": "I'm calling regarding your outstanding balance with Premier Loan Services. Can you confirm your address for me?",
+        "stime": 12,
+        "etime": 22
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's 123 Maple Street.",
+        "stime": 23,
+        "etime": 25
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you! I see you have a balance of $750. When would you like to make a payment?",
+        "stime": 24,
+        "etime": 34
+    },
+    {
+        "speaker": "Customer",
+        "text": "I can't pay it all at once right now. Can I set up a payment plan?",
+        "stime": 35,
+        "etime": 40
+    },
+    {
+        "speaker": "Agent",
+        "text": "Of course! We can arrange that. How much would you be able to pay monthly?",
+        "stime": 39,
+        "etime": 45
+    },
+    {
+        "speaker": "Customer",
+        "text": "I can do $100 a month.",
+        "stime": 46,
+        "etime": 48
+    },
+    {
+        "speaker": "Agent",
+        "text": "That sounds reasonable. I can set you up with a plan for that amount. Can you confirm your phone number for our records?",
+        "stime": 47,
+        "etime": 58
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's 555-123-4567.",
+        "stime": 59,
+        "etime": 62
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great! So to recap, you will pay $100 monthly. Your first payment is due next month. Thank you for your cooperation!",
+        "stime": 61,
+        "etime": 73
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you for your help. I appreciate it.",
+        "stime": 74,
+        "etime": 78
+    },
+    {
+        "speaker": "Agent",
+        "text": "You're welcome! If you have any questions, feel free to reach out. Have a great day!",
+        "stime": 77,
+        "etime": 85
+    },
+    {
+        "speaker": "Customer",
+        "text": "You too, bye!",
+        "stime": 86,
+        "etime": 88
+    }
+]

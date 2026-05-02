@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark calling from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 6
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm doing well, thank you. What's this about?",
+        "stime": 6.5,
+        "etime": 10
+    },
+    {
+        "speaker": "Agent",
+        "text": "I'm contacting you regarding your outstanding balance with First National Bank. Before we proceed, can you please verify your date of birth?",
+        "stime": 9,
+        "etime": 22
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure! It's July 15, 1990.",
+        "stime": 22.5,
+        "etime": 25
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for that. Can you also confirm your current address?",
+        "stime": 24,
+        "etime": 29
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, it's 123 Maple Street, Springfield.",
+        "stime": 28,
+        "etime": 31
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for confirming your information. You currently have a balance of $750. How would you like to proceed with your payment today?",
+        "stime": 30,
+        "etime": 43
+    },
+    {
+        "speaker": "Customer",
+        "text": "I can pay $250 right now over the phone.",
+        "stime": 42,
+        "etime": 48
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great! I can help you with that. Can I have your payment details, please?",
+        "stime": 47,
+        "etime": 55
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, I\u2019ll provide my credit card number.",
+        "stime": 54,
+        "etime": 58
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you. Please provide the card number when you're ready.",
+        "stime": 57,
+        "etime": 62
+    },
+    {
+        "speaker": "Customer",
+        "text": "It's 4111 1111 1111 1111, expiration date 12/25.",
+        "stime": 63,
+        "etime": 67
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for that information. Your payment has been successfully processed.",
+        "stime": 66,
+        "etime": 73
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you for your help!",
+        "stime": 72,
+        "etime": 75
+    },
+    {
+        "speaker": "Agent",
+        "text": "You're welcome! Have a great day!",
+        "stime": 74,
+        "etime": 80
+    }
+]

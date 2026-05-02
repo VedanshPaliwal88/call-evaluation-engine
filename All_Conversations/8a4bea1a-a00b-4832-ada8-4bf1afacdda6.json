@@ -1,0 +1,32 @@
+[
+    {
+        "speaker": "Customer",
+        "text": "You have reached voicemail for John Doe. Please leave a message after the beep.",
+        "stime": 0,
+        "etime": 8
+    },
+    {
+        "speaker": "Agent",
+        "text": "Hello, John. This is Sarah from ABC Collections. I'm calling about your outstanding balance.",
+        "stime": 9,
+        "etime": 18
+    },
+    {
+        "speaker": "Customer",
+        "text": "To leave a message, please record after the beep.",
+        "stime": 19,
+        "etime": 27
+    },
+    {
+        "speaker": "Agent",
+        "text": "It's important that we discuss this matter as soon as possible to avoid further issues. Please call me back at this number.",
+        "stime": 28,
+        "etime": 40
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you for your call and have a great day.",
+        "stime": 41,
+        "etime": 48
+    }
+]

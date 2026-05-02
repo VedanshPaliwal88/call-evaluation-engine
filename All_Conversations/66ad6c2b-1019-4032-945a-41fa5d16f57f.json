@@ -1,0 +1,80 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Ian calling from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm okay, what is this about?",
+        "stime": 8,
+        "etime": 11
+    },
+    {
+        "speaker": "Agent",
+        "text": "I understand. I'm calling regarding your account with First National Bank. To proceed, could you please verify your date of birth?",
+        "stime": 10,
+        "etime": 22
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's January 15, 1990.",
+        "stime": 23,
+        "etime": 26
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for that. Can you also confirm your current address for verification?",
+        "stime": 25,
+        "etime": 34
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, it's 123 Maple Street, Springfield.",
+        "stime": 35,
+        "etime": 39
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great, and I can confirm you have an outstanding balance of $450. How would you like to handle this today?",
+        "stime": 38,
+        "etime": 48
+    },
+    {
+        "speaker": "Customer",
+        "text": "I want to pay half of it today and the rest next month.",
+        "stime": 49,
+        "etime": 54
+    },
+    {
+        "speaker": "Agent",
+        "text": "That's perfectly fine. We can accept a payment of $225 today. How would you like to make that payment?",
+        "stime": 53,
+        "etime": 62
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'll pay by credit card over the phone.",
+        "stime": 63,
+        "etime": 67
+    },
+    {
+        "speaker": "Agent",
+        "text": "Alright, I'll guide you through the process. Please have your card ready.",
+        "stime": 66,
+        "etime": 73
+    },
+    {
+        "speaker": "Customer",
+        "text": "Okay, I have it now.",
+        "stime": 74,
+        "etime": 76
+    },
+    {
+        "speaker": "Agent",
+        "text": "Perfect! Let's proceed. Please provide the card number.",
+        "stime": 75,
+        "etime": 81
+    }
+]

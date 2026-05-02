@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark calling from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm doing well, thank you. What is this regarding?",
+        "stime": 7.5,
+        "etime": 12
+    },
+    {
+        "speaker": "Agent",
+        "text": "I\u2019m calling about your outstanding balance with ABC Credit. Before we discuss any details, can you please verify your date of birth?",
+        "stime": 11,
+        "etime": 22
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it\u2019s January 15, 1990.",
+        "stime": 21,
+        "etime": 25
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for that. Can you also confirm your current address?",
+        "stime": 24,
+        "etime": 30
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, it\u2019s 123 Maple Street, Springfield.",
+        "stime": 29,
+        "etime": 34
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for verifying your information. You have an outstanding balance of $350. How would you like to proceed with this?",
+        "stime": 33,
+        "etime": 43
+    },
+    {
+        "speaker": "Customer",
+        "text": "I can make a payment of $100 today.",
+        "stime": 42,
+        "etime": 46
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great! Would you like to pay that via credit card or bank transfer?",
+        "stime": 45,
+        "etime": 54
+    },
+    {
+        "speaker": "Customer",
+        "text": "I will use my credit card.",
+        "stime": 53,
+        "etime": 56
+    },
+    {
+        "speaker": "Agent",
+        "text": "Perfect! I\u2019ll need your card details to process the payment. What\u2019s the card number?",
+        "stime": 55,
+        "etime": 63
+    },
+    {
+        "speaker": "Customer",
+        "text": "It's 4111-1111-1111-1111.",
+        "stime": 62,
+        "etime": 66
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you, and can I have the expiration date and CVV as well?",
+        "stime": 65,
+        "etime": 71
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's 12/25 and the CVV is 123.",
+        "stime": 70,
+        "etime": 77
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for your cooperation. Your payment of $100 is being processed now.",
+        "stime": 76,
+        "etime": 82
+    }
+]

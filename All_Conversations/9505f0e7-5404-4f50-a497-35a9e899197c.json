@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark from XYZ Collections. I need to talk about your damn overdue account. How's that for a nice greeting?",
+        "stime": 0,
+        "etime": 8
+    },
+    {
+        "speaker": "Customer",
+        "text": "I understand. I'm aware of my account status, and I'm here to discuss it.",
+        "stime": 7,
+        "etime": 13
+    },
+    {
+        "speaker": "Agent",
+        "text": "Listen up! I don't have time for this crap. Just verify your freaking address so we can get this over with.",
+        "stime": 12,
+        "etime": 20
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, my address is 123 Main Street, Anytown, USA.",
+        "stime": 19,
+        "etime": 23
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great! You\u2019ve got a balance of $750. What the hell are you planning to do about it?",
+        "stime": 22,
+        "etime": 30
+    },
+    {
+        "speaker": "Customer",
+        "text": "I can make a payment arrangement if that works for you.",
+        "stime": 29,
+        "etime": 35
+    },
+    {
+        "speaker": "Agent",
+        "text": "Arrangement? What the hell is wrong with you? Just pay it off already!",
+        "stime": 34,
+        "etime": 42
+    },
+    {
+        "speaker": "Customer",
+        "text": "I appreciate your urgency, but I have my own financial situation to manage.",
+        "stime": 41,
+        "etime": 48
+    },
+    {
+        "speaker": "Agent",
+        "text": "Yeah, well, that\u2019s not my problem! Just get it sorted or face the consequences!",
+        "stime": 47,
+        "etime": 55
+    },
+    {
+        "speaker": "Customer",
+        "text": "I see you're quite passionate. I will work on this right away.",
+        "stime": 54,
+        "etime": 59
+    },
+    {
+        "speaker": "Agent",
+        "text": "Passionate? I'm just sick of dealing with deadbeats like you!",
+        "stime": 58,
+        "etime": 65
+    },
+    {
+        "speaker": "Customer",
+        "text": "I assure you, I am addressing my obligations.",
+        "stime": 64,
+        "etime": 69
+    },
+    {
+        "speaker": "Agent",
+        "text": "Well, you'd better make it happen, or we're going to have a serious problem!",
+        "stime": 68,
+        "etime": 76
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you for your time. I'll follow up soon regarding my payment plan.",
+        "stime": 75,
+        "etime": 80
+    },
+    {
+        "speaker": "Agent",
+        "text": "Whatever, just don\u2019t waste my time!",
+        "stime": 79,
+        "etime": 83
+    }
+]

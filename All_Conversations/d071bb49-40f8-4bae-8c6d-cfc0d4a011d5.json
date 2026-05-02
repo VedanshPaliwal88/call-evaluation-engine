@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mike from XYZ Collections, how are you today?",
+        "stime": 0,
+        "etime": 8
+    },
+    {
+        "speaker": "Customer",
+        "text": "What the hell do you want? I'm busy!",
+        "stime": 8.5,
+        "etime": 12
+    },
+    {
+        "speaker": "Agent",
+        "text": "I understand you\u2019re busy, but I'm calling about your overdue account. Can I take a moment of your time?",
+        "stime": 11,
+        "etime": 20
+    },
+    {
+        "speaker": "Customer",
+        "text": "You can shove it! I'm not paying a damn thing!",
+        "stime": 19.5,
+        "etime": 23
+    },
+    {
+        "speaker": "Agent",
+        "text": "I appreciate your feedback. Can I at least confirm some information regarding your account first?",
+        "stime": 22.5,
+        "etime": 30
+    },
+    {
+        "speaker": "Customer",
+        "text": "I don't give a crap about your stupid questions!",
+        "stime": 29.5,
+        "etime": 33
+    },
+    {
+        "speaker": "Agent",
+        "text": "I understand your frustration. However, if you could just verify your address, I can provide the details on your balance.",
+        "stime": 32.5,
+        "etime": 41
+    },
+    {
+        "speaker": "Customer",
+        "text": "Why the hell would I do that? Just tell me what you want!",
+        "stime": 40,
+        "etime": 44
+    },
+    {
+        "speaker": "Agent",
+        "text": "Right now, your account shows a balance of $500. It\u2019s crucial to discuss your options to resolve this.",
+        "stime": 43.5,
+        "etime": 53
+    },
+    {
+        "speaker": "Customer",
+        "text": "Oh, like I\u2019m just gonna hand over my cash to you! Not a chance!",
+        "stime": 52,
+        "etime": 56
+    },
+    {
+        "speaker": "Agent",
+        "text": "I completely understand, and I\u2019m here to help you find a solution. Let\u2019s talk about a payment plan.",
+        "stime": 55,
+        "etime": 65
+    },
+    {
+        "speaker": "Customer",
+        "text": "You really think I\u2019m gonna listen to your bullshit? Get lost!",
+        "stime": 64,
+        "etime": 68
+    },
+    {
+        "speaker": "Agent",
+        "text": "I\u2019m just trying to assist you. Please understand that ignoring it will only make things worse.",
+        "stime": 67,
+        "etime": 76
+    },
+    {
+        "speaker": "Customer",
+        "text": "I said no! And you can\u2019t make me do anything!",
+        "stime": 75,
+        "etime": 79
+    },
+    {
+        "speaker": "Agent",
+        "text": "I respect your decision, but I\u2019ll have to inform you that there may be further actions if this isn\u2019t resolved.",
+        "stime": 78,
+        "etime": 87
+    }
+]

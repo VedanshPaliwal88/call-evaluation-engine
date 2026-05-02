@@ -1,0 +1,44 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, is this John Smith?",
+        "stime": 0,
+        "etime": 5
+    },
+    {
+        "speaker": "Customer",
+        "text": "No, this is Sarah. Who is this?",
+        "stime": 6,
+        "etime": 10
+    },
+    {
+        "speaker": "Agent",
+        "text": "I'm calling from XYZ Collections regarding some outstanding debt connected to your account.",
+        "stime": 9,
+        "etime": 18
+    },
+    {
+        "speaker": "Customer",
+        "text": "I think you've got the wrong person. I don\u2019t have any accounts with you.",
+        "stime": 19,
+        "etime": 24
+    },
+    {
+        "speaker": "Agent",
+        "text": "I apologize for the mix-up. I will update our records to reflect this.",
+        "stime": 23,
+        "etime": 30
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you for understanding.",
+        "stime": 31,
+        "etime": 34
+    },
+    {
+        "speaker": "Agent",
+        "text": "Of course! Have a great day.",
+        "stime": 35,
+        "etime": 40
+    }
+]

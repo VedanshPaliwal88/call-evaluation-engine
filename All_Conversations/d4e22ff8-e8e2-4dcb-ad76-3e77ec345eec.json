@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark from Secure Collections. How are you today?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "Hi Mark, I'm doing okay. What's this about?",
+        "stime": 7.5,
+        "etime": 11
+    },
+    {
+        "speaker": "Agent",
+        "text": "I appreciate your response. I'm reaching out concerning your account. Could you please verify your date of birth for security purposes?",
+        "stime": 10,
+        "etime": 22
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's June 5th, 1990.",
+        "stime": 22.5,
+        "etime": 25
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for that information. Can you also confirm your address for verification?",
+        "stime": 24,
+        "etime": 31
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, it's 123 Maple Street, Springfield.",
+        "stime": 31.5,
+        "etime": 34
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you. I can confirm that we are discussing your account with a current balance of $450. How would you like to proceed with this matter?",
+        "stime": 33,
+        "etime": 43
+    },
+    {
+        "speaker": "Customer",
+        "text": "I can make a payment right now. Can I do it over the phone?",
+        "stime": 43.5,
+        "etime": 48
+    },
+    {
+        "speaker": "Agent",
+        "text": "Absolutely, I can guide you through the process. Can you please provide me with your payment details?",
+        "stime": 47,
+        "etime": 56
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, my credit card number is 1234-5678-9012-3456.",
+        "stime": 56.5,
+        "etime": 59
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for that. I will now process your payment. This will take just a moment.",
+        "stime": 58.5,
+        "etime": 65
+    },
+    {
+        "speaker": "Customer",
+        "text": "Okay, I appreciate it.",
+        "stime": 66,
+        "etime": 68
+    },
+    {
+        "speaker": "Agent",
+        "text": "Your payment has been successfully processed. Thank you for your time today!",
+        "stime": 67,
+        "etime": 75
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you, Mark. Have a great day!",
+        "stime": 75.5,
+        "etime": 78
+    },
+    {
+        "speaker": "Agent",
+        "text": "You're welcome! Take care.",
+        "stime": 78.5,
+        "etime": 80
+    }
+]

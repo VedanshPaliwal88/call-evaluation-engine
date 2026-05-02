@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm doing alright, thanks. What\u2019s this about?",
+        "stime": 8,
+        "etime": 12
+    },
+    {
+        "speaker": "Agent",
+        "text": "I\u2019m calling about your outstanding balance with Universal Credit. Can I have your account number to pull up your information?",
+        "stime": 11,
+        "etime": 19
+    },
+    {
+        "speaker": "Customer",
+        "text": "I don\u2019t have that right now. Can you tell me what balance you're referring to?",
+        "stime": 20,
+        "etime": 26
+    },
+    {
+        "speaker": "Agent",
+        "text": "Your current balance is three hundred fifty dollars. How would you like to proceed with this payment?",
+        "stime": 25,
+        "etime": 33
+    },
+    {
+        "speaker": "Customer",
+        "text": "I can\u2019t pay that today. Can we set up a payment plan?",
+        "stime": 34,
+        "etime": 40
+    },
+    {
+        "speaker": "Agent",
+        "text": "Sure! We can set up a payment plan. How much can you pay today?",
+        "stime": 39,
+        "etime": 46
+    },
+    {
+        "speaker": "Customer",
+        "text": "I can manage fifty dollars today.",
+        "stime": 47,
+        "etime": 51
+    },
+    {
+        "speaker": "Agent",
+        "text": "Perfect! I\u2019ll apply that towards your balance. Can I verify your last four digits of your Social Security number?",
+        "stime": 50,
+        "etime": 58
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's 1234.",
+        "stime": 59,
+        "etime": 62
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you! We\u2019ve noted your payment. You will still have a remaining balance of three hundred dollars.",
+        "stime": 61,
+        "etime": 70
+    },
+    {
+        "speaker": "Customer",
+        "text": "Okay, but how do I keep track of my payment plan?",
+        "stime": 71,
+        "etime": 75
+    },
+    {
+        "speaker": "Agent",
+        "text": "We will send you a confirmation email with all the details and a link to check your account status online.",
+        "stime": 74,
+        "etime": 83
+    },
+    {
+        "speaker": "Customer",
+        "text": "Great, I appreciate your help!",
+        "stime": 82,
+        "etime": 86
+    },
+    {
+        "speaker": "Agent",
+        "text": "You're welcome! Thank you for your cooperation. Have a nice day!",
+        "stime": 85,
+        "etime": 91
+    }
+]

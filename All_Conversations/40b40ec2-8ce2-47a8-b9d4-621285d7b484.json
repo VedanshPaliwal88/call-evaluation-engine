@@ -1,0 +1,86 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark calling from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm okay, just busy. What is this about?",
+        "stime": 8,
+        "etime": 12
+    },
+    {
+        "speaker": "Agent",
+        "text": "I understand, I will be brief. I'm calling regarding your outstanding balance with Quick Loans. Can you confirm your name for me?",
+        "stime": 11,
+        "etime": 20
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's Lisa Green.",
+        "stime": 21,
+        "etime": 24
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you, Lisa. You currently have a balance of $450. How would you like to proceed with the payment?",
+        "stime": 23,
+        "etime": 32
+    },
+    {
+        "speaker": "Customer",
+        "text": "I need more information before I decide.",
+        "stime": 33,
+        "etime": 36
+    },
+    {
+        "speaker": "Agent",
+        "text": "Of course! Your last payment was made in January, and your balance has been accumulating since then. Would you like to set up a payment plan?",
+        "stime": 35,
+        "etime": 45
+    },
+    {
+        "speaker": "Customer",
+        "text": "I might consider that. What are the options?",
+        "stime": 46,
+        "etime": 50
+    },
+    {
+        "speaker": "Agent",
+        "text": "We can do weekly or monthly payments. For example, a monthly payment of $150 would work for you.",
+        "stime": 49,
+        "etime": 58
+    },
+    {
+        "speaker": "Customer",
+        "text": "That sounds reasonable, but I need to think it over.",
+        "stime": 59,
+        "etime": 62
+    },
+    {
+        "speaker": "Agent",
+        "text": "I understand. Please let me know if you have any questions. Can I count on you to respond by the end of the week?",
+        "stime": 63,
+        "etime": 72
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, I'll get back to you. Thank you.",
+        "stime": 71,
+        "etime": 74
+    },
+    {
+        "speaker": "Agent",
+        "text": "You're welcome, Lisa. Have a great day!",
+        "stime": 75,
+        "etime": 78
+    },
+    {
+        "speaker": "Customer",
+        "text": "You too, bye.",
+        "stime": 79,
+        "etime": 82
+    }
+]

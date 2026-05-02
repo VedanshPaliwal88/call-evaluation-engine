@@ -1,0 +1,80 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, is this Mr. Thompson?",
+        "stime": 0,
+        "etime": 5
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, this is him. Who's calling?",
+        "stime": 6,
+        "etime": 10
+    },
+    {
+        "speaker": "Agent",
+        "text": "Hi Mr. Thompson, this is Lisa from XYZ Collections. I'm reaching out regarding a balance on your account. Can you please verify your date of birth?",
+        "stime": 9,
+        "etime": 22
+    },
+    {
+        "speaker": "Customer",
+        "text": "It's July 14, 1985.",
+        "stime": 23,
+        "etime": 26
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for that. Can you also confirm your current address?",
+        "stime": 26,
+        "etime": 32
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's 1500 Oak Street, Springfield.",
+        "stime": 33,
+        "etime": 37
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for confirming your identity. You have an outstanding balance of $250. How would you like to proceed with the payment?",
+        "stime": 35,
+        "etime": 48
+    },
+    {
+        "speaker": "Customer",
+        "text": "I\u2019d like to set up a payment plan.",
+        "stime": 49,
+        "etime": 52
+    },
+    {
+        "speaker": "Agent",
+        "text": "Certainly, I can assist you with that. How much would you like to pay each month?",
+        "stime": 51,
+        "etime": 60
+    },
+    {
+        "speaker": "Customer",
+        "text": "I can pay $50 a month.",
+        "stime": 61,
+        "etime": 65
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great, I\u2019ll set that up for you. You will start your payments next month.",
+        "stime": 65,
+        "etime": 74
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you for your help.",
+        "stime": 75,
+        "etime": 78
+    },
+    {
+        "speaker": "Agent",
+        "text": "You're welcome, Mr. Thompson. Have a great day!",
+        "stime": 79,
+        "etime": 85
+    }
+]

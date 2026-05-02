@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mike from XYZ Collections. How the hell are you?",
+        "stime": 0,
+        "etime": 5
+    },
+    {
+        "speaker": "Customer",
+        "text": "I\u2019m well, thank you. How can I help you today?",
+        "stime": 4.5,
+        "etime": 9
+    },
+    {
+        "speaker": "Agent",
+        "text": "I\u2019m calling about the overdue balance on your account. You owe quite a bit of money, and I need to sort this out.",
+        "stime": 8,
+        "etime": 17
+    },
+    {
+        "speaker": "Customer",
+        "text": "I understand. Could you provide me with the specific details?",
+        "stime": 16,
+        "etime": 20
+    },
+    {
+        "speaker": "Agent",
+        "text": "Look, if I have to chase you down for this, it's gonna get ugly. Can you just tell me your address?",
+        "stime": 19,
+        "etime": 26
+    },
+    {
+        "speaker": "Customer",
+        "text": "I can\u2019t share my information without verifying my identity first.",
+        "stime": 25,
+        "etime": 30
+    },
+    {
+        "speaker": "Agent",
+        "text": "Whatever, I just want to get this over with. Your account balance is $1,200, you better have a plan.",
+        "stime": 29,
+        "etime": 38
+    },
+    {
+        "speaker": "Customer",
+        "text": "I will arrange to pay, but please refrain from using that kind of language.",
+        "stime": 37,
+        "etime": 43
+    },
+    {
+        "speaker": "Agent",
+        "text": "I\u2019ll talk however I want! This is a serious matter, you need to get your shit together.",
+        "stime": 42,
+        "etime": 51
+    },
+    {
+        "speaker": "Customer",
+        "text": "I appreciate your concern, but I expect professionalism in our communication.",
+        "stime": 50,
+        "etime": 58
+    },
+    {
+        "speaker": "Agent",
+        "text": "Professionalism? Ha! You\u2019re the one dodging payments! Get real!",
+        "stime": 57,
+        "etime": 65
+    },
+    {
+        "speaker": "Customer",
+        "text": "I\u2019m trying to resolve this. Let\u2019s work together calmly.",
+        "stime": 64,
+        "etime": 70
+    },
+    {
+        "speaker": "Agent",
+        "text": "Fine, but make it quick. I don\u2019t have time for this BS.",
+        "stime": 69,
+        "etime": 75
+    },
+    {
+        "speaker": "Customer",
+        "text": "I appreciate your time, but I will be escalating this conversation if it continues this way.",
+        "stime": 74,
+        "etime": 82
+    },
+    {
+        "speaker": "Agent",
+        "text": "Go ahead! I don\u2019t give a damn! You think I\u2019m scared of complaints?",
+        "stime": 81,
+        "etime": 88
+    }
+]

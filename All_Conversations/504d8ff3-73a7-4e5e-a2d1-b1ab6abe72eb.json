@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is James calling from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm doing well, thank you. What is this call about?",
+        "stime": 7.5,
+        "etime": 12
+    },
+    {
+        "speaker": "Agent",
+        "text": "I'm calling regarding an outstanding balance on your account. Before we proceed, could you please verify your date of birth?",
+        "stime": 11,
+        "etime": 20
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's June 15, 1985.",
+        "stime": 19.5,
+        "etime": 24
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you. Can you also confirm your current address for security purposes?",
+        "stime": 23,
+        "etime": 30
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, it's 123 Elm Street, Springfield.",
+        "stime": 29,
+        "etime": 34
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for verifying that information. You have a balance of $250 due. How would you like to proceed with the payment?",
+        "stime": 33,
+        "etime": 43
+    },
+    {
+        "speaker": "Customer",
+        "text": "I can pay it with a credit card over the phone.",
+        "stime": 42.5,
+        "etime": 48
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great, I can assist you with that. Please provide your card number when you're ready.",
+        "stime": 47,
+        "etime": 56
+    },
+    {
+        "speaker": "Customer",
+        "text": "It's 1234 5678 9101 1121.",
+        "stime": 55,
+        "etime": 59
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you. Just a moment while I process that payment.",
+        "stime": 58,
+        "etime": 64
+    },
+    {
+        "speaker": "Customer",
+        "text": "No problem, take your time.",
+        "stime": 63,
+        "etime": 66
+    },
+    {
+        "speaker": "Agent",
+        "text": "All done! Your payment has been processed and your balance is now zero. Thank you for your time.",
+        "stime": 65,
+        "etime": 75
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you, have a great day!",
+        "stime": 74,
+        "etime": 78
+    },
+    {
+        "speaker": "Agent",
+        "text": "You too! Goodbye.",
+        "stime": 77,
+        "etime": 80
+    }
+]

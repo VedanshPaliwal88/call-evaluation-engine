@@ -1,0 +1,56 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Jessica from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 8
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm fine, but what's this about?",
+        "stime": 8.5,
+        "etime": 11
+    },
+    {
+        "speaker": "Agent",
+        "text": "I'm calling regarding your outstanding balance with ABC Credit Card. This call is to discuss your account.",
+        "stime": 10,
+        "etime": 20
+    },
+    {
+        "speaker": "Customer",
+        "text": "I've requested several times to stop calling me.",
+        "stime": 19,
+        "etime": 23
+    },
+    {
+        "speaker": "Agent",
+        "text": "I apologize for the inconvenience. I can help you with that. Would you like me to mark your number as do not call?",
+        "stime": 22,
+        "etime": 32
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, please do that. I don't want any more calls.",
+        "stime": 31,
+        "etime": 35
+    },
+    {
+        "speaker": "Agent",
+        "text": "Got it! I'll mark your number on the do not call list immediately.",
+        "stime": 34,
+        "etime": 42
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you, I appreciate it.",
+        "stime": 41,
+        "etime": 45
+    },
+    {
+        "speaker": "Agent",
+        "text": "You're welcome! Your request has been processed. Have a great day!",
+        "stime": 44,
+        "etime": 54
+    }
+]

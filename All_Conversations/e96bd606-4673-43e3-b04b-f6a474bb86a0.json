@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, is this John Smith?",
+        "stime": 0,
+        "etime": 5
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, this is John. Who's calling?",
+        "stime": 5.5,
+        "etime": 9
+    },
+    {
+        "speaker": "Agent",
+        "text": "I'm Samantha from XYZ Collections. I'm calling about your account with Central Finance.",
+        "stime": 9,
+        "etime": 15
+    },
+    {
+        "speaker": "Customer",
+        "text": "Oh, okay. What about my account?",
+        "stime": 15.5,
+        "etime": 18
+    },
+    {
+        "speaker": "Agent",
+        "text": "I need to inform you that you have an outstanding balance of $500. How would you like to proceed?",
+        "stime": 18,
+        "etime": 25
+    },
+    {
+        "speaker": "Customer",
+        "text": "I wasn't aware of that. Can you give me more details?",
+        "stime": 24.5,
+        "etime": 29
+    },
+    {
+        "speaker": "Agent",
+        "text": "Sure, this balance is due from last month. Can you confirm your address for verification?",
+        "stime": 29,
+        "etime": 34
+    },
+    {
+        "speaker": "Customer",
+        "text": "It's 123 Elm Street.",
+        "stime": 34.5,
+        "etime": 36
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you. The balance on your account is due immediately. Would you like to pay by card or through bank transfer?",
+        "stime": 36,
+        "etime": 45
+    },
+    {
+        "speaker": "Customer",
+        "text": "I would prefer to pay by card.",
+        "stime": 45.5,
+        "etime": 49
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great! Please provide your card details to process the payment.",
+        "stime": 49,
+        "etime": 54
+    },
+    {
+        "speaker": "Customer",
+        "text": "Wait, can I have a summary of the charges first?",
+        "stime": 54.5,
+        "etime": 58
+    },
+    {
+        "speaker": "Agent",
+        "text": "Absolutely, you have a $500 balance from last month. There are no additional fees at this time.",
+        "stime": 58.5,
+        "etime": 65
+    },
+    {
+        "speaker": "Customer",
+        "text": "Okay, that sounds fine. Here are my card details.",
+        "stime": 65.5,
+        "etime": 70
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you, processing your payment now.",
+        "stime": 70.5,
+        "etime": 73
+    }
+]

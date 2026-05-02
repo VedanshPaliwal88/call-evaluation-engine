@@ -1,0 +1,32 @@
+[
+    {
+        "speaker": "Customer",
+        "text": "You have reached the voicemail of Alex Johnson. Please leave a message after the beep.",
+        "stime": 0,
+        "etime": 8
+    },
+    {
+        "speaker": "Agent",
+        "text": "Hello Alex, this is Sarah from Debt Solutions. I'm calling about your overdue balance.",
+        "stime": 9,
+        "etime": 17
+    },
+    {
+        "speaker": "Customer",
+        "text": "At the tone, please record your message. When you are finished, you may hang up or press one for more options.",
+        "stime": 18,
+        "etime": 28
+    },
+    {
+        "speaker": "Agent",
+        "text": "You can reach me at the number provided or visit our website for further assistance.",
+        "stime": 29,
+        "etime": 38
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you for your call. Goodbye.",
+        "stime": 39,
+        "etime": 44
+    }
+]

@@ -1,0 +1,56 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark calling from XYZ Collections. Am I speaking with Sarah Johnson?",
+        "stime": 0,
+        "etime": 8
+    },
+    {
+        "speaker": "Customer",
+        "text": "No, this is not Sarah. I think you have the wrong number.",
+        "stime": 9,
+        "etime": 12
+    },
+    {
+        "speaker": "Agent",
+        "text": "I apologize for the mix-up. I'm calling about an outstanding balance on your account with City Bank.",
+        "stime": 11,
+        "etime": 20
+    },
+    {
+        "speaker": "Customer",
+        "text": "I really have no idea what you're talking about. I don\u2019t have an account with City Bank.",
+        "stime": 21,
+        "etime": 30
+    },
+    {
+        "speaker": "Agent",
+        "text": "I'm sorry for the inconvenience. Let me double-check the number I dialed.",
+        "stime": 29,
+        "etime": 38
+    },
+    {
+        "speaker": "Customer",
+        "text": "Please do that. I\u2019d like to resolve this quickly.",
+        "stime": 39,
+        "etime": 43
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for your patience. Looks like I need to update my records. You won\u2019t be contacted again.",
+        "stime": 42,
+        "etime": 52
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thanks for confirming that. Have a good day.",
+        "stime": 53,
+        "etime": 57
+    },
+    {
+        "speaker": "Agent",
+        "text": "You too! Goodbye.",
+        "stime": 58,
+        "etime": 60
+    }
+]

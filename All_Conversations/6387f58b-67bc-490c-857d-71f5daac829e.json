@@ -1,0 +1,32 @@
+[
+    {
+        "speaker": "Customer",
+        "text": "You have reached John Smith's voicemail. Please leave a message after the beep.",
+        "stime": 0,
+        "etime": 10
+    },
+    {
+        "speaker": "Agent",
+        "text": "Hi John, this is Sarah from Global Collections. I am reaching out about your overdue balance.",
+        "stime": 8,
+        "etime": 20
+    },
+    {
+        "speaker": "Customer",
+        "text": "If this is an emergency, please hang up and call 911.",
+        "stime": 19,
+        "etime": 28
+    },
+    {
+        "speaker": "Agent",
+        "text": "Your current balance is three hundred and fifty dollars, and it's important to resolve this as soon as possible.",
+        "stime": 25,
+        "etime": 38
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you for your call. I am not available right now, but I will get back to you.",
+        "stime": 37,
+        "etime": 44
+    }
+]

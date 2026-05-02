@@ -1,0 +1,80 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 6
+    },
+    {
+        "speaker": "Customer",
+        "text": "What the hell do you want? I\u2019m not in the mood for your crap!",
+        "stime": 7,
+        "etime": 12
+    },
+    {
+        "speaker": "Agent",
+        "text": "I understand this can be frustrating. I'm here to discuss your account. Can you please verify your date of birth for me?",
+        "stime": 11,
+        "etime": 20
+    },
+    {
+        "speaker": "Customer",
+        "text": "Why the f*** do I need to tell you anything? Just get to the point!",
+        "stime": 21,
+        "etime": 27
+    },
+    {
+        "speaker": "Agent",
+        "text": "I appreciate your patience. I can\u2019t provide any details without verifying your identity first. Just your date of birth, please.",
+        "stime": 25,
+        "etime": 34
+    },
+    {
+        "speaker": "Customer",
+        "text": "Fine! It\u2019s July 15, 1985. Now can we move on, or are you gonna waste my time more?",
+        "stime": 35,
+        "etime": 43
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for that. I have your information now. You currently have an outstanding balance of $500. What is your plan for repayment?",
+        "stime": 42,
+        "etime": 53
+    },
+    {
+        "speaker": "Customer",
+        "text": "I don\u2019t have that kind of money! You guys are ruthless! Just leave me the f*** alone!",
+        "stime": 54,
+        "etime": 62
+    },
+    {
+        "speaker": "Agent",
+        "text": "I understand your concern, but we can work together to find a solution. Would you be willing to set up a payment plan?",
+        "stime": 61,
+        "etime": 70
+    },
+    {
+        "speaker": "Customer",
+        "text": "A payment plan? You think I have time for your bullsh*t? Just stop calling me!",
+        "stime": 71,
+        "etime": 78
+    },
+    {
+        "speaker": "Agent",
+        "text": "I hear you. I'm here to help. If you change your mind, you can always reach out to us. Just remember, we\u2019re available to assist.",
+        "stime": 77,
+        "etime": 87
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yeah, whatever. Just don\u2019t call me again, you hear me?",
+        "stime": 88,
+        "etime": 93
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for your time today. I\u2019ll make sure to note your preference. Have a good day.",
+        "stime": 92,
+        "etime": 100
+    }
+]

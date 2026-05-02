@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Lisa from Secure Collections. How are you today?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm doing well, thank you. What\u2019s this call about?",
+        "stime": 8,
+        "etime": 14
+    },
+    {
+        "speaker": "Agent",
+        "text": "I\u2019m calling regarding an outstanding balance on your account. First, could you please verify your date of birth?",
+        "stime": 13,
+        "etime": 22
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's April 15, 1990.",
+        "stime": 23,
+        "etime": 25
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for that information. Can you also confirm your current address?",
+        "stime": 24,
+        "etime": 33
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, it's 123 Maple Street, Springfield.",
+        "stime": 34,
+        "etime": 37
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for confirming your identity. You currently have a balance of $250 on your account. Would you like to discuss a payment option?",
+        "stime": 36,
+        "etime": 48
+    },
+    {
+        "speaker": "Customer",
+        "text": "I can make a payment today. What are my options?",
+        "stime": 49,
+        "etime": 54
+    },
+    {
+        "speaker": "Agent",
+        "text": "You can pay by credit card, bank transfer, or set up a payment plan. Which would you prefer?",
+        "stime": 53,
+        "etime": 64
+    },
+    {
+        "speaker": "Customer",
+        "text": "I\u2019d like to pay by credit card.",
+        "stime": 65,
+        "etime": 69
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great! I can help you with that. Please provide your credit card details.",
+        "stime": 68,
+        "etime": 77
+    },
+    {
+        "speaker": "Customer",
+        "text": "Okay, my card number is 4111 1111 1111 1111.",
+        "stime": 76,
+        "etime": 81
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you! I've processed your payment. You\u2019ll receive a confirmation email shortly.",
+        "stime": 80,
+        "etime": 90
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you for your help.",
+        "stime": 91,
+        "etime": 93
+    },
+    {
+        "speaker": "Agent",
+        "text": "You\u2019re welcome! Have a great day!",
+        "stime": 92,
+        "etime": 97
+    }
+]

@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Rachel from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm doing okay, thanks. What's this about?",
+        "stime": 7.5,
+        "etime": 12
+    },
+    {
+        "speaker": "Agent",
+        "text": "I\u2019m calling regarding your outstanding balance with ABC Credit Card. Can you please confirm your name?",
+        "stime": 11,
+        "etime": 19
+    },
+    {
+        "speaker": "Customer",
+        "text": "It's John Smith.",
+        "stime": 19.5,
+        "etime": 21
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you, John. You have a balance of $350 due. How do you plan to handle this today?",
+        "stime": 20,
+        "etime": 30
+    },
+    {
+        "speaker": "Customer",
+        "text": "I can't afford to pay that right now. Can we set up a payment plan?",
+        "stime": 31,
+        "etime": 36
+    },
+    {
+        "speaker": "Agent",
+        "text": "Sure, we can look into that. Can you provide me with your account number?",
+        "stime": 35,
+        "etime": 42
+    },
+    {
+        "speaker": "Customer",
+        "text": "I don't have it on me. Is there another way to verify?",
+        "stime": 43,
+        "etime": 47
+    },
+    {
+        "speaker": "Agent",
+        "text": "That's okay, I can help you without it. Let's proceed with your payment plan options.",
+        "stime": 46,
+        "etime": 55
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you, I appreciate that.",
+        "stime": 54,
+        "etime": 57
+    },
+    {
+        "speaker": "Agent",
+        "text": "No problem. We can set up monthly payments of $100 starting next month.",
+        "stime": 58,
+        "etime": 65
+    },
+    {
+        "speaker": "Customer",
+        "text": "That sounds good. Let's do that.",
+        "stime": 66,
+        "etime": 69
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great! I\u2019ll send you the confirmation via email. Is that alright?",
+        "stime": 70,
+        "etime": 76
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, please do. Thank you for your help.",
+        "stime": 75,
+        "etime": 80
+    },
+    {
+        "speaker": "Agent",
+        "text": "You're welcome. Have a great day, John!",
+        "stime": 81,
+        "etime": 86
+    }
+]

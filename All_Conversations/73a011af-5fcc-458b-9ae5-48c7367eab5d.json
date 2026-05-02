@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Sarah from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm doing alright, thanks. What is this about?",
+        "stime": 6.5,
+        "etime": 10
+    },
+    {
+        "speaker": "Agent",
+        "text": "I'm glad to hear that. I'm calling regarding an outstanding account. Can you please confirm your date of birth for verification?",
+        "stime": 9,
+        "etime": 22
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's February 14th, 1990.",
+        "stime": 21,
+        "etime": 25
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for that. Could you also provide your current address to further verify your identity?",
+        "stime": 24,
+        "etime": 34
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, I live at 123 Maple Street, Springfield.",
+        "stime": 33,
+        "etime": 38
+    },
+    {
+        "speaker": "Agent",
+        "text": "I appreciate your confirmation. You currently have a balance of $450 on your account. How would you like to proceed with the payment?",
+        "stime": 37,
+        "etime": 50
+    },
+    {
+        "speaker": "Customer",
+        "text": "I can pay $100 today and the rest later.",
+        "stime": 49,
+        "etime": 53
+    },
+    {
+        "speaker": "Agent",
+        "text": "That sounds good. I can help you process that payment right now. Would you like to use a credit card?",
+        "stime": 52,
+        "etime": 62
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, I'll use my Visa card.",
+        "stime": 61,
+        "etime": 64
+    },
+    {
+        "speaker": "Agent",
+        "text": "Perfect. Can you please provide me with the card number?",
+        "stime": 63,
+        "etime": 66
+    },
+    {
+        "speaker": "Customer",
+        "text": "It's 4111 1111 1111 1111.",
+        "stime": 65,
+        "etime": 68
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you. Just one moment while I process that for you.",
+        "stime": 67,
+        "etime": 74
+    },
+    {
+        "speaker": "Customer",
+        "text": "Okay, I'm waiting.",
+        "stime": 73,
+        "etime": 76
+    },
+    {
+        "speaker": "Agent",
+        "text": "All done! Your payment has been processed. Thank you for your cooperation.",
+        "stime": 75,
+        "etime": 85
+    }
+]

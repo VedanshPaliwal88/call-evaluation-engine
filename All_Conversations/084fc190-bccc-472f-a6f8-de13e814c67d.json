@@ -1,0 +1,86 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark from XYZ Collections. Am I speaking with Jordan Smith?",
+        "stime": 0,
+        "etime": 8
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, this is Jordan. What's this about?",
+        "stime": 8.5,
+        "etime": 12
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for confirming, Jordan. I'm calling regarding an outstanding balance on your account. Can you please verify your date of birth?",
+        "stime": 11,
+        "etime": 22
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's June 15, 1990.",
+        "stime": 23,
+        "etime": 26
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for that. Also, could you confirm your address for security purposes?",
+        "stime": 25,
+        "etime": 34
+    },
+    {
+        "speaker": "Customer",
+        "text": "It's 123 Maple Street, Springfield.",
+        "stime": 34.5,
+        "etime": 38
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great, thank you for verifying that information. You currently have a balance of $500. How would you like to proceed with the payment?",
+        "stime": 37,
+        "etime": 48
+    },
+    {
+        "speaker": "Customer",
+        "text": "I can pay half right now and the rest by the end of the month.",
+        "stime": 48.5,
+        "etime": 55
+    },
+    {
+        "speaker": "Agent",
+        "text": "That sounds reasonable. So, you'll pay $250 today and the remaining $250 by the end of the month?",
+        "stime": 54,
+        "etime": 62
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, that's correct.",
+        "stime": 62.5,
+        "etime": 64
+    },
+    {
+        "speaker": "Agent",
+        "text": "Perfect. How would you like to make the payment today?",
+        "stime": 65,
+        "etime": 70
+    },
+    {
+        "speaker": "Customer",
+        "text": "I can do it via credit card.",
+        "stime": 70.5,
+        "etime": 73
+    },
+    {
+        "speaker": "Agent",
+        "text": "Alright, I will gather your card details. Thank you for your cooperation, Jordan.",
+        "stime": 72,
+        "etime": 80
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you for your help.",
+        "stime": 80.5,
+        "etime": 82
+    }
+]

@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is James from XYZ Collections. Am I speaking with Michael?",
+        "stime": 0,
+        "etime": 8
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, this is Michael. What's this about?",
+        "stime": 9.2,
+        "etime": 12.05
+    },
+    {
+        "speaker": "Agent",
+        "text": "I'm calling regarding a past due account. Before I provide any details, could you please verify your date of birth for security purposes?",
+        "stime": 11,
+        "etime": 23
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's January 15, 1990.",
+        "stime": 24,
+        "etime": 27
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you, Michael. Can you also confirm your current address?",
+        "stime": 26,
+        "etime": 31
+    },
+    {
+        "speaker": "Customer",
+        "text": "I live at 123 Elm Street, Springfield.",
+        "stime": 32,
+        "etime": 36
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for that information. You have an outstanding balance of $350. How would you like to proceed with the payment?",
+        "stime": 35,
+        "etime": 44
+    },
+    {
+        "speaker": "Customer",
+        "text": "I can pay $150 right now and the rest later.",
+        "stime": 45,
+        "etime": 50
+    },
+    {
+        "speaker": "Agent",
+        "text": "That works. I can set up a partial payment for today. How will you be making the payment?",
+        "stime": 49,
+        "etime": 57
+    },
+    {
+        "speaker": "Customer",
+        "text": "I\u2019ll pay with my credit card.",
+        "stime": 58,
+        "etime": 61
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great! Please provide your card details, and I will process that for you.",
+        "stime": 60,
+        "etime": 67
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, the number is 1234-5678-9012-3456.",
+        "stime": 68,
+        "etime": 71
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you, Michael. Your payment is being processed, and you will receive a confirmation shortly.",
+        "stime": 70,
+        "etime": 80
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thanks for your help!",
+        "stime": 81,
+        "etime": 83
+    },
+    {
+        "speaker": "Agent",
+        "text": "You're welcome. Have a great day!",
+        "stime": 84,
+        "etime": 89
+    }
+]

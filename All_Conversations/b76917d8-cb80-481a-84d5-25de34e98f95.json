@@ -1,0 +1,86 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Good afternoon, this is Robert calling from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm fine, thank you. What is this about?",
+        "stime": 7.5,
+        "etime": 12
+    },
+    {
+        "speaker": "Agent",
+        "text": "I'm here to discuss your account with City Credit. Before we proceed, could you please verify your date of birth?",
+        "stime": 11,
+        "etime": 21
+    },
+    {
+        "speaker": "Customer",
+        "text": "It's July 15, 1990.",
+        "stime": 20,
+        "etime": 22
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for confirming your date of birth. Can you also provide the last four digits of your Social Security number for verification?",
+        "stime": 21,
+        "etime": 32
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's 1234.",
+        "stime": 31,
+        "etime": 34
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for that. I confirm your identity. You currently have a balance of $250 on your account. How would you like to proceed with payment?",
+        "stime": 33,
+        "etime": 45
+    },
+    {
+        "speaker": "Customer",
+        "text": "I\u2019d like to set up a payment plan.",
+        "stime": 44,
+        "etime": 48
+    },
+    {
+        "speaker": "Agent",
+        "text": "Absolutely! We can set that up. Would you prefer weekly or monthly payments?",
+        "stime": 47,
+        "etime": 57
+    },
+    {
+        "speaker": "Customer",
+        "text": "Monthly payments would work for me.",
+        "stime": 56,
+        "etime": 59
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great! I\u2019ll set you up for monthly payments of $62.50. Does that sound good?",
+        "stime": 58,
+        "etime": 68
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, that works.",
+        "stime": 67,
+        "etime": 70
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for confirming. You\u2019ll receive a confirmation email shortly. Have a great day!",
+        "stime": 69,
+        "etime": 78
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thanks, you too!",
+        "stime": 77,
+        "etime": 80
+    }
+]

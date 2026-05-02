@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, is this Mark Johnson? This is Sarah calling from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 8
+    },
+    {
+        "speaker": "Customer",
+        "text": "Hi Sarah, yes this is Mark. I'm doing okay, thanks.",
+        "stime": 8.5,
+        "etime": 12
+    },
+    {
+        "speaker": "Agent",
+        "text": "I'm glad to hear that, Mark. I'm reaching out regarding your overdue balance with ABC Credit Union. Can I get your account number to look it up?",
+        "stime": 11,
+        "etime": 21
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's 123456789.",
+        "stime": 22,
+        "etime": 25
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for that. Now, your current balance is $500. Would you like to discuss payment options?",
+        "stime": 24,
+        "etime": 34
+    },
+    {
+        "speaker": "Customer",
+        "text": "I was thinking of paying half today and the rest next month.",
+        "stime": 35,
+        "etime": 42
+    },
+    {
+        "speaker": "Agent",
+        "text": "That sounds reasonable. I can help facilitate that. Just to clarify, can I confirm your mailing address?",
+        "stime": 41,
+        "etime": 51
+    },
+    {
+        "speaker": "Customer",
+        "text": "It's 456 Elm Street, Springfield.",
+        "stime": 52,
+        "etime": 56
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you, Mark! So, your first payment today would be $250, correct?",
+        "stime": 55,
+        "etime": 64
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, that's right.",
+        "stime": 65,
+        "etime": 67
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great! Let's go ahead and process that. How would you like to make the payment?",
+        "stime": 68,
+        "etime": 76
+    },
+    {
+        "speaker": "Customer",
+        "text": "I can do it over the phone with my credit card.",
+        "stime": 77,
+        "etime": 82
+    },
+    {
+        "speaker": "Agent",
+        "text": "Perfect. I just need the card number to get started.",
+        "stime": 81,
+        "etime": 88
+    },
+    {
+        "speaker": "Customer",
+        "text": "It's 5555 4444 3333 2222.",
+        "stime": 89,
+        "etime": 92
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for providing that. Now, your payment will be processed shortly. Is there anything else I can assist you with today?",
+        "stime": 93,
+        "etime": 103
+    }
+]

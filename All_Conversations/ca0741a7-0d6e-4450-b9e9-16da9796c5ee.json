@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, is this John Smith?",
+        "stime": 0,
+        "etime": 4
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, this is John. Who is this?",
+        "stime": 5,
+        "etime": 8
+    },
+    {
+        "speaker": "Agent",
+        "text": "Hi John, this is Sarah from XYZ Collections. How are you today?",
+        "stime": 7,
+        "etime": 12
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm doing alright, thanks. What\u2019s this about?",
+        "stime": 11,
+        "etime": 15
+    },
+    {
+        "speaker": "Agent",
+        "text": "I\u2019m calling to discuss your outstanding balance with Acme Corp. Can you confirm your address for me?",
+        "stime": 14,
+        "etime": 22
+    },
+    {
+        "speaker": "Customer",
+        "text": "I live at 123 Elm Street. What\u2019s the amount?",
+        "stime": 21,
+        "etime": 25
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you! You currently have a balance of $450. How would you like to proceed with this payment?",
+        "stime": 24,
+        "etime": 33
+    },
+    {
+        "speaker": "Customer",
+        "text": "Can I pay it in installments?",
+        "stime": 32,
+        "etime": 36
+    },
+    {
+        "speaker": "Agent",
+        "text": "Yes, we can arrange that! We can set up a payment plan for you. What amount would you like to pay each month?",
+        "stime": 35,
+        "etime": 44
+    },
+    {
+        "speaker": "Customer",
+        "text": "I can do $100 a month.",
+        "stime": 43,
+        "etime": 46
+    },
+    {
+        "speaker": "Agent",
+        "text": "That works! I'll set that up for you. Do you want to use your bank account for the payments?",
+        "stime": 45,
+        "etime": 53
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, that\u2019s fine. When will the first payment be deducted?",
+        "stime": 52,
+        "etime": 57
+    },
+    {
+        "speaker": "Agent",
+        "text": "The first payment will be deducted next month on the 15th. Is there anything else I can help you with today?",
+        "stime": 56,
+        "etime": 63
+    },
+    {
+        "speaker": "Customer",
+        "text": "No, that's all. Thank you for the help!",
+        "stime": 62,
+        "etime": 66
+    },
+    {
+        "speaker": "Agent",
+        "text": "You're welcome! Have a great day!",
+        "stime": 65,
+        "etime": 70
+    }
+]

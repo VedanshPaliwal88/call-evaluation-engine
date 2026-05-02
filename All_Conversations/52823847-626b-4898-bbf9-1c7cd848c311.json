@@ -1,0 +1,32 @@
+[
+    {
+        "speaker": "Customer",
+        "text": "You have reached John Doe's voicemail. Please leave a message after the beep.",
+        "stime": 0,
+        "etime": 8
+    },
+    {
+        "speaker": "Agent",
+        "text": "Hello John, this is Sarah from the Debt Collection Agency. I'm calling about your outstanding balance.",
+        "stime": 6,
+        "etime": 16
+    },
+    {
+        "speaker": "Customer",
+        "text": "For immediate assistance, please send your email.",
+        "stime": 12,
+        "etime": 20
+    },
+    {
+        "speaker": "Agent",
+        "text": "You can reach me at your earliest convenience at one eight hundred two two two five five five five.",
+        "stime": 18,
+        "etime": 30
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you for your call. Please leave your information.",
+        "stime": 25,
+        "etime": 34
+    }
+]

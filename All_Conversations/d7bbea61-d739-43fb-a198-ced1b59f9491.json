@@ -1,0 +1,80 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 5
+    },
+    {
+        "speaker": "Customer",
+        "text": "What the hell do you want? I've told you assholes to leave me alone!",
+        "stime": 4.5,
+        "etime": 10
+    },
+    {
+        "speaker": "Agent",
+        "text": "I understand that you may be upset. I'm calling about your account with ABC Bank. Can I have your account number to assist you?",
+        "stime": 9,
+        "etime": 15
+    },
+    {
+        "speaker": "Customer",
+        "text": "Why the fuck would I give you anything? You're just some low-life calling me!",
+        "stime": 14,
+        "etime": 20
+    },
+    {
+        "speaker": "Agent",
+        "text": "I assure you, I'm here to help resolve this matter. Your current balance is $500. How do you prefer to settle this?",
+        "stime": 19,
+        "etime": 26
+    },
+    {
+        "speaker": "Customer",
+        "text": "Settle this? You guys are a bunch of crooks! I don't owe you shit!",
+        "stime": 25,
+        "etime": 32
+    },
+    {
+        "speaker": "Agent",
+        "text": "I understand your frustration. However, it's important for us to discuss this. The account is past due.",
+        "stime": 31,
+        "etime": 37
+    },
+    {
+        "speaker": "Customer",
+        "text": "Fuck you! You think I'm gonna pay you just because you say so?",
+        "stime": 36,
+        "etime": 41
+    },
+    {
+        "speaker": "Agent",
+        "text": "I appreciate your honesty. My goal is simply to find a solution. Would you be open to setting up a payment plan?",
+        "stime": 40,
+        "etime": 48
+    },
+    {
+        "speaker": "Customer",
+        "text": "A payment plan? You\u2019re dreaming! Not a dime from me!",
+        "stime": 47,
+        "etime": 53
+    },
+    {
+        "speaker": "Agent",
+        "text": "I respect your decision. Just know I'm here to assist whenever you're ready to discuss options.",
+        "stime": 52,
+        "etime": 59
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yeah, whatever. Just get the hell off my phone!",
+        "stime": 58,
+        "etime": 63
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for your time. Have a good day.",
+        "stime": 62,
+        "etime": 65
+    }
+]

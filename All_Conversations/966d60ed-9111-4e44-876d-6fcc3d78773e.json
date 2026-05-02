@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mike from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 6
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm doing well, thank you. How can I help you?",
+        "stime": 7,
+        "etime": 10
+    },
+    {
+        "speaker": "Agent",
+        "text": "I'm calling about your outstanding debt with First National Bank. Before we proceed, can you verify your date of birth?",
+        "stime": 11,
+        "etime": 21
+    },
+    {
+        "speaker": "Customer",
+        "text": "Certainly, it's January 15, 1990.",
+        "stime": 22,
+        "etime": 25
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thanks. Now, can you also confirm your current address?",
+        "stime": 24,
+        "etime": 30
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, it's 123 Elm Street, Springfield.",
+        "stime": 31,
+        "etime": 35
+    },
+    {
+        "speaker": "Agent",
+        "text": "Alright, you've got a balance of $3,000. How the hell do you plan to settle that?",
+        "stime": 36,
+        "etime": 45
+    },
+    {
+        "speaker": "Customer",
+        "text": "I prefer to discuss payment options calmly.",
+        "stime": 46,
+        "etime": 50
+    },
+    {
+        "speaker": "Agent",
+        "text": "Calmly? You think I'm in the mood for that shit? You owe money! Just pay up!",
+        "stime": 49,
+        "etime": 57
+    },
+    {
+        "speaker": "Customer",
+        "text": "I understand, but I need to understand my options first.",
+        "stime": 58,
+        "etime": 62
+    },
+    {
+        "speaker": "Agent",
+        "text": "Options? You either pay now or I\u2019ll make your life hell with calls! What\u2019s so hard to get?",
+        "stime": 63,
+        "etime": 70
+    },
+    {
+        "speaker": "Customer",
+        "text": "I can assure you that I will make a payment, just not immediately.",
+        "stime": 71,
+        "etime": 75
+    },
+    {
+        "speaker": "Agent",
+        "text": "Whatever, but don't think you can just ignore this. It\u2019s going to bite you in the ass!",
+        "stime": 76,
+        "etime": 83
+    },
+    {
+        "speaker": "Customer",
+        "text": "I will address it as soon as possible. Thank you.",
+        "stime": 84,
+        "etime": 88
+    },
+    {
+        "speaker": "Agent",
+        "text": "Yeah, good luck with that. Bye!",
+        "stime": 89,
+        "etime": 92
+    }
+]

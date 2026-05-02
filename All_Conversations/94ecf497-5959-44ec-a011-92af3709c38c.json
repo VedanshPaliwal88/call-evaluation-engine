@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, is this John Smith?",
+        "stime": 0,
+        "etime": 5
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, this is John. Who is this?",
+        "stime": 5.5,
+        "etime": 8
+    },
+    {
+        "speaker": "Agent",
+        "text": "This is Sarah from XYZ Collections. I'm calling about your account with Metro Credit. How are you today?",
+        "stime": 8,
+        "etime": 15
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm okay, but I wasn't expecting any calls.",
+        "stime": 15.5,
+        "etime": 20
+    },
+    {
+        "speaker": "Agent",
+        "text": "I understand, John. I'm here to discuss the outstanding balance on your account. Can you confirm your address for verification?",
+        "stime": 20.5,
+        "etime": 30
+    },
+    {
+        "speaker": "Customer",
+        "text": "I live at 123 Maple Street.",
+        "stime": 30.5,
+        "etime": 32
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you, John. You currently have a balance of $2,500. How would you like to proceed with that today?",
+        "stime": 32.5,
+        "etime": 40
+    },
+    {
+        "speaker": "Customer",
+        "text": "I wasn't aware of that amount. Is there a way to reduce it?",
+        "stime": 40.5,
+        "etime": 44
+    },
+    {
+        "speaker": "Agent",
+        "text": "Unfortunately, the balance is accurate based on the last statement. Would you like to set up a payment plan?",
+        "stime": 44.5,
+        "etime": 52
+    },
+    {
+        "speaker": "Customer",
+        "text": "I guess I can do that. What are my options?",
+        "stime": 52.5,
+        "etime": 55
+    },
+    {
+        "speaker": "Agent",
+        "text": "We can divide the balance over the next six months, which would be about $416.67 a month. Does that work for you?",
+        "stime": 55.5,
+        "etime": 65
+    },
+    {
+        "speaker": "Customer",
+        "text": "That sounds manageable. Let's do it.",
+        "stime": 65.5,
+        "etime": 69
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great! I just need to confirm your payment method, and we can get started.",
+        "stime": 69.5,
+        "etime": 75
+    },
+    {
+        "speaker": "Customer",
+        "text": "I prefer to use my debit card.",
+        "stime": 75.5,
+        "etime": 79
+    },
+    {
+        "speaker": "Agent",
+        "text": "Okay, thank you for that. I\u2019ll guide you through the payment process now.",
+        "stime": 79.5,
+        "etime": 85
+    }
+]

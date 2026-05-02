@@ -1,0 +1,86 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark calling from XYZ Collections. Am I speaking with John?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, this is John. How can I help you?",
+        "stime": 7.5,
+        "etime": 10
+    },
+    {
+        "speaker": "Agent",
+        "text": "I need to verify your identity before we proceed. Can you give me your date of birth or address?",
+        "stime": 10,
+        "etime": 20
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's March 15, 1985.",
+        "stime": 19,
+        "etime": 22
+    },
+    {
+        "speaker": "Agent",
+        "text": "Alright, thanks. Now, you\u2019ve got an overdue balance of $500. What the hell are you going to do about it?",
+        "stime": 21,
+        "etime": 30
+    },
+    {
+        "speaker": "Customer",
+        "text": "I\u2019m working on it and plan to make a payment soon.",
+        "stime": 30.5,
+        "etime": 34
+    },
+    {
+        "speaker": "Agent",
+        "text": "You say that every damn time! What\u2019s stopping you from sorting this out now?",
+        "stime": 33,
+        "etime": 40
+    },
+    {
+        "speaker": "Customer",
+        "text": "I understand your frustration, but I assure you I'm doing my best.",
+        "stime": 39,
+        "etime": 44
+    },
+    {
+        "speaker": "Agent",
+        "text": "Yeah, right! Spare me the excuses! You\u2019re just wasting time here!",
+        "stime": 43,
+        "etime": 51
+    },
+    {
+        "speaker": "Customer",
+        "text": "I would appreciate it if we could keep this professional.",
+        "stime": 50,
+        "etime": 54
+    },
+    {
+        "speaker": "Agent",
+        "text": "Professional? You think I\u2019m playing games? Get your shit together!",
+        "stime": 53,
+        "etime": 60
+    },
+    {
+        "speaker": "Customer",
+        "text": "I will make sure to pay what I owe. Thank you for your time.",
+        "stime": 60.5,
+        "etime": 64
+    },
+    {
+        "speaker": "Agent",
+        "text": "Whatever, just make sure you do it or I\u2019ll be back on your ass!",
+        "stime": 63,
+        "etime": 70
+    },
+    {
+        "speaker": "Customer",
+        "text": "Goodbye.",
+        "stime": 70.5,
+        "etime": 72
+    }
+]

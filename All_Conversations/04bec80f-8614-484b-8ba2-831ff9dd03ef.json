@@ -1,0 +1,80 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Kyle from XYZ Collections. How the hell are you?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm doing well, thank you. How can I assist you today?",
+        "stime": 7.5,
+        "etime": 12
+    },
+    {
+        "speaker": "Agent",
+        "text": "I need to verify your identity before discussing your account. Can you please give me your date of birth?",
+        "stime": 11,
+        "etime": 21
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's March 15, 1985.",
+        "stime": 20,
+        "etime": 23
+    },
+    {
+        "speaker": "Agent",
+        "text": "Alright, that checks out. Now, you owe us a shitload of money. What the hell are you planning to do about it?",
+        "stime": 22,
+        "etime": 34
+    },
+    {
+        "speaker": "Customer",
+        "text": "I plan to pay it off as soon as possible, but I need to discuss my options.",
+        "stime": 33,
+        "etime": 38
+    },
+    {
+        "speaker": "Agent",
+        "text": "Options? Don't give me that crap. You need to pay up, plain and simple!",
+        "stime": 37,
+        "etime": 46
+    },
+    {
+        "speaker": "Customer",
+        "text": "I understand, but I would like to know if I can set up a payment plan.",
+        "stime": 45,
+        "etime": 50
+    },
+    {
+        "speaker": "Agent",
+        "text": "Payment plan? Who the hell do you think you are? Just pay the damn balance!",
+        "stime": 49,
+        "etime": 58
+    },
+    {
+        "speaker": "Customer",
+        "text": "I really want to resolve this, but I need a reasonable solution.",
+        "stime": 57,
+        "etime": 62
+    },
+    {
+        "speaker": "Agent",
+        "text": "A reasonable solution is to pay what you owe! Stop wasting my time!",
+        "stime": 61,
+        "etime": 70
+    },
+    {
+        "speaker": "Customer",
+        "text": "I will find a way to make this work. Thank you for your time.",
+        "stime": 69,
+        "etime": 74
+    },
+    {
+        "speaker": "Agent",
+        "text": "Whatever, just get it done! Bye!",
+        "stime": 73,
+        "etime": 80
+    }
+]

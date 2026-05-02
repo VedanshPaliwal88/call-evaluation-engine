@@ -1,0 +1,44 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark from XYZ Collections. Am I speaking with Lisa?",
+        "stime": 0,
+        "etime": 8
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, this is Lisa. What is this regarding?",
+        "stime": 9,
+        "etime": 12
+    },
+    {
+        "speaker": "Agent",
+        "text": "I'm calling about your overdue balance with XYZ Credit. We need to discuss your payment options.",
+        "stime": 11,
+        "etime": 22
+    },
+    {
+        "speaker": "Customer",
+        "text": "I don't want to discuss anything. I've asked to be placed on your do not call list.",
+        "stime": 23,
+        "etime": 27
+    },
+    {
+        "speaker": "Agent",
+        "text": "I apologize for the inconvenience, Lisa. I will ensure your number is added to our do not call list.",
+        "stime": 26,
+        "etime": 37
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you, please make sure that happens.",
+        "stime": 38,
+        "etime": 42
+    },
+    {
+        "speaker": "Agent",
+        "text": "Absolutely, your request is being processed right now. You won't receive any more calls.",
+        "stime": 41,
+        "etime": 52
+    }
+]

@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark from Debt Solutions. How are you today?",
+        "stime": 0,
+        "etime": 5
+    },
+    {
+        "speaker": "Customer",
+        "text": "What the hell do you want? I've told you to leave me alone!",
+        "stime": 5.5,
+        "etime": 9
+    },
+    {
+        "speaker": "Agent",
+        "text": "I understand your frustration. I'm just here to discuss your account. Can you verify your date of birth for security purposes?",
+        "stime": 8,
+        "etime": 16
+    },
+    {
+        "speaker": "Customer",
+        "text": "Why the f*** should I give you anything? You don't have the right to call me!",
+        "stime": 15,
+        "etime": 21
+    },
+    {
+        "speaker": "Agent",
+        "text": "I assure you I'm just doing my job. I need to verify your information. Can you provide your address, please?",
+        "stime": 20,
+        "etime": 27
+    },
+    {
+        "speaker": "Customer",
+        "text": "Why don\u2019t you shove it? I\u2019m not telling you a damn thing!",
+        "stime": 26,
+        "etime": 31
+    },
+    {
+        "speaker": "Agent",
+        "text": "I respect your privacy, but without verification, I'm unable to discuss your account details. Can you just confirm your city?",
+        "stime": 30,
+        "etime": 39
+    },
+    {
+        "speaker": "Customer",
+        "text": "You know what? You people are just a bunch of thieves! I don\u2019t owe you anything!",
+        "stime": 38,
+        "etime": 44
+    },
+    {
+        "speaker": "Agent",
+        "text": "I can assure you we are here to help you, not to steal from you. Please verify your street address so we can move forward.",
+        "stime": 43,
+        "etime": 52
+    },
+    {
+        "speaker": "Customer",
+        "text": "F*** off! I\u2019m not giving you a single piece of info!",
+        "stime": 51,
+        "etime": 56
+    },
+    {
+        "speaker": "Agent",
+        "text": "I completely understand your hesitation. However, without confirmation, I can't provide you with any information about your account. I\u2019m here to assist you.",
+        "stime": 55,
+        "etime": 65
+    },
+    {
+        "speaker": "Customer",
+        "text": "I don\u2019t want your help! Just stop calling me already!",
+        "stime": 64,
+        "etime": 70
+    },
+    {
+        "speaker": "Agent",
+        "text": "I apologize for the inconvenience. If you rather not discuss this now, I can note it and try again later. Just let me know.",
+        "stime": 69,
+        "etime": 77
+    },
+    {
+        "speaker": "Customer",
+        "text": "You\u2019re wasting my time, you know that? I\u2019m done! Just get lost!",
+        "stime": 76,
+        "etime": 82
+    },
+    {
+        "speaker": "Agent",
+        "text": "Understood. Thank you for speaking with me today. If you change your mind, we're here to assist you anytime. Goodbye.",
+        "stime": 81,
+        "etime": 90
+    }
+]

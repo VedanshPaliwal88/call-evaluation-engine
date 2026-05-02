@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mike from XYZ Collections. I'm calling about your overdue account. Can you confirm your date of birth for verification?",
+        "stime": 0,
+        "etime": 10
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, my date of birth is April 12, 1985.",
+        "stime": 10.5,
+        "etime": 16
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great, thanks. Now, can you also confirm your current address?",
+        "stime": 15,
+        "etime": 23
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, I live at 123 Main Street, Springfield.",
+        "stime": 24,
+        "etime": 30
+    },
+    {
+        "speaker": "Agent",
+        "text": "Alright, you have a balance of $1,200. It's time to settle this shit. How are you going to pay today?",
+        "stime": 29,
+        "etime": 40
+    },
+    {
+        "speaker": "Customer",
+        "text": "I prefer to discuss my payment options calmly first.",
+        "stime": 39,
+        "etime": 46
+    },
+    {
+        "speaker": "Agent",
+        "text": "Calmly? Seriously? You owe us money, and you're talking about 'calmly'? Just get your shit together and pay up!",
+        "stime": 45,
+        "etime": 57
+    },
+    {
+        "speaker": "Customer",
+        "text": "I understand that, but I need to know all my options before I commit to anything.",
+        "stime": 56,
+        "etime": 65
+    },
+    {
+        "speaker": "Agent",
+        "text": "Options? You think you can just pick and choose? We are not running a charity here, you know!",
+        "stime": 64,
+        "etime": 74
+    },
+    {
+        "speaker": "Customer",
+        "text": "I am just trying to understand my responsibilities and plan accordingly.",
+        "stime": 73,
+        "etime": 82
+    },
+    {
+        "speaker": "Agent",
+        "text": "Responsibilities? How about you just quit making excuses? Pay what you owe!",
+        "stime": 81,
+        "etime": 91
+    },
+    {
+        "speaker": "Customer",
+        "text": "I will make a payment soon, but I need to make sure it fits within my budget.",
+        "stime": 90,
+        "etime": 100
+    },
+    {
+        "speaker": "Agent",
+        "text": "You're wasting my time. Just give me a damn date when you'll pay, or I\u2019ll escalate this further!",
+        "stime": 99,
+        "etime": 110
+    },
+    {
+        "speaker": "Customer",
+        "text": "I appreciate your urgency, but I need some time to sort things out and I will get back to you.",
+        "stime": 109,
+        "etime": 120
+    },
+    {
+        "speaker": "Agent",
+        "text": "You better not keep dragging this out, or I'll make your life a living hell!",
+        "stime": 119,
+        "etime": 130
+    }
+]

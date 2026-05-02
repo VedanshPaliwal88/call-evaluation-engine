@@ -1,0 +1,86 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, is this David?",
+        "stime": 0,
+        "etime": 5
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, this is David. Who's calling?",
+        "stime": 5.2,
+        "etime": 9
+    },
+    {
+        "speaker": "Agent",
+        "text": "This is Sarah from XYZ Collections. I'm reaching out regarding your account with Green Bank.",
+        "stime": 8,
+        "etime": 15
+    },
+    {
+        "speaker": "Customer",
+        "text": "Oh, I see. I was expecting a call. What's the status?",
+        "stime": 15.5,
+        "etime": 19
+    },
+    {
+        "speaker": "Agent",
+        "text": "Before we proceed, I need to inform you that this call is about a debt collection matter. Can you provide your address?",
+        "stime": 18,
+        "etime": 27
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's 123 Main Street, Springfield.",
+        "stime": 27.5,
+        "etime": 31
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you. Your current balance is $450. When do you plan to make a payment?",
+        "stime": 30,
+        "etime": 39
+    },
+    {
+        "speaker": "Customer",
+        "text": "I can pay it by the end of the week.",
+        "stime": 39.5,
+        "etime": 43
+    },
+    {
+        "speaker": "Agent",
+        "text": "Sounds good! We accept online payments. Would you like assistance with that?",
+        "stime": 42,
+        "etime": 49
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, please guide me through the process.",
+        "stime": 48.5,
+        "etime": 52
+    },
+    {
+        "speaker": "Agent",
+        "text": "Of course! To start, visit our website and click on 'Make a Payment'.",
+        "stime": 51,
+        "etime": 58
+    },
+    {
+        "speaker": "Customer",
+        "text": "Got it, I\u2019ll do that right away.",
+        "stime": 57,
+        "etime": 60
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for your cooperation, David. If you have any questions, feel free to call back.",
+        "stime": 59,
+        "etime": 68
+    },
+    {
+        "speaker": "Customer",
+        "text": "Will do, thank you!",
+        "stime": 67,
+        "etime": 70
+    }
+]

@@ -1,0 +1,56 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 6
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm fine, but I don\u2019t appreciate these calls. What's this about?",
+        "stime": 6.5,
+        "etime": 12
+    },
+    {
+        "speaker": "Agent",
+        "text": "I understand your frustration. I'm calling regarding your outstanding balance with your credit account.",
+        "stime": 11,
+        "etime": 19
+    },
+    {
+        "speaker": "Customer",
+        "text": "Look, I've requested multiple times to be placed on your do not call list.",
+        "stime": 18,
+        "etime": 23
+    },
+    {
+        "speaker": "Agent",
+        "text": "I sincerely apologize for the inconvenience. Let me take care of that for you right now.",
+        "stime": 22,
+        "etime": 30
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you. I just don\u2019t want to be disturbed anymore.",
+        "stime": 29,
+        "etime": 35
+    },
+    {
+        "speaker": "Agent",
+        "text": "I completely understand, and I will ensure your number is added to the do not call list.",
+        "stime": 34,
+        "etime": 44
+    },
+    {
+        "speaker": "Customer",
+        "text": "Great. Please make sure it\u2019s done.",
+        "stime": 43,
+        "etime": 48
+    },
+    {
+        "speaker": "Agent",
+        "text": "Absolutely, it will be processed immediately. Thank you for your understanding.",
+        "stime": 47,
+        "etime": 55
+    }
+]

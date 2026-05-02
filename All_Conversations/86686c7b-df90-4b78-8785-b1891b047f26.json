@@ -1,0 +1,80 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, is this Jacob?",
+        "stime": 0,
+        "etime": 5
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, this is Jacob. Who's calling?",
+        "stime": 6,
+        "etime": 9
+    },
+    {
+        "speaker": "Agent",
+        "text": "Hi Jacob, this is Sarah from XYZ Collections. I hope you're doing well today.",
+        "stime": 8,
+        "etime": 14
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm alright, thank you. What's this about?",
+        "stime": 15,
+        "etime": 19
+    },
+    {
+        "speaker": "Agent",
+        "text": "I'm calling regarding your past due balance with ABC Credit. Can you confirm your address for me?",
+        "stime": 18,
+        "etime": 25
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's 123 Elm Street.",
+        "stime": 26,
+        "etime": 28
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you, Jacob. You have a balance of $450. Would you like to discuss payment options today?",
+        "stime": 27,
+        "etime": 35
+    },
+    {
+        "speaker": "Customer",
+        "text": "I need to check my finances first before I can commit to anything.",
+        "stime": 36,
+        "etime": 42
+    },
+    {
+        "speaker": "Agent",
+        "text": "I understand. We can definitely give you some time. When do you think you'll be able to follow up?",
+        "stime": 41,
+        "etime": 47
+    },
+    {
+        "speaker": "Customer",
+        "text": "Maybe in a week or so. I just need to figure things out.",
+        "stime": 48,
+        "etime": 53
+    },
+    {
+        "speaker": "Agent",
+        "text": "That sounds good. I'll mark that down for a follow-up. Just remember, it's important to address this balance as soon as you can.",
+        "stime": 52,
+        "etime": 60
+    },
+    {
+        "speaker": "Customer",
+        "text": "I understand, thank you for your call.",
+        "stime": 59,
+        "etime": 62
+    },
+    {
+        "speaker": "Agent",
+        "text": "You're welcome, Jacob. Talk to you soon!",
+        "stime": 63,
+        "etime": 66
+    }
+]

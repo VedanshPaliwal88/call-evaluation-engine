@@ -1,0 +1,80 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark calling from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm doing okay, thanks. What\u2019s this about?",
+        "stime": 6.5,
+        "etime": 10
+    },
+    {
+        "speaker": "Agent",
+        "text": "I'm contacting you regarding an outstanding account with Quick Loan Services. Can I please verify your date of birth before we proceed?",
+        "stime": 9,
+        "etime": 19
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it\u2019s April 5th, 1990.",
+        "stime": 18,
+        "etime": 21
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for that information. Can you also confirm your current address for me?",
+        "stime": 20,
+        "etime": 28
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, it\u2019s 123 Elm Street, Springfield.",
+        "stime": 27,
+        "etime": 31
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great! I can now confirm that I\u2019m speaking with you. Your current balance is $550. How would you like to resolve this?",
+        "stime": 30,
+        "etime": 42
+    },
+    {
+        "speaker": "Customer",
+        "text": "I can pay $200 today and the rest next month.",
+        "stime": 41,
+        "etime": 45
+    },
+    {
+        "speaker": "Agent",
+        "text": "That sounds like a plan. I\u2019ll note that down. Can I take your payment details now?",
+        "stime": 44,
+        "etime": 55
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, I\u2019ll use my credit card. The number is...",
+        "stime": 54,
+        "etime": 59
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you! I will process that right away and send you a confirmation email.",
+        "stime": 58,
+        "etime": 67
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you for your assistance.",
+        "stime": 66,
+        "etime": 69
+    },
+    {
+        "speaker": "Agent",
+        "text": "You\u2019re welcome! Have a great day!",
+        "stime": 68,
+        "etime": 73
+    }
+]

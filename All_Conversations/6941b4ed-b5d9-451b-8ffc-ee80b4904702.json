@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Sarah calling from Debt Solutions. How are you today?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "Hi Sarah, I'm alright, thanks. What's this about?",
+        "stime": 7.5,
+        "etime": 12
+    },
+    {
+        "speaker": "Agent",
+        "text": "I\u2019m reaching out regarding an outstanding balance on your account. Before we proceed, could you please confirm your date of birth?",
+        "stime": 11,
+        "etime": 24
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's July 15, 1990.",
+        "stime": 23,
+        "etime": 26
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for that information. Can you also verify your current address for me?",
+        "stime": 25,
+        "etime": 32
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, it's 123 Elm Street, Springfield.",
+        "stime": 31,
+        "etime": 34
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great, I have verified your identity. You currently have a balance of $250. How would you like to proceed with the payment?",
+        "stime": 33,
+        "etime": 46
+    },
+    {
+        "speaker": "Customer",
+        "text": "I can pay half of it today, about $125.",
+        "stime": 45,
+        "etime": 50
+    },
+    {
+        "speaker": "Agent",
+        "text": "That sounds good. Would you like to make that payment by credit card or bank transfer?",
+        "stime": 49,
+        "etime": 58
+    },
+    {
+        "speaker": "Customer",
+        "text": "I\u2019ll use my credit card.",
+        "stime": 57,
+        "etime": 59
+    },
+    {
+        "speaker": "Agent",
+        "text": "Perfect. Please hold on while I process that for you.",
+        "stime": 58,
+        "etime": 65
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, take your time.",
+        "stime": 64,
+        "etime": 68
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for your patience. Your payment has been processed successfully. Is there anything else I can assist you with today?",
+        "stime": 67,
+        "etime": 80
+    },
+    {
+        "speaker": "Customer",
+        "text": "No, that's all. Thank you!",
+        "stime": 79,
+        "etime": 82
+    },
+    {
+        "speaker": "Agent",
+        "text": "You're welcome! Have a great day!",
+        "stime": 81,
+        "etime": 85
+    }
+]

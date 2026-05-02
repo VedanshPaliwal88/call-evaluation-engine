@@ -1,0 +1,56 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mike from XYZ Collections. Am I speaking with Sarah?",
+        "stime": 0,
+        "etime": 8
+    },
+    {
+        "speaker": "Customer",
+        "text": "No, this is not Sarah. You might have the wrong number.",
+        "stime": 8.5,
+        "etime": 12
+    },
+    {
+        "speaker": "Agent",
+        "text": "I apologize for that. I'm reaching out about a past due account with ABC Credit.",
+        "stime": 11,
+        "etime": 18
+    },
+    {
+        "speaker": "Customer",
+        "text": "I really don't know anyone named Sarah, and I definitely don't have any accounts with ABC Credit.",
+        "stime": 17,
+        "etime": 24
+    },
+    {
+        "speaker": "Agent",
+        "text": "That\u2019s understandable. Let me double-check the number I have on file.",
+        "stime": 23,
+        "etime": 30
+    },
+    {
+        "speaker": "Customer",
+        "text": "I hope you find the right person soon.",
+        "stime": 29,
+        "etime": 33
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for your patience, and I'm sorry for the inconvenience.",
+        "stime": 32,
+        "etime": 39
+    },
+    {
+        "speaker": "Customer",
+        "text": "No problem. Good luck!",
+        "stime": 38,
+        "etime": 42
+    },
+    {
+        "speaker": "Agent",
+        "text": "Take care! Bye!",
+        "stime": 41,
+        "etime": 44
+    }
+]

@@ -1,0 +1,74 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Tom calling from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm doing alright, thanks. What is this about?",
+        "stime": 7.5,
+        "etime": 11
+    },
+    {
+        "speaker": "Agent",
+        "text": "I'm calling regarding the outstanding balance on your account. Can I have your address to access your details?",
+        "stime": 10,
+        "etime": 19
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's 123 Elm Street.",
+        "stime": 19.5,
+        "etime": 22
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you! You have a balance of $250 that is past due. When can we expect payment?",
+        "stime": 21,
+        "etime": 28
+    },
+    {
+        "speaker": "Customer",
+        "text": "I wasn't aware of that amount. Can you give me more details?",
+        "stime": 29,
+        "etime": 32
+    },
+    {
+        "speaker": "Agent",
+        "text": "The balance is from your last credit card payment. Would you like to settle this today?",
+        "stime": 31,
+        "etime": 39
+    },
+    {
+        "speaker": "Customer",
+        "text": "I need to think about it. Can I call you back?",
+        "stime": 40,
+        "etime": 43
+    },
+    {
+        "speaker": "Agent",
+        "text": "Of course, but just to remind you, this is subject to additional fees if not resolved soon.",
+        "stime": 42,
+        "etime": 49
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you for letting me know. I'll reach out soon.",
+        "stime": 48,
+        "etime": 52
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for your time. We look forward to hearing from you.",
+        "stime": 53,
+        "etime": 57
+    },
+    {
+        "speaker": "Customer",
+        "text": "Goodbye.",
+        "stime": 58,
+        "etime": 59
+    }
+]

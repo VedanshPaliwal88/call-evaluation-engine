@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, is this Mark Thompson?",
+        "stime": 0,
+        "etime": 5
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, this is Mark. How can I help you?",
+        "stime": 6,
+        "etime": 10
+    },
+    {
+        "speaker": "Agent",
+        "text": "I'm calling from XYZ Collections about your outstanding balance. First, can you verify your date of birth?",
+        "stime": 11,
+        "etime": 20
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's May 12, 1985.",
+        "stime": 19,
+        "etime": 22
+    },
+    {
+        "speaker": "Agent",
+        "text": "Alright, and can you confirm your current address?",
+        "stime": 22,
+        "etime": 26
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, it's 1234 Elm Street, Springfield.",
+        "stime": 25,
+        "etime": 30
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great, thanks. You have a balance of $750. What the hell are you going to do about it?",
+        "stime": 31,
+        "etime": 39
+    },
+    {
+        "speaker": "Customer",
+        "text": "I would like to discuss payment options.",
+        "stime": 39,
+        "etime": 42
+    },
+    {
+        "speaker": "Agent",
+        "text": "Payment options? Just pay it already, it\u2019s not that hard!",
+        "stime": 41,
+        "etime": 48
+    },
+    {
+        "speaker": "Customer",
+        "text": "I understand, but I need a few moments to arrange that.",
+        "stime": 47,
+        "etime": 52
+    },
+    {
+        "speaker": "Agent",
+        "text": "Hurry the hell up then! This is a joke, right?",
+        "stime": 51,
+        "etime": 56
+    },
+    {
+        "speaker": "Customer",
+        "text": "I assure you this is not a joke. I will make this payment soon.",
+        "stime": 56,
+        "etime": 60
+    },
+    {
+        "speaker": "Agent",
+        "text": "Whatever, just don\u2019t take too long or I\u2019ll come after you!",
+        "stime": 59,
+        "etime": 64
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you for your time, I will handle this shortly.",
+        "stime": 63,
+        "etime": 68
+    },
+    {
+        "speaker": "Agent",
+        "text": "Yeah, sure. Good luck with that!",
+        "stime": 67,
+        "etime": 70
+    }
+]

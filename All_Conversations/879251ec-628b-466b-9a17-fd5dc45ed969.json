@@ -1,0 +1,56 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, is this Emily Parker?",
+        "stime": 0,
+        "etime": 5
+    },
+    {
+        "speaker": "Customer",
+        "text": "No, this is not Emily. Who's calling?",
+        "stime": 6,
+        "etime": 10
+    },
+    {
+        "speaker": "Agent",
+        "text": "This is Sam from XYZ Collections, I'm reaching out about an account balance that's due.",
+        "stime": 9,
+        "etime": 16
+    },
+    {
+        "speaker": "Customer",
+        "text": "I think you have the wrong number. I don\u2019t have any accounts with XYZ.",
+        "stime": 17,
+        "etime": 22
+    },
+    {
+        "speaker": "Agent",
+        "text": "I apologize for the mistake, let me double-check the number.",
+        "stime": 21,
+        "etime": 30
+    },
+    {
+        "speaker": "Customer",
+        "text": "Please do that. I really don\u2019t owe anyone.",
+        "stime": 31,
+        "etime": 35
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for your patience. I\u2019ll make a note that this is not a valid contact.",
+        "stime": 34,
+        "etime": 43
+    },
+    {
+        "speaker": "Customer",
+        "text": "I appreciate that. Thanks for clearing it up.",
+        "stime": 44,
+        "etime": 50
+    },
+    {
+        "speaker": "Agent",
+        "text": "You're welcome! Have a great day.",
+        "stime": 51,
+        "etime": 55
+    }
+]

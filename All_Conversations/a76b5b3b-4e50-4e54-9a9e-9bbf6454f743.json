@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "What the hell do you want? I don't have time for this!",
+        "stime": 6.5,
+        "etime": 11
+    },
+    {
+        "speaker": "Agent",
+        "text": "I understand you're busy. I'm calling regarding your account. Can you please verify your date of birth for security?",
+        "stime": 10,
+        "etime": 20
+    },
+    {
+        "speaker": "Customer",
+        "text": "Are you kidding me? You people are freaking parasites! It's 15th of June, 1990!",
+        "stime": 19,
+        "etime": 25
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for that information. I need to confirm your address to proceed with the account details.",
+        "stime": 24,
+        "etime": 31
+    },
+    {
+        "speaker": "Customer",
+        "text": "My address? Why the hell do you need that? It's 123 Main St, and I'm done with this!",
+        "stime": 30.5,
+        "etime": 36
+    },
+    {
+        "speaker": "Agent",
+        "text": "I appreciate your patience. I can see you have a balance of $500. How would you like to settle this?",
+        "stime": 35,
+        "etime": 43
+    },
+    {
+        "speaker": "Customer",
+        "text": "Settle it? You must be out of your mind if you think I'm paying you a damn cent!",
+        "stime": 42,
+        "etime": 49
+    },
+    {
+        "speaker": "Agent",
+        "text": "I understand your frustration. We can discuss payment options that might work for you.",
+        "stime": 48,
+        "etime": 55
+    },
+    {
+        "speaker": "Customer",
+        "text": "Options? You mean your bullshit tactics! Just leave me alone!",
+        "stime": 54,
+        "etime": 60
+    },
+    {
+        "speaker": "Agent",
+        "text": "It's my job to help you, and I'm here to listen. Would you prefer a payment plan?",
+        "stime": 59,
+        "etime": 66
+    },
+    {
+        "speaker": "Customer",
+        "text": "I don't want your help! Just stop calling me!",
+        "stime": 65,
+        "etime": 70
+    },
+    {
+        "speaker": "Agent",
+        "text": "I hear you. I will note your request. Thank you for your time, and have a good day.",
+        "stime": 69,
+        "etime": 76
+    },
+    {
+        "speaker": "Customer",
+        "text": "Whatever, just buzz off!",
+        "stime": 75,
+        "etime": 79
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you. Goodbye.",
+        "stime": 78,
+        "etime": 80
+    }
+]

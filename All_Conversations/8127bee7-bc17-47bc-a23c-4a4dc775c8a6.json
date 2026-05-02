@@ -1,0 +1,86 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm doing well, thanks. What's this about?",
+        "stime": 6.5,
+        "etime": 11
+    },
+    {
+        "speaker": "Agent",
+        "text": "I'm reaching out regarding your account. Can you please verify your address for me?",
+        "stime": 10,
+        "etime": 21
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's 123 Maple Street.",
+        "stime": 20,
+        "etime": 24
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you. And could you confirm your date of birth as well?",
+        "stime": 23,
+        "etime": 31
+    },
+    {
+        "speaker": "Customer",
+        "text": "It's June 15, 1985.",
+        "stime": 30,
+        "etime": 33
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great, thank you for verifying that information. You currently have an outstanding balance of $250.",
+        "stime": 32,
+        "etime": 45
+    },
+    {
+        "speaker": "Customer",
+        "text": "I understand, but I need some time to gather the funds.",
+        "stime": 44,
+        "etime": 50
+    },
+    {
+        "speaker": "Agent",
+        "text": "I appreciate that. When do you think you can make the payment?",
+        "stime": 49,
+        "etime": 56
+    },
+    {
+        "speaker": "Customer",
+        "text": "I can make a partial payment of $100 next week.",
+        "stime": 55,
+        "etime": 59
+    },
+    {
+        "speaker": "Agent",
+        "text": "That sounds reasonable. Can I confirm a date for you to make that payment?",
+        "stime": 58,
+        "etime": 66
+    },
+    {
+        "speaker": "Customer",
+        "text": "How about next Friday?",
+        "stime": 65,
+        "etime": 68
+    },
+    {
+        "speaker": "Agent",
+        "text": "Next Friday works for me. Thank you for your cooperation.",
+        "stime": 67,
+        "etime": 75
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you for understanding.",
+        "stime": 74,
+        "etime": 78
+    }
+]

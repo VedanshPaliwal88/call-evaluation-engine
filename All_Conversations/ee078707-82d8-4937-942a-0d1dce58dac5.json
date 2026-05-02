@@ -1,0 +1,86 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark calling from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm doing alright, thanks. What\u2019s this about?",
+        "stime": 7.5,
+        "etime": 12
+    },
+    {
+        "speaker": "Agent",
+        "text": "I'm calling regarding an outstanding balance on your account with Mega Credit. Can I get you to confirm your name for security purposes?",
+        "stime": 11,
+        "etime": 19
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's Jessica Brown.",
+        "stime": 18,
+        "etime": 21
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you, Jessica. You currently have a balance of two thousand five hundred dollars.",
+        "stime": 21.5,
+        "etime": 30
+    },
+    {
+        "speaker": "Customer",
+        "text": "That's quite a bit. Can you give me more details on that?",
+        "stime": 29,
+        "etime": 32
+    },
+    {
+        "speaker": "Agent",
+        "text": "Of course! This amount includes your last payment and the missed payments since then.",
+        "stime": 31,
+        "etime": 39
+    },
+    {
+        "speaker": "Customer",
+        "text": "I see. I wasn't aware of the total. What options do I have?",
+        "stime": 38.5,
+        "etime": 44
+    },
+    {
+        "speaker": "Agent",
+        "text": "You can make a payment plan or pay the full amount today. What works best for you?",
+        "stime": 43,
+        "etime": 52
+    },
+    {
+        "speaker": "Customer",
+        "text": "I need some time to think about that.",
+        "stime": 51,
+        "etime": 55
+    },
+    {
+        "speaker": "Agent",
+        "text": "No problem! Please feel free to reach out if you have any questions, but just remember the balance is accumulating interest.",
+        "stime": 54,
+        "etime": 64
+    },
+    {
+        "speaker": "Customer",
+        "text": "Got it, thank you.",
+        "stime": 63,
+        "etime": 65
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for your time, Jessica. Have a great day!",
+        "stime": 66,
+        "etime": 73
+    },
+    {
+        "speaker": "Customer",
+        "text": "You too, bye!",
+        "stime": 72,
+        "etime": 75
+    }
+]

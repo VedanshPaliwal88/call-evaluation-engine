@@ -1,0 +1,56 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, is this Mr. Smith?",
+        "stime": 0,
+        "etime": 5
+    },
+    {
+        "speaker": "Customer",
+        "text": "No, this is not Mr. Smith. Who is this?",
+        "stime": 6,
+        "etime": 10
+    },
+    {
+        "speaker": "Agent",
+        "text": "This is Jake from XYZ Debt Collection. I'm calling about an outstanding balance.",
+        "stime": 9,
+        "etime": 15
+    },
+    {
+        "speaker": "Customer",
+        "text": "I think you have the wrong person. I don't have any debts.",
+        "stime": 14,
+        "etime": 18
+    },
+    {
+        "speaker": "Agent",
+        "text": "I apologize for the inconvenience. Can I confirm your name, please?",
+        "stime": 17,
+        "etime": 22
+    },
+    {
+        "speaker": "Customer",
+        "text": "My name is Tracy Jones. I really have no idea about any debts.",
+        "stime": 21,
+        "etime": 26
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you, Ms. Jones. I'll update our records to reflect this.",
+        "stime": 25,
+        "etime": 31
+    },
+    {
+        "speaker": "Customer",
+        "text": "I appreciate that. Thank you.",
+        "stime": 30,
+        "etime": 34
+    },
+    {
+        "speaker": "Agent",
+        "text": "You're welcome, have a great day!",
+        "stime": 33,
+        "etime": 38
+    }
+]

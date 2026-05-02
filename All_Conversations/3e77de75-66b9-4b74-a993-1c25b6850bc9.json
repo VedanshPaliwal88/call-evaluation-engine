@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hi, this is Mark from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "What the hell do you want? I'm not in the mood for this crap!",
+        "stime": 6.5,
+        "etime": 12
+    },
+    {
+        "speaker": "Agent",
+        "text": "I understand this isn't the best time. I'm calling about your account. Can I please have your date of birth for verification?",
+        "stime": 11,
+        "etime": 19
+    },
+    {
+        "speaker": "Customer",
+        "text": "Why the hell should I tell you anything? You're just after my money!",
+        "stime": 18,
+        "etime": 24
+    },
+    {
+        "speaker": "Agent",
+        "text": "I completely understand your frustration. However, I need to verify your identity before discussing any details. Can you confirm your address for me?",
+        "stime": 23,
+        "etime": 30
+    },
+    {
+        "speaker": "Customer",
+        "text": "It's 1234 Elm St, but I don't see why that matters!",
+        "stime": 29,
+        "etime": 34
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for that information. You currently have a balance of $500. How would you like to proceed?",
+        "stime": 33,
+        "etime": 41
+    },
+    {
+        "speaker": "Customer",
+        "text": "This is all bullshit! I'm not paying a dime!",
+        "stime": 40,
+        "etime": 45
+    },
+    {
+        "speaker": "Agent",
+        "text": "I understand your concerns. We can discuss options to settle the balance. Would you like to hear about a payment plan?",
+        "stime": 44,
+        "etime": 54
+    },
+    {
+        "speaker": "Customer",
+        "text": "I don't want to hear any of your pathetic excuses! Just drop dead!",
+        "stime": 53,
+        "etime": 59
+    },
+    {
+        "speaker": "Agent",
+        "text": "I appreciate you sharing your feelings. My goal is to assist you. Can we explore alternative options together?",
+        "stime": 58,
+        "etime": 66
+    },
+    {
+        "speaker": "Customer",
+        "text": "Explore this! I'm done talking to you!",
+        "stime": 65,
+        "etime": 70
+    },
+    {
+        "speaker": "Agent",
+        "text": "I understand. If you change your mind, we're here to help you. Thank you for your time.",
+        "stime": 69,
+        "etime": 79
+    },
+    {
+        "speaker": "Customer",
+        "text": "Goodbye!",
+        "stime": 78,
+        "etime": 80
+    },
+    {
+        "speaker": "Agent",
+        "text": "Goodbye. Take care!",
+        "stime": 79,
+        "etime": 82
+    }
+]

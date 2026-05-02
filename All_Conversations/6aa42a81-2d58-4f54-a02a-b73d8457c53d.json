@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark from XYZ Debt Collection. Am I speaking with Sarah Johnson?",
+        "stime": 0,
+        "etime": 8
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, this is Sarah. What is this about?",
+        "stime": 8.5,
+        "etime": 12
+    },
+    {
+        "speaker": "Agent",
+        "text": "I'm reaching out regarding an outstanding balance on your account. Before I proceed, can you please verify your date of birth?",
+        "stime": 12,
+        "etime": 22
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's June 15, 1990.",
+        "stime": 22.2,
+        "etime": 25
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you, Sarah. Can you also confirm your current address for security purposes?",
+        "stime": 25.1,
+        "etime": 32
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, I live at 123 Elm Street, Springfield.",
+        "stime": 32.5,
+        "etime": 36
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great, thank you for the information. You currently have a balance of $250. How would you like to settle this today?",
+        "stime": 36.1,
+        "etime": 45
+    },
+    {
+        "speaker": "Customer",
+        "text": "Can I pay that online?",
+        "stime": 45.5,
+        "etime": 48
+    },
+    {
+        "speaker": "Agent",
+        "text": "Absolutely, you can pay through our secure website. Do you need assistance with the link?",
+        "stime": 48.2,
+        "etime": 56
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, please, that would be helpful.",
+        "stime": 56.5,
+        "etime": 59
+    },
+    {
+        "speaker": "Agent",
+        "text": "I'll send you a link via email. Could you please confirm your email address?",
+        "stime": 59.1,
+        "etime": 65
+    },
+    {
+        "speaker": "Customer",
+        "text": "It's sarah.johnson@email.com.",
+        "stime": 65.2,
+        "etime": 68
+    },
+    {
+        "speaker": "Agent",
+        "text": "Got it. You'll receive the link shortly. Thank you for your cooperation today.",
+        "stime": 68.3,
+        "etime": 74
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you for your help!",
+        "stime": 74.5,
+        "etime": 76
+    },
+    {
+        "speaker": "Agent",
+        "text": "You're welcome, Sarah. Have a great day!",
+        "stime": 76.2,
+        "etime": 80
+    }
+]

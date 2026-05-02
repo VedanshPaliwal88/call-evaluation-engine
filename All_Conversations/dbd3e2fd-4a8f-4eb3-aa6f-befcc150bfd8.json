@@ -1,0 +1,86 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm okay, thanks for asking. What's this about?",
+        "stime": 8,
+        "etime": 14
+    },
+    {
+        "speaker": "Agent",
+        "text": "I'm calling to discuss your outstanding balance with ABC Credit Union. Can I have your account number to proceed?",
+        "stime": 13,
+        "etime": 22
+    },
+    {
+        "speaker": "Customer",
+        "text": "I don\u2019t have that right now, can you give me more details first?",
+        "stime": 23,
+        "etime": 28
+    },
+    {
+        "speaker": "Agent",
+        "text": "Sure! You have an overdue balance of $450. How do you wish to handle this?",
+        "stime": 27,
+        "etime": 34
+    },
+    {
+        "speaker": "Customer",
+        "text": "That sounds high. When was this due?",
+        "stime": 35,
+        "etime": 40
+    },
+    {
+        "speaker": "Agent",
+        "text": "The payment was due on June 15th. I can set up a payment plan if needed.",
+        "stime": 39,
+        "etime": 46
+    },
+    {
+        "speaker": "Customer",
+        "text": "I may need some time, can you reduce the amount?",
+        "stime": 48,
+        "etime": 52
+    },
+    {
+        "speaker": "Agent",
+        "text": "Unfortunately, I can't adjust the balance. However, I can help with the payment options available.",
+        "stime": 51,
+        "etime": 58
+    },
+    {
+        "speaker": "Customer",
+        "text": "What are the options then?",
+        "stime": 59,
+        "etime": 63
+    },
+    {
+        "speaker": "Agent",
+        "text": "You can either pay in full or set up monthly payments. Would you like to discuss that?",
+        "stime": 62,
+        "etime": 70
+    },
+    {
+        "speaker": "Customer",
+        "text": "I need to think about it before making a decision.",
+        "stime": 71,
+        "etime": 75
+    },
+    {
+        "speaker": "Agent",
+        "text": "Of course! Just call us back when you're ready. Thank you for your time.",
+        "stime": 74,
+        "etime": 82
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you, goodbye.",
+        "stime": 83,
+        "etime": 86
+    }
+]

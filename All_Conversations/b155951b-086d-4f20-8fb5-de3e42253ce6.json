@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark from XYZ Collections, how are you today?",
+        "stime": 0,
+        "etime": 8
+    },
+    {
+        "speaker": "Customer",
+        "text": "How the hell do you think I'm doing?! You\u2019re calling me about that sh*t again!",
+        "stime": 8.5,
+        "etime": 14
+    },
+    {
+        "speaker": "Agent",
+        "text": "I understand this might be frustrating. I'm here to help you with your account.",
+        "stime": 13.5,
+        "etime": 20
+    },
+    {
+        "speaker": "Customer",
+        "text": "Help? What a joke! You people are the worst! I don\u2019t owe you a damn thing!",
+        "stime": 19,
+        "etime": 26
+    },
+    {
+        "speaker": "Agent",
+        "text": "I can provide you with information regarding your balance if you\u2019d like.",
+        "stime": 25,
+        "etime": 32
+    },
+    {
+        "speaker": "Customer",
+        "text": "Like I care! You think I\u2019m gonna pay you a single cent? Screw you!",
+        "stime": 31,
+        "etime": 37
+    },
+    {
+        "speaker": "Agent",
+        "text": "I can assure you that we want to resolve this matter. Your current balance is $500.",
+        "stime": 36,
+        "etime": 45
+    },
+    {
+        "speaker": "Customer",
+        "text": "Oh really? And what are you gonna do if I don\u2019t pay? Send a freaking goon after me?",
+        "stime": 44,
+        "etime": 52
+    },
+    {
+        "speaker": "Agent",
+        "text": "Our goal is to come to an agreement that works for both parties. We can set up a payment plan.",
+        "stime": 51,
+        "etime": 60
+    },
+    {
+        "speaker": "Customer",
+        "text": "A payment plan? Man, you must be smoking something! I\u2019m not giving you a cent!",
+        "stime": 59,
+        "etime": 65
+    },
+    {
+        "speaker": "Agent",
+        "text": "I respect your position. However, it\u2019s important to address this to avoid further action.",
+        "stime": 64,
+        "etime": 72
+    },
+    {
+        "speaker": "Customer",
+        "text": "Further action? You think I\u2019m scared of your threats? Bring it on!",
+        "stime": 71,
+        "etime": 78
+    },
+    {
+        "speaker": "Agent",
+        "text": "My intention is not to threaten you, but to find a solution. Can we discuss possible options?",
+        "stime": 77,
+        "etime": 85
+    },
+    {
+        "speaker": "Customer",
+        "text": "Options? Just stop calling me, and we won\u2019t have a problem!",
+        "stime": 84,
+        "etime": 90
+    },
+    {
+        "speaker": "Agent",
+        "text": "I hear you. If you change your mind, feel free to reach out anytime. Thank you.",
+        "stime": 89,
+        "etime": 97
+    }
+]

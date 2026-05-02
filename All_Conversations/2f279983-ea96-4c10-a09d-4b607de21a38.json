@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hi, this is Mike calling from XYZ Collections. How the hell are you today?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm doing well, thank you. How can I help you?",
+        "stime": 7.5,
+        "etime": 11
+    },
+    {
+        "speaker": "Agent",
+        "text": "Listen up, I need you to verify your date of birth before I can discuss your damn account.",
+        "stime": 10,
+        "etime": 16
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, my date of birth is January 15, 1990.",
+        "stime": 15.5,
+        "etime": 19
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great, but you're lucky I even have time for this crap. You owe us over $300.",
+        "stime": 18,
+        "etime": 24
+    },
+    {
+        "speaker": "Customer",
+        "text": "I understand, but I'd like to arrange a payment plan.",
+        "stime": 24.5,
+        "etime": 28
+    },
+    {
+        "speaker": "Agent",
+        "text": "A payment plan? Are you kidding me? Just pay the damn thing off already!",
+        "stime": 27,
+        "etime": 32
+    },
+    {
+        "speaker": "Customer",
+        "text": "I would like to discuss my options, please.",
+        "stime": 32.5,
+        "etime": 35
+    },
+    {
+        "speaker": "Agent",
+        "text": "Your options? Well, you can either pay up or get ready for some serious collection action!",
+        "stime": 34,
+        "etime": 40
+    },
+    {
+        "speaker": "Customer",
+        "text": "I will do my best to sort this out. Can you provide me with the details?",
+        "stime": 40.5,
+        "etime": 44
+    },
+    {
+        "speaker": "Agent",
+        "text": "Fine, but you better not be jerking me around. I\u2019ll send you the info when I can!",
+        "stime": 43,
+        "etime": 48
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you for your assistance. I appreciate it.",
+        "stime": 48.5,
+        "etime": 52
+    },
+    {
+        "speaker": "Agent",
+        "text": "Yeah, whatever. Just get it done, alright?",
+        "stime": 51,
+        "etime": 56
+    },
+    {
+        "speaker": "Customer",
+        "text": "I will. Have a good day.",
+        "stime": 56.5,
+        "etime": 59
+    },
+    {
+        "speaker": "Agent",
+        "text": "Yeah, you too, I guess. Bye.",
+        "stime": 58,
+        "etime": 61
+    }
+]

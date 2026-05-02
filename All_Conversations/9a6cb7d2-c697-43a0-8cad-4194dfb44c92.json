@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark calling from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm doing well, thank you. How can I help you?",
+        "stime": 8,
+        "etime": 12
+    },
+    {
+        "speaker": "Agent",
+        "text": "I need to verify your identity first. Can you provide your date of birth?",
+        "stime": 11,
+        "etime": 18
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's March 15, 1985.",
+        "stime": 19,
+        "etime": 22
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thanks for that. Now, what's your current address?",
+        "stime": 21,
+        "etime": 25
+    },
+    {
+        "speaker": "Customer",
+        "text": "I live at 123 Main Street, Springfield.",
+        "stime": 26,
+        "etime": 30
+    },
+    {
+        "speaker": "Agent",
+        "text": "Alright, you have an outstanding balance of $500. How do you plan to settle this?",
+        "stime": 29,
+        "etime": 37
+    },
+    {
+        "speaker": "Customer",
+        "text": "I would like to discuss payment options first.",
+        "stime": 36,
+        "etime": 40
+    },
+    {
+        "speaker": "Agent",
+        "text": "Listen, you can't just ignore this! You think this will just vanish? Pay up!",
+        "stime": 39,
+        "etime": 45
+    },
+    {
+        "speaker": "Customer",
+        "text": "I understand this is important, and I'm here to help find a solution.",
+        "stime": 44,
+        "etime": 50
+    },
+    {
+        "speaker": "Agent",
+        "text": "Well, you better get your shit together and stop dodging this. It's pathetic!",
+        "stime": 49,
+        "etime": 56
+    },
+    {
+        "speaker": "Customer",
+        "text": "I assure you I'm not dodging anything. I'm simply looking for clarity.",
+        "stime": 55,
+        "etime": 60
+    },
+    {
+        "speaker": "Agent",
+        "text": "Clarity? You want clarity? You owe money! Just pay it already!",
+        "stime": 59,
+        "etime": 66
+    },
+    {
+        "speaker": "Customer",
+        "text": "I appreciate your urgency, but I would like to keep this conversation professional.",
+        "stime": 65,
+        "etime": 70
+    },
+    {
+        "speaker": "Agent",
+        "text": "Professional? You think I give a damn about being professional with a deadbeat like you?",
+        "stime": 69,
+        "etime": 76
+    }
+]

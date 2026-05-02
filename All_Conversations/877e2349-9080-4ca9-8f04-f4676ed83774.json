@@ -1,0 +1,56 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mike from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm fine, but can you tell me what this is about?",
+        "stime": 7.5,
+        "etime": 11
+    },
+    {
+        "speaker": "Agent",
+        "text": "I'm calling regarding your past due balance with XYZ Credit Card. This is a debt collection call.",
+        "stime": 10,
+        "etime": 19
+    },
+    {
+        "speaker": "Customer",
+        "text": "I understand, but I've requested multiple times to be put on a do not call list.",
+        "stime": 18,
+        "etime": 24
+    },
+    {
+        "speaker": "Agent",
+        "text": "I apologize for the inconvenience. I will ensure your number is added to our do not call list right away.",
+        "stime": 23,
+        "etime": 32
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you. I really don't want to receive these calls anymore.",
+        "stime": 31,
+        "etime": 36
+    },
+    {
+        "speaker": "Agent",
+        "text": "Understood. Your number will be marked as do not call immediately.",
+        "stime": 35,
+        "etime": 42
+    },
+    {
+        "speaker": "Customer",
+        "text": "Great. I appreciate your help.",
+        "stime": 41,
+        "etime": 45
+    },
+    {
+        "speaker": "Agent",
+        "text": "You're welcome! If you need anything else, feel free to reach out. Have a good day.",
+        "stime": 44,
+        "etime": 52
+    }
+]

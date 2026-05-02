@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, is this John Smith?",
+        "stime": 0,
+        "etime": 5
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, this is John. Who is this?",
+        "stime": 6,
+        "etime": 10
+    },
+    {
+        "speaker": "Agent",
+        "text": "This is Morgan from XYZ Collections. I'm calling about your account with City Finance.",
+        "stime": 9,
+        "etime": 15
+    },
+    {
+        "speaker": "Customer",
+        "text": "Oh, I see. What\u2019s the issue?",
+        "stime": 16,
+        "etime": 20
+    },
+    {
+        "speaker": "Agent",
+        "text": "You currently have an outstanding balance of five hundred dollars. How would you like to proceed?",
+        "stime": 19,
+        "etime": 27
+    },
+    {
+        "speaker": "Customer",
+        "text": "Wait, can you please verify some information before we discuss this?",
+        "stime": 26,
+        "etime": 30
+    },
+    {
+        "speaker": "Agent",
+        "text": "Sure, I understand. Your account details show that your last payment was made in May 2023. Would you like to settle this now?",
+        "stime": 29,
+        "etime": 38
+    },
+    {
+        "speaker": "Customer",
+        "text": "I need more information before making a payment. What was the original amount?",
+        "stime": 37,
+        "etime": 44
+    },
+    {
+        "speaker": "Agent",
+        "text": "The original amount was six hundred dollars, but after payments and fees, the current balance is five hundred.",
+        "stime": 43,
+        "etime": 55
+    },
+    {
+        "speaker": "Customer",
+        "text": "I see. I can\u2019t pay that all at once. Can we set up a payment plan?",
+        "stime": 54,
+        "etime": 59
+    },
+    {
+        "speaker": "Agent",
+        "text": "Absolutely, we can arrange a payment plan. How much can you pay today?",
+        "stime": 58,
+        "etime": 63
+    },
+    {
+        "speaker": "Customer",
+        "text": "I can do one hundred dollars today.",
+        "stime": 62,
+        "etime": 66
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great! I will set that up for you. Thank you for your cooperation.",
+        "stime": 65,
+        "etime": 72
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you for the help.",
+        "stime": 71,
+        "etime": 74
+    },
+    {
+        "speaker": "Agent",
+        "text": "You're welcome. Have a great day!",
+        "stime": 73,
+        "etime": 77
+    }
+]

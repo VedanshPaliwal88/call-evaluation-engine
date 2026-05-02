@@ -1,0 +1,86 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark calling from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm doing okay, thanks. What is this about?",
+        "stime": 8,
+        "etime": 12
+    },
+    {
+        "speaker": "Agent",
+        "text": "I'm reaching out regarding an account you have with Online Credit Services. First, can you please confirm your date of birth for verification?",
+        "stime": 11,
+        "etime": 24
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's July 15, 1990.",
+        "stime": 23,
+        "etime": 26
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for that. Can you also confirm your current address?",
+        "stime": 25,
+        "etime": 32
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, it's 123 Maple Street, Anytown, USA.",
+        "stime": 31,
+        "etime": 35
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great, I appreciate your help. I see that you have a balance of $350 on your account. How would you like to proceed with the payment?",
+        "stime": 34,
+        "etime": 45
+    },
+    {
+        "speaker": "Customer",
+        "text": "I can make a payment of $200 today and the rest next week.",
+        "stime": 44,
+        "etime": 51
+    },
+    {
+        "speaker": "Agent",
+        "text": "That's perfectly fine. I can set up the payment for $200 today. Would you like to use your debit card or bank account?",
+        "stime": 50,
+        "etime": 62
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'll use my debit card.",
+        "stime": 61,
+        "etime": 65
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you. Please provide me with your card number.",
+        "stime": 64,
+        "etime": 70
+    },
+    {
+        "speaker": "Customer",
+        "text": "It's 1234-5678-9101-1121.",
+        "stime": 69,
+        "etime": 73
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for that. I will process this payment immediately. Is there anything else I can assist you with?",
+        "stime": 72,
+        "etime": 82
+    },
+    {
+        "speaker": "Customer",
+        "text": "No, that will be all. Thank you for your help.",
+        "stime": 81,
+        "etime": 86
+    }
+]

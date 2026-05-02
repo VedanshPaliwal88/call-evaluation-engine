@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Jake from XYZ Collections. Is this John?",
+        "stime": 0,
+        "etime": 6
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, this is John. How can I help you?",
+        "stime": 6.5,
+        "etime": 10
+    },
+    {
+        "speaker": "Agent",
+        "text": "I'm calling about your overdue account. You\u2019re really behind on your payments, you know that?",
+        "stime": 10,
+        "etime": 16
+    },
+    {
+        "speaker": "Customer",
+        "text": "I am aware of that and I\u2019m trying to work on it. Can you provide me with more details?",
+        "stime": 16.5,
+        "etime": 21
+    },
+    {
+        "speaker": "Agent",
+        "text": "Details? You should already know that you owe us\u2014get your act together!",
+        "stime": 20,
+        "etime": 25
+    },
+    {
+        "speaker": "Customer",
+        "text": "I understand, but I don't have that information on hand. Can you please confirm the balance?",
+        "stime": 24,
+        "etime": 29
+    },
+    {
+        "speaker": "Agent",
+        "text": "You don\u2019t even know how much you owe? Pathetic. It\u2019s $500, and you need to pay it now.",
+        "stime": 28,
+        "etime": 35
+    },
+    {
+        "speaker": "Customer",
+        "text": "I really want to settle this, but I need to review my options first.",
+        "stime": 34,
+        "etime": 38
+    },
+    {
+        "speaker": "Agent",
+        "text": "Options? Like what? You can borrow money from your mommy? Just pay up!",
+        "stime": 37,
+        "etime": 42
+    },
+    {
+        "speaker": "Customer",
+        "text": "I am not looking for insults. I want to resolve this matter professionally.",
+        "stime": 41,
+        "etime": 46
+    },
+    {
+        "speaker": "Agent",
+        "text": "Professionally? This is a debt collection call, not a tea party! Pay your damn bills!",
+        "stime": 45,
+        "etime": 52
+    },
+    {
+        "speaker": "Customer",
+        "text": "I get that. I just need a couple of days to sort things out.",
+        "stime": 51,
+        "etime": 55
+    },
+    {
+        "speaker": "Agent",
+        "text": "A couple of days? You better not be wasting my time! What\u2019s your next excuse?",
+        "stime": 54,
+        "etime": 61
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm not making excuses. I am trying to work with you. Please give me some space.",
+        "stime": 60,
+        "etime": 65
+    },
+    {
+        "speaker": "Agent",
+        "text": "Fine! But you\u2019re only digging yourself deeper with this crap. Bye!",
+        "stime": 64,
+        "etime": 70
+    }
+]

@@ -1,0 +1,32 @@
+[
+    {
+        "speaker": "Customer",
+        "text": "You have reached out to a voicemail. Please leave a message at the tone.",
+        "stime": 0,
+        "etime": 8
+    },
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Jessica from ACME Collections. I'm calling about your outstanding balance on account number one two three four five.",
+        "stime": 9,
+        "etime": 24
+    },
+    {
+        "speaker": "Customer",
+        "text": "If you would like to leave a message, please do so after the beep.",
+        "stime": 25,
+        "etime": 33
+    },
+    {
+        "speaker": "Agent",
+        "text": "Please contact us at one eight hundred two two five four five six seven to discuss your account.",
+        "stime": 34,
+        "etime": 45
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you for your call.",
+        "stime": 46,
+        "etime": 50
+    }
+]

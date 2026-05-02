@@ -1,0 +1,32 @@
+[
+    {
+        "speaker": "Customer",
+        "text": "You have reached the voicemail of Sarah Thompson. Please leave your message after the beep.",
+        "stime": 0,
+        "etime": 8
+    },
+    {
+        "speaker": "Agent",
+        "text": "Hello, Sarah. This is Mark from XYZ Collections. I am calling regarding your past due balance on your account.",
+        "stime": 9,
+        "etime": 21
+    },
+    {
+        "speaker": "Customer",
+        "text": "If you are trying to reach me, please leave your name and number.",
+        "stime": 22,
+        "etime": 30
+    },
+    {
+        "speaker": "Agent",
+        "text": "You can reach me at 1-800-555-0175. We need to discuss your payment options.",
+        "stime": 31,
+        "etime": 42
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you for the information. I will get back to you as soon as possible.",
+        "stime": 43,
+        "etime": 50
+    }
+]

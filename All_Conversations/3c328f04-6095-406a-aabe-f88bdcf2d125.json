@@ -1,0 +1,32 @@
+[
+    {
+        "speaker": "Customer",
+        "text": "You have reached the voicemail of John Smith. Please leave a message after the beep.",
+        "stime": 0,
+        "etime": 8
+    },
+    {
+        "speaker": "Agent",
+        "text": "Hello John, this is Sarah calling from XYZ Collections regarding your outstanding balance.",
+        "stime": 5,
+        "etime": 15
+    },
+    {
+        "speaker": "Customer",
+        "text": "To ensure a prompt response, please leave your name and number.",
+        "stime": 10,
+        "etime": 18
+    },
+    {
+        "speaker": "Agent",
+        "text": "You can reach me directly at 1-800-555-0199. We can help you discuss your payment options.",
+        "stime": 15,
+        "etime": 25
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you for calling, I will return your call as soon as possible.",
+        "stime": 23,
+        "etime": 30
+    }
+]

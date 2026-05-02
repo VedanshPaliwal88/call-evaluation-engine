@@ -1,0 +1,86 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm doing alright, thanks. What is this about?",
+        "stime": 8,
+        "etime": 12
+    },
+    {
+        "speaker": "Agent",
+        "text": "I'm calling in regard to your account with Quick Loans. Can you please confirm your full name so we can proceed?",
+        "stime": 11,
+        "etime": 22
+    },
+    {
+        "speaker": "Customer",
+        "text": "It's John Smith.",
+        "stime": 23,
+        "etime": 25
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you, John. I see that your current balance is $450. Would you like to discuss payment options?",
+        "stime": 24,
+        "etime": 33
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, I need to figure out what I can afford this month.",
+        "stime": 34,
+        "etime": 39
+    },
+    {
+        "speaker": "Agent",
+        "text": "Absolutely. We can set up a payment plan. How much can you commit to each month?",
+        "stime": 38,
+        "etime": 47
+    },
+    {
+        "speaker": "Customer",
+        "text": "I could do $100 a month for now.",
+        "stime": 48,
+        "etime": 51
+    },
+    {
+        "speaker": "Agent",
+        "text": "That works, John. I\u2019ll go ahead and set that up. Just to confirm, the first payment will be due next week on the 8th.",
+        "stime": 50,
+        "etime": 59
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sounds good to me. Thank you for your help.",
+        "stime": 60,
+        "etime": 63
+    },
+    {
+        "speaker": "Agent",
+        "text": "You're welcome. Is there anything else you would like to ask?",
+        "stime": 62,
+        "etime": 67
+    },
+    {
+        "speaker": "Customer",
+        "text": "No, that's everything for now.",
+        "stime": 68,
+        "etime": 71
+    },
+    {
+        "speaker": "Agent",
+        "text": "Alright, thank you for your time, John. Have a great day!",
+        "stime": 72,
+        "etime": 80
+    },
+    {
+        "speaker": "Customer",
+        "text": "You too! Bye.",
+        "stime": 81,
+        "etime": 84
+    }
+]

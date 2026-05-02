@@ -1,0 +1,32 @@
+[
+    {
+        "speaker": "Customer",
+        "text": "You have reached out to a voicemail. Please leave a message at the tone.",
+        "stime": 0,
+        "etime": 8
+    },
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Jamie from ABC Collections. I'm calling regarding your past due balance.",
+        "stime": 6,
+        "etime": 15
+    },
+    {
+        "speaker": "Customer",
+        "text": "To leave a message, please state your name and number after the tone. Thank you.",
+        "stime": 12,
+        "etime": 20
+    },
+    {
+        "speaker": "Agent",
+        "text": "You can reach me at 1-800-555-1234. It's important to address this matter as soon as possible.",
+        "stime": 18,
+        "etime": 30
+    },
+    {
+        "speaker": "Customer",
+        "text": "Have a great day!",
+        "stime": 25,
+        "etime": 30
+    }
+]

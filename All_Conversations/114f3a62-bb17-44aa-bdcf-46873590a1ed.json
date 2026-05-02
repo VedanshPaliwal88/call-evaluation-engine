@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Jordan from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "Hi, I'm doing alright, thanks. What is this about?",
+        "stime": 8.5,
+        "etime": 12
+    },
+    {
+        "speaker": "Agent",
+        "text": "I'm contacting you regarding an outstanding balance on your account. Before we proceed, can you please verify your date of birth?",
+        "stime": 11,
+        "etime": 23
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's June 15, 1990.",
+        "stime": 24,
+        "etime": 26
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for that information. Can you also confirm your address for verification?",
+        "stime": 25,
+        "etime": 36
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, it's 123 Maple Street, Springfield.",
+        "stime": 37,
+        "etime": 41
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for verifying your information. You have an outstanding balance of $500. How would you like to settle this today?",
+        "stime": 42,
+        "etime": 55
+    },
+    {
+        "speaker": "Customer",
+        "text": "I can pay $200 right now and the rest later.",
+        "stime": 56,
+        "etime": 60
+    },
+    {
+        "speaker": "Agent",
+        "text": "That sounds good. I can set up a payment plan for the remaining balance. Would that work for you?",
+        "stime": 59,
+        "etime": 71
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, I appreciate that. How do we proceed?",
+        "stime": 72,
+        "etime": 76
+    },
+    {
+        "speaker": "Agent",
+        "text": "I will send you the details via email after this call. What's the best email address for you?",
+        "stime": 77,
+        "etime": 89
+    },
+    {
+        "speaker": "Customer",
+        "text": "It's john.doe@example.com.",
+        "stime": 90,
+        "etime": 93
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you, John. You\u2019ll receive an email shortly with all the payment details. Is there anything else I can assist you with today?",
+        "stime": 94,
+        "etime": 106
+    },
+    {
+        "speaker": "Customer",
+        "text": "No, that's all. Thank you for your help!",
+        "stime": 107,
+        "etime": 111
+    },
+    {
+        "speaker": "Agent",
+        "text": "You're welcome! Have a great day. Goodbye.",
+        "stime": 112,
+        "etime": 120
+    }
+]

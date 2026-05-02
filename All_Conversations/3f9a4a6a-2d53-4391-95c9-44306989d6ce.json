@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, is this Mark Thompson?",
+        "stime": 0,
+        "etime": 5
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, this is Mark. Who is this?",
+        "stime": 6,
+        "etime": 9
+    },
+    {
+        "speaker": "Agent",
+        "text": "Hi Mark, this is Anna calling from XYZ Collections. I'm doing well, thank you. How about you?",
+        "stime": 8,
+        "etime": 15
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm okay, just busy with work.",
+        "stime": 16,
+        "etime": 18
+    },
+    {
+        "speaker": "Agent",
+        "text": "I understand. I\u2019m calling regarding an outstanding balance on your account. Before we proceed, can you please verify your date of birth?",
+        "stime": 17,
+        "etime": 29
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's April 12, 1990.",
+        "stime": 30,
+        "etime": 33
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for that information. Can you also confirm your current address for verification?",
+        "stime": 32,
+        "etime": 41
+    },
+    {
+        "speaker": "Customer",
+        "text": "I live at 123 Maple Street, Springfield.",
+        "stime": 42,
+        "etime": 45
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you, Mark. I can confirm that you have a balance of $250 on your account. How would you like to resolve this today?",
+        "stime": 46,
+        "etime": 56
+    },
+    {
+        "speaker": "Customer",
+        "text": "I can pay $100 right now. Can I set up a payment plan for the rest?",
+        "stime": 57,
+        "etime": 64
+    },
+    {
+        "speaker": "Agent",
+        "text": "That sounds like a reasonable plan. We can set up a payment plan for the remaining balance. Let\u2019s discuss the details.",
+        "stime": 63,
+        "etime": 72
+    },
+    {
+        "speaker": "Customer",
+        "text": "Great! I'm available to discuss that now.",
+        "stime": 73,
+        "etime": 76
+    },
+    {
+        "speaker": "Agent",
+        "text": "Perfect, I\u2019ll send you the payment plan options via email after our call. Thank you for your cooperation today.",
+        "stime": 75,
+        "etime": 85
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you, Anna. I appreciate your help.",
+        "stime": 86,
+        "etime": 89
+    },
+    {
+        "speaker": "Agent",
+        "text": "You're welcome, Mark. Have a great day!",
+        "stime": 90,
+        "etime": 94
+    }
+]

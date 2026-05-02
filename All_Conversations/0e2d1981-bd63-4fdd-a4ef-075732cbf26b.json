@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm okay, thanks. What is this about?",
+        "stime": 8,
+        "etime": 11
+    },
+    {
+        "speaker": "Agent",
+        "text": "I'm calling regarding an outstanding balance on your account. Can I get your name for verification?",
+        "stime": 10,
+        "etime": 18
+    },
+    {
+        "speaker": "Customer",
+        "text": "It's Alex Johnson.",
+        "stime": 18.5,
+        "etime": 20
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you, Alex. You have a balance of $250 due on your account. How would you like to settle this today?",
+        "stime": 19,
+        "etime": 30
+    },
+    {
+        "speaker": "Customer",
+        "text": "I didn't realize I had a balance. Can you give me more details?",
+        "stime": 31,
+        "etime": 35
+    },
+    {
+        "speaker": "Agent",
+        "text": "Certainly! The last payment was made in July, and the current balance includes late fees.",
+        "stime": 34,
+        "etime": 44
+    },
+    {
+        "speaker": "Customer",
+        "text": "I see, but I need to check my records before making a payment.",
+        "stime": 45,
+        "etime": 50
+    },
+    {
+        "speaker": "Agent",
+        "text": "Of course! Would you like to discuss a payment plan?",
+        "stime": 49,
+        "etime": 55
+    },
+    {
+        "speaker": "Customer",
+        "text": "I think that would be best. I need a little more time.",
+        "stime": 56,
+        "etime": 60
+    },
+    {
+        "speaker": "Agent",
+        "text": "I understand. We can set up a plan for you. When do you think you could make the first payment?",
+        "stime": 59,
+        "etime": 69
+    },
+    {
+        "speaker": "Customer",
+        "text": "Maybe next week. I'll check my schedule.",
+        "stime": 70,
+        "etime": 74
+    },
+    {
+        "speaker": "Agent",
+        "text": "That sounds good. Please don't hesitate to call us back if you have any questions.",
+        "stime": 73,
+        "etime": 81
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thanks for your help, Mark. I appreciate it.",
+        "stime": 82,
+        "etime": 87
+    },
+    {
+        "speaker": "Agent",
+        "text": "You're welcome, Alex! Have a great day!",
+        "stime": 86,
+        "etime": 92
+    }
+]

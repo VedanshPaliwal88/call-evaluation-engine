@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark calling from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 8
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm doing okay, thanks. What is this about?",
+        "stime": 8.5,
+        "etime": 14
+    },
+    {
+        "speaker": "Agent",
+        "text": "I'm reaching out regarding a past due account. Before we proceed, could you please confirm your date of birth?",
+        "stime": 14,
+        "etime": 22
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's June 15, 1990.",
+        "stime": 22.5,
+        "etime": 25
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for that. Could you also provide your current address to verify your identity?",
+        "stime": 24,
+        "etime": 30
+    },
+    {
+        "speaker": "Customer",
+        "text": "I live at 123 Maple Street, Springfield.",
+        "stime": 30.5,
+        "etime": 34
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great, I\u2019ve verified your identity. You currently have an outstanding balance of $250. How do you plan to address this today?",
+        "stime": 33,
+        "etime": 42
+    },
+    {
+        "speaker": "Customer",
+        "text": "I can pay $50 right now and schedule the rest for next week.",
+        "stime": 42.5,
+        "etime": 48
+    },
+    {
+        "speaker": "Agent",
+        "text": "That sounds reasonable. Let\u2019s set up that $50 payment. How would you like to pay?",
+        "stime": 47,
+        "etime": 55
+    },
+    {
+        "speaker": "Customer",
+        "text": "I\u2019ll use my credit card for that.",
+        "stime": 55.5,
+        "etime": 58
+    },
+    {
+        "speaker": "Agent",
+        "text": "Okay, I\u2019ll process that for you. Can you please provide your credit card number?",
+        "stime": 58.5,
+        "etime": 64
+    },
+    {
+        "speaker": "Customer",
+        "text": "It's 4111-1111-1111-1111.",
+        "stime": 64.5,
+        "etime": 67
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you. I\u2019ll process this payment right away. You're all set. Is there anything else you need?",
+        "stime": 66,
+        "etime": 76
+    },
+    {
+        "speaker": "Customer",
+        "text": "No, that\u2019s all. Thank you for your help.",
+        "stime": 75.5,
+        "etime": 79
+    },
+    {
+        "speaker": "Agent",
+        "text": "You're welcome! Have a great day!",
+        "stime": 78.5,
+        "etime": 82
+    }
+]

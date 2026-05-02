@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Mark from XYZ Collections. How are you doing today?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "Hi Mark, I'm doing well, thank you. What\u2019s this about?",
+        "stime": 8,
+        "etime": 13
+    },
+    {
+        "speaker": "Agent",
+        "text": "I\u2019m calling regarding a past due account with Prime Bank. Before we proceed, could you please verify your address?",
+        "stime": 12,
+        "etime": 22
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's 123 Elm Street, Springfield.",
+        "stime": 21,
+        "etime": 25
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for that. Could you also provide your date of birth for verification?",
+        "stime": 24,
+        "etime": 32
+    },
+    {
+        "speaker": "Customer",
+        "text": "It's January 15th, 1990.",
+        "stime": 31,
+        "etime": 34
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great, thank you for confirming your identity. You currently have a balance of $450 on your account.",
+        "stime": 33,
+        "etime": 42
+    },
+    {
+        "speaker": "Customer",
+        "text": "Oh, I didn't realize it was that much. What are my options for payment?",
+        "stime": 41,
+        "etime": 47
+    },
+    {
+        "speaker": "Agent",
+        "text": "You can pay the full amount today, or we can set up a payment plan for you.",
+        "stime": 46,
+        "etime": 55
+    },
+    {
+        "speaker": "Customer",
+        "text": "I think I can pay $150 today and set up a plan for the rest.",
+        "stime": 54,
+        "etime": 60
+    },
+    {
+        "speaker": "Agent",
+        "text": "That sounds good. I\u2019ll help you set up the payment plan for the remaining balance. Thank you for cooperating.",
+        "stime": 59,
+        "etime": 70
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you for your understanding.",
+        "stime": 69,
+        "etime": 73
+    },
+    {
+        "speaker": "Agent",
+        "text": "You're welcome. I\u2019ll send you the confirmation of the payment details shortly.",
+        "stime": 72,
+        "etime": 80
+    },
+    {
+        "speaker": "Customer",
+        "text": "Great, I\u2019ll keep an eye out for it.",
+        "stime": 79,
+        "etime": 83
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for your time today. Have a wonderful day!",
+        "stime": 82,
+        "etime": 87
+    }
+]

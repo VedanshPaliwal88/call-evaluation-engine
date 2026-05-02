@@ -1,0 +1,32 @@
+[
+    {
+        "speaker": "Customer",
+        "text": "You have reached the voicemail of Jamie Smith. Please leave your name and number after the beep.",
+        "stime": 0,
+        "etime": 8
+    },
+    {
+        "speaker": "Agent",
+        "text": "Hello, Jamie. This is Michael from Capital Collections.",
+        "stime": 5,
+        "etime": 14
+    },
+    {
+        "speaker": "Agent",
+        "text": "I\u2019m calling about your overdue balance. Please contact us as soon as possible at one eight hundred two four one five six seven eight.",
+        "stime": 12,
+        "etime": 25
+    },
+    {
+        "speaker": "Customer",
+        "text": "Thank you for your call. I\u2019ll be sure to return it as soon as I can.",
+        "stime": 20,
+        "etime": 29
+    },
+    {
+        "speaker": "Agent",
+        "text": "We appreciate your prompt attention to this matter. Have a great day!",
+        "stime": 27,
+        "etime": 35
+    }
+]

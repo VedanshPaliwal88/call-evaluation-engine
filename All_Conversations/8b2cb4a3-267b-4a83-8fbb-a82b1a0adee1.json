@@ -1,0 +1,92 @@
+[
+    {
+        "speaker": "Agent",
+        "text": "Hello, this is Sarah from XYZ Collections. How are you today?",
+        "stime": 0,
+        "etime": 7
+    },
+    {
+        "speaker": "Customer",
+        "text": "I'm doing alright, thanks. What is this about?",
+        "stime": 8,
+        "etime": 12
+    },
+    {
+        "speaker": "Agent",
+        "text": "I\u2019m reaching out regarding an outstanding balance on your account. Before we proceed, could you please verify your date of birth?",
+        "stime": 11,
+        "etime": 22
+    },
+    {
+        "speaker": "Customer",
+        "text": "Sure, it's January 15, 1985.",
+        "stime": 23,
+        "etime": 25
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for that information. Can you confirm your current address for verification?",
+        "stime": 24,
+        "etime": 32
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, it's 123 Maple Street, Springfield.",
+        "stime": 33,
+        "etime": 37
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you for verifying that. You currently have a balance of $500. Would you like to discuss payment options?",
+        "stime": 36,
+        "etime": 47
+    },
+    {
+        "speaker": "Customer",
+        "text": "Yes, I want to know how I can pay that off.",
+        "stime": 48,
+        "etime": 52
+    },
+    {
+        "speaker": "Agent",
+        "text": "You can pay via credit card, bank transfer, or check. Which option works best for you?",
+        "stime": 51,
+        "etime": 61
+    },
+    {
+        "speaker": "Customer",
+        "text": "I\u2019d prefer to pay with a credit card.",
+        "stime": 62,
+        "etime": 65
+    },
+    {
+        "speaker": "Agent",
+        "text": "Great! I can help you process that right now. Please provide your card details.",
+        "stime": 64,
+        "etime": 73
+    },
+    {
+        "speaker": "Customer",
+        "text": "Okay, the card number is 1234-5678-8765-4321.",
+        "stime": 74,
+        "etime": 78
+    },
+    {
+        "speaker": "Agent",
+        "text": "Thank you! Your payment will be processed shortly. Is there anything else I can assist you with?",
+        "stime": 77,
+        "etime": 86
+    },
+    {
+        "speaker": "Customer",
+        "text": "No, that's all. Thank you for your help.",
+        "stime": 87,
+        "etime": 90
+    },
+    {
+        "speaker": "Agent",
+        "text": "You're welcome! Have a great day!",
+        "stime": 89,
+        "etime": 93
+    }
+]
