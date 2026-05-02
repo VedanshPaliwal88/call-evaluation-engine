@@ -1,0 +1,17 @@
+call_id,violation,verification_status,violation_type,notes
+0b764207-9bf4-4201-b69a-b0e6077a5689.json,no,NOT_APPLICABLE,NOT_APPLICABLE,"Voicemail, no sensitive information shared"
+00be25b0-458f-4cbf-ae86-ae2ec1f7fba4.json,no,NOT_APPLICABLE,NOT_APPLICABLE,Wrong number called
+0bf6844f-af6a-4e46-8d72-9ec01e4bc99a.json,yes,UNVERIFIED,NO_VERIFICATION,Agent shared information just using name without proper verification
+0e2d1981-bd63-4fdd-a4ef-075732cbf26b.json,yes,UNVERIFIED,NO_VERIFICATION,Agent shared information just using name without proper verification
+2ea925db-df94-4d9b-bd72-6c227742569d.json,yes,UNVERIFIED,NO_VERIFICATION,Agent shared information just using name without proper verification
+04bec80f-8614-484b-0p8e-438ff8ee13ga.json,yes,PARTIAL,NO_VERIFICATION,Agent started sharing information (at t=22) way before customer finished sentence (at t=25)
+8a7ed9a3-fc6d-4cff-88bf-da8236d1c834.json,no,VERIFIED,NOT_APPLICABLE,Agent shared information only after proper verification
+8ae8018c-15b3-46f6-9713-f956505735ec.json,yes,PARTIAL,NO_VERIFICATION,Agent only asked for DOB confirmation no Social Security Number or Address
+8e34b537-4076-4736-b07f-5437c2379e57.json,yes,VERIFIED,ACCOUNT_DETAILS_BEFORE_VERIFICATION,Customer was correct but agent shared balance before verification
+114f3a62-bb17-44aa-bdcf-46873590a1ed.json,no,VERIFIED,NOT_APPLICABLE,Agent shared information only after proper verification
+320c83b6-fb0e-4c01-b455-46152a056395.json,no,VERIFIED,NOT_APPLICABLE,Agent shared information only after proper verification
+928acb70-fa80-4532-a0c0-2234bf236e17.json,no,VERIFIED,NOT_APPLICABLE,Agent shared information only after proper verification
+6387f58b-67bc-490c-857d-71f5daac829e.json,no,NOT_APPLICABLE,NOT_APPLICABLE,"Voicemail, no sensitive information shared"
+708878fa-108e-4c22-b7bf-1d5c38227087.json,yes,UNVERIFIED,NO_VERIFICATION,Agent shared information just using name without proper verification
+ecb08af4-0279-4178-a062-b82de0c701fb.json,no,NOT_APPLICABLE,NOT_APPLICABLE,Agent didn't share information because customer didn't verify themselves
+fa8af38b-d3f8-415c-a69b-e28dccf8af99.json,yes,VERIFIED,ACCOUNT_DETAILS_BEFORE_VERIFICATION,Customer was correct but agent shared balance before verification

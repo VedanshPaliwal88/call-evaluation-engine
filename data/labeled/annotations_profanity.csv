@@ -1,0 +1,19 @@
+call_id,agent_profanity,customer_profanity,severity,context,notes
+0b6979e4-8c05-49e1-b7a7-94d85a627df5.json,no,no,NONE,N/A,Routine collections call
+0b764207-9bf4-4201-b69a-b0e6077a5689.json,no,no,NONE,N/A,voicemail only
+00be25b0-458f-4cbf-ae86-ae2ec1f7fba4.json,no,no,NONE,N/A,Wrong number detected
+2f279983-ea96-4c10-a09d-4b607de21a38.json,yes,no,SEVERE,DIRECTED_AT_CUSTOMER,rude agent
+3e6dde01-1a46-42b4-92dd-0a211185e660.json,no,yes,SEVERE,DIRECTED_AT_AGENT,Rude customer
+04bec80f-8614-484b-0p8e-438ff8ee13ga.json,yes,no,SEVERE,DIRECTED_AT_CUSTOMER,"Agent was extremely rude, but the customer was very calm and wanted to pay debts"
+8ae8018c-15b3-46f6-9713-f956505735ec.json,no,yes,SEVERE,DIRECTED_AT_AGENT,Rude customer
+9a6cb7d2-c697-43a0-8cad-4194dfb44c92.json,yes,no,MODERATE,DIRECTED_AT_CUSTOMER,No extreme profanity but rude agent
+114f3a62-bb17-44aa-bdcf-46873590a1ed.json,no,no,NONE,N/A,Routine collections call
+171ab2df-da45-49bc-9a7f-e2b0978c6972.json,no,no,NONE,N/A,Customer calmly asked to be added on No call list
+214c92cc-3141-404d-8224-c1b05acc345c.json,yes,no,SEVERE,DIRECTED_AT_CUSTOMER,"Agent became rude on seeing balance, but the customer was very calm and wanted to pay debts"
+320c83b6-fb0e-4c01-b455-46152a056395.json,no,no,NONE,N/A,Routine collections call
+928acb70-fa80-4532-a0c0-2234bf236e17.json,yes,no,SEVERE,DIRECTED_AT_CUSTOMER,rude agent
+6387f58b-67bc-490c-857d-71f5daac829e.json,no,no,NONE,N/A,voicemail only
+708878fa-108e-4c22-b7bf-1d5c38227087.json,no,yes,SEVERE,DIRECTED_AT_AGENT,Rude customer
+ecb08af4-0279-4178-a062-b82de0c701fb.json,no,yes,SEVERE,DIRECTED_AT_AGENT,Rude customer
+ee078707-82d8-4937-942a-0d1dce58dac5.json,no,no,NONE,N/A,Routine collections call
+pd116924-82d8-1579-942a-0d1dce58dac5.json,no,yes,MILD,SELF_EXPRESSION,Routine collections call
