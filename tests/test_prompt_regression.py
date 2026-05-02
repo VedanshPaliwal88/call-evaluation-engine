@@ -9,7 +9,7 @@ from call_evaluation.models.analysis import (
     SentimentLabel,
     SeverityLabel,
 )
-from call_evaluation.services.llm_client import LLMClient
+from call_evaluation.services.llm_client import LLMClient, _ENUM_SAFE_DEFAULTS
 
 
 def test_profanity_prompt_file_exists_and_is_not_hardcoded() -> None:
@@ -72,3 +72,19 @@ def test_compliance_prompt_contains_expected_enums_and_edge_cases() -> None:
         "disclosure before any verification attempt begins",
     ]:
         assert phrase in prompt_text.lower()
+
+
+def test_prompts_contain_notes_constraint() -> None:
+    notes_rule = "the notes field must only reference information explicitly present in the transcript"
+    for prompt_file in ["profanity_v1.txt", "compliance_v1.txt"]:
+        text = Path(f"src/call_evaluation/detectors/llm/prompts/{prompt_file}").read_text(encoding="utf-8")
+        assert notes_rule in text.lower(), f"{prompt_file} is missing the notes constraint rule"
+
+
+def test_violation_type_allowed_values_match_prompt() -> None:
+    allowed, default = _ENUM_SAFE_DEFAULTS["violation_type"]
+    assert allowed == {"NO_VERIFICATION", "ACCOUNT_DETAILS_BEFORE_VERIFICATION", "NOT_APPLICABLE"}
+    assert default == "NOT_APPLICABLE"
+    prompt_text = Path("src/call_evaluation/detectors/llm/prompts/compliance_v1.txt").read_text(encoding="utf-8")
+    for value in allowed:
+        assert value in prompt_text, f"violation_type value {value!r} missing from compliance prompt"

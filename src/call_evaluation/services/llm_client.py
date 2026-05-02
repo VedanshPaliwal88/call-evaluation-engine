@@ -24,7 +24,7 @@ except ImportError:  # pragma: no cover
 _ENUM_SAFE_DEFAULTS: dict[str, tuple[set[str], str]] = {
     "violation": ({"YES", "NO"}, "NO"),
     "verification_status": ({"VERIFIED", "PARTIAL", "UNVERIFIED", "NOT_APPLICABLE"}, "UNVERIFIED"),
-    "violation_type": ({"NO_VIOLATION", "NO_VERIFICATION", "ACCOUNT_DETAILS_BEFORE_VERIFICATION", "NOT_APPLICABLE"}, "NOT_APPLICABLE"),
+    "violation_type": ({"NO_VERIFICATION", "ACCOUNT_DETAILS_BEFORE_VERIFICATION", "NOT_APPLICABLE"}, "NOT_APPLICABLE"),
     "severity": ({"NONE", "MILD", "MODERATE", "SEVERE"}, "NONE"),
     "context": ({"DIRECTED_AT_AGENT", "DIRECTED_AT_CUSTOMER", "SELF_EXPRESSION", "NARRATIVE_QUOTE", "AMBIENT"}, "AMBIENT"),
     "sentiment": ({"POSITIVE", "NEUTRAL", "NEGATIVE"}, "NEUTRAL"),
