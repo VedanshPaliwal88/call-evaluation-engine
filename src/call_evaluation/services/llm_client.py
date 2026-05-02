@@ -14,6 +14,13 @@ logger = logging.getLogger(__name__)
 
 ModelT = TypeVar("ModelT", bound=BaseModel)
 
+_LLM_TIMEOUT_SECONDS = 30.0
+
+try:  # openai may not be installed in all environments
+    from openai import APITimeoutError as _OpenAITimeoutError
+except ImportError:  # pragma: no cover
+    _OpenAITimeoutError = None  # type: ignore[assignment,misc]
+
 _ENUM_SAFE_DEFAULTS: dict[str, tuple[set[str], str]] = {
     "violation": ({"YES", "NO"}, "NO"),
     "verification_status": ({"VERIFIED", "PARTIAL", "UNVERIFIED", "NOT_APPLICABLE"}, "UNVERIFIED"),
@@ -93,7 +100,7 @@ class LLMClient:
             response = self._client.chat.completions.create(
                 model=self.settings.llm_model,
                 temperature=0.0,
-                timeout=30.0,
+                timeout=_LLM_TIMEOUT_SECONDS,
                 response_format={"type": "json_object"},
                 messages=[
                     {"role": "system", "content": "Return valid JSON only."},
@@ -101,9 +108,8 @@ class LLMClient:
                 ],
             )
         except Exception as exc:
-            exc_str = str(exc).lower()
-            if "timeout" in exc_str or "timed out" in exc_str:
-                logger.warning("LLM request timed out — returning safe fallback result.")
+            if self._is_timeout(exc):
+                logger.warning("LLM request timed out after %ss — returning safe fallback result.", _LLM_TIMEOUT_SECONDS)
                 return self._safe_fallback(response_model, "LLM request timed out")
             raise LLMUnavailableError(f"LLM request failed: {exc}") from exc
 
@@ -120,6 +126,12 @@ class LLMClient:
         except ValidationError as exc:
             logger.warning("LLM response failed schema validation after sanitization: %s", exc)
             return self._safe_fallback(response_model, "LLM response failed schema validation")
+
+    @staticmethod
+    def _is_timeout(exc: Exception) -> bool:
+        if _OpenAITimeoutError is not None and isinstance(exc, _OpenAITimeoutError):
+            return True
+        return "timeout" in str(exc).lower() or "timed out" in str(exc).lower()
 
     def _safe_fallback(self, response_model: type[ModelT], reason: str) -> ModelT:
         """Build a minimal valid instance of response_model using safe defaults."""
