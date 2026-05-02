@@ -1,0 +1,20 @@
+- speaker: Agent
+  text: Hello, this is Maya from Axis Collections. Am I speaking with Brian?
+  stime: 0
+  etime: 5
+- speaker: Customer
+  text: Yes, this is Brian.
+  stime: 5.5
+  etime: 7.5
+- speaker: Agent
+  text: Before I discuss your account, can you confirm your date of birth?
+  stime: 8
+  etime: 13
+- speaker: Customer
+  text: It is January 1 1990.
+  stime: 13.3
+  etime: 16
+- speaker: Agent
+  text: Thank you. Your balance is 210 dollars.
+  stime: 16.5
+  etime: 20
