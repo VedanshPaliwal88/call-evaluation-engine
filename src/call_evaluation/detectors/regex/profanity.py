@@ -27,10 +27,6 @@ PROFANITY_PATTERNS = {
     "screw": re.compile(r"\bscrew you\b"),
 }
 
-DIRECTED_PATTERNS = [
-    re.compile(r"\byou\b"),
-    re.compile(r"\byour\b"),
-]
 NARRATIVE_PATTERNS = [
     re.compile(r"\bhe said\b"),
     re.compile(r"\bshe said\b"),
@@ -54,10 +50,10 @@ def _severity_from_hits(hits: list[str], context: ContextLabel) -> SeverityLabel
 def _context_from_text(text: str, speaker_role: SpeakerRole) -> ContextLabel:
     if any(pattern.search(text) for pattern in NARRATIVE_PATTERNS):
         return ContextLabel.NARRATIVE_QUOTE
-    if any(pattern.search(text) for pattern in DIRECTED_PATTERNS):
-        return ContextLabel.DIRECTED_AT_AGENT if speaker_role == SpeakerRole.CUSTOMER else ContextLabel.DIRECTED_AT_CUSTOMER
-    if re.search(r"\b(i|me|my)\b", text):
-        return ContextLabel.SELF_EXPRESSION
+    if speaker_role == SpeakerRole.CUSTOMER:
+        return ContextLabel.DIRECTED_AT_AGENT
+    if speaker_role == SpeakerRole.AGENT:
+        return ContextLabel.DIRECTED_AT_CUSTOMER
     return ContextLabel.AMBIENT
 
 

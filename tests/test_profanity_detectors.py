@@ -31,3 +31,17 @@ def test_profanity_detector_ignores_clean_conversation() -> None:
     result = RegexProfanityDetector().analyze(transcript, SpeakerRole.AGENT)
     assert result.flag is False
     assert result.severity.value == "NONE"
+
+
+def test_profanity_detector_does_not_use_generic_you_for_direction() -> None:
+    transcript = IngestionService().load_named_bytes(
+        "polite.json",
+        b"""
+        [
+          {"speaker":"Agent","text":"Thank you for your time. I will help you with your account today.","stime":0,"etime":5},
+          {"speaker":"Customer","text":"Thank you.","stime":5.5,"etime":6.5}
+        ]
+        """,
+    )[0]
+    result = RegexProfanityDetector().analyze(transcript, SpeakerRole.AGENT)
+    assert result.flag is False
