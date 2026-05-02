@@ -49,7 +49,7 @@ def test_compliance_result_schema_is_valid() -> None:
         call_id="x",
         violation=ComplianceViolation.YES,
         verification_status=PrivacyVerificationStatus.UNVERIFIED,
-        violation_type="DISCLOSURE_BEFORE_VERIFICATION",
+        violation_type="ACCOUNT_DETAILS_BEFORE_VERIFICATION",
         evidence=[],
         notes="ok",
     )
@@ -118,7 +118,7 @@ def test_llm_compliance_detector_routes_through_prompt_file() -> None:
         call_id="placeholder",
         violation=ComplianceViolation.YES,
         verification_status=PrivacyVerificationStatus.UNVERIFIED,
-        violation_type="DISCLOSURE_BEFORE_VERIFICATION",
+        violation_type="ACCOUNT_DETAILS_BEFORE_VERIFICATION",
         evidence=[],
         notes="ok",
     )
