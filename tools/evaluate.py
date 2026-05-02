@@ -9,6 +9,7 @@ Sections:
   2. LLM accuracy check       — annotated files only
   3. Reproducibility check    — first 10 annotated files, 2 LLM runs each
   4. Hallucination check      — scans notes from section-2 outputs, no extra cost
+  5. Blind spot check         — 15 random unannotated files, plausibility + cross-check
 
 Output: console + reports/evaluation_report.txt
 """
@@ -16,6 +17,7 @@ from __future__ import annotations
 
 import csv
 import json
+import random
 import re
 import sys
 import time
@@ -28,12 +30,17 @@ sys.path.insert(0, str(ROOT / "src"))
 
 from call_evaluation.detectors.llm.compliance import LLMComplianceDetector
 from call_evaluation.detectors.llm.profanity import LLMProfanityDetector
-from call_evaluation.detectors.regex.compliance import RegexComplianceDetector
-from call_evaluation.detectors.regex.profanity import RegexProfanityDetector
+from call_evaluation.detectors.regex.compliance import (
+    DISCLOSURE_PATTERNS,
+    RegexComplianceDetector,
+    VERIFICATION_PATTERNS,
+)
+from call_evaluation.detectors.regex.profanity import PROFANITY_PATTERNS, RegexProfanityDetector
 from call_evaluation.ingestion import IngestionService
 from call_evaluation.models.analysis import ContextLabel, SentimentLabel, SeverityLabel
 from call_evaluation.models.transcript import SpeakerRole
 from call_evaluation.services.llm_client import LLMClient
+from call_evaluation.utils.text import normalize_for_matching, normalize_for_verification
 
 # ---------------------------------------------------------------------------
 # Paths
@@ -49,9 +56,10 @@ REPORTS_DIR       = ROOT / "reports"
 # ---------------------------------------------------------------------------
 
 COST_PER_CALL_CENTS = 0.056
-MAX_LLM_CALLS       = 100
+MAX_LLM_CALLS       = 200   # raised to accommodate section 5 (adds ~45 calls)
 REPRO_COUNT         = 10
 REPRO_GAP_SECONDS   = 5
+BLIND_SPOT_COUNT    = 15
 
 VALID_SEVERITY     = {e.value for e in SeverityLabel}
 VALID_CONTEXT      = {e.value for e in ContextLabel}
@@ -138,18 +146,21 @@ def _pct(n: int, d: int) -> str:
 # ---------------------------------------------------------------------------
 
 def _calculate_projected_calls(prof_count: int, comp_count: int) -> int:
-    repro = min(REPRO_COUNT, prof_count) * 2 * 2  # agent+customer × 2 runs
-    return prof_count * 2 + comp_count + repro
+    repro       = min(REPRO_COUNT, prof_count) * 2 * 2  # agent+customer × 2 runs
+    blind_spot  = BLIND_SPOT_COUNT * 3                  # 2 profanity + 1 compliance per file
+    return prof_count * 2 + comp_count + repro + blind_spot
 
 
 def cost_guard(prof_count: int, comp_count: int) -> int:
     total = _calculate_projected_calls(prof_count, comp_count)
     if total > MAX_LLM_CALLS:
+        blind = BLIND_SPOT_COUNT * 3
         print(
             f"\nABORTED — projected LLM calls ({total}) exceeds hard limit ({MAX_LLM_CALLS}).\n"
             f"  Profanity accuracy:    {prof_count} files × 2 speakers = {prof_count*2}\n"
             f"  Compliance accuracy:   {comp_count} files = {comp_count}\n"
             f"  Reproducibility:       {min(REPRO_COUNT,prof_count)} files × 2 speakers × 2 runs = {min(REPRO_COUNT,prof_count)*2*2}\n"
+            f"  Blind spot:            {BLIND_SPOT_COUNT} files × 3 calls = {blind}\n"
             f"Reduce annotation set or raise MAX_LLM_CALLS to proceed."
         )
         sys.exit(1)
@@ -529,6 +540,208 @@ def section4_hallucination(
         report.line("No hallucinated content detected.")
 
 # ---------------------------------------------------------------------------
+# Section 5 — Blind spot check helpers
+# ---------------------------------------------------------------------------
+
+def _evidence_has_lexicon_match(evidence_spans: list) -> bool:
+    """Return True if any evidence span text contains a profanity lexicon hit."""
+    for span in evidence_spans:
+        normalized = normalize_for_matching(span.text)
+        if any(pat.search(normalized) for pat in PROFANITY_PATTERNS.values()):
+            return True
+    return False
+
+
+def _transcript_has_disclosure(payload) -> bool:
+    """Return True if any agent turn contains a disclosure pattern match."""
+    for turn in payload.turns:
+        if turn.speaker == SpeakerRole.AGENT:
+            normalized = normalize_for_verification(turn.text)
+            if any(pat.search(normalized) for pat in DISCLOSURE_PATTERNS):
+                return True
+    return False
+
+
+def _transcript_has_verification(payload) -> bool:
+    """Return True if any turn contains a verification pattern match."""
+    for turn in payload.turns:
+        normalized = normalize_for_verification(turn.text)
+        if any(pat.search(normalized) for pat in VERIFICATION_PATTERNS):
+            return True
+    return False
+
+
+def _validity_issues(call_id: str, agent_r, customer_r, comp_r) -> list[str]:
+    """Return a list of validity problem strings, empty if all clean."""
+    issues: list[str] = []
+    for label, r in (("agent", agent_r), ("customer", customer_r)):
+        if r.severity.value not in VALID_SEVERITY:
+            issues.append(f"profanity[{label}].severity={r.severity.value!r}")
+        if r.context.value not in VALID_CONTEXT:
+            issues.append(f"profanity[{label}].context={r.context.value!r}")
+        if r.sentiment.value not in VALID_SENTIMENT:
+            issues.append(f"profanity[{label}].sentiment={r.sentiment.value!r}")
+        if r.flag and not r.evidence:
+            issues.append(f"profanity[{label}] flag=True but evidence empty")
+    if comp_r.violation.value not in VALID_VIOLATION:
+        issues.append(f"compliance.violation={comp_r.violation.value!r}")
+    if comp_r.verification_status.value not in VALID_VERIFICATION:
+        issues.append(f"compliance.verification_status={comp_r.verification_status.value!r}")
+    if comp_r.violation.value == "YES" and not comp_r.evidence:
+        issues.append("compliance violation=YES but evidence empty")
+    return issues
+
+
+# ---------------------------------------------------------------------------
+# Section 5 — Blind spot check
+# ---------------------------------------------------------------------------
+
+def section5_blind_spot(
+    report: Report,
+    ingestion: IngestionService,
+    all_files: list[str],
+    annotated_ids: set[str],
+    llm_prof: LLMProfanityDetector,
+    llm_comp: LLMComplianceDetector,
+) -> int:
+    report.line()
+    report.line("=" * 62)
+    report.line("SECTION 5 — BLIND SPOT CHECK")
+    report.line("=" * 62)
+
+    candidates = [f for f in all_files if f not in annotated_ids]
+    sample = random.sample(candidates, min(BLIND_SPOT_COUNT, len(candidates)))
+
+    report.line(f"Unannotated pool : {len(candidates)} files")
+    report.line(f"Sample selected  : {len(sample)} files")
+    report.line()
+
+    regex_prof = RegexProfanityDetector()
+    regex_comp = RegexComplianceDetector()
+    api_calls  = 0
+
+    validity_failures: list[str] = []
+    rows: list[dict] = []
+
+    for call_id in sample:
+        try:
+            payload = _load_payload(ingestion, call_id)
+            if not payload.validation.is_valid:
+                rows.append({
+                    "call_id": call_id,
+                    "prof_flag": "—",
+                    "violation": "—",
+                    "verdict": "SKIP",
+                    "explanation": "transcript failed validation",
+                })
+                continue
+
+            # LLM inference
+            agent_r    = llm_prof.analyze(payload, SpeakerRole.AGENT);    api_calls += 1
+            customer_r = llm_prof.analyze(payload, SpeakerRole.CUSTOMER); api_calls += 1
+            comp_r     = llm_comp.analyze(payload);                        api_calls += 1
+
+            # Output validity
+            issues = _validity_issues(call_id, agent_r, customer_r, comp_r)
+            if issues:
+                for issue in issues:
+                    validity_failures.append(f"  {call_id}: {issue}")
+
+            prof_flag_str = (
+                f"agent={'T' if agent_r.flag else 'F'}, "
+                f"customer={'T' if customer_r.flag else 'F'}"
+            )
+            violation_str = comp_r.violation.value
+
+            verdicts: list[tuple[str, str]] = []
+
+            # --- Profanity plausibility ---
+            if agent_r.flag and not _evidence_has_lexicon_match(agent_r.evidence):
+                verdicts.append(("SUSPECT", "agent flagged but no lexicon words in evidence"))
+            if customer_r.flag and not _evidence_has_lexicon_match(customer_r.evidence):
+                verdicts.append(("SUSPECT", "customer flagged but no lexicon words in evidence"))
+
+            # --- Compliance plausibility ---
+            if comp_r.violation.value == "YES" and not _transcript_has_disclosure(payload):
+                verdicts.append(("SUSPECT", "violation=YES but no disclosure patterns in transcript"))
+
+            # --- Cross-check when both LLM outputs are fully negative ---
+            if not agent_r.flag and not customer_r.flag and comp_r.violation.value == "NO":
+                rp_a = regex_prof.analyze(payload, SpeakerRole.AGENT)
+                rp_c = regex_prof.analyze(payload, SpeakerRole.CUSTOMER)
+                rc   = regex_comp.analyze(payload)
+                divergences: list[str] = []
+                if rp_a.flag:
+                    divergences.append("regex flagged agent profanity")
+                if rp_c.flag:
+                    divergences.append("regex flagged customer profanity")
+                if rc.violation.value == "YES":
+                    divergences.append("regex found compliance violation")
+                if divergences:
+                    verdicts.append(("DIVERGENT", "; ".join(divergences)))
+                else:
+                    verdicts.append(("CONSISTENT", "LLM and regex both negative"))
+
+            # Derive overall verdict (SUSPECT > DIVERGENT > CONSISTENT)
+            if any(v[0] == "SUSPECT" for v in verdicts):
+                overall = "SUSPECT"
+            elif any(v[0] == "DIVERGENT" for v in verdicts):
+                overall = "DIVERGENT"
+            elif verdicts:
+                overall = verdicts[0][0]
+            else:
+                overall = "CONSISTENT"  # positive and plausibility checks passed
+
+            explanation = "; ".join(v[1] for v in verdicts) or "positive result, evidence consistent with transcript"
+
+            rows.append({
+                "call_id":     call_id,
+                "prof_flag":   prof_flag_str,
+                "violation":   violation_str,
+                "verdict":     overall,
+                "explanation": explanation,
+            })
+
+        except Exception as exc:
+            rows.append({
+                "call_id":     call_id,
+                "prof_flag":   "—",
+                "violation":   "—",
+                "verdict":     "CRASH",
+                "explanation": str(exc),
+            })
+
+    # Print results table
+    col_w = 52
+    report.line(f"{'call_id':<44} {'profanity':<22} {'violation':<12} {'verdict':<12} explanation")
+    report.line("-" * 140)
+    for row in rows:
+        cid  = row["call_id"][:43]
+        report.line(
+            f"{cid:<44} {row['prof_flag']:<22} {row['violation']:<12} {row['verdict']:<12} {row['explanation']}"
+        )
+
+    # Validity summary
+    report.line()
+    suspect_count   = sum(1 for r in rows if r["verdict"] == "SUSPECT")
+    divergent_count = sum(1 for r in rows if r["verdict"] == "DIVERGENT")
+    consistent_count = sum(1 for r in rows if r["verdict"] == "CONSISTENT")
+
+    report.line(f"Consistent : {consistent_count}/{len(rows)}")
+    report.line(f"Divergent  : {divergent_count}/{len(rows)}  (LLM negative, regex positive — worth human review)")
+    report.line(f"Suspect    : {suspect_count}/{len(rows)}  (LLM positive, no supporting evidence/patterns)")
+
+    if validity_failures:
+        report.line(f"\nValidity failures ({len(validity_failures)}):")
+        for f in validity_failures:
+            report.line(f)
+    else:
+        report.line("Validity failures: none")
+
+    return api_calls
+
+
+# ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 
@@ -569,7 +782,7 @@ def main() -> None:
         report.line("=" * 62)
         report.line("LLM SECTIONS SKIPPED")
         report.line(f"Reason: {llm_state.message}")
-        report.line("Sections 2, 3, and 4 require OPENAI_API_KEY to be set.")
+        report.line("Sections 2, 3, 4, and 5 require OPENAI_API_KEY to be set.")
         report.line("=" * 62)
         report.line()
         report.line(f"Total LLM API calls : 0")
@@ -598,6 +811,12 @@ def main() -> None:
     total_api_calls += calls3
 
     section4_hallucination(report, prof_outputs, comp_outputs)
+
+    annotated_ids = set(prof_annotations.keys()) | set(comp_annotations.keys())
+    calls5 = section5_blind_spot(
+        report, ingestion, all_files, annotated_ids, llm_prof, llm_comp
+    )
+    total_api_calls += calls5
 
     # --- Final summary ---
     actual_cost = total_api_calls * COST_PER_CALL_CENTS
