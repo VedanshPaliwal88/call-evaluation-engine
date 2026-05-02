@@ -21,9 +21,10 @@ PROFANITY_PATTERNS = {
     "crap": re.compile(r"\bcrap\b"),
     "bullshit": re.compile(r"\b(bull shit|bullshit)\b"),
     "bastard": re.compile(r"\b(bastard)\b"),
+    "bitch": re.compile(r"\b(bitch)\b"),
     "asshole": re.compile(r"\b(asshole)\b"),
     "idiot": re.compile(r"\b(idiot)\b"),
-    "stupid": re.compile(r"\b(stupid|dumb|moron|useless)\b"),
+    "stupid": re.compile(r"\b(stupid|dumb|moron|useless|pissed off)\b"),
     "screw": re.compile(r"\bscrew you\b"),
 }
 
@@ -38,8 +39,12 @@ NARRATIVE_PATTERNS = [
 def _severity_from_hits(hits: list[str], context: ContextLabel) -> SeverityLabel:
     if not hits:
         return SeverityLabel.NONE
+    if context == ContextLabel.AMBIENT and hits == ["hell"]:
+        return SeverityLabel.MILD
+    if context == ContextLabel.SELF_EXPRESSION and "damn" in hits and len(hits) == 1:
+        return SeverityLabel.MILD
     if context in {ContextLabel.DIRECTED_AT_AGENT, ContextLabel.DIRECTED_AT_CUSTOMER}:
-        if any(hit in {"fuck", "asshole", "bastard", "bullshit"} for hit in hits) or len(hits) >= 2:
+        if any(hit in {"fuck", "asshole", "bastard", "bullshit", "bitch", "idiot"} for hit in hits) or len(hits) >= 2:
             return SeverityLabel.SEVERE
         return SeverityLabel.MODERATE
     if any(hit in {"fuck", "shit"} for hit in hits):
@@ -48,8 +53,12 @@ def _severity_from_hits(hits: list[str], context: ContextLabel) -> SeverityLabel
 
 
 def _context_from_text(text: str, speaker_role: SpeakerRole) -> ContextLabel:
+    if re.search(r"\b(i|i am|i'm|me|my)\b", text):
+        return ContextLabel.SELF_EXPRESSION
     if any(pattern.search(text) for pattern in NARRATIVE_PATTERNS):
         return ContextLabel.NARRATIVE_QUOTE
+    if re.search(r"\b(go to hell|hell no)\b", text):
+        return ContextLabel.AMBIENT
     if speaker_role == SpeakerRole.CUSTOMER:
         return ContextLabel.DIRECTED_AT_AGENT
     if speaker_role == SpeakerRole.AGENT:
