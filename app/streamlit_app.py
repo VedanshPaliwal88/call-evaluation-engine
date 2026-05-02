@@ -14,13 +14,14 @@ from call_evaluation.services.analysis_service import (
     AnalysisService,
     ComplianceBatchResult,
     ComplianceRowDetail,
+    MetricsBatchResult,
     ProfanityBatchResult,
-    ProfanityRowDetail,
 )
 from call_evaluation.services.exceptions import LLMUnavailableError
 from call_evaluation.visualization import (
     create_distribution_histograms,
-    create_per_call_metrics_figure,
+    create_metrics_box_plot,
+    create_metrics_scatter_plot,
     create_top_n_figure,
 )
 
@@ -33,12 +34,25 @@ ENTITY_OPTIONS = (
     "Profanity Detection",
     "Privacy and Compliance Violation",
 )
+STATE_KEY = "analysis_session"
 
 
 def _init_page() -> None:
     st.set_page_config(page_title="Call Evaluation Project", layout="wide")
     st.title("Call Evaluation Project")
     st.caption("Batch transcript analysis for profanity, compliance, and call quality metrics.")
+
+
+def _get_session_state() -> dict[str, Any]:
+    if STATE_KEY not in st.session_state:
+        st.session_state[STATE_KEY] = {
+            "transcripts": None,
+            "entity_label": None,
+            "approach_label": None,
+            "selected_result": None,
+            "metrics_result": None,
+        }
+    return st.session_state[STATE_KEY]
 
 
 def _render_sidebar(service: AnalysisService) -> tuple[str, str]:
@@ -70,6 +84,7 @@ def _render_uploads() -> list[Any]:
         type=["json", "yaml", "yml", "zip"],
         accept_multiple_files=True,
         help="You can mix JSON and YAML files, or upload one ZIP archive.",
+        key="transcript-uploads",
     )
 
 
@@ -114,14 +129,14 @@ def _render_profanity_results(result: ProfanityBatchResult) -> None:
 
     selected_call_id = str(dataframe.iloc[selected_index]["call_id"])
     detail = result.details[selected_call_id]
-    with st.expander(f"Evidence for {selected_call_id}", expanded=True):
-        st.write(f"Source file: `{detail.source_name}`")
-        st.write(f"Special tags: `{', '.join(detail.special_tags)}`")
-        _render_profanity_detail("Agent", detail.agent)
-        _render_profanity_detail("Customer", detail.customer)
+    st.markdown(f"**Evidence for {selected_call_id}**")
+    st.write(f"Source file: `{detail.source_name}`")
+    st.write(f"Special tags: `{', '.join(detail.special_tags)}`")
+    _render_profanity_detail("Agent", detail.agent)
+    _render_profanity_detail("Customer", detail.customer)
 
 
-def _render_profanity_detail(label: str, result) -> None:
+def _render_profanity_detail(label: str, result: Any) -> None:
     st.markdown(
         f"**{label}**  \n"
         f"Flag: `{result.flag}`  \n"
@@ -162,8 +177,8 @@ def _render_compliance_results(result: ComplianceBatchResult) -> None:
 
     selected_call_id = str(dataframe.iloc[selected_index]["call_id"])
     detail = result.details[selected_call_id]
-    with st.expander(f"Evidence for {selected_call_id}", expanded=True):
-        _render_compliance_detail(detail)
+    st.markdown(f"**Evidence for {selected_call_id}**")
+    _render_compliance_detail(detail)
 
 
 def _render_compliance_detail(detail: ComplianceRowDetail) -> None:
@@ -182,25 +197,29 @@ def _render_compliance_detail(detail: ComplianceRowDetail) -> None:
         st.caption("No evidence spans were returned for this call.")
 
 
-def _render_metrics_section(rows: list[dict], report: BatchProcessingReport) -> None:
+def _render_metrics_section(result: MetricsBatchResult) -> None:
     st.subheader("Q3 Metrics")
-    _render_report_summary(report)
-    if not rows:
+    _render_report_summary(result.report)
+    if not result.rows:
         st.info("No valid calls were available for metrics.")
-        _render_errors(report)
+        _render_errors(result.report)
         return
 
-    metrics_frame = pd.DataFrame(rows)
+    metrics_frame = pd.DataFrame(result.rows)
     st.dataframe(metrics_frame, use_container_width=True, hide_index=True)
-    _render_errors(report)
+    _render_errors(result.report)
 
-    per_call_figure = create_per_call_metrics_figure(rows)
-    histograms = create_distribution_histograms(rows)
-    top_silence = create_top_n_figure(rows, "silence_pct", top_n=10)
-    top_overtalk = create_top_n_figure(rows, "overtalk_pct", top_n=10)
+    box_plot = create_metrics_box_plot(result.rows)
+    scatter_plot = create_metrics_scatter_plot(result.rows)
+    histograms = create_distribution_histograms(result.rows)
+    top_silence = create_top_n_figure(result.rows, "silence_pct", top_n=10)
+    top_overtalk = create_top_n_figure(result.rows, "overtalk_pct", top_n=10)
 
-    if per_call_figure is not None:
-        st.plotly_chart(per_call_figure, use_container_width=True)
+    visual_columns = st.columns(2)
+    if box_plot is not None:
+        visual_columns[0].plotly_chart(box_plot, use_container_width=True)
+    if scatter_plot is not None:
+        visual_columns[1].plotly_chart(scatter_plot, use_container_width=True)
 
     histogram_columns = st.columns(2)
     if histograms.get("silence_pct") is not None:
@@ -228,38 +247,71 @@ def _selected_row_index(event: Any) -> int | None:
     return None
 
 
-def main() -> None:
-    _init_page()
-    service = AnalysisService()
-    entity_label, approach_label = _render_sidebar(service)
-    uploads = _render_uploads()
-
-    if not st.button("Run Batch Analysis", type="primary", use_container_width=True):
-        return
-
+def _run_analysis(
+    service: AnalysisService,
+    uploads: list[Any],
+    entity_label: str,
+    approach_label: str,
+) -> None:
     if not uploads:
         st.info("Upload at least one transcript file or ZIP archive to continue.")
         return
 
-    try:
-        payloads = [(upload.name, upload.getvalue()) for upload in uploads]
-        transcripts = service.load_inputs(payloads)
-        metrics_result = service.analyze_metrics(transcripts)
+    payloads = [(upload.name, upload.getvalue()) for upload in uploads]
+    transcripts = service.load_inputs(payloads)
+    metrics_result = service.analyze_metrics(transcripts)
 
-        selected_approach = APPROACH_OPTIONS[approach_label]
-        if entity_label == "Profanity Detection":
-            selected_result = service.analyze_profanity(transcripts, selected_approach)
-            _render_profanity_results(selected_result)
-        else:
-            selected_result = service.analyze_compliance(transcripts, selected_approach)
-            _render_compliance_results(selected_result)
+    selected_approach = APPROACH_OPTIONS[approach_label]
+    if entity_label == "Profanity Detection":
+        selected_result = service.analyze_profanity(transcripts, selected_approach)
+    else:
+        selected_result = service.analyze_compliance(transcripts, selected_approach)
 
-        st.divider()
-        _render_metrics_section(metrics_result.rows, metrics_result.report)
-    except LLMUnavailableError as exc:
-        st.error(str(exc))
-    except Exception as exc:
-        st.error(f"Unexpected error: {exc}")
+    session = _get_session_state()
+    session["transcripts"] = transcripts
+    session["entity_label"] = entity_label
+    session["approach_label"] = approach_label
+    session["selected_result"] = selected_result
+    session["metrics_result"] = metrics_result
+
+
+def _render_saved_results(entity_label: str, approach_label: str) -> None:
+    session = _get_session_state()
+    selected_result = session.get("selected_result")
+    metrics_result = session.get("metrics_result")
+
+    if selected_result is None or metrics_result is None:
+        return
+
+    if session.get("entity_label") != entity_label or session.get("approach_label") != approach_label:
+        st.info("Current selectors differ from the last batch run. Click `Run Batch Analysis` to refresh results.")
+        return
+
+    if entity_label == "Profanity Detection":
+        _render_profanity_results(selected_result)
+    else:
+        _render_compliance_results(selected_result)
+
+    st.divider()
+    _render_metrics_section(metrics_result)
+
+
+def main() -> None:
+    _init_page()
+    service = AnalysisService()
+    _get_session_state()
+    entity_label, approach_label = _render_sidebar(service)
+    uploads = _render_uploads()
+
+    if st.button("Run Batch Analysis", type="primary", use_container_width=True):
+        try:
+            _run_analysis(service, uploads, entity_label, approach_label)
+        except LLMUnavailableError as exc:
+            st.error(str(exc))
+        except Exception as exc:
+            st.error(f"Unexpected error: {exc}")
+
+    _render_saved_results(entity_label, approach_label)
 
 
 if __name__ == "__main__":

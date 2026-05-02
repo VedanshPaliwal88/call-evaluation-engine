@@ -12,16 +12,44 @@ def _load_plotly_modules() -> tuple[Any, Any] | tuple[None, None]:
     return px, go
 
 
-def create_per_call_metrics_figure(rows: list[dict[str, Any]]) -> Any:
+def create_metrics_box_plot(rows: list[dict[str, Any]]) -> Any:
     px, _ = _load_plotly_modules()
     if px is None or not rows:
         return None
-    return px.bar(
+    plot_rows: list[dict[str, Any]] = []
+    for row in rows:
+        plot_rows.append({"metric": "Silence %", "value": row.get("silence_pct", 0.0), "call_id": row.get("call_id", "")})
+        plot_rows.append({"metric": "Overtalk %", "value": row.get("overtalk_pct", 0.0), "call_id": row.get("call_id", "")})
+    return px.box(
+        plot_rows,
+        x="metric",
+        y="value",
+        color="metric",
+        points="outliers",
+        hover_data=["call_id"],
+        title="Silence and Overtalk Distribution",
+    )
+
+
+def create_metrics_scatter_plot(rows: list[dict[str, Any]]) -> Any:
+    px, _ = _load_plotly_modules()
+    if px is None or not rows:
+        return None
+    hover_data = {
+        "call_id": False,
+        "agent_talk_pct": any("agent_talk_pct" in row for row in rows),
+        "customer_talk_pct": any("customer_talk_pct" in row for row in rows),
+    }
+    if any("special_case" in row for row in rows):
+        hover_data["special_case"] = True
+    return px.scatter(
         rows,
-        x="call_id",
-        y=["silence_pct", "overtalk_pct", "agent_talk_pct", "customer_talk_pct"],
-        barmode="group",
-        title="Per-Call Conversation Metrics",
+        x="silence_pct",
+        y="overtalk_pct",
+        hover_name="call_id",
+        hover_data=hover_data,
+        title="Silence vs Overtalk by Call",
+        labels={"silence_pct": "Silence %", "overtalk_pct": "Overtalk %"},
     )
 
 
@@ -59,13 +87,4 @@ def create_top_n_figure(rows: list[dict[str, Any]], metric_key: str, top_n: int 
 
 
 def create_metrics_figure(rows: list[dict[str, Any]]) -> Any:
-    return create_per_call_metrics_figure(rows)
-    if not rows:
-        return None
-    return px.bar(
-        rows,
-        x="call_id",
-        y=["silence_pct", "overtalk_pct"],
-        barmode="group",
-        title="Silence and Overtalk Percentage by Call",
-    )
+    return create_metrics_box_plot(rows)
