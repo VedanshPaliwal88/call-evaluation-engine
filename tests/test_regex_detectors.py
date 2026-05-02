@@ -10,7 +10,14 @@ FIXTURES = Path(__file__).parent / "fixtures"
 
 
 def test_compliance_detector_flags_voicemail_disclosure() -> None:
-    transcript = IngestionService().load_path(FIXTURES / "voicemail_transcript.json")[0]
+    transcript = IngestionService().load_named_bytes(
+        "case.json",
+        b"""
+        [
+          {"speaker":"Agent","text":"Hello Brian, this is collections. Your balance is 500 dollars. Please call us back.","stime":0,"etime":6}
+        ]
+        """,
+    )[0]
     result = RegexComplianceDetector().analyze(transcript)
     assert result.violation.value == "YES"
     assert result.verification_status.value == "NOT_APPLICABLE"
@@ -74,7 +81,7 @@ def test_compliance_false_negative_traps() -> None:
         """,
         """
         [
-          {"speaker":"Agent","text":"I am calling about your overdue balance today.","stime":0,"etime":4},
+          {"speaker":"Agent","text":"Your overdue balance is 450 dollars.","stime":0,"etime":4},
           {"speaker":"Customer","text":"Who is this?","stime":4.5,"etime":6}
         ]
         """,
@@ -115,3 +122,59 @@ def test_compliance_verification_boundaries() -> None:
         )[0]
         result = detector.analyze(transcript)
         assert result.verification_status.value == expected_status
+
+
+def test_compliance_explicit_edge_cases_exist_for_regex_path() -> None:
+    detector = RegexComplianceDetector()
+    cases = [
+        (
+            """
+            [
+              {"speaker":"Agent","text":"Hello Brian, this is collections. Your balance is 500 dollars. Please call us back.","stime":0,"etime":6}
+            ]
+            """,
+            ("YES", "NOT_APPLICABLE"),
+        ),
+        (
+            """
+            [
+              {"speaker":"Agent","text":"May I speak to Brian?","stime":0,"etime":2},
+              {"speaker":"Customer","text":"You have the wrong person.","stime":2.5,"etime":4},
+              {"speaker":"Agent","text":"Understood, I will remove this number.","stime":4.5,"etime":6}
+            ]
+            """,
+            ("NO", "NOT_APPLICABLE"),
+        ),
+        (
+            """
+            [
+              {"speaker":"Customer","text":"This is Alex.","stime":0,"etime":2},
+              {"speaker":"Agent","text":"Okay, I see the right account here. You owe 450 dollars.","stime":2.5,"etime":7}
+            ]
+            """,
+            ("YES", "PARTIAL"),
+        ),
+        (
+            """
+            [
+              {"speaker":"Agent","text":"Can you confirm your name?","stime":0,"etime":2},
+              {"speaker":"Customer","text":"This is Alex.","stime":2.5,"etime":4},
+              {"speaker":"Agent","text":"Your balance is 450 dollars.","stime":4.5,"etime":8}
+            ]
+            """,
+            ("YES", "PARTIAL"),
+        ),
+        (
+            """
+            [
+              {"speaker":"Agent","text":"Your balance is 450 dollars.","stime":0,"etime":4},
+              {"speaker":"Customer","text":"Why are you calling?","stime":4.5,"etime":6}
+            ]
+            """,
+            ("YES", "UNVERIFIED"),
+        ),
+    ]
+    for raw_text, expected in cases:
+        transcript = IngestionService().load_named_bytes("case.json", raw_text.encode())[0]
+        result = detector.analyze(transcript)
+        assert (result.violation.value, result.verification_status.value) == expected
