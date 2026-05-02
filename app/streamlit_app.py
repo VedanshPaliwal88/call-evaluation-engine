@@ -305,7 +305,8 @@ def main() -> None:
 
     if st.button("Run Batch Analysis", type="primary", use_container_width=True):
         try:
-            _run_analysis(service, uploads, entity_label, approach_label)
+            with st.spinner("Analysing transcripts..."):
+                _run_analysis(service, uploads, entity_label, approach_label)
         except LLMUnavailableError as exc:
             st.error(str(exc))
         except Exception as exc:
