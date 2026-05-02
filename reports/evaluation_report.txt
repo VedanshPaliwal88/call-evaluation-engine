@@ -1,0 +1,67 @@
+==============================================================
+CALL EVALUATION — AUTOMATED EVALUATION REPORT
+Generated : 2026-05-03 02:49:23
+Report    : C:\Users\Vedansh Paliwal\Desktop\Call evaluation project\reports\evaluation_report.txt
+==============================================================
+
+Transcript files      : 252
+Profanity annotations : 19
+Compliance annotations: 17
+
+==============================================================
+SECTION 1 — REGEX VALIDITY CHECK
+==============================================================
+Files processed : 252
+Validity passed : 251/252 (99.6%)
+Validity failures: none
+Crashes: none
+
+Projected LLM calls : 95 (limit: 100)
+Estimated cost      : 5.320 cents  ($0.05320)
+
+==============================================================
+SECTION 2 — LLM ACCURACY CHECK
+==============================================================
+
+Profanity (19 annotated files):
+  agent accuracy    : 19/19 (100.0%)
+  customer accuracy : 19/19 (100.0%)
+  severity accuracy : 14/19 (73.7%)
+  context accuracy  : 19/19 (100.0%)
+
+Compliance (17 annotated files):
+  violation accuracy         : 15/17 (88.2%)
+  verification accuracy      : 12/17 (70.6%)
+  violation type accuracy    : 14/17 (82.4%)
+  exact match (all 3 fields) : 12/17 (70.6%)
+
+==============================================================
+SECTION 3 — REPRODUCIBILITY CHECK
+==============================================================
+Files: 10  |  Gap between runs: 5s
+Running first pass...
+Waiting 5s before second pass...
+Running second pass...
+
+  flag         reproducibility: 20/20 (100.0%)
+  severity     reproducibility: 20/20 (100.0%)
+  context      reproducibility: 19/20 (95.0%)
+  sentiment    reproducibility: 20/20 (100.0%)
+
+Differences (1):
+  04bec80f-8614-484b-0p8e-438ff8ee13ga.json [customer].context: run1='AMBIENT' vs run2='SELF_EXPRESSION'
+
+==============================================================
+SECTION 4 — HALLUCINATION CHECK (notes fields)
+==============================================================
+Notes fields checked : 55
+Flagged              : 0
+No hallucinated content detected.
+
+==============================================================
+SUMMARY
+==============================================================
+Total LLM API calls : 95
+Estimated cost      : 5.320 cents  ($0.05320)
+Report written to   : C:\Users\Vedansh Paliwal\Desktop\Call evaluation project\reports\evaluation_report.txt
+==============================================================
