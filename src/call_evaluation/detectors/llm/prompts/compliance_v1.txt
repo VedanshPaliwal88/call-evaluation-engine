@@ -24,6 +24,7 @@ Output JSON schema:
 
 Rules:
 - Return valid JSON only.
+- Return raw JSON only. No markdown, no backticks, no explanation outside the JSON object.
 - Never invent enum values.
 - Focus on whether sensitive information was disclosed by the agent before verification.
 - Consider implied verification when the intent and sequence support it.
