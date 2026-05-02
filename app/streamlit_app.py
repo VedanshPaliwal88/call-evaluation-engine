@@ -258,8 +258,8 @@ def main() -> None:
         _render_metrics_section(metrics_result.rows, metrics_result.report)
     except LLMUnavailableError as exc:
         st.error(str(exc))
-    except Exception:
-        st.error("The uploaded files could not be processed. Check file formats and transcript contents, then try again.")
+    except Exception as exc:
+        st.error(f"Unexpected error: {exc}")
 
 
 if __name__ == "__main__":

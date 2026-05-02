@@ -2,55 +2,133 @@
 
 ## Overview
 
-This project implements a production-minded transcript analysis workflow for debt collection calls. The system is intentionally organized around reusable services and typed models so the same behavior is available to both automated tests and the Streamlit UI.
+This project is implemented as a batch transcript-analysis system with a thin Streamlit UI on top of reusable ingestion, detector, and metrics services. The built system supports:
+
+- `Q1` profanity detection through both `regex` and `LLM` classification paths
+- `Q2` privacy and compliance detection through both `regex` and `LLM` classification paths
+- `Q3` silence and overtalk metrics derived from timestamp interval math
+
+The UI does not contain analysis rules. It delegates file loading, detector execution, and metric generation to `src/call_evaluation/services/analysis_service.py`, which orchestrates the lower-level services.
 
 ## Technology Choices
 
-- **Python 3.11+**: modern typing support, mature ecosystem, and strong fit for data processing plus Streamlit.
-- **Streamlit**: assignment-aligned UI framework with quick iteration, batch upload support, and straightforward deployment to Streamlit Community Cloud.
-- **Pydantic**: strict schema validation and typed contracts for transcript ingestion, detector outputs, and error handling.
-- **`re` module**: lightweight, transparent baseline for rule-based profanity and compliance detection.
-- **OpenAI SDK**: official client for prompt-based classification using a configurable model.
-- **pytest**: clear unit and regression testing for detectors, parsing, and edge cases.
-- **python-dotenv**: secure local configuration without hardcoding secrets.
-- **Plotly**: interactive visualizations that embed cleanly in Streamlit for Q3 deliverables.
+- **Python 3.11+**
+  - modern typing, clean package structure, and strong support for data-oriented services
+- **Streamlit**
+  - fast assignment-aligned UI, batch file handling, and simple deployment to Streamlit Community Cloud
+- **Pydantic**
+  - strict typed contracts for transcript models, detector outputs, and validation-safe parsing of LLM JSON
+- **`re` module**
+  - transparent, fast, and easy-to-debug baseline for rule-based profanity and compliance detection
+- **OpenAI SDK**
+  - official client for prompt-based structured classification through a shared `LLMClient`
+- **pytest**
+  - regression safety for ingestion, detectors, prompt parsing, and metric edge cases
+- **python-dotenv**
+  - local secret loading without hardcoding credentials into source control
+- **Plotly**
+  - interactive charting for Q3 metrics inside Streamlit
 
-## Architecture Diagram
+## Final Architecture Diagram
 
 ```mermaid
 flowchart LR
-    A["File Input<br/>JSON / YAML / ZIP / Multi-file"] --> B["Validation Layer<br/>schema, empty-file, malformed-file, special-case tagging"]
-    B --> C["Ingestion + Normalization<br/>canonical transcript models"]
-    C --> D["Detector Service Layer"]
-    D --> E["Regex Path"]
-    D --> F["LLM Path via LLMClient"]
-    E --> G["Typed Output Schemas"]
-    F --> G
-    C --> H["Metrics Service<br/>silence and overtalk"]
-    H --> I["Metric Output Schemas"]
-    G --> J["Streamlit UI"]
-    I --> J
+    A["Uploads<br/>JSON / YAML / ZIP / Multi-file"] --> B["IngestionService<br/>decode, parse, normalize"]
+    B --> C["Validation + Tagging<br/>schema checks, empty files, voicemail, wrong-person, single-speaker"]
+    C --> D["TranscriptFilePayload models"]
+
+    D --> E["AnalysisService"]
+
+    E --> F["Q1 Profanity pipeline"]
+    E --> G["Q2 Compliance pipeline"]
+    E --> H["Q3 Metrics pipeline"]
+
+    F --> F1["RegexProfanityDetector"]
+    F --> F2["LLMProfanityDetector"]
+    G --> G1["RegexComplianceDetector"]
+    G --> G2["LLMComplianceDetector"]
+    F2 --> L["LLMClient<br/>prompt loading + model config + JSON parsing"]
+    G2 --> L
+    L --> P["Prompt templates<br/>src/call_evaluation/detectors/llm/prompts"]
+
+    F1 --> O1["Typed result schemas"]
+    F2 --> O1
+    G1 --> O2["Typed result schemas"]
+    G2 --> O2
+    H --> M["MetricsService<br/>interval math"]
+    M --> O3["MetricResult rows"]
+
+    O1 --> U["Streamlit UI"]
+    O2 --> U
+    O3 --> U
+    U --> V["Tables, row evidence, Plotly charts, clear validation messages"]
 ```
 
-## Service Boundaries
+## Regex and LLM Framing
 
-- **Ingestion services** convert raw uploaded files into validated canonical transcript models.
-- **Detector services** execute either regex or LLM analysis while returning the same typed result shapes.
-- **LLM client** centralizes prompt execution, model selection, and graceful failure when credentials are unavailable.
-- **Metrics services** calculate timing-derived analytics independent of UI concerns.
-- **Streamlit** remains a thin orchestration layer over shared services.
+The final implementation uses a shared pipeline shape for `Q1` and `Q2`:
+
+1. Transcripts are ingested into the same canonical payload format.
+2. `AnalysisService` selects either the `regex` detector or the `LLM` detector based on the UI choice.
+3. Both paths return the same typed output schema for that task.
+4. The UI renders the same table and evidence layout regardless of which path produced the result.
+
+This means the system is not two disconnected applications. It is one analysis pipeline with interchangeable detector strategies.
+
+## Built Service Boundaries
+
+- **IngestionService**
+  - loads JSON, YAML, and ZIP input
+  - validates transcript structure
+  - emits canonical `TranscriptFilePayload` models
+  - tags special calls such as voicemail, wrong-person, empty, and single-speaker
+
+- **Regex detectors**
+  - provide transparent baseline logic for profanity and compliance classification
+  - handle adversarial tests and known edge cases through explicit rule logic
+
+- **LLM detectors**
+  - use file-based prompt templates and a shared `LLMClient`
+  - require fixed JSON output parsed through Pydantic
+  - degrade gracefully when `OPENAI_API_KEY` is unavailable
+
+- **MetricsService**
+  - computes total duration, agent talk time, customer talk time, silence percentage, and overtalk percentage
+  - handles empty transcripts, zero duration, voicemail, zero overtalk, and single-speaker calls safely
+
+- **Visualization helpers**
+  - build the per-call bar chart, histograms, and top-N plots used by the Streamlit app
+
+- **AnalysisService**
+  - keeps the UI thin by batching ingestion outputs into:
+    - profanity result tables and evidence details
+    - compliance result tables and evidence details
+    - metrics rows and batch reports
 
 ## Guard Rails
 
-- Canonical validation before analysis
-- Fixed LLM JSON schemas parsed by Pydantic
-- Graceful missing-key handling for LLM features
-- Explicit handling for empty files, wrong-person calls, voicemail-style calls, and single-speaker transcripts
-- Regression testing for prompt changes and detector behavior
+- Canonical transcript validation happens before analysis.
+- Unsupported, empty, malformed, and parse-failed files are reported as UI errors instead of crashing the app.
+- LLM prompts are stored as versioned files, not hardcoded strings.
+- LLM classification uses `temperature=0.0`.
+- LLM responses must satisfy fixed JSON schemas and are validated through Pydantic.
+- Missing API keys disable the LLM path visibly instead of failing at runtime.
+- Metrics logic handles divide-by-zero and no-speaker / one-speaker edge cases explicitly.
+- Prompt regression and detector regression tests protect previously implemented behavior.
 
-## Prompt Strategy
+## Final Repository Roles
 
-- Prompts are treated like versioned code artifacts in `src/call_evaluation/detectors/llm/prompts/`.
-- All classification prompts use `temperature=0.0`.
-- Prompts define fixed enums and forbid free-form label invention.
-- Few-shot examples cover positive, negative, and noisy-transcript edge cases.
+- [app/streamlit_app.py](/C:/Users/Vedansh%20Paliwal/Desktop/Call%20evaluation%20project/app/streamlit_app.py)
+  - Streamlit interface
+- [src/call_evaluation/ingestion.py](/C:/Users/Vedansh%20Paliwal/Desktop/Call%20evaluation%20project/src/call_evaluation/ingestion.py)
+  - transcript loading and validation
+- [src/call_evaluation/services/analysis_service.py](/C:/Users/Vedansh%20Paliwal/Desktop/Call%20evaluation%20project/src/call_evaluation/services/analysis_service.py)
+  - UI-facing orchestration layer
+- [src/call_evaluation/services/llm_client.py](/C:/Users/Vedansh%20Paliwal/Desktop/Call%20evaluation%20project/src/call_evaluation/services/llm_client.py)
+  - shared LLM wrapper
+- [src/call_evaluation/detectors/](/C:/Users/Vedansh%20Paliwal/Desktop/Call%20evaluation%20project/src/call_evaluation/detectors)
+  - regex and LLM task-specific detectors
+- [src/call_evaluation/metrics/call_metrics.py](/C:/Users/Vedansh%20Paliwal/Desktop/Call%20evaluation%20project/src/call_evaluation/metrics/call_metrics.py)
+  - interval-based Q3 metrics
+- [src/call_evaluation/visualization.py](/C:/Users/Vedansh%20Paliwal/Desktop/Call%20evaluation%20project/src/call_evaluation/visualization.py)
+  - Plotly figure builders
