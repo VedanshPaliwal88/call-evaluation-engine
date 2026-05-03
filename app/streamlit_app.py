@@ -369,6 +369,7 @@ def _render_saved_results(entity_label: str, approach_label: str) -> None:
     # Clear button — lets user start fresh without a browser refresh
     if st.button("Clear and Upload New Batch", type="secondary"):
         st.session_state.pop(STATE_KEY, None)
+        st.session_state.pop("transcript-uploads", None)
         st.rerun()
 
     if session.get("entity_label") != entity_label or session.get("approach_label") != approach_label:
