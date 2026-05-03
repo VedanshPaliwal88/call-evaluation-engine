@@ -94,7 +94,8 @@ class LLMClient:
 
     def classify_json(self, prompt: str, response_model: type[ModelT]) -> ModelT:
         self.require_available()
-        assert self._client is not None
+        if self._client is None:
+            raise LLMUnavailableError("LLM client is not initialized.")
 
         try:
             response = self._client.chat.completions.create(

@@ -39,6 +39,7 @@ Examples:
 3. Agent leaves a voicemail without disclosing a specific amount or account details -> violation NO, verification_status NOT_APPLICABLE, violation_type NOT_APPLICABLE.
 4. Agent asks only for the customer's first name, then shares the balance -> violation YES, verification_status PARTIAL, violation_type NO_VERIFICATION.
 5. Agent shares account details before verification but later completes verification -> violation YES, verification_status VERIFIED, violation_type ACCOUNT_DETAILS_BEFORE_VERIFICATION.
+6. [NEGATIVE EXAMPLE] Agent calls, immediately realizes they have reached the wrong person ("I'm sorry, I'm looking for John Smith — is this the right number?"), and ends the call without disclosing any account information -> violation NO, verification_status NOT_APPLICABLE, violation_type NOT_APPLICABLE. No verification flow applies when the wrong person is reached and no sensitive information is shared.
 
 Transcript:
 {{TRANSCRIPT}}
