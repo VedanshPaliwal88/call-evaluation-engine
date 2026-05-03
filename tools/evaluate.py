@@ -341,6 +341,8 @@ def section2_llm_accuracy(
             gt_viol  = ann["violation"].strip().upper()
             gt_verif = ann["verification_status"].strip().upper()
             gt_vtype = ann["violation_type"].strip().upper()
+            if gt_vtype == "NO_VIOLATION":
+                gt_vtype = "NOT_APPLICABLE"
 
             pred_viol  = result.violation.value
             pred_verif = result.verification_status.value
