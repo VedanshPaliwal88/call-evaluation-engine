@@ -102,9 +102,9 @@ def test_compliance_verification_boundaries() -> None:
     detector = RegexComplianceDetector()
     cases = [
         ("yes that's correct", "UNVERIFIED"),
-        ("my birthday is january 5th 1984", "VERIFIED"),
-        ("one two three main street", "VERIFIED"),
-        ("it's 415-22-3456", "VERIFIED"),
+        ("my birthday is january 5th 1984", "PARTIAL"),
+        ("one two three main street", "PARTIAL"),
+        ("it's 415-22-3456", "PARTIAL"),
         ("i've told you 3 times already", "UNVERIFIED"),
         ("5", "UNVERIFIED"),
         ("sure", "UNVERIFIED"),
@@ -152,7 +152,7 @@ def test_compliance_explicit_edge_cases_exist_for_regex_path() -> None:
               {"speaker":"Agent","text":"Okay, I see the right account here. You owe 450 dollars.","stime":2.5,"etime":7}
             ]
             """,
-            ("YES", "PARTIAL"),
+            ("YES", "UNVERIFIED"),
         ),
         (
             """
@@ -162,7 +162,7 @@ def test_compliance_explicit_edge_cases_exist_for_regex_path() -> None:
               {"speaker":"Agent","text":"Your balance is 450 dollars.","stime":4.5,"etime":8}
             ]
             """,
-            ("YES", "PARTIAL"),
+            ("YES", "UNVERIFIED"),
         ),
         (
             """

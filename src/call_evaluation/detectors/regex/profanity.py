@@ -39,17 +39,30 @@ NARRATIVE_PATTERNS = [
 def _severity_from_hits(hits: list[str], context: ContextLabel) -> SeverityLabel:
     if not hits:
         return SeverityLabel.NONE
-    if context == ContextLabel.AMBIENT and hits == ["hell"]:
-        return SeverityLabel.MILD
-    if context == ContextLabel.SELF_EXPRESSION and "damn" in hits and len(hits) == 1:
-        return SeverityLabel.MILD
-    if context in {ContextLabel.DIRECTED_AT_AGENT, ContextLabel.DIRECTED_AT_CUSTOMER}:
-        if any(hit in {"fuck", "asshole", "bastard", "bullshit", "bitch", "idiot"} for hit in hits) or len(hits) >= 2:
-            return SeverityLabel.SEVERE
-        return SeverityLabel.MODERATE
-    if any(hit in {"fuck", "shit"} for hit in hits):
-        return SeverityLabel.MODERATE
-    return SeverityLabel.MILD
+
+    _SEVERE_TIER   = {"fuck", "asshole", "bitch"}
+    _MODERATE_TIER = {"bastard", "bullshit"}
+    # remaining keys (damn, crap, hell, shit, screw, stupid, idiot) are MILD
+
+    if any(h in _SEVERE_TIER for h in hits):
+        base = SeverityLabel.SEVERE
+    elif any(h in _MODERATE_TIER for h in hits):
+        base = SeverityLabel.MODERATE
+    else:
+        base = SeverityLabel.MILD
+
+    directed = context in {ContextLabel.DIRECTED_AT_AGENT, ContextLabel.DIRECTED_AT_CUSTOMER}
+    if directed:
+        if base == SeverityLabel.MILD:
+            base = SeverityLabel.MODERATE
+        elif base == SeverityLabel.MODERATE:
+            base = SeverityLabel.SEVERE
+
+    _RANK = [SeverityLabel.MILD, SeverityLabel.MODERATE, SeverityLabel.SEVERE]
+    if len(hits) >= 3 and base != SeverityLabel.SEVERE:
+        base = _RANK[min(_RANK.index(base) + 1, 2)]
+
+    return base
 
 
 def _context_from_text(text: str, speaker_role: SpeakerRole) -> ContextLabel:

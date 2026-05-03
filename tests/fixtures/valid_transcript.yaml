@@ -7,14 +7,14 @@
   stime: 5.5
   etime: 7.5
 - speaker: Agent
-  text: Before I discuss your account, can you confirm your date of birth?
+  text: Before I discuss your account, can you confirm your date of birth and address?
   stime: 8
   etime: 13
 - speaker: Customer
-  text: It is January 1 1990.
+  text: It is January 1 1990. My address is 123 Main Street.
   stime: 13.3
-  etime: 16
+  etime: 18
 - speaker: Agent
   text: Thank you. Your balance is 210 dollars.
-  stime: 16.5
-  etime: 20
+  stime: 18.5
+  etime: 22
