@@ -31,12 +31,18 @@ Rules:
 - Directed profanity at another person is more severe than self-expression or quoting.
 - The notes field must only reference information explicitly present in the transcript. Do not infer, assume, or add context not found in the transcript text.
 - An agent acknowledging, referencing, or de-escalating a customer's emotional state or prior language is NOT profanity. Flag only language that is itself profane, not language that responds to profanity.
+- Severity is determined by TWO factors combined: word strength AND frequency/directedness.
+- Word strength tiers: SEVERE-tier words: fuck, f***, a**hole, b****. MODERATE-tier words: bastard, bullshit, bullship. MILD-tier words: damn, crap, hell, shit, s***.
+- A MILD-tier word used once = MILD. A MILD-tier word used repeatedly or directed aggressively = MODERATE. A MODERATE-tier word directed at a person = SEVERE. A SEVERE-tier word regardless of context = SEVERE.
+- Frequency: if the speaker uses profanity in 3 or more utterances, upgrade severity by one level.
 
 Examples:
-1. Customer says "you people are fckn useless" to the agent -> flag true, speaker_role CUSTOMER, severity SEVERE, context DIRECTED_AT_AGENT.
-2. Agent says "he called me a bastard yesterday" while narrating history -> flag true, speaker_role AGENT, severity MILD or MODERATE, context NARRATIVE_QUOTE.
-3. Customer says "damn that hurts" after hearing the balance -> flag true, speaker_role CUSTOMER, severity MILD, context SELF_EXPRESSION.
-4. [NEGATIVE EXAMPLE] Agent says "I understand you may feel frustrated, but let's discuss your options" after a customer used profanity -> flag false, severity NONE. The agent is de-escalating and acknowledging the customer's emotional state. This is not profanity — do not flag an agent for responding professionally to a customer's language.
+1. Customer says "you people are fucking useless, I hate you" (strong word, directed, multiple instances) -> flag true, severity SEVERE, context DIRECTED_AT_AGENT.
+2. Customer says "this is such bullshit" once, not directed at anyone -> flag true, severity MILD, context SELF_EXPRESSION. Single mild word, not directed.
+3. Agent says "just pay the damn thing off already" dismissively to customer -> flag true, severity MODERATE, context DIRECTED_AT_CUSTOMER. Mild-tier word but directed at the customer.
+4. Agent says "he called me a bastard yesterday" narrating a story -> flag true, severity MILD, context NARRATIVE_QUOTE. Quoting someone else.
+5. Customer says "damn that hurts" once after hearing balance -> flag true, severity MILD, context SELF_EXPRESSION.
+6. [NEGATIVE EXAMPLE] Agent says "I understand you may feel frustrated, but let's discuss your options" -> flag false, severity NONE. Acknowledging customer emotion is not profanity.
 
 Transcript:
 {{TRANSCRIPT}}
