@@ -14,7 +14,7 @@ from call_evaluation.models.analysis import (
 )
 from call_evaluation.detectors.llm.compliance import LLMComplianceDetector
 from call_evaluation.ingestion import IngestionService
-from call_evaluation.services.llm_client import LLMClient
+from call_evaluation.services.llm_client import LLMClient, _sanitize_enum_fields
 
 
 class DummyClient:
@@ -81,6 +81,33 @@ def test_llm_client_sanitizes_bad_enum_values_to_safe_defaults() -> None:
     assert result.severity.value == "NONE"
     assert result.sentiment.value == "NEUTRAL"
     assert result.context.value == "AMBIENT"
+
+
+def test_sanitize_enum_fields_handles_none_integer_boolean() -> None:
+    parsed = {
+        "severity": None,
+        "sentiment": 0,
+        "context": True,
+        "violation": False,
+        "verification_status": 42,
+    }
+    result = _sanitize_enum_fields(parsed)
+    assert result["severity"] == "NONE"
+    assert result["sentiment"] == "NEUTRAL"
+    assert result["context"] == "AMBIENT"
+    assert result["violation"] == "NO"
+    assert result["verification_status"] == "UNVERIFIED"
+
+
+def test_safe_fallback_returns_valid_compliance_result() -> None:
+    client = LLMClient()
+    result = client._safe_fallback(ComplianceAnalysisResult, "test note")
+    assert isinstance(result, ComplianceAnalysisResult)
+    assert result.violation == ComplianceViolation.NO
+    assert result.verification_status == PrivacyVerificationStatus.UNVERIFIED
+    assert result.violation_type == "NOT_APPLICABLE"
+    assert result.evidence == []
+    assert result.notes == "test note"
 
 
 def test_llm_client_timeout_returns_safe_fallback() -> None:
