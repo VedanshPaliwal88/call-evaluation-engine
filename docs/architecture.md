@@ -76,7 +76,9 @@ graph TD
     E --> H
     F2 --> L
     G2 --> L
-    L --> P
+    P --> L
+    L --> F2
+    L --> G2
     F1 --> O1
     F2 --> O1
     G1 --> O2
