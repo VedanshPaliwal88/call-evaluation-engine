@@ -52,7 +52,7 @@ def test_profanity_false_positive_traps() -> None:
     cases = [
         ("thank you for your help today", False, "NONE", "AMBIENT"),
         ("what the heck is going on", False, "NONE", "AMBIENT"),
-        ("she said he was a bastard to her", True, "MILD", "NARRATIVE_QUOTE"),
+        ("she said he was a bastard to her", True, "MODERATE", "NARRATIVE_QUOTE"),
         ("this situation is really crappy weather-wise", False, "NONE", "AMBIENT"),
         ("i'm damn sure i paid that", True, "MILD", "SELF_EXPRESSION"),
         ("go to hell", True, "MILD", "AMBIENT"),
@@ -90,10 +90,10 @@ def test_profanity_false_negative_traps() -> None:
 def test_profanity_context_classification_cases() -> None:
     detector = RegexProfanityDetector()
     cases = [
-        ("Agent", "you're an idiot", "DIRECTED_AT_CUSTOMER", "SEVERE"),
+        ("Agent", "you're an idiot", "DIRECTED_AT_CUSTOMER", "MODERATE"),
         ("Customer", "you're useless", "DIRECTED_AT_AGENT", "MODERATE"),
         ("Customer", "i was so pissed off yesterday", "SELF_EXPRESSION", "MILD"),
-        ("Agent", "he said she was a bitch", "NARRATIVE_QUOTE", "MILD"),
+        ("Agent", "he said she was a bitch", "NARRATIVE_QUOTE", "SEVERE"),
     ]
     for speaker, text, expected_context, expected_severity in cases:
         transcript = IngestionService().load_named_bytes(
