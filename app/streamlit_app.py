@@ -197,7 +197,11 @@ def _render_compliance_detail(detail: ComplianceRowDetail) -> None:
         st.caption("No evidence spans were returned for this call.")
 
 
-def _render_metrics_section(result: MetricsBatchResult) -> None:
+def _render_metrics_section(
+    result: MetricsBatchResult,
+    selected_result: Any = None,
+    entity_label: str = "",
+) -> None:
     st.subheader("Q3 Metrics")
     _render_report_summary(result.report)
     if not result.rows:
@@ -209,11 +213,37 @@ def _render_metrics_section(result: MetricsBatchResult) -> None:
     st.dataframe(metrics_frame, use_container_width=True, hide_index=True)
     _render_errors(result.report)
 
+    # Derive enrichment data from whichever detector was actually run
+    profanity_rows: list[Any] | None = None
+    compliance_rows: list[Any] | None = None
+    if selected_result is not None and isinstance(selected_result, ProfanityBatchResult):
+        profanity_rows = selected_result.rows
+    elif selected_result is not None and isinstance(selected_result, ComplianceBatchResult):
+        compliance_rows = selected_result.rows
+
+    # Correlation summary for top-10 overtalk calls
+    if profanity_rows is not None or compliance_rows is not None:
+        top_ids = {
+            r["call_id"]
+            for r in sorted(result.rows, key=lambda r: float(r.get("overtalk_pct", 0.0)), reverse=True)[:10]
+        }
+        summary_parts: list[str] = []
+        if profanity_rows is not None:
+            prof_map = {r["call_id"]: bool(r.get("agent_profanity")) or bool(r.get("customer_profanity")) for r in profanity_rows}
+            p_count = sum(1 for cid in top_ids if prof_map.get(cid, False))
+            summary_parts.append(f"**{p_count}** of the top 10 overtalk calls also had flagged profanity.")
+        if compliance_rows is not None:
+            comp_map = {r["call_id"]: r.get("violation", "NO") == "YES" for r in compliance_rows}
+            c_count = sum(1 for cid in top_ids if comp_map.get(cid, False))
+            summary_parts.append(f"**{c_count}** had compliance violations.")
+        if summary_parts:
+            st.info("  ".join(summary_parts))
+
     box_plot = create_metrics_box_plot(result.rows)
-    scatter_plot = create_metrics_scatter_plot(result.rows)
+    scatter_plot = create_metrics_scatter_plot(result.rows, profanity_rows=profanity_rows)
     histograms = create_distribution_histograms(result.rows)
-    top_silence = create_top_n_figure(result.rows, "silence_pct", top_n=10)
-    top_overtalk = create_top_n_figure(result.rows, "overtalk_pct", top_n=10)
+    top_silence = create_top_n_figure(result.rows, "silence_pct", top_n=10, profanity_rows=profanity_rows, compliance_rows=compliance_rows)
+    top_overtalk = create_top_n_figure(result.rows, "overtalk_pct", top_n=10, profanity_rows=profanity_rows, compliance_rows=compliance_rows)
 
     visual_columns = st.columns(2)
     if box_plot is not None:
@@ -293,7 +323,7 @@ def _render_saved_results(entity_label: str, approach_label: str) -> None:
         _render_compliance_results(selected_result)
 
     st.divider()
-    _render_metrics_section(metrics_result)
+    _render_metrics_section(metrics_result, selected_result=selected_result, entity_label=entity_label)
 
 
 def main() -> None:
