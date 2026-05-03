@@ -33,7 +33,6 @@ from call_evaluation.detectors.llm.profanity import LLMProfanityDetector
 from call_evaluation.detectors.regex.compliance import (
     DISCLOSURE_PATTERNS,
     RegexComplianceDetector,
-    VERIFICATION_PATTERNS,
 )
 from call_evaluation.detectors.regex.profanity import PROFANITY_PATTERNS, RegexProfanityDetector
 from call_evaluation.ingestion import IngestionService

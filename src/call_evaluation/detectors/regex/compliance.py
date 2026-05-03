@@ -24,10 +24,16 @@ DISCLOSURE_PATTERNS = [
     re.compile(r"\bi see your last payment\b"),
 ]
 NAME_ONLY_PATTERN = re.compile(r"\b(?:this is|it's|it is|my name is|speaking)\s+[a-z]+(?:\s+[a-z]+)?\b")
-VERIFICATION_PATTERNS = [
+
+# Agent-side patterns: which factor is being requested
+DOB_AGENT_PATTERNS = [
     re.compile(r"\bdate of birth\b"),
     re.compile(r"\bdob\b"),
+]
+ADDRESS_AGENT_PATTERNS = [
     re.compile(r"\baddress\b"),
+]
+SSN_AGENT_PATTERNS = [
     re.compile(r"\bsocial security\b"),
     re.compile(r"\bssn\b"),
 ]
@@ -91,22 +97,38 @@ class RegexComplianceDetector:
                 notes="Wrong-person call detected; no valid borrower verification flow applies.",
             )
 
-        verified = False
-        partial = False
-        pending_verification = False
+        dob_pending     = False
+        address_pending = False
+        ssn_pending     = False
+
+        dob_confirmed     = False
+        address_confirmed = False
+        ssn_confirmed     = False
+
         pre_verification_disclosure: list[EvidenceSpan] = []
         evidence: list[EvidenceSpan] = []
 
         for turn in transcript.turns:
             normalized = normalize_for_verification(turn.text)
-            verification_text = normalized
-            if turn.speaker == SpeakerRole.AGENT and any(pattern.search(normalized) for pattern in VERIFICATION_PATTERNS):
-                pending_verification = True
-            elif turn.speaker == SpeakerRole.CUSTOMER and pending_verification and self._looks_like_customer_confirmation(verification_text):
-                verified = True
-                pending_verification = False
-            elif turn.speaker == SpeakerRole.CUSTOMER and self._looks_like_name_only_confirmation(verification_text):
-                partial = True
+
+            if turn.speaker == SpeakerRole.AGENT:
+                if any(p.search(normalized) for p in DOB_AGENT_PATTERNS):
+                    dob_pending = True
+                if any(p.search(normalized) for p in ADDRESS_AGENT_PATTERNS):
+                    address_pending = True
+                if any(p.search(normalized) for p in SSN_AGENT_PATTERNS):
+                    ssn_pending = True
+
+            elif turn.speaker == SpeakerRole.CUSTOMER:
+                if dob_pending and self._looks_like_dob_confirmation(normalized):
+                    dob_confirmed = True
+                    dob_pending = False
+                if address_pending and self._looks_like_address_confirmation(normalized):
+                    address_confirmed = True
+                    address_pending = False
+                if ssn_pending and self._looks_like_ssn_confirmation(normalized):
+                    ssn_confirmed = True
+                    ssn_pending = False
 
             if turn.speaker == SpeakerRole.AGENT and self._contains_disclosure_text(normalized):
                 span = EvidenceSpan(
@@ -117,32 +139,42 @@ class RegexComplianceDetector:
                     reason="Agent disclosed potentially sensitive account information.",
                 )
                 evidence.append(span)
-                if not verified:
+                factors_so_far = sum([dob_confirmed, address_confirmed, ssn_confirmed])
+                if factors_so_far < 2:
                     pre_verification_disclosure.append(span)
 
+        factors_confirmed = sum([dob_confirmed, address_confirmed, ssn_confirmed])
+
         if pre_verification_disclosure:
-            if verified:
+            if factors_confirmed >= 2:
                 return ComplianceAnalysisResult(
                     call_id=transcript.call_id,
                     violation=ComplianceViolation.YES,
                     verification_status=PrivacyVerificationStatus.VERIFIED,
                     violation_type="ACCOUNT_DETAILS_BEFORE_VERIFICATION",
                     evidence=pre_verification_disclosure,
-                    notes="Regex path found disclosure before verification was fully completed.",
+                    notes="Regex path found disclosure before two-factor verification was fully completed.",
                 )
             return ComplianceAnalysisResult(
                 call_id=transcript.call_id,
                 violation=ComplianceViolation.YES,
-                verification_status=PrivacyVerificationStatus.PARTIAL if partial else PrivacyVerificationStatus.UNVERIFIED,
+                verification_status=PrivacyVerificationStatus.PARTIAL if factors_confirmed == 1 else PrivacyVerificationStatus.UNVERIFIED,
                 violation_type="NO_VERIFICATION",
                 evidence=pre_verification_disclosure,
-                notes="Regex path found sensitive disclosure before full verification.",
+                notes="Regex path found sensitive disclosure before two-factor verification.",
             )
+
+        if factors_confirmed >= 2:
+            final_status = PrivacyVerificationStatus.VERIFIED
+        elif factors_confirmed == 1:
+            final_status = PrivacyVerificationStatus.PARTIAL
+        else:
+            final_status = PrivacyVerificationStatus.NOT_APPLICABLE
 
         return ComplianceAnalysisResult(
             call_id=transcript.call_id,
             violation=ComplianceViolation.NO,
-            verification_status=PrivacyVerificationStatus.VERIFIED if verified else PrivacyVerificationStatus.NOT_APPLICABLE,
+            verification_status=final_status,
             violation_type="NOT_APPLICABLE",
             evidence=evidence,
             notes="No pre-verification disclosure was detected by regex rules.",
@@ -152,25 +184,33 @@ class RegexComplianceDetector:
         return any(self._contains_disclosure_text(normalize_for_verification(turn.text)) for turn in transcript.turns if turn.speaker == SpeakerRole.AGENT)
 
     @staticmethod
-    def _contains_disclosure_text(normalized_text: str) -> bool:
-        if re.search(r"\b(a|the)\s+balance\b", normalized_text) and not re.search(r"\b(your|owe|payment)\b", normalized_text):
-            return False
-        return any(pattern.search(normalized_text) for pattern in DISCLOSURE_PATTERNS)
-
-    @staticmethod
-    def _looks_like_customer_confirmation(normalized_text: str) -> bool:
-        normalized_text = normalized_text.strip()
-        verification_patterns = [
-            SSN_DIGIT_PATTERN,
-            SSN_SPELLED_PATTERN,
+    def _looks_like_dob_confirmation(normalized_text: str) -> bool:
+        return any(p.search(normalized_text) for p in [
             DOB_SLASH_PATTERN,
             DOB_MONTH_TEXT_PATTERN,
             DOB_OF_MONTH_PATTERN,
             DOB_SPELLED_PATTERN,
+        ])
+
+    @staticmethod
+    def _looks_like_address_confirmation(normalized_text: str) -> bool:
+        return any(p.search(normalized_text) for p in [
             ADDRESS_DIGIT_PATTERN,
             ADDRESS_SPELLED_PATTERN,
-        ]
-        return any(pattern.search(normalized_text) for pattern in verification_patterns)
+        ])
+
+    @staticmethod
+    def _looks_like_ssn_confirmation(normalized_text: str) -> bool:
+        return any(p.search(normalized_text) for p in [
+            SSN_DIGIT_PATTERN,
+            SSN_SPELLED_PATTERN,
+        ])
+
+    @staticmethod
+    def _contains_disclosure_text(normalized_text: str) -> bool:
+        if re.search(r"\b(a|the)\s+balance\b", normalized_text) and not re.search(r"\b(your|owe|payment)\b", normalized_text):
+            return False
+        return any(pattern.search(normalized_text) for pattern in DISCLOSURE_PATTERNS)
 
     @staticmethod
     def _looks_like_name_only_confirmation(normalized_text: str) -> bool:
