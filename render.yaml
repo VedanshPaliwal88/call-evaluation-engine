@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: call-evaluation-engine
+    runtime: python
+    buildCommand: pip install -e .
+    startCommand: python -m streamlit run app/streamlit_app.py --server.port=$PORT --server.address=0.0.0.0 --server.headless=true
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: LLM_MODEL
+        value: gpt-4o
