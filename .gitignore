@@ -12,3 +12,6 @@ build/
 *.pyd
 artifacts/local/
 data/labeled/annotation_skips.csv
+reports/
+src/*.egg-info/
+src/**/*.egg-info/
