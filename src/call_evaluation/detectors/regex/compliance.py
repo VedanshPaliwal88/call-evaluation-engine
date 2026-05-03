@@ -148,9 +148,6 @@ class RegexComplianceDetector:
             notes="No pre-verification disclosure was detected by regex rules.",
         )
 
-    def _contains_disclosure(self, transcript: TranscriptFilePayload) -> bool:
-        return any(self._contains_disclosure_text(normalize_for_verification(turn.text)) for turn in transcript.turns if turn.speaker == SpeakerRole.AGENT)
-
     def _contains_specific_disclosure(self, transcript: TranscriptFilePayload) -> bool:
         return any(self._contains_disclosure_text(normalize_for_verification(turn.text)) for turn in transcript.turns if turn.speaker == SpeakerRole.AGENT)
 

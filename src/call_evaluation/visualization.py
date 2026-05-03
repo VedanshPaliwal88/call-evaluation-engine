@@ -84,7 +84,3 @@ def create_top_n_figure(rows: list[dict[str, Any]], metric_key: str, top_n: int 
         y=metric_key,
         title=f"Top {len(ranked_rows)} Calls by {metric_key.replace('_', ' ').title()}",
     )
-
-
-def create_metrics_figure(rows: list[dict[str, Any]]) -> Any:
-    return create_metrics_box_plot(rows)

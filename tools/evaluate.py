@@ -89,14 +89,6 @@ class Report:
 # Data helpers
 # ---------------------------------------------------------------------------
 
-def _load_conversations() -> list[str]:
-    """Sorted list of regular (non-checkpoint) JSON filenames."""
-    return sorted(
-        p.name for p in CONVERSATIONS_DIR.iterdir()
-        if p.suffix == ".json" and "checkpoint" not in p.name
-    )
-
-
 def _load_annotations(path: Path) -> dict[str, dict[str, str]]:
     """Return {call_id: row_dict} for every row in a CSV."""
     if not path.exists():
@@ -705,7 +697,6 @@ def section5_blind_spot(
             })
 
     # Print results table
-    col_w = 52
     report.line(f"{'call_id':<44} {'profanity':<22} {'violation':<12} {'verdict':<12} explanation")
     report.line("-" * 140)
     for row in rows:
