@@ -23,8 +23,6 @@ DISCLOSURE_PATTERNS = [
     re.compile(r"\blast payment was\b"),
     re.compile(r"\bi see your last payment\b"),
 ]
-NAME_ONLY_PATTERN = re.compile(r"\b(?:this is|it's|it is|my name is|speaking)\s+[a-z]+(?:\s+[a-z]+)?\b")
-
 # Agent-side patterns: which factor is being requested
 DOB_AGENT_PATTERNS = [
     re.compile(r"\bdate of birth\b"),
@@ -212,7 +210,3 @@ class RegexComplianceDetector:
             return False
         return any(pattern.search(normalized_text) for pattern in DISCLOSURE_PATTERNS)
 
-    @staticmethod
-    def _looks_like_name_only_confirmation(normalized_text: str) -> bool:
-        normalized_text = normalized_text.strip()
-        return bool(NAME_ONLY_PATTERN.search(normalized_text))
