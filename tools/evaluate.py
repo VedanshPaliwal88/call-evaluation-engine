@@ -562,15 +562,6 @@ def _transcript_has_disclosure(payload) -> bool:
     return False
 
 
-def _transcript_has_verification(payload) -> bool:
-    """Return True if any turn contains a verification pattern match."""
-    for turn in payload.turns:
-        normalized = normalize_for_verification(turn.text)
-        if any(pat.search(normalized) for pat in VERIFICATION_PATTERNS):
-            return True
-    return False
-
-
 def _validity_issues(call_id: str, agent_r, customer_r, comp_r) -> list[str]:
     """Return a list of validity problem strings, empty if all clean."""
     issues: list[str] = []
