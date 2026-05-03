@@ -51,6 +51,7 @@ def _get_session_state() -> dict[str, Any]:
             "approach_label": None,
             "selected_result": None,
             "metrics_result": None,
+            "chart_selected_call_id": None,
         }
     return st.session_state[STATE_KEY]
 
@@ -123,17 +124,29 @@ def _render_profanity_results(result: ProfanityBatchResult) -> None:
     _render_errors(result.report)
 
     selected_index = _selected_row_index(event)
-    if selected_index is None:
-        st.caption("Click a row to inspect evidence details.")
-        return
+    chart_cid = _get_session_state().get("chart_selected_call_id")
 
-    selected_call_id = str(dataframe.iloc[selected_index]["call_id"])
-    detail = result.details[selected_call_id]
-    st.markdown(f"**Evidence for {selected_call_id}**")
-    st.write(f"Source file: `{detail.source_name}`")
-    st.write(f"Special tags: `{', '.join(detail.special_tags)}`")
-    _render_profanity_detail("Agent", detail.agent)
-    _render_profanity_detail("Customer", detail.customer)
+    if selected_index is not None:
+        # Row click takes priority
+        selected_call_id = str(dataframe.iloc[selected_index]["call_id"])
+        detail = result.details[selected_call_id]
+        st.markdown(f"**Evidence for {selected_call_id}**")
+        st.write(f"Source file: `{detail.source_name}`")
+        st.write(f"Special tags: `{', '.join(detail.special_tags)}`")
+        _render_profanity_detail("Agent", detail.agent)
+        _render_profanity_detail("Customer", detail.customer)
+    elif chart_cid:
+        if chart_cid in result.details:
+            st.info(f"Chart selection — showing details for `{chart_cid}`")
+            detail = result.details[chart_cid]
+            st.write(f"Source file: `{detail.source_name}`")
+            st.write(f"Special tags: `{', '.join(detail.special_tags)}`")
+            _render_profanity_detail("Agent", detail.agent)
+            _render_profanity_detail("Customer", detail.customer)
+        else:
+            st.caption(f"Chart-selected call `{chart_cid}` is not in the current profanity results.")
+    else:
+        st.caption("Click a row to inspect evidence details.")
 
 
 def _render_profanity_detail(label: str, result: Any) -> None:
@@ -171,14 +184,21 @@ def _render_compliance_results(result: ComplianceBatchResult) -> None:
     _render_errors(result.report)
 
     selected_index = _selected_row_index(event)
-    if selected_index is None:
-        st.caption("Click a row to inspect evidence details.")
-        return
+    chart_cid = _get_session_state().get("chart_selected_call_id")
 
-    selected_call_id = str(dataframe.iloc[selected_index]["call_id"])
-    detail = result.details[selected_call_id]
-    st.markdown(f"**Evidence for {selected_call_id}**")
-    _render_compliance_detail(detail)
+    if selected_index is not None:
+        selected_call_id = str(dataframe.iloc[selected_index]["call_id"])
+        detail = result.details[selected_call_id]
+        st.markdown(f"**Evidence for {selected_call_id}**")
+        _render_compliance_detail(detail)
+    elif chart_cid:
+        if chart_cid in result.details:
+            st.info(f"Chart selection — showing details for `{chart_cid}`")
+            _render_compliance_detail(result.details[chart_cid])
+        else:
+            st.caption(f"Chart-selected call `{chart_cid}` is not in the current compliance results.")
+    else:
+        st.caption("Click a row to inspect evidence details.")
 
 
 def _render_compliance_detail(detail: ComplianceRowDetail) -> None:
@@ -197,7 +217,11 @@ def _render_compliance_detail(detail: ComplianceRowDetail) -> None:
         st.caption("No evidence spans were returned for this call.")
 
 
-def _render_metrics_section(result: MetricsBatchResult) -> None:
+def _render_metrics_section(
+    result: MetricsBatchResult,
+    selected_result: Any = None,
+    entity_label: str = "",
+) -> None:
     st.subheader("Q3 Metrics")
     _render_report_summary(result.report)
     if not result.rows:
@@ -209,11 +233,47 @@ def _render_metrics_section(result: MetricsBatchResult) -> None:
     st.dataframe(metrics_frame, use_container_width=True, hide_index=True)
     _render_errors(result.report)
 
+    # Derive enrichment from whichever detector was run
+    profanity_rows: list[Any] | None = None
+    compliance_rows: list[Any] | None = None
+    if isinstance(selected_result, ProfanityBatchResult):
+        profanity_rows = selected_result.rows
+    elif isinstance(selected_result, ComplianceBatchResult):
+        compliance_rows = selected_result.rows
+
+    # Correlation summary for top-10 overtalk calls
+    if profanity_rows is not None or compliance_rows is not None:
+        top_ids = {
+            r["call_id"]
+            for r in sorted(result.rows, key=lambda r: float(r.get("overtalk_pct", 0.0)), reverse=True)[:10]
+        }
+        summary_parts: list[str] = []
+        if profanity_rows is not None:
+            prof_map = {r["call_id"]: bool(r.get("agent_profanity")) or bool(r.get("customer_profanity")) for r in profanity_rows}
+            p_count = sum(1 for cid in top_ids if prof_map.get(cid, False))
+            summary_parts.append(f"**{p_count}** of the top 10 overtalk calls also had flagged profanity.")
+        if compliance_rows is not None:
+            comp_map = {r["call_id"]: r.get("violation", "NO") == "YES" for r in compliance_rows}
+            c_count = sum(1 for cid in top_ids if comp_map.get(cid, False))
+            summary_parts.append(f"**{c_count}** had compliance violations.")
+        if summary_parts:
+            st.info("  ".join(summary_parts))
+
     box_plot = create_metrics_box_plot(result.rows)
-    scatter_plot = create_metrics_scatter_plot(result.rows)
+    scatter_plot = create_metrics_scatter_plot(
+        result.rows,
+        profanity_rows=profanity_rows,
+        compliance_rows=compliance_rows,
+    )
     histograms = create_distribution_histograms(result.rows)
-    top_silence = create_top_n_figure(result.rows, "silence_pct", top_n=10)
-    top_overtalk = create_top_n_figure(result.rows, "overtalk_pct", top_n=10)
+    top_silence = create_top_n_figure(
+        result.rows, "silence_pct", top_n=10,
+        profanity_rows=profanity_rows, compliance_rows=compliance_rows,
+    )
+    top_overtalk = create_top_n_figure(
+        result.rows, "overtalk_pct", top_n=10,
+        profanity_rows=profanity_rows, compliance_rows=compliance_rows,
+    )
 
     visual_columns = st.columns(2)
     if box_plot is not None:
@@ -227,11 +287,33 @@ def _render_metrics_section(result: MetricsBatchResult) -> None:
     if histograms.get("overtalk_pct") is not None:
         histogram_columns[1].plotly_chart(histograms["overtalk_pct"], use_container_width=True)
 
+    # Top-N bar charts with click-to-navigate support
     top_columns = st.columns(2)
+    silence_event = None
+    overtalk_event = None
     if top_silence is not None:
-        top_columns[0].plotly_chart(top_silence, use_container_width=True)
+        silence_event = top_columns[0].plotly_chart(
+            top_silence, use_container_width=True, on_select="rerun", key="top-silence-chart"
+        )
     if top_overtalk is not None:
-        top_columns[1].plotly_chart(top_overtalk, use_container_width=True)
+        overtalk_event = top_columns[1].plotly_chart(
+            top_overtalk, use_container_width=True, on_select="rerun", key="top-overtalk-chart"
+        )
+
+    # Detect bar click and store in session for Q1/Q2 evidence navigation
+    selected_cid: str | None = None
+    for evt in (overtalk_event, silence_event):
+        if not evt:
+            continue
+        pts = getattr(getattr(evt, "selection", None), "points", None) or []
+        if pts:
+            selected_cid = str(pts[0].get("x", "")) or None
+            break
+
+    session = _get_session_state()
+    if selected_cid and selected_cid != session.get("chart_selected_call_id"):
+        session["chart_selected_call_id"] = selected_cid
+        st.rerun()
 
 
 def _selected_row_index(event: Any) -> int | None:
@@ -273,6 +355,7 @@ def _run_analysis(
     session["approach_label"] = approach_label
     session["selected_result"] = selected_result
     session["metrics_result"] = metrics_result
+    session["chart_selected_call_id"] = None
 
 
 def _render_saved_results(entity_label: str, approach_label: str) -> None:
@@ -282,6 +365,11 @@ def _render_saved_results(entity_label: str, approach_label: str) -> None:
 
     if selected_result is None or metrics_result is None:
         return
+
+    # Clear button — lets user start fresh without a browser refresh
+    if st.button("Clear and Upload New Batch", type="secondary"):
+        st.session_state.pop(STATE_KEY, None)
+        st.rerun()
 
     if session.get("entity_label") != entity_label or session.get("approach_label") != approach_label:
         st.info("Current selectors differ from the last batch run. Click `Run Batch Analysis` to refresh results.")
@@ -293,7 +381,11 @@ def _render_saved_results(entity_label: str, approach_label: str) -> None:
         _render_compliance_results(selected_result)
 
     st.divider()
-    _render_metrics_section(metrics_result)
+    _render_metrics_section(
+        metrics_result,
+        selected_result=selected_result,
+        entity_label=entity_label,
+    )
 
 
 def main() -> None:
