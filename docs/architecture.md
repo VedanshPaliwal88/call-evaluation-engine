@@ -32,36 +32,60 @@ The UI does not contain analysis rules. It delegates file loading, detector exec
 ## Final Architecture Diagram
 
 ```mermaid
-flowchart LR
-    A["Uploads<br/>JSON / YAML / ZIP / Multi-file"] --> B["IngestionService<br/>decode, parse, normalize"]
-    B --> C["Validation + Tagging<br/>schema checks, empty files, voicemail, wrong-person, single-speaker"]
-    C --> D["TranscriptFilePayload models"]
+graph TD
+    subgraph Input["Input"]
+        A["Uploads<br/>JSON · YAML · ZIP · Multi-file"]
+    end
 
-    D --> E["AnalysisService"]
+    subgraph Ingestion["Ingestion"]
+        B["IngestionService<br/>decode · parse · normalize"]
+        C["Validation + Tagging<br/>empty · voicemail · wrong-person · single-speaker"]
+        D["TranscriptFilePayload models"]
+    end
 
-    E --> F["Q1 Profanity pipeline"]
-    E --> G["Q2 Compliance pipeline"]
-    E --> H["Q3 Metrics pipeline"]
+    subgraph Analysis["Analysis"]
+        E["AnalysisService"]
+    end
 
-    F --> F1["RegexProfanityDetector"]
-    F --> F2["LLMProfanityDetector"]
-    G --> G1["RegexComplianceDetector"]
-    G --> G2["LLMComplianceDetector"]
-    F2 --> L["LLMClient<br/>prompt loading + model config + JSON parsing"]
+    subgraph Detection["Detection"]
+        F1["RegexProfanityDetector"]
+        F2["LLMProfanityDetector"]
+        G1["RegexComplianceDetector"]
+        G2["LLMComplianceDetector"]
+        H["MetricsService<br/>interval math"]
+        L["LLMClient<br/>prompt loading · model config · JSON parsing"]
+        P["Prompt templates<br/>src/call_evaluation/detectors/llm/prompts/"]
+    end
+
+    subgraph Output["Output"]
+        O1["Typed result schemas<br/>profanity"]
+        O2["Typed result schemas<br/>compliance"]
+        O3["MetricResult rows"]
+        U["Streamlit UI"]
+        V["Tables · row evidence · Plotly charts · validation messages"]
+    end
+
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F1
+    E --> F2
+    E --> G1
+    E --> G2
+    E --> H
+    F2 --> L
     G2 --> L
-    L --> P["Prompt templates<br/>src/call_evaluation/detectors/llm/prompts"]
-
-    F1 --> O1["Typed result schemas"]
+    L --> P
+    F1 --> O1
     F2 --> O1
-    G1 --> O2["Typed result schemas"]
+    G1 --> O2
     G2 --> O2
-    H --> M["MetricsService<br/>interval math"]
-    M --> O3["MetricResult rows"]
-
-    O1 --> U["Streamlit UI"]
+    H --> O3
+    O1 --> U
     O2 --> U
     O3 --> U
-    U --> V["Tables, row evidence, Plotly charts, clear validation messages"]
+    U --> V
 ```
 
 ## Regex and LLM Framing

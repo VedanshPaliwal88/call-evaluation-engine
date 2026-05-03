@@ -265,19 +265,15 @@ def _render_annotation_form(call_id: str, needs_profanity: bool, needs_complianc
             container = left if left is not None else st.container()
             with container:
                 with st.expander("**Profanity**", expanded=True):
-                    agent = st.radio(
-                        "Agent profanity", ["no", "yes"], horizontal=True, key=f"{call_id}-agent"
-                    )
-                    customer = st.radio(
-                        "Customer profanity", ["no", "yes"], horizontal=True, key=f"{call_id}-customer"
-                    )
+                    agent = st.checkbox("Agent profanity", key=f"{call_id}-agent")
+                    customer = st.checkbox("Customer profanity", key=f"{call_id}-customer")
                     severity = st.selectbox("Severity", SEVERITY_OPTIONS, key=f"{call_id}-severity")
                     context = st.selectbox("Context", CONTEXT_OPTIONS, key=f"{call_id}-context")
                     p_notes = st.text_input("Notes", key=f"{call_id}-p-notes", placeholder="Optional")
                     profanity_values = {
                         "call_id": call_id,
-                        "agent_profanity": agent,
-                        "customer_profanity": customer,
+                        "agent_profanity": "yes" if agent else "no",
+                        "customer_profanity": "yes" if customer else "no",
                         "severity": severity,
                         "context": context,
                         "notes": p_notes,
@@ -288,9 +284,7 @@ def _render_annotation_form(call_id: str, needs_profanity: bool, needs_complianc
             container = right if right is not None else st.container()
             with container:
                 with st.expander("**Compliance**", expanded=True):
-                    violation = st.radio(
-                        "Violation", ["no", "yes"], horizontal=True, key=f"{call_id}-violation"
-                    )
+                    violation = st.checkbox("Violation", key=f"{call_id}-violation")
                     verification = st.selectbox(
                         "Verification status", VERIFICATION_OPTIONS, key=f"{call_id}-verification"
                     )
@@ -300,7 +294,7 @@ def _render_annotation_form(call_id: str, needs_profanity: bool, needs_complianc
                     c_notes = st.text_input("Notes", key=f"{call_id}-c-notes", placeholder="Optional")
                     compliance_values = {
                         "call_id": call_id,
-                        "violation": violation,
+                        "violation": "yes" if violation else "no",
                         "verification_status": verification,
                         "violation_type": vtype,
                         "notes": c_notes,
@@ -321,6 +315,45 @@ def _render_annotation_form(call_id: str, needs_profanity: bool, needs_complianc
         sess["show_form"] = False
         sess["flash"] = f"Saved `{call_id}`. Loading next file…"
         st.rerun()
+
+
+# ---------------------------------------------------------------------------
+# Edge case variant editor
+# ---------------------------------------------------------------------------
+
+
+def _render_edge_case_editor(call_id: str) -> None:
+    with st.expander("Create Edge Case Variant", expanded=False):
+        raw_path = CONVERSATIONS_DIR / call_id
+        try:
+            raw_content = raw_path.read_text(encoding="utf-8")
+        except Exception:
+            st.warning("Could not load file content for editing.")
+            return
+
+        edited = st.text_area(
+            "Edit transcript JSON",
+            value=raw_content,
+            height=300,
+            key=f"edge-editor-{call_id}",
+        )
+        new_filename = st.text_input(
+            "New filename",
+            value=f"edgecase_{call_id}",
+            key=f"edge-filename-{call_id}",
+        )
+        if st.button("Save Variant", key=f"edge-save-{call_id}"):
+            if not new_filename.strip():
+                st.error("Filename cannot be empty.")
+                return
+            try:
+                json.loads(edited)
+            except json.JSONDecodeError as exc:
+                st.error(f"Invalid JSON — fix before saving: {exc}")
+                return
+            dest = CONVERSATIONS_DIR / new_filename.strip()
+            dest.write_text(edited, encoding="utf-8")
+            st.success(f"Saved as `{new_filename.strip()}` — it will appear in the unannotated pool next session.")
 
 
 # ---------------------------------------------------------------------------
@@ -404,6 +437,10 @@ def main() -> None:
     if sess["show_form"]:
         st.divider()
         _render_annotation_form(current, needs_profanity, needs_compliance, index)
+
+    # Edge case variant creator (always available, collapsed by default)
+    st.divider()
+    _render_edge_case_editor(current)
 
 
 if __name__ == "__main__":
