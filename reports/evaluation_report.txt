@@ -1,0 +1,95 @@
+==============================================================
+CALL EVALUATION — AUTOMATED EVALUATION REPORT
+Generated : 2026-05-03 03:12:41
+Report    : C:\Users\Vedansh Paliwal\Desktop\Call evaluation project\reports\evaluation_report.txt
+==============================================================
+
+Transcript files      : 252
+Profanity annotations : 19
+Compliance annotations: 17
+
+==============================================================
+SECTION 1 — REGEX VALIDITY CHECK
+==============================================================
+Files processed : 252
+Validity passed : 251/252 (99.6%)
+Validity failures: none
+Crashes: none
+
+Projected LLM calls : 140 (limit: 200)
+Estimated cost      : 7.840 cents  ($0.07840)
+
+==============================================================
+SECTION 2 — LLM ACCURACY CHECK
+==============================================================
+
+Profanity (19 annotated files):
+  agent accuracy    : 19/19 (100.0%)
+  customer accuracy : 19/19 (100.0%)
+  severity accuracy : 14/19 (73.7%)
+  context accuracy  : 19/19 (100.0%)
+
+Compliance (17 annotated files):
+  violation accuracy         : 15/17 (88.2%)
+  verification accuracy      : 11/17 (64.7%)
+  violation type accuracy    : 15/17 (88.2%)
+  exact match (all 3 fields) : 11/17 (64.7%)
+
+==============================================================
+SECTION 3 — REPRODUCIBILITY CHECK
+==============================================================
+Files: 10  |  Gap between runs: 5s
+Running first pass...
+Waiting 5s before second pass...
+Running second pass...
+
+  flag         reproducibility: 20/20 (100.0%)
+  severity     reproducibility: 20/20 (100.0%)
+  context      reproducibility: 20/20 (100.0%)
+  sentiment    reproducibility: 20/20 (100.0%)
+
+No differences detected between runs.
+
+==============================================================
+SECTION 4 — HALLUCINATION CHECK (notes fields)
+==============================================================
+Notes fields checked : 55
+Flagged              : 0
+No hallucinated content detected.
+
+==============================================================
+SECTION 5 — BLIND SPOT CHECK
+==============================================================
+Unannotated pool : 227 files
+Sample selected  : 15 files
+
+call_id                                      profanity              violation    verdict      explanation
+--------------------------------------------------------------------------------------------------------------------------------------------
+b2c32e46-fdac-420e-b2dd-3929ba661a89.json    agent=F, customer=F    NO           CONSISTENT   LLM and regex both negative
+849b1e2c-abc5-41a4-a1b1-0b97cd2a245d.json    agent=F, customer=F    NO           CONSISTENT   LLM and regex both negative
+d78c5a90-2f3c-4657-a121-9d5778b051bf.json    agent=F, customer=F    NO           CONSISTENT   LLM and regex both negative
+63803395-1ed2-405c-afdc-66ed0f48cd45.json    agent=F, customer=F    NO           CONSISTENT   LLM and regex both negative
+ac0276ef-30d9-4421-8b3e-6886e1b9e508.json    agent=F, customer=F    YES          CONSISTENT   positive result, evidence consistent with transcript
+966d60ed-9111-4e44-876d-6fcc3d78773e.json    agent=T, customer=F    NO           CONSISTENT   positive result, evidence consistent with transcript
+df372d50-4a09-4429-91c4-9a87a5f486e2.json    agent=F, customer=F    NO           CONSISTENT   LLM and regex both negative
+55f06ad3-1c58-4853-8bbb-34b7b97bcbd7.json    agent=F, customer=F    NO           CONSISTENT   LLM and regex both negative
+80e5fe02-ec03-4ca5-902a-fdf38e6b7b8a.json    agent=F, customer=F    NO           CONSISTENT   LLM and regex both negative
+7cfd0c78-fa7a-4488-9b62-f478f7609089.json    agent=F, customer=F    NO           CONSISTENT   LLM and regex both negative
+50abe040-847c-47e1-962f-a00d7ff2cfe4.json    agent=T, customer=F    YES          CONSISTENT   positive result, evidence consistent with transcript
+6aa42a81-2d58-4f54-a02a-b73d8457c53d.json    agent=F, customer=F    NO           CONSISTENT   LLM and regex both negative
+68b8e267-3f64-4925-9ecb-6dfb5c1f6462.json    agent=F, customer=F    NO           CONSISTENT   LLM and regex both negative
+4f05aaff-585f-485f-90a1-60d027ec6e46.json    agent=T, customer=F    NO           CONSISTENT   positive result, evidence consistent with transcript
+bc3cb988-a172-45f0-89a4-c59d4c9cc7a1.json    agent=F, customer=F    NO           CONSISTENT   LLM and regex both negative
+
+Consistent : 15/15
+Divergent  : 0/15  (LLM negative, regex positive — worth human review)
+Suspect    : 0/15  (LLM positive, no supporting evidence/patterns)
+Validity failures: none
+
+==============================================================
+SUMMARY
+==============================================================
+Total LLM API calls : 140
+Estimated cost      : 7.840 cents  ($0.07840)
+Report written to   : C:\Users\Vedansh Paliwal\Desktop\Call evaluation project\reports\evaluation_report.txt
+==============================================================
