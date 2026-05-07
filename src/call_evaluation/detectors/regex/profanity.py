@@ -1,3 +1,4 @@
+"""Regex-based profanity detector with tier-based severity and directedness upgrade."""
 from __future__ import annotations
 
 import re
@@ -37,12 +38,29 @@ NARRATIVE_PATTERNS = [
 
 
 def _severity_from_hits(hits: list[str], context: ContextLabel) -> SeverityLabel:
+    """Derive a severity label from matched profanity terms and their context.
+
+    Uses a three-tier word taxonomy, then applies two upgrade rules:
+      1. Directedness upgrade — MILD→MODERATE or MODERATE→SEVERE when the
+         profanity is aimed at a specific person rather than used as filler.
+      2. Frequency upgrade — 3+ distinct hit terms push the label one tier up
+         (stops at SEVERE).
+
+    Args:
+        hits: Canonical term keys matched against PROFANITY_PATTERNS.
+        context: How the profanity is framed (directed, self-expression, etc.).
+
+    Returns:
+        Final SeverityLabel after applying both upgrade rules.
+    """
     if not hits:
         return SeverityLabel.NONE
 
+    # Tier 1 (SEVERE): strongest slurs with highest harm potential
     _SEVERE_TIER   = {"fuck", "asshole", "bitch"}
+    # Tier 2 (MODERATE): offensive but one step below the top tier
     _MODERATE_TIER = {"bastard", "bullshit"}
-    # remaining keys (damn, crap, hell, shit, screw, stupid, idiot) are MILD
+    # Remaining keys (damn, crap, hell, shit, screw, stupid, idiot) default to MILD
 
     if any(h in _SEVERE_TIER for h in hits):
         base = SeverityLabel.SEVERE
@@ -51,6 +69,7 @@ def _severity_from_hits(hits: list[str], context: ContextLabel) -> SeverityLabel
     else:
         base = SeverityLabel.MILD
 
+    # Directedness upgrade: profanity aimed at a person is more harmful than ambient use
     directed = context in {ContextLabel.DIRECTED_AT_AGENT, ContextLabel.DIRECTED_AT_CUSTOMER}
     if directed:
         if base == SeverityLabel.MILD:
@@ -58,6 +77,7 @@ def _severity_from_hits(hits: list[str], context: ContextLabel) -> SeverityLabel
         elif base == SeverityLabel.MODERATE:
             base = SeverityLabel.SEVERE
 
+    # Frequency upgrade: 3+ distinct terms signal an escalation pattern
     _RANK = [SeverityLabel.MILD, SeverityLabel.MODERATE, SeverityLabel.SEVERE]
     if len(hits) >= 3 and base != SeverityLabel.SEVERE:
         base = _RANK[min(_RANK.index(base) + 1, 2)]
@@ -80,7 +100,18 @@ def _context_from_text(text: str, speaker_role: SpeakerRole) -> ContextLabel:
 
 
 class RegexProfanityDetector:
+    """Pattern-match profanity in transcript turns for a specified speaker role."""
+
     def analyze(self, transcript: TranscriptFilePayload, target_role: SpeakerRole) -> ProfanityAnalysisResult:
+        """Scan all turns by target_role for profanity and return a structured result.
+
+        Args:
+            transcript: Validated payload with normalized utterances.
+            target_role: Which speaker (AGENT or CUSTOMER) to analyze.
+
+        Returns:
+            ProfanityAnalysisResult with flag, severity, context, and evidence spans.
+        """
         evidence: list[EvidenceSpan] = []
         hits: list[str] = []
         context = ContextLabel.AMBIENT

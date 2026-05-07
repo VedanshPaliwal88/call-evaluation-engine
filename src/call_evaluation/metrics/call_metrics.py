@@ -1,3 +1,4 @@
+"""Call quality metrics: silence, overtalk, and talk-time percentages from timestamps."""
 from __future__ import annotations
 
 from call_evaluation.models.analysis import MetricResult
@@ -5,6 +6,14 @@ from call_evaluation.models.transcript import SpeakerRole, TranscriptFilePayload
 
 
 def _merge_intervals(intervals: list[tuple[float, float]]) -> list[tuple[float, float]]:
+    """Merge overlapping or adjacent time intervals into a minimal sorted list.
+
+    Args:
+        intervals: Unsorted list of (start, end) float pairs.
+
+    Returns:
+        Sorted list of non-overlapping (start, end) pairs.
+    """
     if not intervals:
         return []
     intervals = sorted(intervals)
@@ -12,6 +21,7 @@ def _merge_intervals(intervals: list[tuple[float, float]]) -> list[tuple[float, 
     for start, end in intervals[1:]:
         last_start, last_end = merged[-1]
         if start <= last_end:
+            # Overlapping or touching: extend the last interval's end if needed
             merged[-1] = (last_start, max(last_end, end))
         else:
             merged.append((start, end))
@@ -19,19 +29,44 @@ def _merge_intervals(intervals: list[tuple[float, float]]) -> list[tuple[float, 
 
 
 def _sum_intervals(intervals: list[tuple[float, float]]) -> float:
+    """Return the total duration covered by a list of possibly-overlapping intervals.
+
+    Args:
+        intervals: List of (start, end) float pairs.
+
+    Returns:
+        Sum of merged interval lengths in seconds.
+    """
     return sum(end - start for start, end in _merge_intervals(intervals))
 
 
 def _intersection_duration(left: list[tuple[float, float]], right: list[tuple[float, float]]) -> float:
+    """Return the total overlapping duration between two sets of time intervals.
+
+    Used to compute overtalk — the seconds where agent and customer spoke
+    simultaneously. Both lists are merged before comparison so duplicate spans
+    are not double-counted.
+
+    Args:
+        left: Agent speaking intervals (start, end).
+        right: Customer speaking intervals (start, end).
+
+    Returns:
+        Total seconds of simultaneous speech.
+    """
     left = _merge_intervals(left)
     right = _merge_intervals(right)
     i = j = 0
     total = 0.0
+    # Two-pointer sweep: advance the pointer whose interval ends first.
+    # This is O(n+m) and avoids the O(n*m) naive pairwise comparison.
     while i < len(left) and j < len(right):
+        # Overlap region of the two current intervals
         start = max(left[i][0], right[j][0])
         end = min(left[i][1], right[j][1])
         if start < end:
             total += end - start
+        # Advance whichever interval ends first; the other may still overlap the next
         if left[i][1] <= right[j][1]:
             i += 1
         else:
@@ -40,7 +75,18 @@ def _intersection_duration(left: list[tuple[float, float]], right: list[tuple[fl
 
 
 class MetricsService:
+    """Compute silence, overtalk, and talk-time metrics from transcript timestamps."""
+
     def analyze(self, transcript: TranscriptFilePayload) -> MetricResult:
+        """Compute timing metrics for a single transcript.
+
+        Args:
+            transcript: Validated payload with normalized turns and timestamps.
+
+        Returns:
+            MetricResult with silence_pct, overtalk_pct, talk-time percentages,
+            and a special_case label for degenerate inputs (empty, voicemail, etc.).
+        """
         if not transcript.turns:
             return MetricResult(call_id=transcript.call_id, special_case="EMPTY_TRANSCRIPT")
 

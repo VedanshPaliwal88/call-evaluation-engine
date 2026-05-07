@@ -1,3 +1,4 @@
+"""Plotly chart builders for Q3 metrics with optional profanity/compliance overlays."""
 from __future__ import annotations
 
 from typing import Any
@@ -28,6 +29,14 @@ def _load_plotly_modules() -> tuple[Any, Any] | tuple[None, None]:
 
 
 def create_metrics_box_plot(rows: list[dict[str, Any]]) -> Any:
+    """Create a box plot comparing silence and overtalk percentage distributions.
+
+    Args:
+        rows: List of metric row dicts containing silence_pct and overtalk_pct.
+
+    Returns:
+        Plotly figure, or None if Plotly is unavailable or rows is empty.
+    """
     px, _ = _load_plotly_modules()
     if px is None or not rows:
         return None
@@ -124,6 +133,15 @@ def create_metrics_scatter_plot(
 
 
 def create_distribution_histograms(rows: list[dict[str, Any]]) -> dict[str, Any]:
+    """Create histograms for silence and overtalk percentage distributions.
+
+    Args:
+        rows: List of metric row dicts containing silence_pct and overtalk_pct.
+
+    Returns:
+        Dict with keys "silence_pct" and "overtalk_pct" mapping to Plotly figures,
+        or an empty dict if Plotly is unavailable or rows is empty.
+    """
     px, _ = _load_plotly_modules()
     if px is None or not rows:
         return {}
@@ -150,6 +168,21 @@ def create_top_n_figure(
     profanity_rows: list[dict[str, Any]] | None = None,
     compliance_rows: list[dict[str, Any]] | None = None,
 ) -> Any:
+    """Create a bar chart of the top N calls by a given metric, with P/C badge overlays.
+
+    Bars representing calls with profanity are annotated with a red "P" badge,
+    compliance violations with an orange "C", and both with a dark-red "P C".
+
+    Args:
+        rows: Metric row dicts containing call_id and the target metric field.
+        metric_key: Column name to rank and plot (e.g. "silence_pct").
+        top_n: Maximum number of calls to show, ranked descending by metric_key.
+        profanity_rows: Optional profanity summary rows for badge annotation.
+        compliance_rows: Optional compliance summary rows for badge annotation.
+
+    Returns:
+        Plotly figure with optional badge annotations, or None if unavailable.
+    """
     px, _ = _load_plotly_modules()
     if px is None or not rows:
         return None

@@ -1,3 +1,4 @@
+"""Application settings and runtime state for the call evaluation system."""
 from __future__ import annotations
 
 from functools import lru_cache
@@ -27,6 +28,8 @@ class Settings(BaseModel):
 
 
 class RuntimeState(BaseModel):
+    """Snapshot of whether the LLM backend is usable at call time."""
+
     api_available: bool
     model_name: str
     message: str | None = None
@@ -34,6 +37,11 @@ class RuntimeState(BaseModel):
 
 @lru_cache(maxsize=1)
 def get_settings() -> Settings:
+    """Return the singleton Settings instance, reading from environment variables.
+
+    Returns:
+        Settings populated from OPENAI_API_KEY and LLM_MODEL env vars.
+    """
     return Settings(
         openai_api_key=os.getenv("OPENAI_API_KEY"),
         llm_model=os.getenv("LLM_MODEL", "gpt-4o"),

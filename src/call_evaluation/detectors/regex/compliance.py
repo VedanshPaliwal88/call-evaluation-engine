@@ -1,3 +1,4 @@
+"""Regex-based compliance detector for two-factor identity verification and disclosure timing."""
 from __future__ import annotations
 
 import re
@@ -61,7 +62,22 @@ ADDRESS_SPELLED_PATTERN = re.compile(
 
 
 class RegexComplianceDetector:
+    """Detect pre-verification account disclosures using a two-factor identity check."""
+
     def analyze(self, transcript: TranscriptFilePayload) -> ComplianceAnalysisResult:
+        """Evaluate a transcript for compliance with identity verification requirements.
+
+        Implements a per-turn state machine tracking three independent identity
+        factors (date of birth, address, SSN). A disclosure before two factors are
+        confirmed constitutes a violation. Special call types (voicemail, wrong-person)
+        are handled before the main loop and return early.
+
+        Args:
+            transcript: Validated payload including special_tags and normalized turns.
+
+        Returns:
+            ComplianceAnalysisResult with violation, verification_status, and evidence.
+        """
         tags = set(transcript.special_tags)
 
         if SpecialCallType.VOICEMAIL.value in tags:
@@ -95,6 +111,9 @@ class RegexComplianceDetector:
                 notes="Wrong-person call detected; no valid borrower verification flow applies.",
             )
 
+        # Two-factor state machine: each factor has a "pending" flag (agent asked)
+        # and a "confirmed" flag (customer supplied a matching response).
+        # Verification requires at least 2 of 3 factors confirmed before disclosure.
         dob_pending     = False
         address_pending = False
         ssn_pending     = False
@@ -110,6 +129,8 @@ class RegexComplianceDetector:
             normalized = normalize_for_verification(turn.text)
 
             if turn.speaker == SpeakerRole.AGENT:
+                # Agent requests arm the pending flags; customer responses will
+                # confirm them in the next branch of this loop.
                 if any(p.search(normalized) for p in DOB_AGENT_PATTERNS):
                     dob_pending = True
                 if any(p.search(normalized) for p in ADDRESS_AGENT_PATTERNS):
@@ -118,6 +139,8 @@ class RegexComplianceDetector:
                     ssn_pending = True
 
             elif turn.speaker == SpeakerRole.CUSTOMER:
+                # A factor is confirmed only when the agent already requested it
+                # (pending=True) and the customer's reply matches the pattern.
                 if dob_pending and self._looks_like_dob_confirmation(normalized):
                     dob_confirmed = True
                     dob_pending = False
@@ -137,6 +160,8 @@ class RegexComplianceDetector:
                     reason="Agent disclosed potentially sensitive account information.",
                 )
                 evidence.append(span)
+                # Record disclosure as pre-verification if fewer than 2 factors
+                # have been confirmed at the moment this turn is spoken
                 factors_so_far = sum([dob_confirmed, address_confirmed, ssn_confirmed])
                 if factors_so_far < 2:
                     pre_verification_disclosure.append(span)
@@ -179,10 +204,26 @@ class RegexComplianceDetector:
         )
 
     def _contains_specific_disclosure(self, transcript: TranscriptFilePayload) -> bool:
+        """Return True if any agent turn in the transcript contains a disclosure phrase.
+
+        Args:
+            transcript: Full call payload to scan.
+
+        Returns:
+            True if at least one agent turn matches a DISCLOSURE_PATTERNS entry.
+        """
         return any(self._contains_disclosure_text(normalize_for_verification(turn.text)) for turn in transcript.turns if turn.speaker == SpeakerRole.AGENT)
 
     @staticmethod
     def _looks_like_dob_confirmation(normalized_text: str) -> bool:
+        """Return True if the customer's utterance looks like a date-of-birth response.
+
+        Args:
+            normalized_text: Lowercase, punctuation-stripped turn text.
+
+        Returns:
+            True if any DOB pattern (slash, month-text, ordinal, or spelled-out) matches.
+        """
         return any(p.search(normalized_text) for p in [
             DOB_SLASH_PATTERN,
             DOB_MONTH_TEXT_PATTERN,
@@ -192,6 +233,14 @@ class RegexComplianceDetector:
 
     @staticmethod
     def _looks_like_address_confirmation(normalized_text: str) -> bool:
+        """Return True if the customer's utterance looks like a street address response.
+
+        Args:
+            normalized_text: Lowercase, punctuation-stripped turn text.
+
+        Returns:
+            True if a digit-based or spelled-out address pattern matches.
+        """
         return any(p.search(normalized_text) for p in [
             ADDRESS_DIGIT_PATTERN,
             ADDRESS_SPELLED_PATTERN,
@@ -199,6 +248,14 @@ class RegexComplianceDetector:
 
     @staticmethod
     def _looks_like_ssn_confirmation(normalized_text: str) -> bool:
+        """Return True if the customer's utterance looks like a Social Security Number.
+
+        Args:
+            normalized_text: Lowercase, punctuation-stripped turn text.
+
+        Returns:
+            True if a digit SSN or a nine-digit spelled-out pattern matches.
+        """
         return any(p.search(normalized_text) for p in [
             SSN_DIGIT_PATTERN,
             SSN_SPELLED_PATTERN,
@@ -206,6 +263,18 @@ class RegexComplianceDetector:
 
     @staticmethod
     def _contains_disclosure_text(normalized_text: str) -> bool:
+        """Return True if the text contains a specific account disclosure phrase.
+
+        Excludes generic balance references that lack personal-account context
+        (e.g. "a balance" without "your", "owe", or "payment") to avoid false positives.
+
+        Args:
+            normalized_text: Lowercase, punctuation-stripped agent turn text.
+
+        Returns:
+            True if a DISCLOSURE_PATTERNS entry matches and the generic-balance filter
+            does not suppress it.
+        """
         if re.search(r"\b(a|the)\s+balance\b", normalized_text) and not re.search(r"\b(your|owe|payment)\b", normalized_text):
             return False
         return any(pattern.search(normalized_text) for pattern in DISCLOSURE_PATTERNS)

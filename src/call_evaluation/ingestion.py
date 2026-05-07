@@ -1,3 +1,4 @@
+"""Transcript ingestion — parse JSON/YAML files and ZIP archives into validated payloads."""
 from __future__ import annotations
 
 import io
@@ -91,9 +92,26 @@ class IngestionService:
     SUPPORTED_SUFFIXES = {".json", ".yaml", ".yml"}
 
     def load_path(self, path: Path) -> list[TranscriptFilePayload]:
+        """Load transcripts from a file system path.
+
+        Args:
+            path: Path to a JSON, YAML, or ZIP file.
+
+        Returns:
+            List of payloads; a ZIP expands to multiple; a single file yields one.
+        """
         return self.load_named_bytes(path.name, path.read_bytes())
 
     def load_named_bytes(self, name: str, raw_bytes: bytes) -> list[TranscriptFilePayload]:
+        """Parse raw bytes with the given filename into transcript payloads.
+
+        Args:
+            name: Original filename used to infer format and derive call_id.
+            raw_bytes: File contents.
+
+        Returns:
+            One payload for JSON/YAML; multiple for ZIP; an invalid payload on errors.
+        """
         suffix = Path(name).suffix.lower()
         if suffix == ".zip":
             return self._load_zip(raw_bytes)
@@ -102,6 +120,14 @@ class IngestionService:
         return [self._load_single(name, raw_bytes)]
 
     def load_batch(self, items: Iterable[tuple[str, bytes]]) -> list[TranscriptFilePayload]:
+        """Load multiple files from an iterable of (name, raw_bytes) pairs.
+
+        Args:
+            items: Iterable of (filename, file bytes) tuples.
+
+        Returns:
+            Flat list of all payloads from all files, including validation failures.
+        """
         payloads: list[TranscriptFilePayload] = []
         for name, raw_bytes in items:
             payloads.extend(self.load_named_bytes(name, raw_bytes))
