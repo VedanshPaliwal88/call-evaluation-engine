@@ -60,7 +60,21 @@ def create_metrics_scatter_plot(
     profanity_rows: list[dict[str, Any]] | None = None,
     compliance_rows: list[dict[str, Any]] | None = None,
 ) -> Any:
-    """Scatter plot of silence vs overtalk. Profanity coloring takes priority over compliance."""
+    """Create a scatter plot of silence vs overtalk, optionally colored by profanity or compliance.
+
+    Profanity severity coloring takes priority: if profanity_rows is provided the
+    points are colored by severity tier (grey/yellow/orange/red). If only
+    compliance_rows is provided the points are colored by violation (grey/red).
+    With neither, a plain single-color scatter is returned.
+
+    Args:
+        rows: Metric row dicts containing silence_pct, overtalk_pct, and call_id.
+        profanity_rows: Optional profanity summary rows; when present, drives severity coloring.
+        compliance_rows: Optional compliance summary rows; used only when profanity_rows is None.
+
+    Returns:
+        Plotly figure, or None if Plotly is unavailable or rows is empty.
+    """
     px, _ = _load_plotly_modules()
     if px is None or not rows:
         return None
