@@ -1,3 +1,4 @@
+"""Streamlit UI for batch transcript analysis — profanity, compliance, and call metrics."""
 from __future__ import annotations
 
 from typing import Any
@@ -391,6 +392,11 @@ def _render_saved_results(entity_label: str, approach_label: str) -> None:
 
 
 def main() -> None:
+    """Entry point for the Streamlit application.
+
+    Initialises the page, renders the sidebar configuration and file uploader,
+    runs analysis on button click, and renders saved results from session state.
+    """
     _init_page()
     service = AnalysisService()
     _get_session_state()

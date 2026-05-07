@@ -1,3 +1,4 @@
+"""Pydantic models for transcript turns, validation results, and file payloads."""
 from __future__ import annotations
 
 from enum import Enum
@@ -6,12 +7,16 @@ from pydantic import BaseModel, ConfigDict, Field, field_validator, model_valida
 
 
 class SpeakerRole(str, Enum):
+    """Speaker identity in a call transcript."""
+
     AGENT = "AGENT"
     CUSTOMER = "CUSTOMER"
     UNKNOWN = "UNKNOWN"
 
 
 class NormalizedTurn(BaseModel):
+    """A single utterance from a call transcript with validated timing fields."""
+
     model_config = ConfigDict(str_strip_whitespace=True)
 
     speaker: SpeakerRole
@@ -32,12 +37,16 @@ class NormalizedTurn(BaseModel):
 
 
 class TranscriptValidationResult(BaseModel):
+    """Outcome of parsing and validating a single transcript file."""
+
     is_valid: bool
     errors: list[str] = Field(default_factory=list)
     warnings: list[str] = Field(default_factory=list)
 
 
 class TranscriptFilePayload(BaseModel):
+    """All data derived from one transcript file, ready for analysis."""
+
     call_id: str
     source_name: str
     turns: list[NormalizedTurn]

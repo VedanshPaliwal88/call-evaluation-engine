@@ -84,6 +84,14 @@ def _append_csv_row(path: Path, fieldnames: list[str], row: dict[str, str]) -> N
 
 
 def _load_transcript(call_id: str) -> list[dict[str, Any]]:
+    """Load raw turn dicts from a conversation JSON file.
+
+    Args:
+        call_id: Filename (including extension) in All_Conversations/.
+
+    Returns:
+        List of turn dicts, or empty list if the file is missing or unparseable.
+    """
     path = CONVERSATIONS_DIR / call_id
     try:
         data = json.loads(path.read_text(encoding="utf-8"))
@@ -163,6 +171,11 @@ def _pick_next(pending: list[str]) -> str | None:
 
 
 def _render_sidebar(index: dict[str, Any]) -> None:
+    """Render the stats sidebar with annotation progress counters.
+
+    Args:
+        index: Current annotation state dict from _build_state().
+    """
     with st.sidebar:
         st.header("Stats")
         total = len(index["all_files"])
@@ -184,6 +197,11 @@ def _render_sidebar(index: dict[str, Any]) -> None:
 
 
 def _render_transcript(call_id: str) -> None:
+    """Render a color-coded transcript view for the given call file.
+
+    Args:
+        call_id: Filename of the conversation to display.
+    """
     turns = _load_transcript(call_id)
     if not turns:
         st.warning("Could not load transcript for this file.")
@@ -235,6 +253,14 @@ def _render_readonly_compliance(row: dict[str, str]) -> None:
 
 
 def _render_annotation_form(call_id: str, needs_profanity: bool, needs_compliance: bool, index: dict[str, Any]) -> None:
+    """Render the labeling form for the current call, with only the missing label sections.
+
+    Args:
+        call_id: Filename of the call being annotated.
+        needs_profanity: True if a profanity label is still required.
+        needs_compliance: True if a compliance label is still required.
+        index: Current annotation state dict; refreshed after submit to pick the next file.
+    """
     st.markdown("### Annotation")
 
     # Show existing labels as read-only context above the form
@@ -323,6 +349,14 @@ def _render_annotation_form(call_id: str, needs_profanity: bool, needs_complianc
 
 
 def _render_edge_case_editor(call_id: str) -> None:
+    """Render an expander allowing the annotator to create a modified edge-case variant.
+
+    Validates JSON before writing so the variant file is always parseable by the ingestion
+    pipeline. The new file appears in the unannotated pool on the next session.
+
+    Args:
+        call_id: Filename of the original call to use as the variant base.
+    """
     with st.expander("Create Edge Case Variant", expanded=False):
         raw_path = CONVERSATIONS_DIR / call_id
         try:
@@ -362,6 +396,11 @@ def _render_edge_case_editor(call_id: str) -> None:
 
 
 def main() -> None:
+    """Entry point for the annotation Streamlit app.
+
+    Renders the sidebar stats, the current call's transcript, navigation buttons,
+    the annotation form (when opened), and the edge-case variant editor.
+    """
     st.set_page_config(page_title="Annotation Tool", layout="wide")
     st.title("Annotation Tool")
     st.caption("Label profanity and compliance for debt collection call transcripts.")

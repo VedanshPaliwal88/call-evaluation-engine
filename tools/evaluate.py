@@ -73,15 +73,23 @@ SEVERITY_RANK: dict[str, int] = {"NONE": 0, "MILD": 1, "MODERATE": 2, "SEVERE": 
 # ---------------------------------------------------------------------------
 
 class Report:
+    """Dual-output writer that echoes each line to stdout and a report file."""
+
     def __init__(self, path: Path) -> None:
         path.parent.mkdir(parents=True, exist_ok=True)
         self._fh = path.open("w", encoding="utf-8")
 
     def line(self, text: str = "") -> None:
+        """Write a line to both stdout and the report file.
+
+        Args:
+            text: Content to write; an empty string produces a blank line.
+        """
         print(text)
         self._fh.write(text + "\n")
 
     def close(self) -> None:
+        """Flush and close the underlying report file."""
         self._fh.close()
 
 # ---------------------------------------------------------------------------
@@ -97,6 +105,15 @@ def _load_annotations(path: Path) -> dict[str, dict[str, str]]:
 
 
 def _load_payload(ingestion: IngestionService, call_id: str):
+    """Load and return the first transcript payload for a given call filename.
+
+    Args:
+        ingestion: Shared IngestionService instance.
+        call_id: Filename (including extension) in All_Conversations/.
+
+    Returns:
+        TranscriptFilePayload for the file.
+    """
     return ingestion.load_path(CONVERSATIONS_DIR / call_id)[0]
 
 
@@ -115,11 +132,30 @@ def _raw_transcript_text(call_id: str) -> str:
 # ---------------------------------------------------------------------------
 
 def _top_profanity_severity(agent_sev: str, customer_sev: str) -> str:
-    """Return the higher of the two severity values."""
+    """Return the higher of the two severity values.
+
+    Args:
+        agent_sev: Severity string for the agent speaker.
+        customer_sev: Severity string for the customer speaker.
+
+    Returns:
+        The severity string with the higher SEVERITY_RANK value.
+    """
     return agent_sev if SEVERITY_RANK.get(agent_sev, 0) >= SEVERITY_RANK.get(customer_sev, 0) else customer_sev
 
 
 def _top_profanity_context(agent_flag: bool, agent_ctx: str, customer_flag: bool, customer_ctx: str) -> str:
+    """Return the most relevant context label given which speakers were flagged.
+
+    Args:
+        agent_flag: Whether the agent was flagged for profanity.
+        agent_ctx: Agent's context label string.
+        customer_flag: Whether the customer was flagged for profanity.
+        customer_ctx: Customer's context label string.
+
+    Returns:
+        The context of the sole flagged speaker, or agent context when both or neither are flagged.
+    """
     if agent_flag and not customer_flag:
         return agent_ctx
     if customer_flag and not agent_flag:
@@ -128,6 +164,15 @@ def _top_profanity_context(agent_flag: bool, agent_ctx: str, customer_flag: bool
 
 
 def _pct(n: int, d: int) -> str:
+    """Format a ratio as "n/d (pct%)" for report output.
+
+    Args:
+        n: Numerator (correct count).
+        d: Denominator (total count).
+
+    Returns:
+        Formatted string, or "N/A" if d is zero.
+    """
     if d == 0:
         return "N/A"
     return f"{n}/{d} ({100*n/d:.1f}%)"
@@ -143,6 +188,15 @@ def _calculate_projected_calls(prof_count: int, comp_count: int) -> int:
 
 
 def cost_guard(prof_count: int, comp_count: int) -> int:
+    """Abort if the projected LLM call count exceeds MAX_LLM_CALLS.
+
+    Args:
+        prof_count: Number of profanity-annotated files to evaluate.
+        comp_count: Number of compliance-annotated files to evaluate.
+
+    Returns:
+        Total projected LLM call count if within limit.
+    """
     total = _calculate_projected_calls(prof_count, comp_count)
     if total > MAX_LLM_CALLS:
         blind = BLIND_SPOT_COUNT * 3
@@ -162,6 +216,16 @@ def cost_guard(prof_count: int, comp_count: int) -> int:
 # ---------------------------------------------------------------------------
 
 def section1_regex_validity(report: Report, ingestion: IngestionService, all_files: list[str]) -> None:
+    """Run regex detectors over all transcript files and report validity failures.
+
+    Checks that every output field is within the allowed enum set and that
+    flagged results always carry at least one evidence span.
+
+    Args:
+        report: Dual-output writer for console and file.
+        ingestion: Service used to load each transcript payload.
+        all_files: All JSON filenames in All_Conversations/.
+    """
     report.line()
     report.line("=" * 62)
     report.line("SECTION 1 — REGEX VALIDITY CHECK")
@@ -370,6 +434,17 @@ def section3_reproducibility(
     prof_annotations: dict[str, dict[str, str]],
     llm_prof: LLMProfanityDetector,
 ) -> int:
+    """Run two LLM profanity passes separated by a gap and report field-level consistency.
+
+    Args:
+        report: Dual-output writer for console and file.
+        ingestion: Service used to load each transcript payload.
+        prof_annotations: Annotated profanity files to sample from.
+        llm_prof: LLM profanity detector to run twice.
+
+    Returns:
+        Number of LLM API calls made.
+    """
     report.line()
     report.line("=" * 62)
     report.line("SECTION 3 — REPRODUCIBILITY CHECK")
@@ -484,6 +559,13 @@ def section4_hallucination(
     prof_outputs: dict[str, tuple],
     comp_outputs: dict[str, object],
 ) -> None:
+    """Scan LLM notes fields for numbers, quoted text, and proper nouns not in the transcript.
+
+    Args:
+        report: Dual-output writer for console and file.
+        prof_outputs: Map of call_id to (agent_result, customer_result) from section 2.
+        comp_outputs: Map of call_id to compliance result from section 2.
+    """
     report.line()
     report.line("=" * 62)
     report.line("SECTION 4 — HALLUCINATION CHECK (notes fields)")
@@ -588,6 +670,23 @@ def section5_blind_spot(
     llm_prof: LLMProfanityDetector,
     llm_comp: LLMComplianceDetector,
 ) -> int:
+    """Run LLM inference on a random unannotated sample and assess plausibility.
+
+    For each sampled file: flags unsupported positives (SUSPECT), checks LLM-vs-regex
+    divergence on all-negative results (DIVERGENT), and marks consistent negatives
+    (CONSISTENT). Also validates enum field ranges.
+
+    Args:
+        report: Dual-output writer for console and file.
+        ingestion: Service used to load each transcript payload.
+        all_files: Full list of JSON filenames in All_Conversations/.
+        annotated_ids: Call IDs already in the annotation CSVs (excluded from sample).
+        llm_prof: LLM profanity detector.
+        llm_comp: LLM compliance detector.
+
+    Returns:
+        Number of LLM API calls made.
+    """
     report.line()
     report.line("=" * 62)
     report.line("SECTION 5 — BLIND SPOT CHECK")
@@ -729,6 +828,7 @@ def section5_blind_spot(
 # ---------------------------------------------------------------------------
 
 def main() -> None:
+    """Run all five evaluation sections and write the report to reports/evaluation_report.txt."""
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     report_path = REPORTS_DIR / "evaluation_report.txt"
     report = Report(report_path)
